@@ -1,0 +1,4 @@
+genus	family	census_otu_count	ncbi_genome_count	ncbi_species_count	isolate_count	isolate_percentage	novelty_factor	overrepresentation_factor	domain	Division	Is_Top_Novelty	Is_Top_Coverage	Domain
+Saccharomyces	Saccharomycetales	13	1936	21	1929	99.64	0.619	1.615	Eukaryota	Opisthokonta	FALSE	TRUE	Eukaryota
+Aspergillus	Aspergillaceae	48	1433	263	1431	99.86	0.183	5.479	Eukaryota	Opisthokonta	FALSE	TRUE	Eukaryota
+Penicillium	Trichocomaceae	100	559	174	558	99.82	0.575	1.74	Eukaryota	Opisthokonta	FALSE	TRUE	Eukaryota

@@ -1,0 +1,191 @@
+MEGA VISUAL SOURCE DATA EXPORT
+Generated: 2025-08-18 15:19:55
+================================================================================
+This file contains all source data used in the mega stacked visualizations
+organized by domain (16S: Bacteria/Archaea, 18S: Eukaryotes) and factors.
+================================================================================
+
+
+16S rRNA DATA (BACTERIA & ARCHAEA)
+================================================================================
+
+
+BACTERIA DATA
+--------------------------------------------------
+
+
+ARCHAEA DATA
+--------------------------------------------------
+
+
+
+18S rRNA DATA (EUKARYOTES)
+================================================================================
+
+Eukaryote Divisions - HIGH NOVELTY (>1.0x)
+==========================================
+Total entries: 16
+
+Hemimastigophora               | Census:     20 | NCBI:      0 | Nov:    infx | Cov:   0.00x
+Picozoa                        | Census:     51 | NCBI:      0 | Nov:    infx | Cov:   0.00x
+Nibbleridia                    | Census:      3 | NCBI:      0 | Nov:    infx | Cov:   0.00x
+Nebulidia                      | Census:      1 | NCBI:      0 | Nov:    infx | Cov:   0.00x
+Centroplasthelida              | Census:    185 | NCBI:      0 | Nov:    infx | Cov:   0.00x
+Rigifilida                     | Census:     79 | NCBI:      0 | Nov:    infx | Cov:   0.00x
+Tubulinea                      | Census:   1323 | NCBI:      1 | Nov: 1323.00x | Cov:   0.00x
+Rhizaria                       | Census:   5126 | NCBI:     15 | Nov: 341.73x | Cov:   0.00x
+Evosea                         | Census:   2431 | NCBI:     31 | Nov:  78.42x | Cov:   0.01x
+Alveolata                      | Census:   9042 | NCBI:    175 | Nov:  51.67x | Cov:   0.02x
+Discoba                        | Census:   5496 | NCBI:    121 | Nov:  45.42x | Cov:   0.02x
+Metamonada                     | Census:    573 | NCBI:     22 | Nov:  26.05x | Cov:   0.04x
+Discosea                       | Census:    399 | NCBI:     26 | Nov:  15.35x | Cov:   0.07x
+Stramenopiles                  | Census:   3668 | NCBI:    330 | Nov:  11.12x | Cov:   0.09x
+Chlorophyta                    | Census:   1505 | NCBI:    223 | Nov:   6.75x | Cov:   0.15x
+Opisthokonta                   | Census:  24345 | NCBI:  17372 | Nov:   1.40x | Cov:   0.71x
+
+Eukaryote Divisions - HIGH COVERAGE (>1.0x)
+===========================================
+Total entries: 4
+
+Prasinodermophyta              | Census:      0 | NCBI:      1 | Nov:   0.00x | Cov:    infx
+Haptophyta                     | Census:      0 | NCBI:     10 | Nov:   0.00x | Cov:    infx
+Rhodophyta                     | Census:      2 | NCBI:     47 | Nov:   0.04x | Cov:  23.50x
+Streptophyta                   | Census:   2252 | NCBI:   2349 | Nov:   0.96x | Cov:   1.04x
+
+Eukaryote Family - HIGH NOVELTY (>1.0x)
+=======================================
+Total entries: 214
+
+WIM80-lineage                  | Census:    173 | NCBI:      0 | Nov:    infx | Cov:   0.00x
+Actinocephalidae               | Census:    172 | NCBI:      0 | Nov:    infx | Cov:   0.00x
+Rhizophydiales_X               | Census:    157 | NCBI:      0 | Nov:    infx | Cov:   0.00x
+Cercomonadidae                 | Census:    154 | NCBI:      0 | Nov:    infx | Cov:   0.00x
+Difflugina                     | Census:    151 | NCBI:      0 | Nov:    infx | Cov:   0.00x
+Salpingoecidae_Group_C1        | Census:    148 | NCBI:      0 | Nov:    infx | Cov:   0.00x
+Nolandellidae                  | Census:    142 | NCBI:      0 | Nov:    infx | Cov:   0.00x
+Rotifera_XX                    | Census:    135 | NCBI:      0 | Nov:    infx | Cov:   0.00x
+Rhogostoma-lineage             | Census:    134 | NCBI:      0 | Nov:    infx | Cov:   0.00x
+Schizoplasmodiidae             | Census:    124 | NCBI:      0 | Nov:    infx | Cov:   0.00x
+Psalteriomonadidae             | Census:    108 | NCBI:      0 | Nov:    infx | Cov:   0.00x
+Gastrotricha_XX                | Census:     99 | NCBI:      0 | Nov:    infx | Cov:   0.00x
+Dino-Group-II-Clade-3          | Census:     92 | NCBI:      0 | Nov:    infx | Cov:   0.00x
+Monothalamids_XX               | Census:     92 | NCBI:      0 | Nov:    infx | Cov:   0.00x
+Suctoria_X                     | Census:     83 | NCBI:      0 | Nov:    infx | Cov:   0.00x
+Endostelium-lineage            | Census:     82 | NCBI:      0 | Nov:    infx | Cov:   0.00x
+Dino-Group-II-Clade-1          | Census:     80 | NCBI:      0 | Nov:    infx | Cov:   0.00x
+Chlorellales_X                 | Census:    315 | NCBI:      0 | Nov:    infx | Cov:   0.00x
+Dino-Group-II-Clade-10-and-11  | Census:    415 | NCBI:      0 | Nov:    infx | Cov:   0.00x
+Maxillopoda                    | Census:    290 | NCBI:      0 | Nov:    infx | Cov:   0.00x
+Dino-Group-II-Clade-6          | Census:    286 | NCBI:      0 | Nov:    infx | Cov:   0.00x
+Rozellomycota_XX               | Census:    268 | NCBI:      0 | Nov:    infx | Cov:   0.00x
+Rigifilida_XXXX                | Census:     79 | NCBI:      0 | Nov:    infx | Cov:   0.00x
+Phaeophyceae_XX                | Census:     77 | NCBI:      0 | Nov:    infx | Cov:   0.00x
+Mucoromycotina_X               | Census:     75 | NCBI:      0 | Nov:    infx | Cov:   0.00x
+Cyclotrichium_like_organism_XX | Census:     79 | NCBI:      0 | Nov:    infx | Cov:   0.00x
+AND16-lineage                  | Census:     75 | NCBI:      0 | Nov:    infx | Cov:   0.00x
+Perkinsida_XX                  | Census:    221 | NCBI:      0 | Nov:    infx | Cov:   0.00x
+Sessilida                      | Census:    174 | NCBI:      0 | Nov:    infx | Cov:   0.00x
+Dino-Group-I-Clade-4           | Census:    182 | NCBI:      0 | Nov:    infx | Cov:   0.00x
+Kinetoplastea_XX               | Census:    183 | NCBI:      0 | Nov:    infx | Cov:   0.00x
+Fungi_XXX                      | Census:    190 | NCBI:      0 | Nov:    infx | Cov:   0.00x
+Eupetalomonads_X               | Census:    192 | NCBI:      0 | Nov:    infx | Cov:   0.00x
+Acantharea_3a                  | Census:    208 | NCBI:      0 | Nov:    infx | Cov:   0.00x
+Chlamydomonadales_X            | Census:    217 | NCBI:      0 | Nov:    infx | Cov:   0.00x
+Dileptidae                     | Census:    253 | NCBI:      0 | Nov:    infx | Cov:   0.00x
+Scytomonadidae                 | Census:    240 | NCBI:      0 | Nov:    infx | Cov:   0.00x
+Colpodellida_CHR1              | Census:     18 | NCBI:      0 | Nov:    infx | Cov:   0.00x
+Lagynidae                      | Census:     18 | NCBI:      0 | Nov:    infx | Cov:   0.00x
+Xcellidae                      | Census:     19 | NCBI:      0 | Nov:    infx | Cov:   0.00x
+Centroplasthelida_XXXX         | Census:     19 | NCBI:      0 | Nov:    infx | Cov:   0.00x
+Dino-Group-II-Clade-14         | Census:     19 | NCBI:      0 | Nov:    infx | Cov:   0.00x
+Ophryoglenida                  | Census:     19 | NCBI:      0 | Nov:    infx | Cov:   0.00x
+Stylocephalidae                | Census:     20 | NCBI:      0 | Nov:    infx | Cov:   0.00x
+Spironemidae                   | Census:     20 | NCBI:      0 | Nov:    infx | Cov:   0.00x
+Rhabdocoela                    | Census:     21 | NCBI:      0 | Nov:    infx | Cov:   0.00x
+Enoplea_X                      | Census:     21 | NCBI:      0 | Nov:    infx | Cov:   0.00x
+NC12A-lineage                  | Census:     22 | NCBI:      0 | Nov:    infx | Cov:   0.00x
+Distigmidae                    | Census:     24 | NCBI:      0 | Nov:    infx | Cov:   0.00x
+Dysteriidae                    | Census:     25 | NCBI:      0 | Nov:    infx | Cov:   0.00x
+
+... and 164 more entries
+
+Eukaryote Family - HIGH COVERAGE (>1.0x)
+========================================
+Total entries: 1370
+
+Glaucidae                      | Census:      0 | NCBI:      1 | Nov:   0.00x | Cov:    infx
+Eudrilidae                     | Census:      0 | NCBI:      1 | Nov:   0.00x | Cov:    infx
+Euphausiidae                   | Census:      0 | NCBI:      1 | Nov:   0.00x | Cov:    infx
+Phyllidiidae                   | Census:      0 | NCBI:      1 | Nov:   0.00x | Cov:    infx
+Eupteleaceae                   | Census:      0 | NCBI:      1 | Nov:   0.00x | Cov:    infx
+Glyceridae                     | Census:      0 | NCBI:      1 | Nov:   0.00x | Cov:    infx
+Gnathostomatidae               | Census:      0 | NCBI:      1 | Nov:   0.00x | Cov:    infx
+Gnetaceae                      | Census:      0 | NCBI:      1 | Nov:   0.00x | Cov:    infx
+Platysternidae                 | Census:      0 | NCBI:      1 | Nov:   0.00x | Cov:    infx
+Platydesmidae                  | Census:      0 | NCBI:      1 | Nov:   0.00x | Cov:    infx
+Geosiphonaceae                 | Census:      0 | NCBI:      1 | Nov:   0.00x | Cov:    infx
+Geomitridae                    | Census:      0 | NCBI:      1 | Nov:   0.00x | Cov:    infx
+Geminibasidiaceae              | Census:      0 | NCBI:      1 | Nov:   0.00x | Cov:    infx
+Porolithaceae                  | Census:      0 | NCBI:      1 | Nov:   0.00x | Cov:    infx
+Choristocarpaceae              | Census:      0 | NCBI:      1 | Nov:   0.00x | Cov:    infx
+Chromadoridae                  | Census:      0 | NCBI:      1 | Nov:   0.00x | Cov:    infx
+Oreohelicidae                  | Census:      0 | NCBI:      1 | Nov:   0.00x | Cov:    infx
+Rhodymeniaceae                 | Census:      0 | NCBI:      1 | Nov:   0.00x | Cov:    infx
+Priapulidae                    | Census:      0 | NCBI:      1 | Nov:   0.00x | Cov:    infx
+Phyllophoridae                 | Census:      0 | NCBI:      1 | Nov:   0.00x | Cov:    infx
+Prasiolaceae                   | Census:      0 | NCBI:      1 | Nov:   0.00x | Cov:    infx
+Anatidae                       | Census:      0 | NCBI:     79 | Nov:   0.00x | Cov:    infx
+Corvidae                       | Census:      0 | NCBI:     20 | Nov:   0.00x | Cov:    infx
+Cucurbitaceae                  | Census:      0 | NCBI:     74 | Nov:   0.00x | Cov:    infx
+Asteraceae                     | Census:      0 | NCBI:    100 | Nov:   0.00x | Cov:    infx
+Accipitridae                   | Census:      0 | NCBI:    145 | Nov:   0.00x | Cov:    infx
+Pythiaceae                     | Census:      0 | NCBI:    116 | Nov:   0.00x | Cov:    infx
+Sporidiobolaceae               | Census:      0 | NCBI:     31 | Nov:   0.00x | Cov:    infx
+Psittacidae                    | Census:      0 | NCBI:    181 | Nov:   0.00x | Cov:    infx
+Trichomonascaceae              | Census:      0 | NCBI:    146 | Nov:   0.00x | Cov:    infx
+Rhabditidae                    | Census:      0 | NCBI:     81 | Nov:   0.00x | Cov:    infx
+Vitaceae                       | Census:      0 | NCBI:     40 | Nov:   0.00x | Cov:    infx
+Solanaceae                     | Census:      0 | NCBI:     91 | Nov:   0.00x | Cov:    infx
+Rosaceae                       | Census:      0 | NCBI:    114 | Nov:   0.00x | Cov:    infx
+Fabaceae                       | Census:      0 | NCBI:    152 | Nov:   0.00x | Cov:    infx
+Chenopodiaceae                 | Census:      0 | NCBI:     28 | Nov:   0.00x | Cov:    infx
+Brassicaceae                   | Census:      0 | NCBI:    108 | Nov:   0.00x | Cov:    infx
+Saccharomycodaceae             | Census:      0 | NCBI:     23 | Nov:   0.00x | Cov:    infx
+Lamiaceae                      | Census:      0 | NCBI:     47 | Nov:   0.00x | Cov:    infx
+Myrtaceae                      | Census:      0 | NCBI:     62 | Nov:   0.00x | Cov:    infx
+Wickerhamomycetaceae           | Census:      0 | NCBI:     45 | Nov:   0.00x | Cov:    infx
+Entrophosporaceae              | Census:      0 | NCBI:      2 | Nov:   0.00x | Cov:    infx
+Saccharomycopsidaceae          | Census:      0 | NCBI:     28 | Nov:   0.00x | Cov:    infx
+Euphorbiaceae                  | Census:      0 | NCBI:     46 | Nov:   0.00x | Cov:    infx
+Fringillidae                   | Census:      0 | NCBI:     46 | Nov:   0.00x | Cov:    infx
+Phasianidae                    | Census:      0 | NCBI:     30 | Nov:   0.00x | Cov:    infx
+Blastocystidae                 | Census:      0 | NCBI:     15 | Nov:   0.00x | Cov:    infx
+Mortierellaceae                | Census:      0 | NCBI:     53 | Nov:   0.00x | Cov:    infx
+Phaffomycetaceae               | Census:      0 | NCBI:     68 | Nov:   0.00x | Cov:    infx
+Rhizopodaceae                  | Census:      0 | NCBI:      7 | Nov:   0.00x | Cov:    infx
+
+... and 1320 more entries
+
+
+
+SUMMARY STATISTICS
+================================================================================
+16S rRNA (Bacteria + Archaea):
+  Total taxa: 0
+  Meaningful taxa (>1.0x factor): 0
+
+18S rRNA (Eukaryotes):
+  Total taxa: 1604
+  Meaningful taxa (>1.0x factor): 1604
+
+GRAND TOTAL:
+  All taxa: 1604
+  All meaningful: 1604
+
+
+NOTES:
+- Novelty Ratio: Census OTU Count / NCBI Species Count
+- Coverage Factor: NCBI Species Count / Census OTU Count
+- Values >1.0x indicate higher representation in that database
+- Data sorted by factor value (highest first)
+- Limited to top 50 entries per category for readability

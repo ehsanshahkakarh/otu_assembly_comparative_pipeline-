@@ -1,0 +1,26 @@
+"node","phylum","absolute_count","percentage","alluvium"
+"NCBI_Eukaryota_Genomes","1. Opisthokonta",41803,83.5809257222833,1
+"NCBI_Eukaryota_Genomes","7. Streptophyta",5885,11.7664700589823,7
+"18S_EukCensus_Sequences","1. Opisthokonta",158758,39.5567869796832,1
+"18S_EukCensus_Sequences","2. Alveolata",60488,15.0714353344529,2
+"18S_EukCensus_Sequences","3. Eukaryota.U.division",39360,9.80709718893113,3
+"18S_EukCensus_Sequences","4. Stramenopiles",24799,6.17901938994673,4
+"18S_EukCensus_Sequences","5. Rhizaria",24072,5.99787712225483,5
+"18S_EukCensus_Sequences","6. Discoba",21089,5.2546207473925,6
+"18S_EukCensus_Sequences","7. Streptophyta",16099,4.01129211495433,7
+"18S_EukCensus_Sequences","8. Amoebozoa.U.division",15143,3.77309127875976,8
+"18S_EukCensus_Sequences","9. Chlorophyta",14229,3.54535533285826,9
+"18S_EukCensus_Sequences","10. Evosea",13475,3.35748563569225,10
+"18S_EukCensus_OTUs","1. Opisthokonta",24345,34.3375788092921,1
+"18S_EukCensus_OTUs","3. Eukaryota.U.division",9333,13.1637963864088,3
+"18S_EukCensus_OTUs","2. Alveolata",9042,12.7533533618246,2
+"18S_EukCensus_OTUs","6. Discoba",5496,7.75187238183895,6
+"18S_EukCensus_OTUs","5. Rhizaria",5126,7.2300032440514,5
+"18S_EukCensus_OTUs","8. Amoebozoa.U.division",4214,5.94366634226153,8
+"18S_EukCensus_OTUs","4. Stramenopiles",3668,5.17355674974259,4
+"18S_EukCensus_OTUs","10. Evosea",2431,3.42882128097716,10
+"18S_EukCensus_OTUs","7. Streptophyta",2252,3.17634945485832,7
+"18S_EukCensus_OTUs","Other",1591,2.2440372924865,13
+"18S_EukCensus_OTUs","9. Chlorophyta",1505,2.12273797937912,9
+"NCBI_Eukaryota_Species","1. Opisthokonta",17372,83.8295613569464,1
+"NCBI_Eukaryota_Species","7. Streptophyta",2349,11.3352313854172,7

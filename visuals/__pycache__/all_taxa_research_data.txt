@@ -1,0 +1,340 @@
+ALL TAXA RESEARCH DATA EXPORT
+Generated: 2025-08-18 15:21:05
+====================================================================================================
+This file contains all taxa from individual scatter plot analyses
+with their taxonomic ranks, classifications, and novelty/coverage factors.
+Source: Individual scatter plot CSV output files
+====================================================================================================
+
+
+BACTERIA TAXA
+================================================================================
+
+Bacteria Phylum/Division - HIGH NOVELTY
+=======================================
+Total entries: 10
+
+Taxon                               | Level           | Domain       | Nov.Ratio  | Cov.Factor | Census   | NCBI    
+----------------------------------- | --------------- | ------------ | ---------- | ---------- | -------- | --------
+Abditibacteriota                    | Phylum/Divisio  | Bacteria     | 36.71      | 0.03       | 257      | 7       
+Calditrichota                       | Phylum/Divisio  | Bacteria     | 35.00      | 0.03       | 455      | 13      
+Planctomycetota                     | Phylum/Divisio  | Bacteria     | 26.34      | 0.04       | 13119    | 498     
+Thermomicrobiota                    | Phylum/Divisio  | Bacteria     | 25.55      | 0.04       | 511      | 20      
+Acidobacteriota                     | Phylum/Divisio  | Bacteria     | 24.66      | 0.04       | 9124     | 370     
+Gemmatimonadota                     | Phylum/Divisio  | Bacteria     | 19.97      | 0.05       | 2576     | 129     
+Chloroflexota                       | Phylum/Divisio  | Bacteria     | 18.45      | 0.05       | 13210    | 716     
+Verrucomicrobiota                   | Phylum/Divisio  | Bacteria     | 16.85      | 0.06       | 10214    | 606     
+Armatimonadota                      | Phylum/Divisio  | Bacteria     | 15.34      | 0.07       | 1473     | 96      
+Myxococcota                         | Phylum/Divisio  | Bacteria     | 14.31      | 0.07       | 3648     | 255     
+
+Bacteria Phylum/Division - HIGH COVERAGE
+========================================
+Total entries: 10
+
+Taxon                               | Level           | Domain       | Nov.Ratio  | Cov.Factor | Census   | NCBI    
+----------------------------------- | --------------- | ------------ | ---------- | ---------- | -------- | --------
+Chlorobiota                         | Phylum/Divisio  | Bacteria     | 0.05       | 18.67      | 3        | 56      
+Ignavibacteriota                    | Phylum/Divisio  | Bacteria     | 0.09       | 10.64      | 11       | 117     
+Chlamydiota                         | Phylum/Divisio  | Bacteria     | 0.11       | 9.50       | 12       | 114     
+Cyanobacteriota                     | Phylum/Divisio  | Bacteria     | 0.63       | 1.59       | 2484     | 3955    
+Chrysiogenota                       | Phylum/Divisio  | Bacteria     | 0.83       | 1.20       | 5        | 6       
+Dictyoglomota                       | Phylum/Divisio  | Bacteria     | 0.88       | 1.14       | 7        | 8       
+Actinomycetota                      | Phylum/Divisio  | Bacteria     | 0.89       | 1.13       | 15932    | 17985   
+Thermotogota                        | Phylum/Divisio  | Bacteria     | 1.20       | 0.84       | 188      | 157     
+Pseudomonadota                      | Phylum/Divisio  | Bacteria     | 1.61       | 0.62       | 53653    | 33394   
+Mycoplasmatota                      | Phylum/Divisio  | Bacteria     | 2.48       | 0.40       | 1523     | 614     
+
+Bacteria Family - HIGH NOVELTY
+==============================
+Total entries: 10
+
+Taxon                               | Level           | Domain       | Nov.Ratio  | Cov.Factor | Census   | NCBI    
+----------------------------------- | --------------- | ------------ | ---------- | ---------- | -------- | --------
+Thermoanaerobaculaceae              | Family          | Bacteria     | 177.00     | 0.01       | 708      | 4       
+Thioalkalispiraceae                 | Family          | Bacteria     | 156.00     | 0.01       | 156      | 1       
+Blastocatellaceae                   | Family          | Bacteria     | 143.33     | 0.01       | 430      | 3       
+Kofleriaceae                        | Family          | Bacteria     | 124.83     | 0.01       | 749      | 6       
+Pyrinomonadaceae                    | Family          | Bacteria     | 109.83     | 0.01       | 659      | 6       
+Microscillaceae                     | Family          | Bacteria     | 102.83     | 0.01       | 617      | 6       
+Longimicrobiaceae                   | Family          | Bacteria     | 100.33     | 0.01       | 301      | 3       
+Chthoniobacteraceae                 | Family          | Bacteria     | 98.88      | 0.01       | 791      | 8       
+Vicinamibacteraceae                 | Family          | Bacteria     | 91.50      | 0.01       | 549      | 6       
+Oligoflexaceae                      | Family          | Bacteria     | 74.75      | 0.01       | 299      | 4       
+
+Bacteria Family - HIGH COVERAGE
+===============================
+Total entries: 10
+
+Taxon                               | Level           | Domain       | Nov.Ratio  | Cov.Factor | Census   | NCBI    
+----------------------------------- | --------------- | ------------ | ---------- | ---------- | -------- | --------
+Gloeomargaritaceae                  | Family          | Bacteria     | 0.04       | 28.00      | 1        | 28      
+Bartonellaceae                      | Family          | Bacteria     | 0.05       | 18.53      | 15       | 278     
+Chlorobiaceae                       | Family          | Bacteria     | 0.06       | 18.00      | 2        | 36      
+Thermosynechococcaceae              | Family          | Bacteria     | 0.10       | 10.20      | 5        | 51      
+Simkaniaceae                        | Family          | Bacteria     | 0.11       | 9.00       | 1        | 9       
+Ancalomicrobiaceae                  | Family          | Bacteria     | 0.12       | 8.00       | 1        | 8       
+Metamycoplasmataceae                | Family          | Bacteria     | 0.14       | 7.36       | 11       | 81      
+Sirenicapillariaceae                | Family          | Bacteria     | 0.14       | 7.00       | 5        | 35      
+Chlamydiaceae                       | Family          | Bacteria     | 0.16       | 6.40       | 5        | 32      
+Prochlorococcaceae                  | Family          | Bacteria     | 0.16       | 6.35       | 139      | 883     
+
+Bacteria Genus - HIGH NOVELTY
+=============================
+Total entries: 10
+
+Taxon                               | Level           | Domain       | Nov.Ratio  | Cov.Factor | Census   | NCBI    
+----------------------------------- | --------------- | ------------ | ---------- | ---------- | -------- | --------
+Desulfofarcimen                     | Genus           | Bacteria     | 249.00     | 0.00       | 249      | 1       
+Pajaroellobacter                    | Genus           | Bacteria     | 195.00     | 0.01       | 195      | 1       
+Haliangium                          | Genus           | Bacteria     | 187.00     | 0.01       | 748      | 4       
+Aquicella                           | Genus           | Bacteria     | 130.50     | 0.01       | 261      | 2       
+Bryobacter                          | Genus           | Bacteria     | 130.00     | 0.01       | 520      | 4       
+Desulfatiglans                      | Genus           | Bacteria     | 123.67     | 0.01       | 371      | 3       
+Monoglobus                          | Genus           | Bacteria     | 115.00     | 0.01       | 345      | 3       
+Pirellula                           | Genus           | Bacteria     | 104.50     | 0.01       | 418      | 4       
+Salinibacter                        | Genus           | Bacteria     | 92.43      | 0.01       | 647      | 7       
+Blastopirellula                     | Genus           | Bacteria     | 89.86      | 0.01       | 629      | 7       
+
+Bacteria Genus - HIGH COVERAGE
+==============================
+Total entries: 10
+
+Taxon                               | Level           | Domain       | Nov.Ratio  | Cov.Factor | Census   | NCBI    
+----------------------------------- | --------------- | ------------ | ---------- | ---------- | -------- | --------
+Gardnerella                         | Genus           | Bacteria     | 0.02       | 59.00      | 1        | 59      
+Micavibrio                          | Genus           | Bacteria     | 0.02       | 42.00      | 1        | 42      
+Mycolicibacterium                   | Genus           | Bacteria     | 0.02       | 41.00      | 4        | 164     
+Phocaeicola                         | Genus           | Bacteria     | 0.03       | 39.00      | 1        | 39      
+Kaistella                           | Genus           | Bacteria     | 0.04       | 28.00      | 1        | 28      
+Qipengyuania                        | Genus           | Bacteria     | 0.04       | 26.50      | 2        | 53      
+Gloeomargarita                      | Genus           | Bacteria     | 0.04       | 26.00      | 1        | 26      
+Thermosynechococcus                 | Genus           | Bacteria     | 0.04       | 22.50      | 2        | 45      
+Christensenella                     | Genus           | Bacteria     | 0.05       | 21.25      | 4        | 85      
+Roseateles                          | Genus           | Bacteria     | 0.05       | 21.25      | 4        | 85      
+
+
+ARCHAEA TAXA
+================================================================================
+
+Archaea Phylum/Division - HIGH NOVELTY
+======================================
+Total entries: 7
+
+Taxon                               | Level           | Domain       | Nov.Ratio  | Cov.Factor | Census   | NCBI    
+----------------------------------- | --------------- | ------------ | ---------- | ---------- | -------- | --------
+Nanoarchaeota                       | Phylum/Divisio  | Archaea      | 117.70     | 0.01       | 3178     | 27      
+Nitrososphaerota                    | Phylum/Divisio  | Archaea      | 5.79       | 0.17       | 1458     | 252     
+Thermoproteota                      | Phylum/Divisio  | Archaea      | 2.28       | 0.44       | 569      | 250     
+Euryarchaeota                       | Phylum/Divisio  | Archaea      | 2.05       | 0.49       | 3600     | 1758    
+Thermoplasmatota                    | Phylum/Divisio  | Archaea      | 0.00       | 0.00       | 0        | 484     
+Promethearchaeota                   | Phylum/Divisio  | Archaea      | 0.00       | 0.00       | 0        | 11      
+Halobacteriota                      | Phylum/Divisio  | Archaea      | 0.00       | 0.00       | 0        | 1       
+
+Archaea Phylum/Division - HIGH COVERAGE
+=======================================
+Total entries: 7
+
+Taxon                               | Level           | Domain       | Nov.Ratio  | Cov.Factor | Census   | NCBI    
+----------------------------------- | --------------- | ------------ | ---------- | ---------- | -------- | --------
+Euryarchaeota                       | Phylum/Divisio  | Archaea      | 2.05       | 0.49       | 3600     | 1758    
+Thermoproteota                      | Phylum/Divisio  | Archaea      | 2.28       | 0.44       | 569      | 250     
+Nitrososphaerota                    | Phylum/Divisio  | Archaea      | 5.79       | 0.17       | 1458     | 252     
+Nanoarchaeota                       | Phylum/Divisio  | Archaea      | 117.70     | 0.01       | 3178     | 27      
+Thermoplasmatota                    | Phylum/Divisio  | Archaea      | 0.00       | 0.00       | 0        | 484     
+Promethearchaeota                   | Phylum/Divisio  | Archaea      | 0.00       | 0.00       | 0        | 11      
+Halobacteriota                      | Phylum/Divisio  | Archaea      | 0.00       | 0.00       | 0        | 1       
+
+Archaea Family - HIGH NOVELTY
+=============================
+Total entries: 10
+
+Taxon                               | Level           | Domain       | Nov.Ratio  | Cov.Factor | Census   | NCBI    
+----------------------------------- | --------------- | ------------ | ---------- | ---------- | -------- | --------
+Nitrosopumilaceae                   | Family          | Archaea      | 10.37      | 0.10       | 529      | 51      
+Nitrososphaeraceae                  | Family          | Archaea      | 9.75       | 0.10       | 273      | 28      
+Fervidicoccaceae                    | Family          | Archaea      | 9.00       | 0.11       | 27       | 3       
+Nanoarchaeaceae                     | Family          | Archaea      | 8.50       | 0.12       | 17       | 2       
+Methanotrichaceae                   | Family          | Archaea      | 6.83       | 0.15       | 246      | 36      
+Methanospirillaceae                 | Family          | Archaea      | 6.44       | 0.16       | 58       | 9       
+Thermoplasmataceae                  | Family          | Archaea      | 6.17       | 0.16       | 37       | 6       
+Methanocellaceae                    | Family          | Archaea      | 5.45       | 0.18       | 60       | 11      
+Desulfurococcaceae                  | Family          | Archaea      | 4.39       | 0.23       | 145      | 33      
+Methanocaldococcaceae               | Family          | Archaea      | 4.33       | 0.23       | 52       | 12      
+
+Archaea Family - HIGH COVERAGE
+==============================
+Total entries: 10
+
+Taxon                               | Level           | Domain       | Nov.Ratio  | Cov.Factor | Census   | NCBI    
+----------------------------------- | --------------- | ------------ | ---------- | ---------- | -------- | --------
+Picrophilaceae                      | Family          | Archaea      | 0.50       | 2.00       | 1        | 2       
+Thermococcaceae                     | Family          | Archaea      | 0.61       | 1.65       | 48       | 79      
+Methanomassiliicoccaceae            | Family          | Archaea      | 0.63       | 1.60       | 52       | 83      
+Haloferacaceae                      | Family          | Archaea      | 0.81       | 1.24       | 220      | 273     
+Natrialbaceae                       | Family          | Archaea      | 0.90       | 1.11       | 131      | 145     
+Halorubraceae                       | Family          | Archaea      | 0.96       | 1.04       | 263      | 273     
+Methanopyraceae                     | Family          | Archaea      | 1.00       | 1.00       | 3        | 3       
+Methanocorpusculaceae               | Family          | Archaea      | 1.09       | 0.92       | 25       | 23      
+Acidilobaceae                       | Family          | Archaea      | 1.17       | 0.86       | 21       | 18      
+Natronoarchaeaceae                  | Family          | Archaea      | 1.26       | 0.79       | 24       | 19      
+
+
+EUKARYOTA TAXA
+================================================================================
+
+Eukaryota Phylum/Division - HIGH NOVELTY
+========================================
+Total entries: 20
+
+Taxon                               | Level           | Domain       | Nov.Ratio  | Cov.Factor | Census   | NCBI    
+----------------------------------- | --------------- | ------------ | ---------- | ---------- | -------- | --------
+Tubulinea                           | Phylum/Divisio  | Eukaryota    | 1323.00    | 0.00       | 1323     | 1       
+Tubulinea                           | Phylum/Divisio  | Eukaryota    | 1323.00    | 0.00       | 1323     | 1       
+Rhizaria                            | Phylum/Divisio  | Eukaryota    | 341.73     | 0.00       | 5126     | 15      
+Rhizaria                            | Phylum/Divisio  | Eukaryota    | 341.73     | 0.00       | 5126     | 15      
+Evosea                              | Phylum/Divisio  | Eukaryota    | 78.42      | 0.01       | 2431     | 31      
+Evosea                              | Phylum/Divisio  | Eukaryota    | 78.42      | 0.01       | 2431     | 31      
+Alveolata                           | Phylum/Divisio  | Eukaryota    | 51.67      | 0.02       | 9042     | 175     
+Alveolata                           | Phylum/Divisio  | Eukaryota    | 51.67      | 0.02       | 9042     | 175     
+Discoba                             | Phylum/Divisio  | Eukaryota    | 45.42      | 0.02       | 5496     | 121     
+Discoba                             | Phylum/Divisio  | Eukaryota    | 45.42      | 0.02       | 5496     | 121     
+Metamonada                          | Phylum/Divisio  | Eukaryota    | 26.05      | 0.04       | 573      | 22      
+Metamonada                          | Phylum/Divisio  | Eukaryota    | 26.05      | 0.04       | 573      | 22      
+Discosea                            | Phylum/Divisio  | Eukaryota    | 15.35      | 0.07       | 399      | 26      
+Discosea                            | Phylum/Divisio  | Eukaryota    | 15.35      | 0.07       | 399      | 26      
+Stramenopiles                       | Phylum/Divisio  | Eukaryota    | 11.12      | 0.09       | 3668     | 330     
+Stramenopiles                       | Phylum/Divisio  | Eukaryota    | 11.12      | 0.09       | 3668     | 330     
+Chlorophyta                         | Phylum/Divisio  | Eukaryota    | 6.75       | 0.15       | 1505     | 223     
+Chlorophyta                         | Phylum/Divisio  | Eukaryota    | 6.75       | 0.15       | 1505     | 223     
+Opisthokonta                        | Phylum/Divisio  | Eukaryota    | 1.40       | 0.71       | 24345    | 17372   
+Opisthokonta                        | Phylum/Divisio  | Eukaryota    | 1.40       | 0.71       | 24345    | 17372   
+
+Eukaryota Phylum/Division - HIGH COVERAGE
+=========================================
+Total entries: 20
+
+Taxon                               | Level           | Domain       | Nov.Ratio  | Cov.Factor | Census   | NCBI    
+----------------------------------- | --------------- | ------------ | ---------- | ---------- | -------- | --------
+Rhodophyta                          | Phylum/Divisio  | Eukaryota    | 0.04       | 23.50      | 2        | 47      
+Rhodophyta                          | Phylum/Divisio  | Eukaryota    | 0.04       | 23.50      | 2        | 47      
+Streptophyta                        | Phylum/Divisio  | Eukaryota    | 0.96       | 1.04       | 2252     | 2349    
+Streptophyta                        | Phylum/Divisio  | Eukaryota    | 0.96       | 1.04       | 2252     | 2349    
+Opisthokonta                        | Phylum/Divisio  | Eukaryota    | 1.40       | 0.71       | 24345    | 17372   
+Opisthokonta                        | Phylum/Divisio  | Eukaryota    | 1.40       | 0.71       | 24345    | 17372   
+Chlorophyta                         | Phylum/Divisio  | Eukaryota    | 6.75       | 0.15       | 1505     | 223     
+Chlorophyta                         | Phylum/Divisio  | Eukaryota    | 6.75       | 0.15       | 1505     | 223     
+Stramenopiles                       | Phylum/Divisio  | Eukaryota    | 11.12      | 0.09       | 3668     | 330     
+Stramenopiles                       | Phylum/Divisio  | Eukaryota    | 11.12      | 0.09       | 3668     | 330     
+Discosea                            | Phylum/Divisio  | Eukaryota    | 15.35      | 0.07       | 399      | 26      
+Discosea                            | Phylum/Divisio  | Eukaryota    | 15.35      | 0.07       | 399      | 26      
+Metamonada                          | Phylum/Divisio  | Eukaryota    | 26.05      | 0.04       | 573      | 22      
+Metamonada                          | Phylum/Divisio  | Eukaryota    | 26.05      | 0.04       | 573      | 22      
+Discoba                             | Phylum/Divisio  | Eukaryota    | 45.42      | 0.02       | 5496     | 121     
+Alveolata                           | Phylum/Divisio  | Eukaryota    | 51.67      | 0.02       | 9042     | 175     
+Alveolata                           | Phylum/Divisio  | Eukaryota    | 51.67      | 0.02       | 9042     | 175     
+Discoba                             | Phylum/Divisio  | Eukaryota    | 45.42      | 0.02       | 5496     | 121     
+Evosea                              | Phylum/Divisio  | Eukaryota    | 78.42      | 0.01       | 2431     | 31      
+Evosea                              | Phylum/Divisio  | Eukaryota    | 78.42      | 0.01       | 2431     | 31      
+
+Eukaryota Family - HIGH NOVELTY
+===============================
+Total entries: 10
+
+Taxon                               | Level           | Domain       | Nov.Ratio  | Cov.Factor | Census   | NCBI    
+----------------------------------- | --------------- | ------------ | ---------- | ---------- | -------- | --------
+Mastigamoebidae                     | Family          | Eukaryota    | 1609.00    | 0.00       | 1609     | 1       
+Euglenaceae                         | Family          | Eukaryota    | 470.00     | 0.00       | 470      | 1       
+Neovahlkampfiidae                   | Family          | Eukaryota    | 211.00     | 0.00       | 211      | 1       
+Oxytrichidae                        | Family          | Eukaryota    | 160.00     | 0.01       | 800      | 5       
+Hexamitidae                         | Family          | Eukaryota    | 143.25     | 0.01       | 573      | 4       
+Gregarinidae                        | Family          | Eukaryota    | 130.00     | 0.01       | 130      | 1       
+Labyrinthulaceae                    | Family          | Eukaryota    | 62.00      | 0.02       | 62       | 1       
+Vannellidae                         | Family          | Eukaryota    | 56.00      | 0.02       | 56       | 1       
+Paramoebidae                        | Family          | Eukaryota    | 54.00      | 0.02       | 54       | 1       
+Rhabdomonadales                     | Family          | Eukaryota    | 26.00      | 0.04       | 26       | 1       
+
+Eukaryota Family - HIGH COVERAGE
+================================
+Total entries: 10
+
+Taxon                               | Level           | Domain       | Nov.Ratio  | Cov.Factor | Census   | NCBI    
+----------------------------------- | --------------- | ------------ | ---------- | ---------- | -------- | --------
+Lepidosauria                        | Family          | Eukaryota    | 0.01       | 74.00      | 4        | 296     
+Amphibia                            | Family          | Eukaryota    | 0.03       | 38.80      | 5        | 194     
+Teleostei                           | Family          | Eukaryota    | 0.04       | 27.37      | 65       | 1779    
+Kickxellales                        | Family          | Eukaryota    | 0.08       | 12.75      | 12       | 153     
+Lipomycetaceae                      | Family          | Eukaryota    | 0.09       | 11.67      | 3        | 35      
+Selenastraceae                      | Family          | Eukaryota    | 0.20       | 5.00       | 1        | 5       
+Schizosaccharomycetes               | Family          | Eukaryota    | 0.25       | 4.00       | 2        | 8       
+Mammalia                            | Family          | Eukaryota    | 0.26       | 3.88       | 257      | 996     
+Scyphozoa                           | Family          | Eukaryota    | 0.54       | 1.85       | 13       | 24      
+Saprolegniales                      | Family          | Eukaryota    | 0.56       | 1.80       | 5        | 9       
+
+Eukaryota Genus - HIGH NOVELTY
+==============================
+Total entries: 10
+
+Taxon                               | Level           | Domain       | Nov.Ratio  | Cov.Factor | Census   | NCBI    
+----------------------------------- | --------------- | ------------ | ---------- | ---------- | -------- | --------
+Mastigamoeba                        | Genus           | Eukaryota    | 1609.00    | 0.00       | 1609     | 1       
+Stylonychia                         | Genus           | Eukaryota    | 800.00     | 0.00       | 800      | 1       
+Neovahlkampfia                      | Genus           | Eukaryota    | 211.00     | 0.00       | 211      | 1       
+Zea                                 | Genus           | Eukaryota    | 186.00     | 0.01       | 372      | 2       
+Rehmannia                           | Genus           | Eukaryota    | 160.00     | 0.01       | 160      | 1       
+Ustanciosporium                     | Genus           | Eukaryota    | 69.00      | 0.01       | 69       | 1       
+Labyrinthula                        | Genus           | Eukaryota    | 62.00      | 0.02       | 62       | 1       
+Phaeosphaeria                       | Genus           | Eukaryota    | 57.33      | 0.02       | 172      | 3       
+Vannella                            | Genus           | Eukaryota    | 56.00      | 0.02       | 56       | 1       
+Pycnora                             | Genus           | Eukaryota    | 46.00      | 0.02       | 46       | 1       
+
+Eukaryota Genus - HIGH COVERAGE
+===============================
+Total entries: 10
+
+Taxon                               | Level           | Domain       | Nov.Ratio  | Cov.Factor | Census   | NCBI    
+----------------------------------- | --------------- | ------------ | ---------- | ---------- | -------- | --------
+Oryza                               | Genus           | Eukaryota    | 0.04       | 23.00      | 1        | 23      
+Debaryomyces                        | Genus           | Eukaryota    | 0.07       | 14.00      | 1        | 14      
+Coemansia                           | Genus           | Eukaryota    | 0.08       | 12.17      | 12       | 146     
+Colletotrichum                      | Genus           | Eukaryota    | 0.10       | 10.40      | 10       | 104     
+Skeletonema                         | Genus           | Eukaryota    | 0.12       | 8.00       | 1        | 8       
+Cladophialophora                    | Genus           | Eukaryota    | 0.12       | 8.00       | 1        | 8       
+Lipomyces                           | Genus           | Eukaryota    | 0.16       | 6.33       | 3        | 19      
+Aspergillus                         | Genus           | Eukaryota    | 0.18       | 5.48       | 48       | 263     
+Cryptococcus                        | Genus           | Eukaryota    | 0.20       | 5.00       | 5        | 25      
+Schizosaccharomyces                 | Genus           | Eukaryota    | 0.25       | 4.00       | 2        | 8       
+
+
+
+SUMMARY BY DOMAIN
+================================================================================
+
+Bacteria:
+  Total unique taxa: 60
+  Phylum/Division level: 20
+  Family level: 20
+  Genus level: 20
+
+Archaea:
+  Total unique taxa: 27
+  Phylum/Division level: 14
+  Family level: 20
+  Genus level: 0
+
+Eukaryota:
+  Total unique taxa: 52
+  Phylum/Division level: 40
+  Family level: 20
+  Genus level: 20
+
+
+COLUMN DEFINITIONS:
+- Taxon: Scientific name of the taxonomic group
+- Level: Taxonomic level (Phylum/Division, Family, Genus)
+- Domain: Bacteria, Archaea, or Eukaryota
+- Nov.Ratio: Novelty Ratio (Census OTUs / NCBI Species)
+- Cov.Factor: Coverage Factor (NCBI Species / Census OTUs)
+- Census: Number of OTUs in environmental census data
+- NCBI: Number of species in NCBI GenBank
+
+Values >1.0 indicate higher representation in that database

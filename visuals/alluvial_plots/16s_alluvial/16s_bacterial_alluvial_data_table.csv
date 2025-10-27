@@ -1,0 +1,15 @@
+"Phylum","NCBI_Total_Genomes","EukCensus_16S_Sequences","EukCensus_16S_OTUs","NCBI_Total_Species"
+"1. Pseudomonadota",1480382,308380,53653,33394
+"2. Bacillota",605378,173190,49858,14412
+"3. Bacteroidota",120577,133133,31180,7329
+"4. Actinomycetota",95708,109549,15932,17985
+"5. Chloroflexota",14682,58834,13210,716
+"6. Verrucomicrobiota",12194,45775,10214,606
+"7. Planctomycetota",10360,44891,13119,498
+"8. Acidobacteriota",12455,44683,9124,370
+"9. Thermodesulfobacteriota",8493,25872,6209,902
+"10. Bacteria.U.phylum",0,19550,4221,0
+"11. Myxococcota",5787,15086,3648,255
+"12. Cyanobacteriota",7688,12888,2484,3955
+"Other",186069,83937,21307,4054
+"TOTAL",2559773,1194453,262346,84476

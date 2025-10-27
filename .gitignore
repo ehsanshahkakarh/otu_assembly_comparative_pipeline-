@@ -1,0 +1,7 @@
+# Ignore everything
+/*
+
+# Keep these
+!visuals/
+!README.md
+!.gitignore
