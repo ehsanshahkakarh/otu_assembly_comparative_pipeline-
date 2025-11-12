@@ -1,0 +1,15 @@
+INTERESTING CASES FIX SUMMARY
+========================================
+
+Total interesting cases processed: 484
+Successfully fixed: 187
+Still unfixed: 297
+Success rate: 38.6%
+
+MAPPING METHODS USED:
+  bacterial_mapping_deltaproteobacteria: 41
+  clade_mapping_discoba: 2
+  clade_mapping_metamonada: 2
+  clade_mapping_sar: 123
+  class_as_phylum: 13
+  incertae_sedis_parent: 6

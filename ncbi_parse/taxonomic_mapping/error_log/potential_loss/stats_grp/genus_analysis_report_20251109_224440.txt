@@ -1,0 +1,40 @@
+================================================================================
+NCBI GENUS-LEVEL TAXONOMIC MAPPING ERROR ANALYSIS
+================================================================================
+Generated: 2025-11-09 22:44:40
+
+Total unmapped genus entries: 32,572
+
+FILTERED CATEGORIES (Common/Expected Issues):
+  Viruses: 0 (0.0%)
+  Unclassified Bacteria: 0 (0.0%)
+  Unclassified Eukaryota: 0 (0.0%)
+  Unclassified Archaea: 0 (0.0%)
+  Environmental Samples: 0 (0.0%)
+  Incertae Sedis: 0 (0.0%)
+  Metagenomes: 0 (0.0%)
+  No Genus Rank: 32,572 (100.0%)
+
+🎯 INTERESTING CASES TO EXAMINE: 0
+   (0.0% of total unmapped entries)
+
+Failure Reason Patterns in Interesting Cases:
+
+================================================================================
+RECOMMENDATIONS:
+================================================================================
+1. Focus analysis on the interesting cases - these represent
+   potential data loss in genus-level classification
+
+2. 'No genus rank' cases may need lineage reconstruction
+   or mapping to family level instead
+
+3. Viruses and metagenomes can likely be excluded from
+   genus-level analysis as expected
+
+4. Environmental samples represent uncultured organisms
+   that may not have genus-level classification
+
+5. Consider using taxonkit reformat with --fill-miss-rank
+   to handle missing genus ranks
+

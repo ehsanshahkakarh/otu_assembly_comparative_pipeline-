@@ -1,0 +1,16 @@
+UNMAPPED PHYLUM CATEGORIES SUMMARY
+==================================================
+
+Viruses: 5,765 entries
+Unclassified Bacteria: 1,261 entries
+Unclassified Eukaryota: 64 entries
+Unclassified Archaea: 112 entries
+Environmental Samples: 22 entries
+Interesting Cases: 484 entries
+  Sample entries:
+    1. TaxID 2762: cellular organisms;Eukaryota;Glaucocystophyceae;Cyanophorales;Cyanophoraceae;Cyanophora;Cyanophora p...
+    2. TaxID 2829: cellular organisms;Eukaryota;Sar;Stramenopiles;Ochrophyta;Raphidophyceae;Chattonellales;Chattonellac...
+    3. TaxID 2872: cellular organisms;Eukaryota;Sar;Stramenopiles;Ochrophyta;PX clade;Phaeophyceae;Laminariales;Agarace...
+    4. TaxID 2876: cellular organisms;Eukaryota;Sar;Stramenopiles;Ochrophyta;PX clade;Phaeophyceae;Dictyotales;Dictyota...
+    5. TaxID 2880: cellular organisms;Eukaryota;Sar;Stramenopiles;Ochrophyta;PX clade;Phaeophyceae;Ectocarpales;Ectocar...
+

@@ -2,6 +2,5 @@
 /*
 
 # Keep these
-!visuals/
-!README.md
+!ncbi_parse/
 !.gitignore

@@ -1,0 +1,76 @@
+================================================================================
+NCBI TAXONOMIC MAPPING ERROR ANALYSIS REPORT
+================================================================================
+Generated: 2025-11-09 22:12:23
+
+PHYLUM LEVEL MAPPING ISSUES
+----------------------------------------
+Total unmapped entries: 7,708
+
+FILTERED CATEGORIES (Common/Expected Issues):
+  Viruses: 5,765 (74.8%)
+  Unclassified Bacteria: 1,261 (16.4%)
+  Unclassified Eukaryota: 64 (0.8%)
+  Unclassified Archaea: 112 (1.5%)
+  Environmental Samples: 22 (0.3%)
+
+🎯 INTERESTING CASES TO EXAMINE: 484
+   (6.3% of total unmapped entries)
+
+Patterns in Interesting Cases:
+  Other complex cases: 201
+  SAR group eukaryotes: 123
+  Opisthokonta group: 21
+  Incertae sedis (uncertain placement): 98
+  Proteobacteria subgroups: 41
+
+Clade instead of phylum issues: 305
+
+FAMILY LEVEL MAPPING ISSUES
+----------------------------------------
+Total unmapped entries: 30,099
+
+Distribution by Domain:
+  Bacteria: 13,324 (44.3%)
+  Eukaryota: 354 (1.2%)
+  Viruses: 15,699 (52.2%)
+  Other: 149 (0.5%)
+  Archaea: 573 (1.9%)
+
+Specific Issues:
+  Incertae sedis (uncertain placement): 5,342 (17.7%)
+  Missing family rank: 7,083 (23.5%)
+  Environmental samples: 460 (1.5%)
+  Viruses: 15,699 (52.2%)
+
+GENUS LEVEL MAPPING ISSUES
+----------------------------------------
+Total unmapped entries: 32,572
+Note: Limited analysis - genus file contains only taxid and reason columns
+
+RECOMMENDATIONS FOR IMPROVEMENT
+----------------------------------------
+1. VIRAL ENTRIES:
+   - Consider creating virus-specific mapping logic
+   - Map to higher taxonomic levels (realm, kingdom)
+   - Create 'Viruses' as a pseudo-phylum category
+
+2. EUKARYOTIC CLADE ISSUES:
+   - Implement clade-to-phylum mapping rules
+   - Use higher-level clades as phylum equivalents
+   - Create mapping dictionary for common clades
+
+3. ENVIRONMENTAL SAMPLES:
+   - Consider excluding from analysis or
+   - Create 'Environmental/Uncultured' categories
+   - Use parent taxonomic information when available
+
+4. INCERTAE SEDIS (UNCERTAIN PLACEMENT):
+   - Use parent taxonomic level for classification
+   - Create 'Unclassified [Parent]' categories
+
+5. MISSING RANKS:
+   - Implement rank interpolation logic
+   - Use taxonkit reformat with --fill-miss-rank option
+   - Create placeholder entries for missing ranks
+

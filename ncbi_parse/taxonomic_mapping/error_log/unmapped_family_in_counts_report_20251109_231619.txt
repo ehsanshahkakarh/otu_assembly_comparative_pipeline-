@@ -1,0 +1,35 @@
+================================================================================
+UNMAPPED FAMILY TAXIDS IN OTHER COUNT FILES ANALYSIS
+================================================================================
+Generated: 2025-11-09 23:16:19
+
+CHECKING FAMILY UNMAPPED IN PHYLUM COUNTS:
+--------------------------------------------------
+Unmapped family taxids: 250
+Total phylum count entries: 223,857
+Matches found: 182
+Percentage: 72.80% of unmapped family entries
+⚠️  INCONSISTENCY DETECTED!
+These taxids failed family mapping but succeeded phylum mapping
+
+CHECKING FAMILY UNMAPPED IN FAMILY COUNTS:
+--------------------------------------------------
+Unmapped family taxids: 250
+Total family count entries: 201,466
+Matches found: 0
+✅ No inconsistencies found
+
+CHECKING FAMILY UNMAPPED IN GENUS COUNTS:
+--------------------------------------------------
+Unmapped family taxids: 250
+Total genus count entries: 198,993
+Matches found: 130
+Percentage: 52.00% of unmapped family entries
+⚠️  INCONSISTENCY DETECTED!
+These taxids failed family mapping but succeeded genus mapping
+
+SUMMARY:
+--------------------
+🚨 TOTAL INCONSISTENCIES: 312 taxids
+These entries failed mapping at one level but succeeded at another
+This suggests potential issues in the mapping pipeline

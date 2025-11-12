@@ -1,0 +1,12 @@
+UNMAPPED GENUS CATEGORIES SUMMARY
+==================================================
+
+Viruses: 0 (0.0%)
+Unclassified Bacteria: 0 (0.0%)
+Unclassified Eukaryota: 0 (0.0%)
+Unclassified Archaea: 0 (0.0%)
+Environmental Samples: 0 (0.0%)
+Incertae Sedis: 0 (0.0%)
+Metagenomes: 0 (0.0%)
+No Genus Rank: 32,572 (100.0%)
+Interesting Cases: 0 (0.0%)

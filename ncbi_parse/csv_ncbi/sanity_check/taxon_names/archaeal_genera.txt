@@ -1,0 +1,121 @@
+ANME-2 cluster
+Acidianus
+Acidilobus
+Aeropyrum
+Caldisphaera
+Caldivirga
+Conexivisphaera
+Desulfurococcus
+Fervidicoccus
+Halostella
+Hyperthermus
+Ignicoccus
+Ignisphaera
+Infirmifilum
+Metallosphaera
+Methanimicrococcus
+Methanocalculus
+Methanocella
+Methanochimaera
+Methanococcoides
+Methanocorpusculum
+Methanocrinis
+Methanoculleus
+Methanofollis
+Methanogenium
+Methanohalobium
+Methanohalophilus
+Methanolacinia
+Methanolapillus
+Methanolinea
+Methanolobus
+Methanomethylovorans
+Methanomicrobium
+Methanonatronarchaeum
+Methanooceanicella
+Methanoplanus
+Methanorbis
+Methanoregula
+Methanosalsum
+Methanosarcina
+Methanosphaerula
+Methanospirillum
+Methanothrix
+Methanovulcanius
+Methermicoccus
+Nanoarchaeum
+Nanobdella
+Natranaeroarchaeum
+Natronoarchaeum
+Nitrosarchaeum
+Nitrosopumilus
+Nitrososphaera
+Nitrosotalea
+Promethearchaeum
+Pyrobaculum
+Pyrodictium
+Pyrofollis
+Pyrolobus
+Saccharolobus
+Salinarchaeum
+Staphylothermus
+Stenosarchaea group
+Stygiolobus
+Sulfodiicoccus
+Sulfolobus
+Sulfuracidifex
+Sulfurisphaera
+Thermocladium
+Thermodiscus
+Thermofilum
+Thermogladius
+Thermoproteati
+Thermoproteus
+Thermosphaera
+Viruses
+Vulcanisaeta
+Zestosphaera
+environmental samples
+unclassifed Promethearchaeia
+unclassified Acidilobaceae
+unclassified Acidilobales
+unclassified Archaea
+unclassified Conexivisphaerales
+unclassified Desulfurococcaceae
+unclassified Desulfurococcales
+unclassified Fervidicoccaceae
+unclassified Methanocalculaceae
+unclassified Methanocellaceae
+unclassified Methanocellales
+unclassified Methanocorpusculaceae
+unclassified Methanomicrobia
+unclassified Methanomicrobiaceae
+unclassified Methanomicrobiales
+unclassified Methanonatronarchaeales
+unclassified Methanoregulaceae
+unclassified Methanosarcinaceae
+unclassified Methanosarcinales
+unclassified Methanospirillaceae
+unclassified Methanotrichaceae
+unclassified Nanoarchaeota
+unclassified Nanobdellati
+unclassified Nitrosopumilaceae
+unclassified Nitrosopumilales
+unclassified Nitrososphaeraceae
+unclassified Nitrososphaerales
+unclassified Nitrososphaeria
+unclassified Nitrososphaerota
+unclassified Promethearchaeati
+unclassified Promethearchaeota
+unclassified Pyrodictiaceae
+unclassified Sulfolobaceae
+unclassified Sulfolobales
+unclassified Theionarchaea
+unclassified Thermofilaceae
+unclassified Thermofilales
+unclassified Thermoproteaceae
+unclassified Thermoproteales
+unclassified Thermoproteati
+unclassified Thermoprotei
+unclassified Thermoproteota
+unclassified viruses

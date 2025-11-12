@@ -1,0 +1,37 @@
+NCBI Assembly Data - Species Analysis Report
+==================================================
+Generated: 2025-09-26 21:42:25
+
+Dataset Overview:
+  Total species: 149,270
+  Total genomes: 2,945,415
+  Isolate genomes: 2,944,574
+  Uncultured genomes: 841
+
+Top 20 Species by Genome Count:
+  Salmonella enterica subsp. enterica serovar Typhimurium str. LT2: 588,575 genomes
+  Escherichia coli str. K-12 substr. MG1655: 330,337 genomes
+  Staphylococcus aureus RF122: 110,778 genomes
+  Influenza A virus (A/Hong Kong/1073/99(H9N2)): 110,376 genomes
+  Campylobacter jejuni subsp. jejuni NCTC 11168 = ATCC 700819: 97,390 genomes
+  Klebsiella pneumoniae subsp. pneumoniae NTUH-K2044: 87,885 genomes
+  Streptococcus pneumoniae TIGR4: 74,800 genomes
+  Listeria monocytogenes serotype 4b str. F2365: 66,108 genomes
+  Neisseria gonorrhoeae FA 1090: 43,684 genomes
+  Streptococcus pyogenes M1 GAS: 41,238 genomes
+  Pseudomonas aeruginosa PAO1: 40,484 genomes
+  Acinetobacter baumannii ATCC 17978: 38,936 genomes
+  Campylobacter coli JV20: 37,060 genomes
+  Enterococcus faecium TX0133a04: 33,283 genomes
+  Streptococcus agalactiae 2603V/R: 23,448 genomes
+  Shigella sonnei Ss046: 23,291 genomes
+  Clostridioides difficile QCD-66c26: 22,455 genomes
+  Shigella flexneri 2a str. 301: 20,706 genomes
+  uncultured Lachnospiraceae bacterium: 18,816 genomes
+  Influenza B virus (B/Lee/1940): 16,127 genomes
+
+Taxonomic Coverage:
+  Domain: 4 unique (71.0% coverage)
+  Phylum: 294 unique (87.9% coverage)
+  Family: 3,983 unique (74.4% coverage)
+  Genus: 14,721 unique (71.0% coverage)

@@ -1,0 +1,18 @@
+UNMAPPED FAMILY CATEGORIES SUMMARY
+==================================================
+
+Viruses: 15,699 (52.2%)
+Unclassified Bacteria: 9,732 (32.3%)
+Unclassified Eukaryota: 160 (0.5%)
+Unclassified Archaea: 492 (1.6%)
+Environmental Samples: 328 (1.1%)
+Incertae Sedis: 3,309 (11.0%)
+Metagenomes: 129 (0.4%)
+Interesting Cases: 250 (0.8%)
+  Sample entries:
+    1. TaxID 1061: cellular organisms;Bacteria;Pseudomonadati;Pseudomonadota;Alphaproteobacteria;Rh...
+    2. TaxID 5778: cellular organisms;Eukaryota;Amoebozoa;Tubulinea;Echinamoebida;Vermamoeba;Vermam...
+    3. TaxID 5932: cellular organisms;Eukaryota;Sar;Alveolata;Ciliophora;Intramacronucleata;Oligohy...
+    4. TaxID 45783: cellular organisms;Eukaryota;Opisthokonta;Metazoa;Eumetazoa;Bilateria;Deuterosto...
+    5. TaxID 46078: cellular organisms;Eukaryota;Sar;Rhizaria;Retaria;Foraminifera;Monothalamids;Ast...
+

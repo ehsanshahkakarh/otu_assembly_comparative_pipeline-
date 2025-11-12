@@ -1,0 +1,44 @@
+================================================================================
+NCBI FAMILY-LEVEL TAXONOMIC MAPPING ERROR ANALYSIS
+================================================================================
+Generated: 2025-11-09 22:41:54
+
+Total unmapped family entries: 30,099
+
+FILTERED CATEGORIES (Common/Expected Issues):
+  Viruses: 15,699 (52.2%)
+  Unclassified Bacteria: 9,732 (32.3%)
+  Unclassified Eukaryota: 160 (0.5%)
+  Unclassified Archaea: 492 (1.6%)
+  Environmental Samples: 328 (1.1%)
+  Incertae Sedis: 3,309 (11.0%)
+  Metagenomes: 129 (0.4%)
+
+🎯 INTERESTING CASES TO EXAMINE: 250
+   (0.8% of total unmapped entries)
+
+Patterns in Interesting Cases:
+  Missing family rank: 250
+  Other complex cases: 107
+  Archaeal groups: 60
+  Proteobacteria subgroups: 46
+  Other eukaryotic groups: 30
+  Animal groups: 4
+  Fungal groups: 2
+  Stramenopile groups: 1
+
+================================================================================
+RECOMMENDATIONS:
+================================================================================
+1. Focus analysis on the interesting cases - these represent
+   potential data loss in family-level classification
+
+2. Viruses and metagenomes can likely be excluded from
+   family-level analysis as expected
+
+3. Incertae sedis cases may need special handling or
+   mapping to higher taxonomic levels
+
+4. Environmental samples represent uncultured organisms
+   that may not have family-level classification
+

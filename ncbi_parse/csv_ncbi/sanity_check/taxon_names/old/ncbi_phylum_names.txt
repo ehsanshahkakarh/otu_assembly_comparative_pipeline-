@@ -1,0 +1,277 @@
+phylum
+Pseudomonadota
+Bacillota
+Campylobacterota
+Bacteroidota
+Actinomycetota
+Ascomycota
+Chloroflexota
+Acidobacteriota
+Verrucomicrobiota
+Chordata
+Planctomycetota
+Thermodesulfobacteriota
+Spirochaetota
+Arthropoda
+Methanobacteriota
+Cyanobacteriota
+Candidatus Saccharibacteria
+Streptophyta
+Myxococcota
+Thermoplasmatota
+Mycoplasmatota
+Gemmatimonadota
+Nitrososphaerota
+Nitrospirota
+Basidiomycota
+Thermoproteota
+Bdellovibrionota
+Candidatus Bathyarchaeota
+Candidatus Omnitrophota
+Ignavibacteriota
+Candidatus Woesearchaeota
+Candidatus Micrarchaeota
+Fusobacteriota
+Candidatus Paceibacterota
+Chlamydiota
+Fidelibacterota
+Elusimicrobiota
+Armatimonadota
+Candidatus Melainabacteria
+Lentisphaerota
+Synergistota
+Deferribacterota
+Candidatus Peregrinibacteriota
+Deinococcota
+Chlorobiota
+Candidatus Cloacimonadota
+Nanobdellota
+Thermotogota
+Fibrobacterota
+Rhodothermota
+Nematoda
+Vulcanimicrobiota
+Kiritimatiellota
+Mollusca
+Aquificota
+Oomycota
+Candidatus Aminicenantota
+Candidatus Dormiibacterota
+Candidatus Binatota
+Balneolota
+Candidatus Moraniibacteriota
+Nitrospinota
+Mucoromycota
+Candidatus Aenigmatarchaeota
+Chlorophyta
+Candidatus Methylomirabilota
+Candidatus Nomuraibacteriota
+Apicomplexa
+Cnidaria
+Candidatus Altimarinota
+candidate division WOR-3
+Candidatus Zixiibacteriota
+Promethearchaeota
+Candidatus Latescibacterota
+Candidatus Bipolaricaulota
+Candidatus Eiseniibacteriota
+Euglenozoa
+Candidatus Poribacteria
+Candidatus Uhriibacteriota
+Candidatus Woeseibacteriota
+Candidatus Hydrogenedentota
+Candidatus Parcubacteria
+Thermomicrobiota
+Calditrichota
+Candidatus Kaiseribacteriota
+Atribacterota
+Candidatus Parvarchaeota
+Candidatus Rokuibacteriota
+Candidatus Kapaibacteriota
+Candidatus Magasanikiibacteriota
+Zoopagomycota
+Candidatus Levyibacteriota
+Candidatus Thorarchaeota
+Caldisericota
+Candidatus Falkowiibacteriota
+Candidatus Roizmaniibacteriota
+Candidatus Krumholzibacteriota
+candidate division WWE3
+Candidatus Nealsoniibacteriota
+Candidatus Heimdallarchaeota
+Candidatus Iainarchaeota
+Ciliophora
+Candidatus Sumerlaeota
+Annelida
+Candidatus Hadarchaeota
+Candidatus Margulisiibacteriota
+Echinodermata
+Porifera
+Platyhelminthes
+Candidatus Methanomethylicota
+Bacillariophyta
+Candidatus Shapironibacteriota
+Candidatus Daviesiibacteriota
+Candidatus Tayloriibacteriota
+Candidatus Gottesmaniibacteriota
+Chytridiomycota
+Candidatus Staskawicziibacteriota
+Candidatus Berkelbacteria
+Microsporidia
+Candidatus Yanofskyibacteriota
+Candidatus Sysuimicrobiota
+Candidatus Wolfeibacteriota
+Rotifera
+Candidatus Doudnaibacteriota
+Candidatus Altarchaeota
+Candidatus Fermentibacterota
+Candidatus Zambryskiibacteriota
+Candidatus Kryptoniota
+Candidatus Collieribacteriota
+Candidatus Deferrimicrobiota
+Candidatus Marsarchaeota
+Candidatus Giovannoniibacteriota
+Candidatus Microgenomatota
+Candidatus Curtissiibacteriota
+Candidatus Joergenseniibacteriota
+Candidatus Aerophobota
+Candidatus Portnoyibacteriota
+Candidatus Absconditibacteriota
+Candidatus Azamiibacteriota
+Candidatus Rifleibacteriota
+Rhodophyta
+Candidatus Adleribacteriota
+Candidatus Firestoneibacteriota
+Endomyxa
+Candidatus Nezhaarchaeota
+Candidatus Kerfeldiibacteriota
+Candidatus Sungiibacteriota
+Candidatus Buchananiibacteriota
+Candidatus Wildermuthiibacteriota
+Candidatus Tectimicrobiota
+Candidatus Colwelliibacteriota
+Candidatus Hodarchaeota
+Candidatus Nanohalarchaeota
+Candidatus Komeiliibacteriota
+Evosea
+Abditibacteriota
+Candidatus Amesiibacteriota
+Fornicata
+Candidatus Campbelliibacteriota
+Candidatus Hydrothermarchaeota
+Candidatus Yonathiibacteriota
+Candidatus Liptoniibacteriota
+Candidatus Vogeliibacteriota
+Discosea
+Candidatus Beckwithiibacteriota
+Coprothermobacterota
+Candidatus Harrisoniibacteriota
+candidate division FCPU426
+Candidatus Fervidibacterota
+Candidatus Delongiibacteriota
+Candidatus Hermodarchaeota
+Candidatus Anderseniibacteriota
+Candidatus Auribacterota
+Candidatus Kueneniibacteriota
+Dictyoglomota
+Candidatus Jacksoniibacteriota
+Candidatus Undinarchaeota
+Candidatus Lloydiibacteriota
+Candidatus Ryaniibacteriota
+Candidatus Calescibacteriota
+Candidatus Hydrothermota
+Heterolobosea
+Candidatus Coatesiibacteriota
+Candidatus Edwardsiibacteriota
+Candidatus Geothermarchaeota
+Candidatus Desantisiibacteriota
+Candidatus Cryosericota
+Candidatus Goldiibacteriota
+Candidatus Ratteibacteria
+Candidatus Woykeibacteriota
+Candidatus Gribaldobacteria
+Candidatus Njordarchaeota
+Parabasalia
+Candidatus Blackburniibacteriota
+Candidatus Terryibacteriota
+Candidatus Odinarchaeota
+Halobacteriota
+Candidatus Walliibacteriota
+Candidatus Vebleniibacteriota
+Candidatus Niyogiibacteriota
+Candidatus Macinerneyibacteriota
+Haptophyta
+Bryozoa
+Candidatus Schekmaniibacteriota
+Candidatus Brockarchaeota
+Ctenophora
+Candidatus Spechtiibacteriota
+Candidatus Brenneribacteriota
+Candidatus Glassiibacteriota
+Thermodesulfobiota
+Candidatus Moduliflexota
+Candidatus Helarchaeota
+Nematomorpha
+Blastocladiomycota
+Candidatus Fraseribacteriota
+Xenacoelomorpha
+Chrysiogenota
+Candidatus Tagaibacteriota
+Nemertea
+candidate division CPR2
+Candidatus Culexarchaeota
+Candidatus Caldatribacteriota
+candidate division CPR3
+Candidatus Chisholmiibacteriota
+Candidatus Baldrarchaeota
+Candidatus Elulimicrobiota
+Candidatus Borrarchaeota
+Perkinsozoa
+Candidatus Huberarchaeota
+candidate division CSSED10-310
+Candidatus Muiribacteriota
+Candidatus Gerdarchaeota
+Candidatus Handelsmaniibacteriota
+candidate division LCP-89
+Candidatus Raymondiibacteriota
+Tardigrada
+Candidatus Lindowiibacteriota
+Cercozoa
+Hemichordata
+Candidatus Sifarchaeota
+Candidatus Lithacetigenota
+Candidatus Caldipriscota
+Candidatus Electryoneota
+Candidatus Wukongarchaeota
+Candidatus Tharpellota
+Candidatus Sigynarchaeota
+Thermosulfidibacterota
+Candidatus Freyarchaeota
+Preaxostyla
+Phoronida
+Candidatus Blackallbacteria
+Candidatus Hinthialibacterota
+Candidatus Effluviviacota
+candidate division CPR1
+Cryptomycota
+Foraminifera
+Candidatus Abawacaibacteriota
+Candidatus Wirthbacteria
+Candidatus Lernaellota
+Tubulinea
+Placozoa
+Priapulida
+Sanchytriomycota
+Onychophora
+Acanthocephala
+Candidatus Fischeribacteriota
+Candidatus Geoarchaeota
+Candidatus Cerribacteria
+Candidatus Kariarchaeota
+Chaetognatha
+Dicyemida
+Gastrotricha
+Orthonectida
+Olpidiomycota
+Brachiopoda
+candidate division KD3-62
