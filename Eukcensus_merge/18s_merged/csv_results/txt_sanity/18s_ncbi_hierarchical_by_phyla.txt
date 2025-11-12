@@ -1,0 +1,347 @@
+18S NCBI Taxa Organized by Phyla
+Generated: 2025-10-13 00:15:07
+Organized from taxonkit lineage data
+========================================================================
+
+PHYLUM: Alveolata
+------------------------------------------------------------
+Families: 9 | Genera: 3
+
+  FAMILIES (9):
+  --------------------------------------------------
+    Babesiidae
+    Cryptosporidiidae
+    Eimeriidae
+    Gregarinidae
+    Oxytrichidae
+    Parameciidae
+    Plasmodiidae
+    Sarcocystidae
+    Theileriidae
+
+  GENERA (3):
+  --------------------------------------------------
+    Ichthyophthirius
+    Paramecium
+    Stylonychia
+
+========================================================================
+
+PHYLUM: Chlorophyta
+------------------------------------------------------------
+Families: 4 | Genera: 10
+
+  FAMILIES (4):
+  --------------------------------------------------
+    Bathycoccaceae
+    Chloropicaceae
+    Coccomyxaceae
+    Selenastraceae
+
+  GENERA (10):
+  --------------------------------------------------
+    Auxenochlorella
+    Bathycoccus
+    Botryococcus
+    Chlamydomonas
+    Chloropicon
+    Micractinium
+    Monoraphidium
+    Ostreococcus
+    Raphidocelis
+    Ulva
+
+========================================================================
+
+PHYLUM: Discoba
+------------------------------------------------------------
+Families: 5 | Genera: 6
+
+  FAMILIES (5):
+  --------------------------------------------------
+    Bodonidae
+    Euglenaceae
+    Neovahlkampfiidae
+    Rhabdomonadales
+    Trypanosomatidae
+
+  GENERA (6):
+  --------------------------------------------------
+    Bodo
+    Leptomonas
+    Neovahlkampfia
+    Phytomonas
+    Strigomonas
+    Trypanosoma
+
+========================================================================
+
+PHYLUM: Discosea
+------------------------------------------------------------
+Families: 4 | Genera: 4
+
+  FAMILIES (4):
+  --------------------------------------------------
+    Acanthamoebidae
+    Balamuthiidae
+    Paramoebidae
+    Vannellidae
+
+  GENERA (4):
+  --------------------------------------------------
+    Acanthamoeba
+    Balamuthia
+    Paramoeba
+    Vannella
+
+========================================================================
+
+PHYLUM: Evosea
+------------------------------------------------------------
+Families: 1 | Genera: 1
+
+  FAMILIES (1):
+  --------------------------------------------------
+    Mastigamoebidae
+
+  GENERA (1):
+  --------------------------------------------------
+    Mastigamoeba
+
+========================================================================
+
+PHYLUM: Metamonada
+------------------------------------------------------------
+Families: 1 | Genera: 1
+
+  FAMILIES (1):
+  --------------------------------------------------
+    Hexamitidae
+
+  GENERA (1):
+  --------------------------------------------------
+    Hexamita
+
+========================================================================
+
+PHYLUM: Opisthokonta
+------------------------------------------------------------
+Families: 32 | Genera: 87
+
+  FAMILIES (32):
+  --------------------------------------------------
+    Agaricomycetes
+    Amphibia
+    Anthozoa
+    Aphelidiaceae
+    Arachnida
+    Blastocladiomycetes
+    Branchiopoda
+    Caenogastropoda
+    Dacrymycetes
+    Dothideomycetes
+    Eurotiomycetes
+    Exobasidiomycetes
+    Glomerales
+    Harpellales
+    Insecta
+    Kickxellales
+    Lecanoromycetes
+    Leotiomycetes
+    Lepidosauria
+    Lipomycetaceae
+    Mammalia
+    Merostomata
+    Neocallimastigaceae
+    Saccharomycetales
+    Schizosaccharomycetes
+    Scyphozoa
+    Sordariomycetes
+    Spizellomycetaceae
+    Taphrinomycetes
+    Teleostei
+    Tremellomycetes
+    Ustilaginomycetes
+
+  GENERA (87):
+  --------------------------------------------------
+    Acartia
+    Aculops
+    Acyrthosiphon
+    Allomyces
+    Anolis
+    Aphelidium
+    Apis
+    Articulospora
+    Aspergillus
+    Batrachochytrium
+    Caenorhabditis
+    Candida
+    Chlorociboria
+    Chrysaora
+    Chydorus
+    Cladophialophora
+    Coccidioides
+    Coccomyxa
+    Coelomomyces
+    Coemansia
+    Colletotrichum
+    Coniophora
+    Conus
+    Corynespora
+    Crassostrea
+    Cryptococcus
+    Culex
+    Danio
+    Daphnia
+    Debaryomyces
+    Ditylenchus
+    Drosophila
+    Eurytemora
+    Exophiala
+    Heterodera
+    Homo
+    Hyaloscypha
+    Hyphodiscus
+    Lecanicillium
+    Lecidea
+    Limulus
+    Lipomyces
+    Malassezia
+    Mayetiola
+    Mitosporidium
+    Mortierella
+    Mrakia
+    Nematostella
+    Neocallimastix
+    Neofabraea
+    Neurospora
+    Oribatida
+    Panellus
+    Paramicrosporidium
+    Penicillium
+    Phaeosphaeria
+    Phialophora
+    Philaenus
+    Piromyces
+    Podospora
+    Polychytrium
+    Pristionchus
+    Pycnora
+    Rattus
+    Rhizoclosmatium
+    Rhizophagus
+    Rhizopus
+    Ricinus
+    Russula
+    Sabatieria
+    Saccharomyces
+    Schistosoma
+    Schizosaccharomyces
+    Simocephalus
+    Smittium
+    Spizellomyces
+    Taphrina
+    Teratosphaeria
+    Thamnocephalis
+    Tilletiopsis
+    Trichocladium
+    Trichosporon
+    Tuckermannopsis
+    Ustanciosporium
+    Venturia
+    Xenopus
+    Zymoseptoria
+
+========================================================================
+
+PHYLUM: Rhizaria
+------------------------------------------------------------
+Families: 1 | Genera: 1
+
+  FAMILIES (1):
+  --------------------------------------------------
+    Paulinellidae
+
+  GENERA (1):
+  --------------------------------------------------
+    Paulinella
+
+========================================================================
+
+PHYLUM: Rhodophyta
+------------------------------------------------------------
+Families: 1 | Genera: 1
+
+  FAMILIES (1):
+  --------------------------------------------------
+    Digenea
+
+  GENERA (1):
+  --------------------------------------------------
+    Cyanidioschyzon
+
+========================================================================
+
+PHYLUM: Stramenopiles
+------------------------------------------------------------
+Families: 8 | Genera: 13
+
+  FAMILIES (8):
+  --------------------------------------------------
+    Cafeteriaceae
+    Labyrinthulaceae
+    Ochromonadaceae
+    Pelagomonadaceae
+    Peronosporales
+    Phaeodactylaceae
+    Saprolegniales
+    Thalassiosiraceae
+
+  GENERA (13):
+  --------------------------------------------------
+    Aureococcus
+    Blastocystis
+    Cafeteria
+    Ectocarpus
+    Labyrinthula
+    Nannochloropsis
+    Phaeodactylum
+    Phytophthora
+    Pythium
+    Saprolegnia
+    Skeletonema
+    Spumella
+    Thalassiosira
+
+========================================================================
+
+PHYLUM: Streptophyta
+------------------------------------------------------------
+Families: 0 | Genera: 8
+
+  No families found for Streptophyta
+
+  GENERA (8):
+  --------------------------------------------------
+    Arabidopsis
+    Brachypodium
+    Glycine
+    Oryza
+    Populus
+    Rehmannia
+    Sorghum
+    Zea
+
+========================================================================
+
+PHYLUM: Tubulinea
+------------------------------------------------------------
+Families: 0 | Genera: 0
+
+  No families found for Tubulinea
+
+  No genera found for Tubulinea
+
+========================================================================
+

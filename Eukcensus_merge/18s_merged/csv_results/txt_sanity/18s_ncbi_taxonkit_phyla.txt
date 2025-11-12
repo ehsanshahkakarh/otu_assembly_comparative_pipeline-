@@ -1,0 +1,21 @@
+18S NCBI Taxonkit Results - Phyla
+Generated: 2025-10-13 00:07:28
+Total taxa processed: 12
+Taxa with taxids: 12
+Taxa with lineages: 12
+================================================================================
+
+Taxon_Name	TaxID	Lineage
+--------------------------------------------------------------------------------
+Opisthokonta	33154	cellular organisms;Eukaryota;Opisthokonta
+Streptophyta	35493	cellular organisms;Eukaryota;Viridiplantae;Streptophyta
+Stramenopiles	33634	cellular organisms;Eukaryota;Sar;Stramenopiles
+Chlorophyta	3041	cellular organisms;Eukaryota;Viridiplantae;Chlorophyta
+Alveolata	33630	cellular organisms;Eukaryota;Sar;Alveolata
+Discoba	2611352	cellular organisms;Eukaryota;Discoba
+Rhodophyta	2763	cellular organisms;Eukaryota;Rhodophyta
+Evosea	2605435	cellular organisms;Eukaryota;Amoebozoa;Evosea
+Discosea	555280	cellular organisms;Eukaryota;Amoebozoa;Discosea
+Metamonada	2611341	cellular organisms;Eukaryota;Metamonada
+Rhizaria	543769	cellular organisms;Eukaryota;Sar;Rhizaria
+Tubulinea	555369	cellular organisms;Eukaryota;Amoebozoa;Tubulinea

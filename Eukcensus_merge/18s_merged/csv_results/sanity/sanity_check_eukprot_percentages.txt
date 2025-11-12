@@ -1,0 +1,108 @@
+EUKPROT CENSUS PERCENTAGE SANITY CHECK RESULTS
+==================================================
+Generated: 2025-08-13 03:53:15.468515
+
+
+=== FAMILY LEVEL CENSUS PERCENTAGE VALIDATION ===
+File: 18s_eukprot_merged_family.csv
+
+Insecta:
+  OTU Count:
+    Merged file: 3,087
+    Original:    3,087
+    Match: ✓
+  
+  OTU Percentage:
+    Merged file: 4.35%
+    Original:    4.35%
+    Match: ✓
+  
+  Size Count:
+    Merged file: 19,878
+    Original:    19,878
+    Match: ✓
+  
+  Size Percentage:
+    Merged file: 4.95%
+    Original:    4.95%
+    Match: ✓
+
+Sordariomycetes:
+  OTU Count:
+    Merged file: 1,305
+    Original:    1,305
+    Match: ✓
+  
+  OTU Percentage:
+    Merged file: 1.84%
+    Original:    1.84%
+    Match: ✓
+  
+  Size Count:
+    Merged file: 9,434
+    Original:    9,434
+    Match: ✓
+  
+  Size Percentage:
+    Merged file: 2.35%
+    Original:    2.35%
+    Match: ✓
+
+Mammalia:
+  OTU Count:
+    Merged file: 257
+    Original:    257
+    Match: ✓
+  
+  OTU Percentage:
+    Merged file: 0.36%
+    Original:    0.36%
+    Match: ✓
+  
+  Size Count:
+    Merged file: 852
+    Original:    852
+    Match: ✓
+  
+  Size Percentage:
+    Merged file: 0.21%
+    Original:    0.21%
+    Match: ✓
+
+Teleostei:
+  OTU Count:
+    Merged file: 65
+    Original:    65
+    Match: ✓
+  
+  OTU Percentage:
+    Merged file: 0.09%
+    Original:    0.09%
+    Match: ✓
+  
+  Size Count:
+    Merged file: 111
+    Original:    111
+    Match: ✓
+  
+  Size Percentage:
+    Merged file: 0.03%
+    Original:    0.03%
+    Match: ✓
+
+
+=== GENUS LEVEL CENSUS PERCENTAGE VALIDATION ===
+File: 18s_eukprot_merged_genus.csv
+
+Insecta: NOT FOUND in merged file
+Sordariomycetes: NOT FOUND in merged file
+Mammalia: NOT FOUND in merged file
+Teleostei: NOT FOUND in merged file
+
+=== DIVISION LEVEL CENSUS PERCENTAGE VALIDATION ===
+File: 18s_eukprot_merged_division.csv
+
+Insecta: NOT FOUND in merged file
+Sordariomycetes: NOT FOUND in merged file
+Mammalia: NOT FOUND in merged file
+Teleostei: NOT FOUND in merged file

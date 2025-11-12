@@ -1,0 +1,19 @@
+18S NCBI Matched Phyla
+Generated: 2025-10-11 18:23:13
+Total matched phyla: 12
+============================================================
+
+Phylum	Census_OTU_Count	NCBI_Species_Count
+------------------------------------------------------------
+Opisthokonta	24345	17372
+Streptophyta	2252	2349
+Stramenopiles	3668	330
+Chlorophyta	1505	223
+Alveolata	9042	175
+Discoba	5496	121
+Rhodophyta	2	47
+Evosea	2431	31
+Discosea	399	26
+Metamonada	573	22
+Rhizaria	5126	15
+Tubulinea	1323	1

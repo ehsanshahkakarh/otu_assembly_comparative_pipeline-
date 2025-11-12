@@ -1,0 +1,30 @@
+18S Census + EukProt Merger Analysis Report
+==================================================
+
+SUMMARY STATISTICS
+--------------------
+
+DIVISION LEVEL:
+  Total taxa: 18
+  Matched taxa: 17
+  Coverage: 94.4%
+
+FAMILY LEVEL:
+  Total taxa: 170
+  Matched taxa: 72
+  Coverage: 42.4%
+
+GENUS LEVEL:
+  Total taxa: 283
+  Matched taxa: 103
+  Coverage: 36.4%
+
+
+DETAILED ANALYSIS
+--------------------
+
+DIVISION LEVEL DETAILS:
+
+FAMILY LEVEL DETAILS:
+
+GENUS LEVEL DETAILS:

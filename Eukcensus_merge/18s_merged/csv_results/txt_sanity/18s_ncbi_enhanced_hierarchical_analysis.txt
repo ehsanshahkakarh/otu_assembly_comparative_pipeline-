@@ -1,0 +1,478 @@
+18S NCBI Enhanced Hierarchical Analysis
+Generated: 2025-10-13 13:01:07
+Organized by taxonomic hierarchy with novelty factors
+Novelty Factor = Census_OTU_Count / NCBI_Species_Count
+====================================================================================================
+
+PHYLUM: Tubulinea
+================================================================================
+Novelty Factor: 1323.00 | OTU Count: 1323 | Size Count: 4810 | NCBI Species: 1
+--------------------------------------------------------------------------------
+
+  Families: 0 | Genera: 0 (Orphan genera: 0)
+
+====================================================================================================
+
+PHYLUM: Rhizaria
+================================================================================
+Novelty Factor: 341.73 | OTU Count: 5126 | Size Count: 24072 | NCBI Species: 15
+--------------------------------------------------------------------------------
+
+  Families: 1 | Genera: 1 (Orphan genera: 0)
+
+    FAMILY: Paulinellidae
+    Novelty: 17.00 | OTU: 17 | Size: 24 | NCBI: 1 | Genera: 1
+      → GENUS: Paulinella | Novelty: 17.00 | OTU: 17 | Size: 24 | NCBI: 1
+
+====================================================================================================
+
+PHYLUM: Evosea
+================================================================================
+Novelty Factor: 78.42 | OTU Count: 2431 | Size Count: 13475 | NCBI Species: 31
+--------------------------------------------------------------------------------
+
+  Families: 1 | Genera: 1 (Orphan genera: 0)
+
+    FAMILY: Mastigamoebidae
+    Novelty: 1609.00 | OTU: 1609 | Size: 10879 | NCBI: 1 | Genera: 1
+      → GENUS: Mastigamoeba | Novelty: 1609.00 | OTU: 1609 | Size: 10879 | NCBI: 1
+
+====================================================================================================
+
+PHYLUM: Alveolata
+================================================================================
+Novelty Factor: 51.67 | OTU Count: 9042 | Size Count: 60488 | NCBI Species: 175
+--------------------------------------------------------------------------------
+
+  Families: 9 | Genera: 3 (Orphan genera: 1)
+
+    FAMILY: Oxytrichidae
+    Novelty: 160.00 | OTU: 800 | Size: 7715 | NCBI: 5 | Genera: 1
+      → GENUS: Stylonychia | Novelty: 800.00 | OTU: 800 | Size: 7715 | NCBI: 1
+
+    FAMILY: Gregarinidae
+    Novelty: 130.00 | OTU: 130 | Size: 692 | NCBI: 1 | Genera: 0
+      (No genera found under this family)
+
+    FAMILY: Theileriidae
+    Novelty: 14.43 | OTU: 101 | Size: 1221 | NCBI: 7 | Genera: 0
+      (No genera found under this family)
+
+    FAMILY: Sarcocystidae
+    Novelty: 12.67 | OTU: 76 | Size: 608 | NCBI: 6 | Genera: 0
+      (No genera found under this family)
+
+    FAMILY: Parameciidae
+    Novelty: 7.22 | OTU: 65 | Size: 547 | NCBI: 9 | Genera: 1
+      → GENUS: Paramecium | Novelty: 7.22 | OTU: 65 | Size: 547 | NCBI: 9
+
+    FAMILY: Eimeriidae
+    Novelty: 5.23 | OTU: 68 | Size: 535 | NCBI: 13 | Genera: 0
+      (No genera found under this family)
+
+    FAMILY: Plasmodiidae
+    Novelty: 3.96 | OTU: 103 | Size: 612 | NCBI: 26 | Genera: 0
+      (No genera found under this family)
+
+    FAMILY: Cryptosporidiidae
+    Novelty: 3.20 | OTU: 64 | Size: 939 | NCBI: 20 | Genera: 0
+      (No genera found under this family)
+
+    FAMILY: Babesiidae
+    Novelty: 1.92 | OTU: 23 | Size: 158 | NCBI: 12 | Genera: 0
+      (No genera found under this family)
+
+    ORPHAN GENERA (match phylum but no family):
+    ------------------------------------------------------------
+      → GENUS: Ichthyophthirius | Novelty: 19.00 | OTU: 19 | Size: 444 | NCBI: 1
+
+====================================================================================================
+
+PHYLUM: Discoba
+================================================================================
+Novelty Factor: 45.42 | OTU Count: 5496 | Size Count: 21089 | NCBI Species: 121
+--------------------------------------------------------------------------------
+
+  Families: 5 | Genera: 6 (Orphan genera: 0)
+
+    FAMILY: Euglenaceae
+    Novelty: 470.00 | OTU: 470 | Size: 1572 | NCBI: 1 | Genera: 0
+      (No genera found under this family)
+
+    FAMILY: Neovahlkampfiidae
+    Novelty: 211.00 | OTU: 211 | Size: 780 | NCBI: 1 | Genera: 1
+      → GENUS: Neovahlkampfia | Novelty: 211.00 | OTU: 211 | Size: 780 | NCBI: 1
+
+    FAMILY: Rhabdomonadales
+    Novelty: 26.00 | OTU: 26 | Size: 100 | NCBI: 1 | Genera: 0
+      (No genera found under this family)
+
+    FAMILY: Bodonidae
+    Novelty: 10.00 | OTU: 10 | Size: 15 | NCBI: 1 | Genera: 1
+      → GENUS: Bodo | Novelty: 10.00 | OTU: 10 | Size: 15 | NCBI: 1
+
+    FAMILY: Trypanosomatidae
+    Novelty: 1.46 | OTU: 147 | Size: 1188 | NCBI: 101 | Genera: 4
+      → GENUS: Leptomonas | Novelty: 26.50 | OTU: 53 | Size: 327 | NCBI: 2
+      → GENUS: Trypanosoma | Novelty: 3.86 | OTU: 85 | Size: 824 | NCBI: 22
+      → GENUS: Strigomonas | Novelty: 2.00 | OTU: 6 | Size: 30 | NCBI: 3
+      → GENUS: Phytomonas | Novelty: 0.75 | OTU: 3 | Size: 7 | NCBI: 4
+
+====================================================================================================
+
+PHYLUM: Metamonada
+================================================================================
+Novelty Factor: 26.05 | OTU Count: 573 | Size Count: 3242 | NCBI Species: 22
+--------------------------------------------------------------------------------
+
+  Families: 1 | Genera: 1 (Orphan genera: 0)
+
+    FAMILY: Hexamitidae
+    Novelty: 143.25 | OTU: 573 | Size: 3242 | NCBI: 4 | Genera: 1
+      → GENUS: Hexamita | Novelty: 32.00 | OTU: 32 | Size: 113 | NCBI: 1
+
+====================================================================================================
+
+PHYLUM: Discosea
+================================================================================
+Novelty Factor: 15.35 | OTU Count: 399 | Size Count: 1365 | NCBI Species: 26
+--------------------------------------------------------------------------------
+
+  Families: 4 | Genera: 4 (Orphan genera: 0)
+
+    FAMILY: Vannellidae
+    Novelty: 56.00 | OTU: 56 | Size: 94 | NCBI: 1 | Genera: 1
+      → GENUS: Vannella | Novelty: 56.00 | OTU: 56 | Size: 94 | NCBI: 1
+
+    FAMILY: Paramoebidae
+    Novelty: 54.00 | OTU: 54 | Size: 81 | NCBI: 1 | Genera: 1
+      → GENUS: Paramoeba | Novelty: 20.00 | OTU: 20 | Size: 31 | NCBI: 1
+
+    FAMILY: Balamuthiidae
+    Novelty: 8.00 | OTU: 8 | Size: 12 | NCBI: 1 | Genera: 1
+      → GENUS: Balamuthia | Novelty: 8.00 | OTU: 8 | Size: 12 | NCBI: 1
+
+    FAMILY: Acanthamoebidae
+    Novelty: 5.86 | OTU: 123 | Size: 773 | NCBI: 21 | Genera: 1
+      → GENUS: Acanthamoeba | Novelty: 4.95 | OTU: 104 | Size: 748 | NCBI: 21
+
+====================================================================================================
+
+PHYLUM: Stramenopiles
+================================================================================
+Novelty Factor: 11.12 | OTU Count: 3668 | Size Count: 24799 | NCBI Species: 330
+--------------------------------------------------------------------------------
+
+  Families: 8 | Genera: 13 (Orphan genera: 6)
+
+    FAMILY: Labyrinthulaceae
+    Novelty: 62.00 | OTU: 62 | Size: 238 | NCBI: 1 | Genera: 1
+      → GENUS: Labyrinthula | Novelty: 62.00 | OTU: 62 | Size: 238 | NCBI: 1
+
+    FAMILY: Phaeodactylaceae
+    Novelty: 15.00 | OTU: 15 | Size: 37 | NCBI: 1 | Genera: 1
+      → GENUS: Phaeodactylum | Novelty: 15.00 | OTU: 15 | Size: 37 | NCBI: 1
+
+    FAMILY: Thalassiosiraceae
+    Novelty: 11.88 | OTU: 309 | Size: 6048 | NCBI: 26 | Genera: 1
+      → GENUS: Thalassiosira | Novelty: 17.17 | OTU: 309 | Size: 6048 | NCBI: 18
+
+    FAMILY: Pelagomonadaceae
+    Novelty: 9.00 | OTU: 36 | Size: 182 | NCBI: 4 | Genera: 1
+      → GENUS: Aureococcus | Novelty: 36.00 | OTU: 36 | Size: 182 | NCBI: 1
+
+    FAMILY: Cafeteriaceae
+    Novelty: 6.00 | OTU: 18 | Size: 75 | NCBI: 3 | Genera: 1
+      → GENUS: Cafeteria | Novelty: 9.00 | OTU: 18 | Size: 75 | NCBI: 2
+
+    FAMILY: Ochromonadaceae
+    Novelty: 6.00 | OTU: 12 | Size: 14 | NCBI: 2 | Genera: 0
+      (No genera found under this family)
+
+    FAMILY: Peronosporales
+    Novelty: 3.62 | OTU: 373 | Size: 2022 | NCBI: 103 | Genera: 1
+      → GENUS: Phytophthora | Novelty: 0.81 | OTU: 67 | Size: 1107 | NCBI: 83
+
+    FAMILY: Saprolegniales
+    Novelty: 0.56 | OTU: 5 | Size: 126 | NCBI: 9 | Genera: 1
+      → GENUS: Saprolegnia | Novelty: 2.50 | OTU: 5 | Size: 126 | NCBI: 2
+
+    ORPHAN GENERA (match phylum but no family):
+    ------------------------------------------------------------
+      → GENUS: Ectocarpus | Novelty: 8.56 | OTU: 77 | Size: 666 | NCBI: 9
+      → GENUS: Pythium | Novelty: 6.57 | OTU: 302 | Size: 870 | NCBI: 46
+      → GENUS: Nannochloropsis | Novelty: 6.50 | OTU: 39 | Size: 315 | NCBI: 6
+      → GENUS: Spumella | Novelty: 6.00 | OTU: 12 | Size: 14 | NCBI: 2
+      → GENUS: Blastocystis | Novelty: 4.80 | OTU: 72 | Size: 618 | NCBI: 15
+      → GENUS: Skeletonema | Novelty: 0.12 | OTU: 1 | Size: 1 | NCBI: 8
+
+====================================================================================================
+
+PHYLUM: Chlorophyta
+================================================================================
+Novelty Factor: 6.75 | OTU Count: 1505 | Size Count: 14229 | NCBI Species: 223
+--------------------------------------------------------------------------------
+
+  Families: 4 | Genera: 10 (Orphan genera: 5)
+
+    FAMILY: Bathycoccaceae
+    Novelty: 13.39 | OTU: 308 | Size: 6531 | NCBI: 23 | Genera: 2
+      → GENUS: Ostreococcus | Novelty: 24.42 | OTU: 293 | Size: 6432 | NCBI: 12
+      → GENUS: Bathycoccus | Novelty: 1.50 | OTU: 15 | Size: 99 | NCBI: 10
+
+    FAMILY: Chloropicaceae
+    Novelty: 7.50 | OTU: 15 | Size: 50 | NCBI: 2 | Genera: 1
+      → GENUS: Chloropicon | Novelty: 7.50 | OTU: 15 | Size: 50 | NCBI: 2
+
+    FAMILY: Coccomyxaceae
+    Novelty: 2.86 | OTU: 20 | Size: 87 | NCBI: 7 | Genera: 0
+      (No genera found under this family)
+
+    FAMILY: Selenastraceae
+    Novelty: 0.20 | OTU: 1 | Size: 1 | NCBI: 5 | Genera: 2
+      → GENUS: Raphidocelis | Novelty: 2.00 | OTU: 2 | Size: 2 | NCBI: 1
+      → GENUS: Monoraphidium | Novelty: 0.33 | OTU: 1 | Size: 1 | NCBI: 3
+
+    ORPHAN GENERA (match phylum but no family):
+    ------------------------------------------------------------
+      → GENUS: Ulva | Novelty: 13.75 | OTU: 55 | Size: 176 | NCBI: 4
+      → GENUS: Auxenochlorella | Novelty: 11.50 | OTU: 23 | Size: 524 | NCBI: 2
+      → GENUS: Botryococcus | Novelty: 5.00 | OTU: 5 | Size: 8 | NCBI: 1
+      → GENUS: Chlamydomonas | Novelty: 1.35 | OTU: 23 | Size: 107 | NCBI: 17
+      → GENUS: Micractinium | Novelty: 0.50 | OTU: 2 | Size: 10 | NCBI: 4
+
+====================================================================================================
+
+PHYLUM: Opisthokonta
+================================================================================
+Novelty Factor: 1.40 | OTU Count: 24345 | Size Count: 158758 | NCBI Species: 17372
+--------------------------------------------------------------------------------
+
+  Families: 32 | Genera: 86 (Orphan genera: 21)
+
+    FAMILY: Glomerales
+    Novelty: 19.67 | OTU: 236 | Size: 4813 | NCBI: 12 | Genera: 1
+      → GENUS: Rhizophagus | Novelty: 33.71 | OTU: 236 | Size: 4813 | NCBI: 7
+
+    FAMILY: Spizellomycetaceae
+    Novelty: 13.00 | OTU: 52 | Size: 167 | NCBI: 4 | Genera: 1
+      → GENUS: Spizellomyces | Novelty: 26.00 | OTU: 52 | Size: 167 | NCBI: 2
+
+    FAMILY: Aphelidiaceae
+    Novelty: 12.00 | OTU: 12 | Size: 17 | NCBI: 1 | Genera: 1
+      → GENUS: Aphelidium | Novelty: 12.00 | OTU: 12 | Size: 17 | NCBI: 1
+
+    FAMILY: Exobasidiomycetes
+    Novelty: 11.33 | OTU: 306 | Size: 11775 | NCBI: 27 | Genera: 1
+      → GENUS: Tilletiopsis | Novelty: 8.00 | OTU: 8 | Size: 53 | NCBI: 1
+
+    FAMILY: Merostomata
+    Novelty: 9.00 | OTU: 36 | Size: 122 | NCBI: 4 | Genera: 1
+      → GENUS: Limulus | Novelty: 36.00 | OTU: 36 | Size: 122 | NCBI: 1
+
+    FAMILY: Harpellales
+    Novelty: 6.67 | OTU: 60 | Size: 247 | NCBI: 9 | Genera: 1
+      → GENUS: Smittium | Novelty: 10.00 | OTU: 60 | Size: 247 | NCBI: 6
+
+    FAMILY: Branchiopoda
+    Novelty: 5.08 | OTU: 132 | Size: 783 | NCBI: 26 | Genera: 3
+      → GENUS: Chydorus | Novelty: 12.00 | OTU: 12 | Size: 27 | NCBI: 1
+      → GENUS: Daphnia | Novelty: 1.11 | OTU: 10 | Size: 26 | NCBI: 9
+      → GENUS: Simocephalus | Novelty: 1.00 | OTU: 1 | Size: 2 | NCBI: 1
+
+    FAMILY: Blastocladiomycetes
+    Novelty: 4.14 | OTU: 29 | Size: 147 | NCBI: 7 | Genera: 2
+      → GENUS: Coelomomyces | Novelty: 10.00 | OTU: 10 | Size: 29 | NCBI: 1
+      → GENUS: Allomyces | Novelty: 5.33 | OTU: 16 | Size: 114 | NCBI: 3
+
+    FAMILY: Leotiomycetes
+    Novelty: 1.86 | OTU: 374 | Size: 2629 | NCBI: 201 | Genera: 5
+      → GENUS: Chlorociboria | Novelty: 28.00 | OTU: 56 | Size: 565 | NCBI: 2
+      → GENUS: Articulospora | Novelty: 19.00 | OTU: 19 | Size: 62 | NCBI: 1
+      → GENUS: Hyaloscypha | Novelty: 8.00 | OTU: 40 | Size: 131 | NCBI: 5
+      → GENUS: Neofabraea | Novelty: 3.00 | OTU: 3 | Size: 6 | NCBI: 1
+      → GENUS: Hyphodiscus | Novelty: 0.50 | OTU: 1 | Size: 1 | NCBI: 2
+
+    FAMILY: Dothideomycetes
+    Novelty: 1.76 | OTU: 874 | Size: 4225 | NCBI: 498 | Genera: 4
+      → GENUS: Phaeosphaeria | Novelty: 57.33 | OTU: 172 | Size: 1177 | NCBI: 3
+      → GENUS: Corynespora | Novelty: 27.50 | OTU: 55 | Size: 265 | NCBI: 2
+      → GENUS: Teratosphaeria | Novelty: 3.62 | OTU: 29 | Size: 32 | NCBI: 8
+      → GENUS: Zymoseptoria | Novelty: 2.67 | OTU: 16 | Size: 52 | NCBI: 6
+
+    FAMILY: Anthozoa
+    Novelty: 1.54 | OTU: 297 | Size: 2971 | NCBI: 193 | Genera: 1
+      → GENUS: Nematostella | Novelty: 14.00 | OTU: 14 | Size: 36 | NCBI: 1
+
+    FAMILY: Saccharomycetales
+    Novelty: 1.42 | OTU: 233 | Size: 2434 | NCBI: 164 | Genera: 2
+      → GENUS: Saccharomyces | Novelty: 0.62 | OTU: 13 | Size: 969 | NCBI: 21
+      → GENUS: Schizosaccharomyces | Novelty: 0.25 | OTU: 2 | Size: 13 | NCBI: 8
+
+    FAMILY: Ustilaginomycetes
+    Novelty: 1.33 | OTU: 69 | Size: 166 | NCBI: 52 | Genera: 1
+      → GENUS: Ustanciosporium | Novelty: 69.00 | OTU: 69 | Size: 166 | NCBI: 1
+
+    FAMILY: Neocallimastigaceae
+    Novelty: 1.25 | OTU: 10 | Size: 79 | NCBI: 8 | Genera: 2
+      → GENUS: Neocallimastix | Novelty: 1.50 | OTU: 3 | Size: 4 | NCBI: 2
+      → GENUS: Piromyces | Novelty: 0.33 | OTU: 1 | Size: 6 | NCBI: 3
+
+    FAMILY: Dacrymycetes
+    Novelty: 1.25 | OTU: 5 | Size: 5 | NCBI: 4 | Genera: 0
+      (No genera found under this family)
+
+    FAMILY: Caenogastropoda
+    Novelty: 1.18 | OTU: 45 | Size: 225 | NCBI: 38 | Genera: 1
+      → GENUS: Conus | Novelty: 7.50 | OTU: 45 | Size: 225 | NCBI: 6
+
+    FAMILY: Taphrinomycetes
+    Novelty: 1.06 | OTU: 17 | Size: 80 | NCBI: 16 | Genera: 1
+      → GENUS: Taphrina | Novelty: 1.89 | OTU: 17 | Size: 80 | NCBI: 9
+
+    FAMILY: Sordariomycetes
+    Novelty: 0.98 | OTU: 1305 | Size: 9434 | NCBI: 1334 | Genera: 5
+      → GENUS: Lecanicillium | Novelty: 37.50 | OTU: 225 | Size: 1334 | NCBI: 6
+      → GENUS: Trichocladium | Novelty: 12.50 | OTU: 25 | Size: 579 | NCBI: 2
+      → GENUS: Podospora | Novelty: 0.46 | OTU: 6 | Size: 12 | NCBI: 13
+      → GENUS: Neurospora | Novelty: 0.38 | OTU: 13 | Size: 243 | NCBI: 34
+      → GENUS: Colletotrichum | Novelty: 0.10 | OTU: 10 | Size: 15 | NCBI: 104
+
+    FAMILY: Eurotiomycetes
+    Novelty: 0.90 | OTU: 604 | Size: 6441 | NCBI: 673 | Genera: 6
+      → GENUS: Coccidioides | Novelty: 5.50 | OTU: 11 | Size: 17 | NCBI: 2
+      → GENUS: Exophiala | Novelty: 2.53 | OTU: 48 | Size: 94 | NCBI: 19
+      → GENUS: Phialophora | Novelty: 2.50 | OTU: 15 | Size: 31 | NCBI: 6
+      → GENUS: Penicillium | Novelty: 0.57 | OTU: 100 | Size: 2067 | NCBI: 174
+      → GENUS: Aspergillus | Novelty: 0.18 | OTU: 48 | Size: 646 | NCBI: 263
+      → GENUS: Cladophialophora | Novelty: 0.12 | OTU: 1 | Size: 6 | NCBI: 8
+
+    FAMILY: Insecta
+    Novelty: 0.79 | OTU: 3087 | Size: 19878 | NCBI: 3912 | Genera: 8
+      → GENUS: Apis | Novelty: 39.33 | OTU: 236 | Size: 762 | NCBI: 6
+      → GENUS: Acyrthosiphon | Novelty: 24.50 | OTU: 49 | Size: 436 | NCBI: 2
+      → GENUS: Culex | Novelty: 10.33 | OTU: 62 | Size: 345 | NCBI: 6
+      → GENUS: Philaenus | Novelty: 5.00 | OTU: 5 | Size: 7 | NCBI: 1
+      → GENUS: Ricinus | Novelty: 4.33 | OTU: 13 | Size: 15 | NCBI: 3
+      → GENUS: Mayetiola | Novelty: 2.00 | OTU: 2 | Size: 11 | NCBI: 1
+      → GENUS: Venturia | Novelty: 0.44 | OTU: 4 | Size: 4 | NCBI: 9
+      → GENUS: Cryptococcus | Novelty: 0.20 | OTU: 5 | Size: 5 | NCBI: 25
+
+    FAMILY: Agaricomycetes
+    Novelty: 0.72 | OTU: 759 | Size: 5519 | NCBI: 1056 | Genera: 4
+      → GENUS: Russula | Novelty: 3.38 | OTU: 71 | Size: 776 | NCBI: 21
+      → GENUS: Coniophora | Novelty: 2.00 | OTU: 2 | Size: 3 | NCBI: 1
+      → GENUS: Panellus | Novelty: 1.00 | OTU: 2 | Size: 3 | NCBI: 2
+      → GENUS: Drosophila | Novelty: 0.83 | OTU: 217 | Size: 1383 | NCBI: 260
+
+    FAMILY: Tremellomycetes
+    Novelty: 0.72 | OTU: 126 | Size: 690 | NCBI: 176 | Genera: 2
+      → GENUS: Trichosporon | Novelty: 4.20 | OTU: 42 | Size: 252 | NCBI: 10
+      → GENUS: Mrakia | Novelty: 1.83 | OTU: 11 | Size: 95 | NCBI: 6
+
+    FAMILY: Lecanoromycetes
+    Novelty: 0.71 | OTU: 220 | Size: 1048 | NCBI: 308 | Genera: 2
+      → GENUS: Lecidea | Novelty: 1.50 | OTU: 3 | Size: 9 | NCBI: 2
+      → GENUS: Tuckermannopsis | Novelty: 1.00 | OTU: 1 | Size: 5 | NCBI: 1
+
+    FAMILY: Arachnida
+    Novelty: 0.67 | OTU: 130 | Size: 496 | NCBI: 195 | Genera: 2
+      → GENUS: Aculops | Novelty: 5.00 | OTU: 5 | Size: 7 | NCBI: 1
+      → GENUS: Oribatida | Novelty: 0.27 | OTU: 16 | Size: 24 | NCBI: 59
+
+    FAMILY: Scyphozoa
+    Novelty: 0.54 | OTU: 13 | Size: 32 | NCBI: 24 | Genera: 1
+      → GENUS: Chrysaora | Novelty: 3.25 | OTU: 13 | Size: 32 | NCBI: 4
+
+    FAMILY: Mammalia
+    Novelty: 0.26 | OTU: 257 | Size: 852 | NCBI: 996 | Genera: 2
+      → GENUS: Rattus | Novelty: 29.00 | OTU: 58 | Size: 114 | NCBI: 2
+      → GENUS: Homo | Novelty: 5.00 | OTU: 5 | Size: 15 | NCBI: 1
+
+    FAMILY: Schizosaccharomycetes
+    Novelty: 0.25 | OTU: 2 | Size: 13 | NCBI: 8 | Genera: 0
+      (No genera found under this family)
+
+    FAMILY: Lipomycetaceae
+    Novelty: 0.09 | OTU: 3 | Size: 6 | NCBI: 35 | Genera: 1
+      → GENUS: Lipomyces | Novelty: 0.16 | OTU: 3 | Size: 6 | NCBI: 19
+
+    FAMILY: Kickxellales
+    Novelty: 0.08 | OTU: 12 | Size: 40 | NCBI: 153 | Genera: 1
+      → GENUS: Coemansia | Novelty: 0.08 | OTU: 12 | Size: 40 | NCBI: 146
+
+    FAMILY: Teleostei
+    Novelty: 0.04 | OTU: 65 | Size: 111 | NCBI: 1779 | Genera: 1
+      → GENUS: Danio | Novelty: 9.29 | OTU: 65 | Size: 111 | NCBI: 7
+
+    FAMILY: Amphibia
+    Novelty: 0.03 | OTU: 5 | Size: 9 | NCBI: 194 | Genera: 1
+      → GENUS: Xenopus | Novelty: 1.00 | OTU: 5 | Size: 9 | NCBI: 5
+
+    FAMILY: Lepidosauria
+    Novelty: 0.01 | OTU: 4 | Size: 42 | NCBI: 296 | Genera: 1
+      → GENUS: Anolis | Novelty: 0.50 | OTU: 4 | Size: 42 | NCBI: 8
+
+    ORPHAN GENERA (match phylum but no family):
+    ------------------------------------------------------------
+      → GENUS: Pycnora | Novelty: 46.00 | OTU: 46 | Size: 237 | NCBI: 1
+      → GENUS: Heterodera | Novelty: 25.33 | OTU: 228 | Size: 2028 | NCBI: 9
+      → GENUS: Eurytemora | Novelty: 21.00 | OTU: 21 | Size: 89 | NCBI: 1
+      → GENUS: Sabatieria | Novelty: 16.00 | OTU: 16 | Size: 95 | NCBI: 1
+      → GENUS: Malassezia | Novelty: 14.90 | OTU: 298 | Size: 11722 | NCBI: 20
+      → GENUS: Rhizopus | Novelty: 11.17 | OTU: 67 | Size: 969 | NCBI: 6
+      → GENUS: Mitosporidium | Novelty: 9.00 | OTU: 9 | Size: 13 | NCBI: 1
+      → GENUS: Pristionchus | Novelty: 8.75 | OTU: 70 | Size: 366 | NCBI: 8
+      → GENUS: Polychytrium | Novelty: 5.00 | OTU: 5 | Size: 6 | NCBI: 1
+      → GENUS: Rhizoclosmatium | Novelty: 4.00 | OTU: 12 | Size: 82 | NCBI: 3
+      → GENUS: Acartia | Novelty: 4.00 | OTU: 4 | Size: 7 | NCBI: 1
+      → GENUS: Coccomyxa | Novelty: 3.33 | OTU: 20 | Size: 87 | NCBI: 6
+      → GENUS: Thamnocephalis | Novelty: 3.00 | OTU: 3 | Size: 4 | NCBI: 1
+      → GENUS: Crassostrea | Novelty: 2.60 | OTU: 13 | Size: 29 | NCBI: 5
+      → GENUS: Paramicrosporidium | Novelty: 2.00 | OTU: 2 | Size: 8 | NCBI: 1
+      → GENUS: Batrachochytrium | Novelty: 1.50 | OTU: 3 | Size: 45 | NCBI: 2
+      → GENUS: Ditylenchus | Novelty: 1.33 | OTU: 4 | Size: 4 | NCBI: 3
+      → GENUS: Caenorhabditis | Novelty: 1.27 | OTU: 57 | Size: 495 | NCBI: 45
+      → GENUS: Candida | Novelty: 0.74 | OTU: 29 | Size: 319 | NCBI: 39
+      → GENUS: Mortierella | Novelty: 0.30 | OTU: 6 | Size: 6 | NCBI: 20
+      → GENUS: Debaryomyces | Novelty: 0.07 | OTU: 1 | Size: 1 | NCBI: 14
+
+====================================================================================================
+
+PHYLUM: Streptophyta
+================================================================================
+Novelty Factor: 0.96 | OTU Count: 2252 | Size Count: 16099 | NCBI Species: 2349
+--------------------------------------------------------------------------------
+
+  Families: 0 | Genera: 8 (Orphan genera: 8)
+
+    ORPHAN GENERA (match phylum but no family):
+    ------------------------------------------------------------
+      → GENUS: Zea | Novelty: 186.00 | OTU: 372 | Size: 6252 | NCBI: 2
+      → GENUS: Rehmannia | Novelty: 160.00 | OTU: 160 | Size: 265 | NCBI: 1
+      → GENUS: Glycine | Novelty: 21.25 | OTU: 85 | Size: 1830 | NCBI: 4
+      → GENUS: Arabidopsis | Novelty: 5.00 | OTU: 30 | Size: 32 | NCBI: 6
+      → GENUS: Brachypodium | Novelty: 1.75 | OTU: 7 | Size: 18 | NCBI: 4
+      → GENUS: Populus | Novelty: 1.00 | OTU: 16 | Size: 126 | NCBI: 16
+      → GENUS: Sorghum | Novelty: 1.00 | OTU: 1 | Size: 2 | NCBI: 1
+      → GENUS: Oryza | Novelty: 0.04 | OTU: 1 | Size: 29 | NCBI: 23
+
+====================================================================================================
+
+PHYLUM: Rhodophyta
+================================================================================
+Novelty Factor: 0.04 | OTU Count: 2 | Size Count: 21 | NCBI Species: 47
+--------------------------------------------------------------------------------
+
+  Families: 1 | Genera: 2 (Orphan genera: 1)
+
+    FAMILY: Digenea
+    Novelty: 5.59 | OTU: 190 | Size: 955 | NCBI: 34 | Genera: 1
+      → GENUS: Schistosoma | Novelty: 14.62 | OTU: 190 | Size: 955 | NCBI: 13
+
+    ORPHAN GENERA (match phylum but no family):
+    ------------------------------------------------------------
+      → GENUS: Cyanidioschyzon | Novelty: 2.00 | OTU: 2 | Size: 21 | NCBI: 1
+
+====================================================================================================
+
