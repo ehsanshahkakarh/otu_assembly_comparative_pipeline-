@@ -1,0 +1,17 @@
+18S EukCensus Eukaryota.U.division Analysis Summary
+============================================================
+
+Analysis date: 2025-08-17 21:27:50
+
+OVERVIEW:
+  Total Eukaryota.U.division entries: 9,333
+  Total sequences: 39,360
+  Unique taxonomic combinations: 1
+  Average sequences per entry: 4.2
+
+TAXONOMIC DIVERSITY:
+  Unique families: 1
+  Unique genera: 1
+
+TOP 10 COMBINATIONS BY CLUSTER COUNT:
+   1. Eukaryota.U.family | Eukaryota.U.genus | 9,333 clusters | 39,360 sequences

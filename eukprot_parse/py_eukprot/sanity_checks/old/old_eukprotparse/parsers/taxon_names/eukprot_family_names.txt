@@ -1,0 +1,93 @@
+family
+GOS clade
+Myzozoa
+Holozoa
+Chlorophyta
+Nucletmycea
+Ciliophora
+Streptophyta
+Rhodophyta
+core euglenids
+Prymnesiophyceae
+Cryptophyceae
+Flabellinia
+Cercozoa
+Metakinetoplastina
+Retaria
+Eumycetozoa
+Picozoa
+Centramoebia
+Diplonemidae
+Elardia
+Archamoebea
+Variosea
+Eupelagonemidae
+Pavlovales
+Endomyxa
+node A clade
+Eutetramitia
+Colponemidae
+Corycidia
+Cutosea
+Hemistasiidae
+Palmophyllophyceae
+Petalomonadida
+Prokinetoplastina
+Pterocystida
+Tsubtile clade
+HR clade
+calkinsids
+Retortamonadidae
+Rhodelphidia
+Anaeramoeba
+Echinamoebidia
+Ancyromonas sigmoides
+Andaluciidae
+Ergobibamus
+D1 lineage
+Diphylleia
+EU17 lineage
+Cyanophora
+Collodictyon
+Cyanoptyche
+Carpediemonas
+Breviata
+Ancoracysta twista
+APU-21 lineage
+Aduncisulcus
+Kipferlia
+Gloeochaete
+Gefionella okellyi
+Glaucocystis
+Paratrimastix
+Panacanthocystida
+Palpitomonas bilix
+Nutomonas longa
+Neovahlkampfiidae
+Malawimonas californiana
+Manchomonas
+Monocercomonoides
+MS clade
+Lenisia
+Malawimonas jakobiformis
+Hemimastix
+Jakoba
+Jbahamiensis clade
+Kathablepharidacea
+Pharyngomonas kirbyi
+Stygiellidae
+Spironema
+Rigifila
+Pygsuia
+Platysulcus
+Trimastix
+Subulatomonas
+Thecamonadinae
+Tsukubamonas globosa
+Tritrichomonas
+Trichomonadida
+eorhiza
+strain BB2
+strain CCAP-1946/1
+strain NYK3C
+strain PAP020

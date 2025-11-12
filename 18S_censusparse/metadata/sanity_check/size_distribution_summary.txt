@@ -1,0 +1,82 @@
+18S EukCensus Size Distribution Analysis
+==================================================
+
+Analysis date: 2025-10-15 11:15:54
+
+CLUSTER COUNT STATISTICS:
+  Mean: 144.4
+  Median: 25.0
+  Standard Deviation: 550.7
+  Min: 1
+  Max: 9,333
+  25th Percentile: 6.0
+  75th Percentile: 82.5
+  Outliers (IQR method): 76 combinations
+
+SEQUENCE COUNT STATISTICS:
+  Mean: 817.4
+  Median: 87.0
+  Standard Deviation: 2685.8
+  Min: 1
+  Max: 39,360
+  25th Percentile: 14.0
+  75th Percentile: 525.0
+  Outliers (IQR method): 70 combinations
+
+AVERAGE SIZE PER CLUSTER STATISTICS:
+  Mean: 5.09
+  Median: 3.32
+  Standard Deviation: 6.44
+  Min: 1.00
+  Max: 74.54
+  25th Percentile: 1.83
+  75th Percentile: 5.80
+  Outliers (IQR method): 39 combinations
+
+TOP 10 BY CLUSTER COUNT:
+   1. Eukaryota.U.division|Eukaryota.U.family|Eukaryota.U.genus    (9,333 clusters)
+   2. Opisthokonta|Metazoa.U.family|Metazoa.U.genus                (4,480 clusters)
+   3. Amoebozoa.U.division|Amoebozoa.U.family|Amoebozoa.U.genus    (4,214 clusters)
+   4. Opisthokonta|Insecta|Insecta.U.genus                         (2,513 clusters)
+   5. Evosea|Mastigamoebidae|Mastigamoeba                          (1,609 clusters)
+   6. Streptophyta|Embryophyceae_XX|Embryophyceae_XX.U.genus       (1,535 clusters)
+   7. Discoba|Euglenida.U.family|Euglenida.U.genus                 (1,526 clusters)
+   8. Opisthokonta|Nematoda.U.family|Nematoda.U.genus              (1,163 clusters)
+   9. Rhizaria|Cercozoa.U.family|Cercozoa.U.genus                  (1,152 clusters)
+  10. Opisthokonta|Fungi.U.family|Fungi.U.genus                    (1,112 clusters)
+
+TOP 10 BY SEQUENCE COUNT:
+   1. Eukaryota.U.division|Eukaryota.U.family|Eukaryota.U.genus    (39,360 sequences)
+   2. Opisthokonta|Metazoa.U.family|Metazoa.U.genus                (25,091 sequences)
+   3. Opisthokonta|Insecta|Insecta.U.genus                         (16,928 sequences)
+   4. Amoebozoa.U.division|Amoebozoa.U.family|Amoebozoa.U.genus    (15,143 sequences)
+   5. Opisthokonta|Exobasidiomycetes|Malassezia                    (11,722 sequences)
+   6. Evosea|Mastigamoebidae|Mastigamoeba                          (10,879 sequences)
+   7. Alveolata|Alveolata.U.family|Alveolata.U.genus               (8,253 sequences)
+   8. Stramenopiles|Stramenopiles.U.family|Stramenopiles.U.genus   (7,804 sequences)
+   9. Alveolata|Oxytrichidae|Stylonychia                           (7,715 sequences)
+  10. Streptophyta|Embryophyceae_XX|Embryophyceae_XX.U.genus       (7,457 sequences)
+
+TOP 10 BY AVERAGE SIZE PER CLUSTER:
+   1. Opisthokonta|Saccharomycetales|Saccharomyces                 (74.54 avg size)
+   2. Opisthokonta|Maxillopoda|Eudiaptomus                         (64.36 avg size)
+   3. Opisthokonta|Exobasidiomycetes|Malassezia                    (39.34 avg size)
+   4. Streptophyta|Embryophyceae_XX|Oryza                          (29.00 avg size)
+   5. Opisthokonta|Arachnida|Penthaleus                            (28.60 avg size)
+   6. Opisthokonta|Ustilaginomycotina.U.family|Ustilaginomycotina.U.genus (26.37 avg size)
+   7. Stramenopiles|Saprolegniales|Saprolegnia                     (25.20 avg size)
+   8. Alveolata|Ophryoglenida|Ichthyophthirius                     (23.37 avg size)
+   9. Opisthokonta|Sordariomycetes|Trichocladium                   (23.16 avg size)
+  10. Chlorophyta|Chlorellales_X|Auxenochlorella                   (22.78 avg size)
+
+SMALLEST 10 BY AVERAGE SIZE PER CLUSTER:
+   1. Rhizaria|Monothalamids_XX|Astrorhiza                         (1.00 avg size)
+   2. Rhizaria|Ventrifissuridae|Ventrifissura                      (1.00 avg size)
+   3. Opisthokonta|Mucoromycotina_X|Mucoromycotina_XX              (1.00 avg size)
+   4. Opisthokonta|Mortierellaceae_X|Mortierella                   (1.00 avg size)
+   5. Opisthokonta|Dacrymycetes|Guepiniopsis                       (1.00 avg size)
+   6. Opisthokonta|Tremellomycetes|Cryptococcus                    (1.00 avg size)
+   7. Rhizaria|Paracercomonadidae|Paracercomonas                   (1.00 avg size)
+   8. Alveolata|OLIGO5_X|OLIGO5_XX                                 (1.00 avg size)
+   9. Rhizaria|Protaspa-lineage|Protaspa                           (1.00 avg size)
+  10. Opisthokonta|Dothideomycetes|Venturia                        (1.00 avg size)

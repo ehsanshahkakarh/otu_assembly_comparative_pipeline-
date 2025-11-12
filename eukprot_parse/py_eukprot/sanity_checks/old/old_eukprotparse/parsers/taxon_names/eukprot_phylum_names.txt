@@ -1,0 +1,21 @@
+phylum
+Sar
+Obazoa
+Archaeplastida
+Amoebozoa
+Euglenozoa
+Haptista
+Cryptista
+BF clade
+Heterolobosea
+Jakobida
+AP clade
+Telonemia
+CR clade
+Preaxostyla
+Malawimonadidae
+Ancyromonadidae
+Hemimastigophora
+Fabomonas
+Mantamonas
+Tsukubamonadida

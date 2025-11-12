@@ -1,0 +1,18 @@
+33154	cellular organisms;Eukaryota;Opisthokonta
+33630	cellular organisms;Eukaryota;Sar;Alveolata
+2611352	cellular organisms;Eukaryota;Discoba
+543769	cellular organisms;Eukaryota;Sar;Rhizaria
+33634	cellular organisms;Eukaryota;Sar;Stramenopiles
+2605435	cellular organisms;Eukaryota;Amoebozoa;Evosea
+35493	cellular organisms;Eukaryota;Viridiplantae;Streptophyta
+3041	cellular organisms;Eukaryota;Viridiplantae;Chlorophyta
+555369	cellular organisms;Eukaryota;Amoebozoa;Tubulinea
+2611341	cellular organisms;Eukaryota;Metamonada
+555280	cellular organisms;Eukaryota;Amoebozoa;Discosea
+193537	cellular organisms;Eukaryota;Haptista;Centroplasthelida
+1237875	cellular organisms;Eukaryota;CRuMs;Rigifilida
+419944	cellular organisms;Eukaryota;Eukaryota incertae sedis;Picozoa
+2489521	cellular organisms;Eukaryota;Hemimastigophora
+3004207	cellular organisms;Eukaryota;Provora;Nibbleridia
+2763	cellular organisms;Eukaryota;Rhodophyta
+3004449	cellular organisms;Eukaryota;Provora;Nebulidia

@@ -1,0 +1,42 @@
+# Legacy Taxa 16S comprehensive list for paper-search mcp 
+
+- PHYLUM - 
+1. Lokiarchaeia (Phylum)
+   - Current name: Lokiarchaeota (phylum, GTDB/NCBI)
+   - Lineage: Archaea; Asgardarchaeota; Lokiarchaeia (GTDB: p__Lokiarchaeia)
+   - Notes: Sometimes referred to as "Lokiarchaeota" in older literature.
+
+- FAMILY - 
+1. Spirosomaceae (Family)
+   - Lineage: Bacteria; Bacteroidota; Cytophagia; Cytophagales; Spirosomaceae
+   - Notes: Recognized family in NCBI/GTDB.
+2. Abitibacteriaceae (Family)
+   - Lineage: Bacteria; Actinobacteriota; Actinomycetia; Micrococcales; Abitibacteriaceae
+   - Notes: Valid family in NCBI/GTDB.
+3. Hydrogenimonaceae (Family)
+   - Lineage: Bacteria; Campylobacterota; Nautiliales; Hydrogenimonaceae
+   - Notes: Valid family in NCBI/GTDB.
+
+- GENUS - 
+1. Candidatus Baumannia (Genus)
+   - Lineage: Bacteria; Proteobacteria; Gammaproteobacteria; Enterobacterales; Erwiniaceae; Baumannia
+   - Notes: "Candidatus Baumannia" is a valid genus, sometimes just "Baumannia".
+2. Yangia (Genus)
+   - Lineage: Bacteria; Proteobacteria; Gammaproteobacteria; Rhodobacterales; Rhodobacteraceae; Yangia
+   - Notes: Valid genus in NCBI/GTDB.
+3. Coenonia (Genus)
+   - Lineage: Bacteria; Proteobacteria; Gammaproteobacteria; Pasteurellales; Pasteurellaceae; Coenonia
+   - Notes: Valid genus in NCBI/GTDB.
+4. Candidatus Ishikawaella (Genus)
+   - Lineage: Bacteria; Proteobacteria; Gammaproteobacteria; Enterobacterales; Erwiniaceae; Ishikawaella
+   - Notes: "Candidatus Ishikawaella" is a valid genus, sometimes just "Ishikawaella".
+5. Candidatus Blochmannia (Genus)
+   - Lineage: Bacteria; Proteobacteria; Gammaproteobacteria; Enterobacterales; Erwiniaceae; Blochmannia
+   - Notes: "Candidatus Blochmannia" is a valid genus, sometimes just "Blochmannia".
+6. Catenococcus (Genus)
+   - Lineage: Bacteria; Firmicutes; Bacilli; Lactobacillales; Carnobacteriaceae; Catenococcus
+   - Notes: Valid genus in NCBI/GTDB.
+7. Tetrasphaera (Genus)
+   - Lineage: Bacteria; Actinobacteriota; Actinomycetia; Micrococcales; Intrasporangiaceae; Tetrasphaera
+   - Notes: Valid genus in NCBI/GTDB.
+8. 

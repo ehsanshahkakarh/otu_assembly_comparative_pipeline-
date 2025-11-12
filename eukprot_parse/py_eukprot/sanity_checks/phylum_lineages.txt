@@ -1,0 +1,48 @@
+6340	cellular organisms;Eukaryota;Opisthokonta;Metazoa;Eumetazoa;Bilateria;Protostomia;Spiralia;Lophotrochozoa;Annelida
+5794	cellular organisms;Eukaryota;Sar;Alveolata;Apicomplexa
+6656	cellular organisms;Eukaryota;Opisthokonta;Metazoa;Eumetazoa;Bilateria;Protostomia;Ecdysozoa;Panarthropoda;Arthropoda
+4890	cellular organisms;Eukaryota;Opisthokonta;Fungi;Dikarya;Ascomycota
+2836	cellular organisms;Eukaryota;Sar;Stramenopiles;Ochrophyta;Bacillariophyta
+5204	cellular organisms;Eukaryota;Opisthokonta;Fungi;Dikarya;Basidiomycota
+451459	cellular organisms;Eukaryota;Opisthokonta;Fungi;Fungi incertae sedis;Blastocladiomycota
+7568	cellular organisms;Eukaryota;Opisthokonta;Metazoa;Eumetazoa;Bilateria;Protostomia;Spiralia;Lophotrochozoa;Brachiopoda
+136419	cellular organisms;Eukaryota;Sar;Rhizaria;Cercozoa
+3041	cellular organisms;Eukaryota;Viridiplantae;Chlorophyta
+7711	cellular organisms;Eukaryota;Opisthokonta;Metazoa;Eumetazoa;Bilateria;Deuterostomia;Chordata
+4761	cellular organisms;Eukaryota;Opisthokonta;Fungi;Fungi incertae sedis;Chytridiomycota
+5878	cellular organisms;Eukaryota;Sar;Alveolata;Ciliophora
+6073	cellular organisms;Eukaryota;Opisthokonta;Metazoa;Eumetazoa;Cnidaria
+1031332	cellular organisms;Eukaryota;Opisthokonta;Fungi;Fungi incertae sedis;Cryptomycota
+10197	cellular organisms;Eukaryota;Opisthokonta;Metazoa;Eumetazoa;Ctenophora
+516519	cellular organisms;Eukaryota;Opisthokonta;Metazoa;Eumetazoa;Bilateria;Protostomia;Ecdysozoa;Panarthropoda;Arthropoda;Mandibulata;Pancrustacea;Hexapoda;Insecta;Dicondylia;Pterygota;Neoptera;Endopterygota;Diptera;Nematocera;Tipulomorpha;Tipuloidea;Tipulidae;Ctenophorinae;Ctenophora
+1003038	cellular organisms;Eukaryota;Sar;Stramenopiles;Ochrophyta;Bacillariophyta;Fragilariophyceae;Fragilariophycidae;Licmophorales;Ulnariaceae;Ctenophora
+555280	cellular organisms;Eukaryota;Amoebozoa;Discosea
+7586	cellular organisms;Eukaryota;Opisthokonta;Metazoa;Eumetazoa;Bilateria;Deuterostomia;Echinodermata
+2604748	cellular organisms;Eukaryota;Sar;Rhizaria;Endomyxa
+33682	cellular organisms;Eukaryota;Discoba;Euglenozoa
+2605435	cellular organisms;Eukaryota;Amoebozoa;Evosea
+29178	cellular organisms;Eukaryota;Sar;Rhizaria;Retaria;Foraminifera
+207245	cellular organisms;Eukaryota;Metamonada;Fornicata
+2830	cellular organisms;Eukaryota;Haptista;Haptophyta
+2489521	cellular organisms;Eukaryota;Hemimastigophora
+5752	cellular organisms;Eukaryota;Discoba;Heterolobosea
+6029	cellular organisms;Eukaryota;Opisthokonta;Fungi;Fungi incertae sedis;Microsporidia
+6447	cellular organisms;Eukaryota;Opisthokonta;Metazoa;Eumetazoa;Bilateria;Protostomia;Spiralia;Lophotrochozoa;Mollusca
+1913637	cellular organisms;Eukaryota;Opisthokonta;Fungi;Fungi incertae sedis;Mucoromycota
+3004449	cellular organisms;Eukaryota;Provora;Nebulidia
+6231	cellular organisms;Eukaryota;Opisthokonta;Metazoa;Eumetazoa;Bilateria;Protostomia;Ecdysozoa;Nematoda
+4762	cellular organisms;Eukaryota;Sar;Stramenopiles;Oomycota
+5719	cellular organisms;Eukaryota;Metamonada;Parabasalia
+2497438	cellular organisms;Eukaryota;Sar;Alveolata;Perkinsozoa
+419944	cellular organisms;Eukaryota;Eukaryota incertae sedis;Picozoa
+10226	cellular organisms;Eukaryota;Opisthokonta;Metazoa;Eumetazoa;Placozoa
+6157	cellular organisms;Eukaryota;Opisthokonta;Metazoa;Eumetazoa;Bilateria;Protostomia;Spiralia;Lophotrochozoa;Platyhelminthes
+6040	cellular organisms;Eukaryota;Opisthokonta;Metazoa;Porifera
+2806169	cellular organisms;Eukaryota;Viridiplantae;Prasinodermophyta
+2662611	cellular organisms;Eukaryota;Metamonada;Preaxostyla
+1224	cellular organisms;Bacteria;Pseudomonadati;Pseudomonadota
+2763	cellular organisms;Eukaryota;Rhodophyta
+2871090	cellular organisms;Eukaryota;Opisthokonta;Fungi;Fungi incertae sedis;Sanchytriomycota
+35493	cellular organisms;Eukaryota;Viridiplantae;Streptophyta
+555369	cellular organisms;Eukaryota;Amoebozoa;Tubulinea
+1913638	cellular organisms;Eukaryota;Opisthokonta;Fungi;Fungi incertae sedis;Zoopagomycota

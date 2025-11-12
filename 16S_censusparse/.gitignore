@@ -1,0 +1,39 @@
+# Ignore everything by default
+*
+
+# Allow directories so we can whitelist their contents selectively
+!*/
+
+# Keep scripts, notebooks, and docs
+!*.py
+!*.R
+!*.sh
+!*.ipynb
+!*.md
+!*.txt
+!.gitignore
+
+# Keep folders but ignore metadata files inside them
+metadata/*.csv
+metadata/*.tsv
+metadata/*.json
+metadata/*.yaml
+metadata/*.yml
+metadata/*.xml
+metadata/*.txt
+
+csv_ncbi/*.csv
+csv_ncbi/*.tsv
+csv_ncbi/*.json
+csv_ncbi/*.yaml
+csv_ncbi/*.yml
+csv_ncbi/*.xml
+csv_ncbi/*.txt
+
+taxonomic_mapping/*.csv
+taxonomic_mapping/*.tsv
+taxonomic_mapping/*.json
+taxonomic_mapping/*.yaml
+taxonomic_mapping/*.yml
+taxonomic_mapping/*.xml
+taxonomic_mapping/*.txt

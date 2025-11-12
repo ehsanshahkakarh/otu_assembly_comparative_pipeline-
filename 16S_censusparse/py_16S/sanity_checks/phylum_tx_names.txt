@@ -1,0 +1,77 @@
+Abditibacteriota	2109258
+Acidobacteriota	57723
+Actinomycetota	201174
+Aquificota	200783	
+Armatimonadota	67819
+Atribacterota	67818
+Bacillota	1239
+Bacteroidota	976
+Bdellovibrionota	3018035
+Caldisericota	67814
+Campylobacterota	29547
+Candidatus Aenigmarchaeota	
+Candidatus Aerophobetes	
+Candidatus Altiarchaeota	
+Candidatus Berkelbacteria	1618330
+Candidatus Bipolaricaulota	67810
+Candidatus Calescamantes	
+Candidatus Cloacimonadota	456828
+Candidatus Cloacimonetes	
+Candidatus Dadabacteria	1752716
+Candidatus Desantisbacteria	
+Candidatus Diapherotrites	
+Candidatus Edwardsbacteria	
+Candidatus Fermentibacteria	
+Candidatus Fervidibacteria	
+Candidatus Firestonebacteria	
+Candidatus Gracilibacteria	
+Candidatus Hydrogenedentes	
+Candidatus Hydrothermae	1130266
+Candidatus Latescibacteria	
+Candidatus Margulisbacteria	
+Candidatus Marinimicrobia	
+Candidatus Micrarchaeota	1801631
+Candidatus Microgenomates	
+Candidatus Moduliflexus	1940406
+Candidatus Nanohaloarchaeota	
+Candidatus Omnitrophica	
+Candidatus Parcubacteria	221216
+Candidatus Poribacteria	265317
+Candidatus Saccharibacteria	95818
+Candidatus Schekmanbacteria	
+Candidatus Sumerlaeota	200295
+Candidatus Tectomicrobia	
+Candidatus Verstraetearchaeota	
+Chlamydiota	204428
+Chlorobiota	1090
+Chloroflexota	200795
+Chrysiogenota	200938
+Coprothermobacterota	2138240
+Cyanobacteriota	1117
+Deferribacterota	200930
+Deinococcota	1297
+Dictyoglomota	68297
+Elusimicrobiota	74152
+Fibrobacterota	65842
+Fusobacteriota	32066
+Gemmatimonadota	142182
+Heimdallarchaeia	3422291
+Ignavibacteriota	1134404
+Mycoplasmatota	544448
+Myxococcota	2818505
+Nanoarchaeota	192989
+Nitrososphaerota	651137
+Nitrospinota	1293497
+Nitrospirota	40117
+Odinarchaeia	3067281
+Patescibacteria	1783273
+Planctomycetota	203682
+Pseudomonadota	1224
+Spirochaetota	203691
+Synergistota	508458
+Thermodesulfobacteriota	200940
+Thermomicrobiota	3027942
+Thermotogota	200918
+Verrucomicrobiota	74201
+candidate division NC10	640293
+candidate division Zixibacteria	1379697

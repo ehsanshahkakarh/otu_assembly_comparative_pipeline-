@@ -1,0 +1,108 @@
+ALLUVIAL PLOT COLOR REFERENCE
+=============================
+
+This file lists all the colors used in your alluvial plots so you can avoid conflicts 
+when editing the scatter plot color schemes.
+
+16S ALLUVIAL PLOTS (BACTERIA/ARCHAEA)
+=====================================
+
+BACTERIA COLORS (from alluvial_16s_abs_values_only.R):
+------------------------------------------------------
+Abditibacteriota = #87bd4b        (36.71× novel - highest factor)
+Calditrichota = #e4a98f           (35.00× novel)
+Deinococcota = #ff6b35            (32.50× novel)
+Spirochaetota = #4ecdc4           (30.00× novel)
+Aquificota = #45b7d1              (25.00× novel)
+Thermotogota = #96ceb4            (22.50× novel)
+Dictyoglomota = #ffeaa7           (20.00× novel)
+Synergistota = #dda0dd            (17.50× novel)
+Elusimicrobiota = #98d8c8         (15.00× novel)
+Caldisericota = #f7dc6f           (12.50× novel)
+Chrysiogenota = #bb8fce           (10.00× novel)
+Nitrospirota = #85c1e9            (7.50× novel)
+Planctomycetota = #f8c471         (5.00× novel)
+Chloroflexota = #82e0aa           (2.50× novel)
+Chlamydiota = #5b1f06             (9.50× overrepresented - dark brown)
+Ignavibacteriota = #f16127        (1063.64× overrepresented - blood orange)
+
+ARCHAEA COLORS (from alluvial_16s_abs_values_only.R):
+-----------------------------------------------------
+Euryarchaeota = #55ee79           (Most common archaea - bright green)
+Nitrososphaerota = #ef9e17        (Important ammonia-oxidizing archaea)
+Thermoproteota = #c0392b          (Hyperthermophiles - deep red)
+Nanoarchaeota = #8e44ad           (Smallest known archaea - purple)
+
+SPECIAL COLORS:
+--------------
+Other = #808080                   (Gray for "Other" category)
+.U. entries = #ff9999, #ffcc99, #99ccff, #ccffcc (Rotating light colors)
+
+EXTENDED FALLBACK COLORS (Bacteria):
+------------------------------------
+#FF6B6B, #4ECDC4, #45B7D1, #96CEB4, #FFEAA7, #DDA0DD,
+#98D8C8, #F7DC6F, #BB8FCE, #85C1E9, #F8C471, #82E0AA,
+#F1948A, #C39BD3, #D7BDE2, #A9DFBF, #F9E79F
+
+18S ALLUVIAL PLOTS (EUKARYOTA)
+==============================
+
+EUKARYOTA COLORS (from alluvial_18s_abs_values_only.R):
+-------------------------------------------------------
+Opisthokonta = #2E5984           (Deep navy blue - most abundant)
+Streptophyta = #8B4513           (Saddle brown - land plants)
+Stramenopiles = #FF8C00          (Dark orange - diverse protists)
+Chlorophyta = #228B22            (Forest green - green algae)
+Alveolata = #DC143C              (Crimson - dinoflagellates, ciliates)
+Rhizaria = #4B0082               (Indigo - amoeboid protists)
+Evosea = #FF1493                 (Deep pink - amoebozoans)
+Discoba = #00CED1                (Dark turquoise - excavates)
+Metamonada = #FF4500             (Orange red - flagellated protists)
+Amoebozoa = #4682B4              (Steel blue - amoebas)
+Haptista = #D2691E               (Chocolate - haptophytes)
+
+SPECIAL COLORS:
+--------------
+Other = #808080                  (Gray for "Other" category)
+.U. entries = #ffcc99            (Light orange for eukaryotic .U. entries)
+
+EXTENDED FALLBACK COLORS (Eukaryota):
+-------------------------------------
+#FF6B6B, #4ECDC4, #45B7D1, #96CEB4, #FFEAA7, #DDA0DD,
+#98D8C8, #F7DC6F, #BB8FCE, #85C1E9, #F8C471, #82E0AA,
+#F1948A, #C39BD3, #D7BDE2, #A9DFBF, #F9E79F
+
+COLORS TO AVOID IN SCATTER PLOTS
+================================
+
+When editing your scatter plot color schemes, AVOID these colors that are 
+already used in alluvial plots:
+
+HIGH PRIORITY (Main taxonomic groups):
+- #87bd4b (Abditibacteriota - highest novel factor)
+- #2E5984 (Opisthokonta - most abundant eukaryote)
+- #55ee79 (Euryarchaeota - most common archaea)
+- #8B4513 (Streptophyta - land plants)
+- #FF8C00 (Stramenopiles - diverse protists)
+- #228B22 (Chlorophyta - green algae)
+- #DC143C (Alveolata - dinoflagellates)
+- #808080 (Other category - always gray)
+
+MEDIUM PRIORITY (Important groups):
+- #e4a98f, #ff6b35, #4ecdc4, #45b7d1, #96ceb4 (Novel bacteria)
+- #ef9e17, #c0392b, #8e44ad (Other archaea)
+- #4B0082, #FF1493, #00CED1, #FF4500 (Other eukaryotes)
+
+LOW PRIORITY (Fallback colors):
+- The extended fallback color arrays listed above
+
+RECOMMENDATION
+==============
+
+Your current scatter plot color schemes are well-designed and should have 
+minimal conflicts with alluvial plots. The main overlaps to watch for are:
+- Any exact hex matches with the HIGH PRIORITY colors above
+- Similar colors that might cause visual confusion when plots are viewed together
+
+When making individual color edits, cross-reference against this list to 
+maintain visual consistency across all your visualizations.

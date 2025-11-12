@@ -1,0 +1,4 @@
+File	Total Taxa	Mismatches	Percentage Correct
+eukaryotic_phyla.csv	21	21	0.00%
+eukaryotic_families.csv	93	93	0.00%
+eukaryotic_genera.csv	716	716	0.00%

@@ -1,0 +1,19 @@
+taxid	lineage	rank	status
+33154	cellular organisms;Eukaryota;Opisthokonta	clade	verified
+33630	cellular organisms;Eukaryota;Sar;Alveolata	clade	verified
+2611352	cellular organisms;Eukaryota;Discoba	clade	verified
+543769	cellular organisms;Eukaryota;Sar;Rhizaria	clade	verified
+33634	cellular organisms;Eukaryota;Sar;Stramenopiles	clade	verified
+2605435	cellular organisms;Eukaryota;Amoebozoa;Evosea	phylum	verified
+35493	cellular organisms;Eukaryota;Viridiplantae;Streptophyta	phylum	verified
+3041	cellular organisms;Eukaryota;Viridiplantae;Chlorophyta	phylum	verified
+555369	cellular organisms;Eukaryota;Amoebozoa;Tubulinea	phylum	verified
+2611341	cellular organisms;Eukaryota;Metamonada	clade	verified
+555280	cellular organisms;Eukaryota;Amoebozoa;Discosea	phylum	verified
+193537	cellular organisms;Eukaryota;Haptista;Centroplasthelida	class	verified
+1237875	cellular organisms;Eukaryota;CRuMs;Rigifilida	order	verified
+419944	cellular organisms;Eukaryota;Eukaryota incertae sedis;Picozoa	phylum	verified
+2489521	cellular organisms;Eukaryota;Hemimastigophora	phylum	verified
+3004207	cellular organisms;Eukaryota;Provora;Nibbleridia	phylum	verified
+2763	cellular organisms;Eukaryota;Rhodophyta	phylum	verified
+3004449	cellular organisms;Eukaryota;Provora;Nebulidia	phylum	verified

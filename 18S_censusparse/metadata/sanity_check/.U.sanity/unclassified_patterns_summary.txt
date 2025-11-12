@@ -1,0 +1,72 @@
+18S EukCensus Unclassified Pattern Analysis
+==================================================
+
+Analysis date: 2025-10-15 11:14:40
+
+OVERVIEW:
+  Total combinations analyzed: 491
+  Total clusters: 70,899
+  Total sequences: 401,342
+
+CLASSIFICATION PATTERNS:
+  Fully Classified:
+    Combinations: 370 (75.4%)
+    Clusters: 20,055 (28.3%)
+    Sequences: 144,214 (35.9%)
+
+  Division Unclassified:
+    Combinations: 0 (0.0%)
+    Clusters: 0 (0.0%)
+    Sequences: 0 (0.0%)
+
+  Family Unclassified:
+    Combinations: 0 (0.0%)
+    Clusters: 0 (0.0%)
+    Sequences: 0 (0.0%)
+
+  Genus Unclassified:
+    Combinations: 38 (7.7%)
+    Clusters: 9,338 (13.2%)
+    Sequences: 58,642 (14.6%)
+
+  Multiple Unclassified:
+    Combinations: 83 (16.9%)
+    Clusters: 41,506 (58.5%)
+    Sequences: 198,486 (49.5%)
+
+TOP 10 FULLY CLASSIFIED BY CLUSTER COUNT:
+   1. Evosea|Mastigamoebidae|Mastigamoeba                          (1,609 clusters, 10,879 sequences)
+   2. Alveolata|Oxytrichidae|Stylonychia                           (800 clusters, 7,715 sequences)
+   3. Rhizaria|Sandonidae|Flectomonas                              (639 clusters, 3,724 sequences)
+   4. Alveolata|Dino-Group-II-Clade-7|Dino-Group-II-Clade-7_X      (547 clusters, 1,828 sequences)
+   5. Discoba|Euglenaceae|Trachelomonas                            (470 clusters, 1,572 sequences)
+   6. Opisthokonta|Sordariomycetes|Gibberella                      (466 clusters, 4,262 sequences)
+   7. Alveolata|Thoracosphaeraceae|Pentapharsodinium               (466 clusters, 2,001 sequences)
+   8. Alveolata|Dino-Group-II-Clade-10-and-11|Dino-Group-II-Clade-10-and-11_X (415 clusters, 1,595 sequences)
+   9. Streptophyta|Embryophyceae_XX|Zea                            (372 clusters, 6,252 sequences)
+  10. Stramenopiles|Thalassiosiraceae|Thalassiosira                (309 clusters, 6,048 sequences)
+
+TOP 10 GENUS UNCLASSIFIED BY CLUSTER COUNT:
+   1. Opisthokonta|Insecta|Insecta.U.genus                         (2,513 clusters, 16,928 sequences)
+   2. Streptophyta|Embryophyceae_XX|Embryophyceae_XX.U.genus       (1,535 clusters, 7,457 sequences)
+   3. Opisthokonta|Agaricomycetes|Agaricomycetes.U.genus           (665 clusters, 4,615 sequences)
+   4. Opisthokonta|Dothideomycetes|Dothideomycetes.U.genus         (539 clusters, 2,447 sequences)
+   5. Metamonada|Hexamitidae|Hexamitidae.U.genus                   (484 clusters, 3,018 sequences)
+   6. Opisthokonta|Sordariomycetes|Sordariomycetes.U.genus         (469 clusters, 2,392 sequences)
+   7. Opisthokonta|Eurotiomycetes|Eurotiomycetes.U.genus           (381 clusters, 3,580 sequences)
+   8. Opisthokonta|Chromadorea_X|Chromadorea_X.U.genus             (282 clusters, 791 sequences)
+   9. Chlorophyta|Chlorellales_X|Chlorellales_X.U.genus            (255 clusters, 2,704 sequences)
+  10. Opisthokonta|Anthozoa|Anthozoa.U.genus                       (248 clusters, 2,766 sequences)
+
+TOP 10 MULTIPLE UNCLASSIFIED BY CLUSTER COUNT:
+   1. Eukaryota.U.division|Eukaryota.U.family|Eukaryota.U.genus    (9,333 clusters, 39,360 sequences)
+   2. Opisthokonta|Metazoa.U.family|Metazoa.U.genus                (4,480 clusters, 25,091 sequences)
+   3. Amoebozoa.U.division|Amoebozoa.U.family|Amoebozoa.U.genus    (4,214 clusters, 15,143 sequences)
+   4. Discoba|Euglenida.U.family|Euglenida.U.genus                 (1,526 clusters, 5,350 sequences)
+   5. Opisthokonta|Nematoda.U.family|Nematoda.U.genus              (1,163 clusters, 5,960 sequences)
+   6. Rhizaria|Cercozoa.U.family|Cercozoa.U.genus                  (1,152 clusters, 3,275 sequences)
+   7. Opisthokonta|Fungi.U.family|Fungi.U.genus                    (1,112 clusters, 2,638 sequences)
+   8. Alveolata|Dinophyceae.U.family|Dinophyceae.U.genus           (1,090 clusters, 4,487 sequences)
+   9. Stramenopiles|Stramenopiles.U.family|Stramenopiles.U.genus   (1,038 clusters, 7,804 sequences)
+  10. Opisthokonta|Pezizomycotina.U.family|Pezizomycotina.U.genus  (987 clusters, 5,074 sequences)
+

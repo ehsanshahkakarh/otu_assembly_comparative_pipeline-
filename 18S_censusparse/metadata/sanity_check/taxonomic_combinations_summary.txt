@@ -1,0 +1,55 @@
+18S EukCensus Taxonomic Combination Summary
+==================================================
+
+Analysis date: 2025-10-15 11:26:29
+
+OVERVIEW:
+  Total unique combinations: 491
+  Total records (clusters): 70,899
+  Total sequences: 401,342
+  Average clusters per combination: 144.4
+  Average sequences per combination: 817.4
+
+TOP 20 COMBINATIONS BY CLUSTER COUNT:
+   1. Eukaryota.U.division|Eukaryota.U.family|Eukaryota.U.genus    (9,333 clusters, 39,360 sequences)
+   2. Opisthokonta|Metazoa.U.family|Metazoa.U.genus                (4,480 clusters, 25,091 sequences)
+   3. Opisthokonta|Insecta|Insecta.U.genus                         (2,513 clusters, 16,928 sequences)
+   4. Opisthokonta|Nematoda.U.family|Nematoda.U.genus              (1,163 clusters, 5,960 sequences)
+   5. Opisthokonta|Fungi.U.family|Fungi.U.genus                    (1,112 clusters, 2,638 sequences)
+   6. Opisthokonta|Pezizomycotina.U.family|Pezizomycotina.U.genus  (987 clusters, 5,074 sequences)
+   7. Opisthokonta|Platyhelminthes.U.family|Platyhelminthes.U.genus (851 clusters, 2,920 sequences)
+   8. Opisthokonta|Opisthokonta.U.family|Opisthokonta.U.genus      (687 clusters, 3,638 sequences)
+   9. Opisthokonta|Agaricomycetes|Agaricomycetes.U.genus           (665 clusters, 4,615 sequences)
+  10. Opisthokonta|Dothideomycetes|Dothideomycetes.U.genus         (539 clusters, 2,447 sequences)
+  11. Opisthokonta|Chytridiomycota.U.family|Chytridiomycota.U.genus (530 clusters, 1,528 sequences)
+  12. Opisthokonta|Sordariomycetes|Sordariomycetes.U.genus         (469 clusters, 2,392 sequences)
+  13. Opisthokonta|Sordariomycetes|Gibberella                      (466 clusters, 4,262 sequences)
+  14. Opisthokonta|Crustacea.U.family|Crustacea.U.genus            (436 clusters, 2,433 sequences)
+  15. Opisthokonta|Eurotiomycetes|Eurotiomycetes.U.genus           (381 clusters, 3,580 sequences)
+  16. Opisthokonta|Mollusca.U.family|Mollusca.U.genus              (353 clusters, 2,354 sequences)
+  17. Opisthokonta|Agaricomycotina.U.family|Agaricomycotina.U.genus (328 clusters, 2,666 sequences)
+  18. Opisthokonta|Craniata_X.U.family|Craniata_X.U.genus          (326 clusters, 2,470 sequences)
+  19. Opisthokonta|Exobasidiomycetes|Malassezia                    (298 clusters, 11,722 sequences)
+  20. Opisthokonta|Ascomycota.U.family|Ascomycota.U.genus          (288 clusters, 3,632 sequences)
+
+TOP 20 COMBINATIONS BY SEQUENCE COUNT:
+   1. Eukaryota.U.division|Eukaryota.U.family|Eukaryota.U.genus    (39,360 sequences, 9,333 clusters)
+   2. Opisthokonta|Metazoa.U.family|Metazoa.U.genus                (25,091 sequences, 4,480 clusters)
+   3. Opisthokonta|Insecta|Insecta.U.genus                         (16,928 sequences, 2,513 clusters)
+   4. Amoebozoa.U.division|Amoebozoa.U.family|Amoebozoa.U.genus    (15,143 sequences, 4,214 clusters)
+   5. Opisthokonta|Exobasidiomycetes|Malassezia                    (11,722 sequences, 298 clusters)
+   6. Evosea|Mastigamoebidae|Mastigamoeba                          (10,879 sequences, 1,609 clusters)
+   7. Alveolata|Alveolata.U.family|Alveolata.U.genus               (8,253 sequences, 393 clusters)
+   8. Stramenopiles|Stramenopiles.U.family|Stramenopiles.U.genus   (7,804 sequences, 1,038 clusters)
+   9. Alveolata|Oxytrichidae|Stylonychia                           (7,715 sequences, 800 clusters)
+  10. Streptophyta|Embryophyceae_XX|Embryophyceae_XX.U.genus       (7,457 sequences, 1,535 clusters)
+  11. Chlorophyta|Bathycoccaceae|Ostreococcus                      (6,432 sequences, 293 clusters)
+  12. Streptophyta|Embryophyceae_XX|Zea                            (6,252 sequences, 372 clusters)
+  13. Stramenopiles|Thalassiosiraceae|Thalassiosira                (6,048 sequences, 309 clusters)
+  14. Opisthokonta|Nematoda.U.family|Nematoda.U.genus              (5,960 sequences, 1,163 clusters)
+  15. Discoba|Euglenida.U.family|Euglenida.U.genus                 (5,350 sequences, 1,526 clusters)
+  16. Opisthokonta|Pezizomycotina.U.family|Pezizomycotina.U.genus  (5,074 sequences, 987 clusters)
+  17. Opisthokonta|Glomerales|Rhizophagus                          (4,813 sequences, 236 clusters)
+  18. Discoba|Heterolobosea.U.family|Heterolobosea.U.genus         (4,751 sequences, 896 clusters)
+  19. Opisthokonta|Agaricomycetes|Agaricomycetes.U.genus           (4,615 sequences, 665 clusters)
+  20. Alveolata|Dinophyceae.U.family|Dinophyceae.U.genus           (4,487 sequences, 1,090 clusters)

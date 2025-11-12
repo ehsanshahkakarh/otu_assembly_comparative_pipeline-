@@ -1,0 +1,32 @@
+{
+  "bacteria_colors": {
+    "color_1": "#4c9b34",
+    "color_2": "#72c859",
+    "color_3": "#9fe18b",
+    "color_4": "#cfe99d",
+    "color_5": "#ff7200",
+    "color_6": "#d58a2f",
+    "color_7": "#ffb44c",
+    "color_8": "#f5d24f",
+    "color_9": "#a67c28",
+    "color_10": "#548877",
+    "color_11": "#46bda3",
+    "color_12": "#55e3ff",
+    "color_13": "#7ac7da",
+    "color_14": "#bfb1d3",
+    "color_15": "#80456e",
+    "color_16": "#994417"
+  },
+  "color_groups": {
+    "spaced_greens": ["#4c9b34", "#72c859", "#9fe18b", "#cfe99d"],
+    "warm_band": ["#ff7200", "#d58a2f", "#ffb44c", "#f5d24f", "#a67c28"],
+    "teals_aquas": ["#548877", "#46bda3", "#55e3ff", "#7ac7da"],
+    "moved_from_euks": ["#bfb1d3", "#80456e"],
+    "brown": ["#994417"]
+  },
+  "notes": {
+    "description": "16-color bacteria palette for mega comprehensive stacked visual",
+    "usage": "Colors are applied to bacterial phyla in order, cycling through if more than 16 phyla exist",
+    "moved_colors": "Colors 14 and 15 were moved from the eukaryota palette to provide better coverage"
+  }
+}

@@ -1,0 +1,49 @@
+taxid	lineage	rank
+6340	cellular organisms;Eukaryota;Opisthokonta;Metazoa;Eumetazoa;Bilateria;Protostomia;Spiralia;Lophotrochozoa;Annelida	phylum
+5794	cellular organisms;Eukaryota;Sar;Alveolata;Apicomplexa	phylum
+6656	cellular organisms;Eukaryota;Opisthokonta;Metazoa;Eumetazoa;Bilateria;Protostomia;Ecdysozoa;Panarthropoda;Arthropoda	phylum
+4890	cellular organisms;Eukaryota;Opisthokonta;Fungi;Dikarya;Ascomycota	phylum
+2836	cellular organisms;Eukaryota;Sar;Stramenopiles;Ochrophyta;Bacillariophyta	phylum
+5204	cellular organisms;Eukaryota;Opisthokonta;Fungi;Dikarya;Basidiomycota	phylum
+451459	cellular organisms;Eukaryota;Opisthokonta;Fungi;Fungi incertae sedis;Blastocladiomycota	phylum
+7568	cellular organisms;Eukaryota;Opisthokonta;Metazoa;Eumetazoa;Bilateria;Protostomia;Spiralia;Lophotrochozoa;Brachiopoda	phylum
+136419	cellular organisms;Eukaryota;Sar;Rhizaria;Cercozoa	phylum
+3041	cellular organisms;Eukaryota;Viridiplantae;Chlorophyta	phylum
+7711	cellular organisms;Eukaryota;Opisthokonta;Metazoa;Eumetazoa;Bilateria;Deuterostomia;Chordata	phylum
+4761	cellular organisms;Eukaryota;Opisthokonta;Fungi;Fungi incertae sedis;Chytridiomycota	phylum
+5878	cellular organisms;Eukaryota;Sar;Alveolata;Ciliophora	phylum
+6073	cellular organisms;Eukaryota;Opisthokonta;Metazoa;Eumetazoa;Cnidaria	phylum
+1031332	cellular organisms;Eukaryota;Opisthokonta;Fungi;Fungi incertae sedis;Cryptomycota	phylum
+10197	cellular organisms;Eukaryota;Opisthokonta;Metazoa;Eumetazoa;Ctenophora	phylum
+516519	cellular organisms;Eukaryota;Opisthokonta;Metazoa;Eumetazoa;Bilateria;Protostomia;Ecdysozoa;Panarthropoda;Arthropoda;Mandibulata;Pancrustacea;Hexapoda;Insecta;Dicondylia;Pterygota;Neoptera;Endopterygota;Diptera;Nematocera;Tipulomorpha;Tipuloidea;Tipulidae;Ctenophorinae;Ctenophora	genus
+1003038	cellular organisms;Eukaryota;Sar;Stramenopiles;Ochrophyta;Bacillariophyta;Fragilariophyceae;Fragilariophycidae;Licmophorales;Ulnariaceae;Ctenophora	genus
+555280	cellular organisms;Eukaryota;Amoebozoa;Discosea	phylum
+7586	cellular organisms;Eukaryota;Opisthokonta;Metazoa;Eumetazoa;Bilateria;Deuterostomia;Echinodermata	phylum
+2604748	cellular organisms;Eukaryota;Sar;Rhizaria;Endomyxa	phylum
+33682	cellular organisms;Eukaryota;Discoba;Euglenozoa	phylum
+2605435	cellular organisms;Eukaryota;Amoebozoa;Evosea	phylum
+29178	cellular organisms;Eukaryota;Sar;Rhizaria;Retaria;Foraminifera	phylum
+207245	cellular organisms;Eukaryota;Metamonada;Fornicata	phylum
+2830	cellular organisms;Eukaryota;Haptista;Haptophyta	phylum
+2489521	cellular organisms;Eukaryota;Hemimastigophora	phylum
+5752	cellular organisms;Eukaryota;Discoba;Heterolobosea	phylum
+6029	cellular organisms;Eukaryota;Opisthokonta;Fungi;Fungi incertae sedis;Microsporidia	phylum
+6447	cellular organisms;Eukaryota;Opisthokonta;Metazoa;Eumetazoa;Bilateria;Protostomia;Spiralia;Lophotrochozoa;Mollusca	phylum
+1913637	cellular organisms;Eukaryota;Opisthokonta;Fungi;Fungi incertae sedis;Mucoromycota	phylum
+3004449	cellular organisms;Eukaryota;Provora;Nebulidia	phylum
+6231	cellular organisms;Eukaryota;Opisthokonta;Metazoa;Eumetazoa;Bilateria;Protostomia;Ecdysozoa;Nematoda	phylum
+4762	cellular organisms;Eukaryota;Sar;Stramenopiles;Oomycota	phylum
+5719	cellular organisms;Eukaryota;Metamonada;Parabasalia	phylum
+2497438	cellular organisms;Eukaryota;Sar;Alveolata;Perkinsozoa	phylum
+419944	cellular organisms;Eukaryota;Eukaryota incertae sedis;Picozoa	phylum
+10226	cellular organisms;Eukaryota;Opisthokonta;Metazoa;Eumetazoa;Placozoa	phylum
+6157	cellular organisms;Eukaryota;Opisthokonta;Metazoa;Eumetazoa;Bilateria;Protostomia;Spiralia;Lophotrochozoa;Platyhelminthes	phylum
+6040	cellular organisms;Eukaryota;Opisthokonta;Metazoa;Porifera	phylum
+2806169	cellular organisms;Eukaryota;Viridiplantae;Prasinodermophyta	phylum
+2662611	cellular organisms;Eukaryota;Metamonada;Preaxostyla	phylum
+1224	cellular organisms;Bacteria;Pseudomonadati;Pseudomonadota	phylum
+2763	cellular organisms;Eukaryota;Rhodophyta	phylum
+2871090	cellular organisms;Eukaryota;Opisthokonta;Fungi;Fungi incertae sedis;Sanchytriomycota	phylum
+35493	cellular organisms;Eukaryota;Viridiplantae;Streptophyta	phylum
+555369	cellular organisms;Eukaryota;Amoebozoa;Tubulinea	phylum
+1913638	cellular organisms;Eukaryota;Opisthokonta;Fungi;Fungi incertae sedis;Zoopagomycota	phylum

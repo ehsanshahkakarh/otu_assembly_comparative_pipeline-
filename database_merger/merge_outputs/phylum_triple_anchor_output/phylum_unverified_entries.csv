@@ -1,0 +1,19 @@
+phylum,gtdb_domain,ncbi_domain,database_presence,match_status,gtdb_genome_count,gtdb_species_count,ncbi_genome_count,ncbi_species_count,reason_filtered,sample_accessions
+QNDG01,Bacteria,,GTDB_Only,No_Match,14,13,0,0,No verifiable NCBI taxonomy classification,"GCA_030635125.1, GCA_023139105.1, GCA_016931965.1, GCA_030372965.1, GCA_016931355.1"
+UBP15,Bacteria,,GTDB_Only,No_Match,9,7,0,0,No verifiable NCBI taxonomy classification,"GCA_002069885.1, GCA_022704265.1, GCA_029561055.1, GCA_029564595.1, GCA_022709505.1"
+UBP18,Bacteria,,GTDB_Only,No_Match,8,6,0,0,No verifiable NCBI taxonomy classification,"GCA_018896935.1, GCA_022012625.1, GCA_018903055.1, GCA_011049955.1, GCA_030616365.1"
+UBP13,Bacteria,,GTDB_Only,No_Match,8,3,0,0,No verifiable NCBI taxonomy classification,"GCA_028698155.1, GCA_028706485.1, GCA_028685295.1, GCA_028702105.1, GCA_002410925.1"
+SM23-31,Bacteria,,GTDB_Only,No_Match,7,6,0,0,No verifiable NCBI taxonomy classification,"GCA_937900915.1, GCA_003644825.1, GCA_028278455.1, GCA_030616165.1, GCA_001304035.1"
+JAHJDO01,Bacteria,,GTDB_Only,No_Match,7,6,0,0,No verifiable NCBI taxonomy classification,"GCA_030629405.1, GCA_023129655.1, GCA_030652805.1, GCA_030631525.1, GCA_018812485.1"
+UBP7,Bacteria,,GTDB_Only,No_Match,6,3,0,0,No verifiable NCBI taxonomy classification,"GCA_913045075.1, GCA_002728215.1, GCA_002456105.1, GCA_002716355.1, GCA_002501535.1"
+JACIXR01,Bacteria,,GTDB_Only,No_Match,3,3,0,0,No verifiable NCBI taxonomy classification,"GCA_938041455.1, GCA_014360495.1, GCA_014360465.1"
+RBG-13-61-14,Bacteria,,GTDB_Only,No_Match,3,3,0,0,No verifiable NCBI taxonomy classification,"GCA_903897985.1, GCA_903930515.1, GCA_001797815.1"
+UBP4,Bacteria,,GTDB_Only,No_Match,3,2,0,0,No verifiable NCBI taxonomy classification,"GCA_002428325.1, GCA_002382585.1, GCA_026416715.1"
+JALSQH01,Bacteria,,GTDB_Only,No_Match,2,2,0,0,No verifiable NCBI taxonomy classification,"GCA_027004335.1, GCA_026985515.1"
+JAGOBX01,Bacteria,,GTDB_Only,No_Match,2,2,0,0,No verifiable NCBI taxonomy classification,"GCA_017999075.1, GCA_029551925.1"
+GCA-001730085,Bacteria,,GTDB_Only,No_Match,2,2,0,0,No verifiable NCBI taxonomy classification,"GCA_022560555.1, GCA_001730085.1"
+T1Sed10-126,Bacteria,,GTDB_Only,No_Match,2,2,0,0,No verifiable NCBI taxonomy classification,"GCA_003557545.1, GCA_003554945.1"
+BS750m-G25,Bacteria,,GTDB_Only,No_Match,1,1,0,0,No verifiable NCBI taxonomy classification,GCA_016783505.1
+JAMORN01,Bacteria,,GTDB_Only,No_Match,1,1,0,0,No verifiable NCBI taxonomy classification,GCA_027063545.1
+JAJRZV01,Bacteria,,GTDB_Only,No_Match,1,1,0,0,No verifiable NCBI taxonomy classification,GCA_024275095.1
+JAMOTN01,Bacteria,,GTDB_Only,No_Match,1,1,0,0,No verifiable NCBI taxonomy classification,GCA_027062325.1

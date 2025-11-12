@@ -61,6 +61,25 @@ logs/
 # *.fastq
 # *.fq
 
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# R generated files
+Rplots.pdf
+.Rhistory
+.RData
+.Ruserdata
+
+# IDE/Editor specific
+.cursor/
+
 # Temporary files
 *.tmp
 *.temp
+temp_taxa_batch_*.txt
+
+# Large batch processing files
+**/txt_s/temp_taxa_batch_*.txt

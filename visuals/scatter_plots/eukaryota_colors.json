@@ -1,0 +1,42 @@
+{
+  "eukaryota_colors": {
+    "color_1": "#416b7d",
+    "color_2": "#69c1d4",
+    "color_3": "#55d0ba",
+    "color_4": "#003ce1",
+    "color_5": "#c73de4",
+    "color_6": "#65417a",
+    "color_7": "#68536c",
+    "color_8": "#cf8ac6",
+    "color_9": "#d24390",
+    "color_10": "#475093",
+    "color_11": "#663be6",
+    "color_12": "#7a9dcd",
+    "color_13": "#2E8B57"
+  },
+  "division_mapping": {
+    "Opisthokonta": "#416b7d",
+    "Alveolata": "#69c1d4",
+    "Rhizaria": "#55d0ba",
+    "Discoba": "#003ce1",
+    "Stramenopiles": "#c73de4",
+    "Evosea": "#65417a",
+    "Streptophyta": "#68536c",
+    "Chlorophyta": "#cf8ac6",
+    "Metamonada": "#d24390",
+    "Discosea": "#475093",
+    "Rhodophyta": "#663be6",
+    "Tubulinea": "#7a9dcd",
+    "Division_13": "#2E8B57"
+  },
+  "color_groups": {
+    "blues_teals": ["#416b7d", "#69c1d4", "#55d0ba", "#7a9dcd", "#2E8B57"],
+    "purples_magentas": ["#003ce1", "#c73de4", "#65417a", "#cf8ac6", "#d24390", "#663be6"],
+    "neutral_tones": ["#68536c", "#475093"]
+  },
+  "notes": {
+    "description": "13-color eukaryota palette for mega comprehensive stacked visual",
+    "usage": "Colors are mapped to specific eukaryotic divisions",
+    "recent_addition": "Color 13 (#2E8B57 sea green) was added to match 13 divisions in dataset"
+  }
+}

@@ -1,0 +1,58 @@
+COLOR PALETTES FOR MEGA COMPREHENSIVE STACKED VISUAL
+====================================================
+
+BACTERIA COLORS (16 colors):
+---------------------------
+color_1:  #4c9b34  (dark green)
+color_2:  #72c859  (medium green)
+color_3:  #9fe18b  (light green)
+color_4:  #cfe99d  (pale green)
+color_5:  #ff7200  (bright orange)
+color_6:  #d58a2f  (orange-brown)
+color_7:  #ffb44c  (light orange)
+color_8:  #f5d24f  (yellow-orange)
+color_9:  #a67c28  (dark yellow-brown)
+color_10: #548877  (teal-green)
+color_11: #46bda3  (aqua-teal)
+color_12: #55e3ff  (bright cyan)
+color_13: #7ac7da  (light blue)
+color_14: #bfb1d3  (lavender - moved from euks)
+color_15: #80456e  (plum - moved from euks)
+color_16: #994417  (brown)
+
+ARCHAEA COLORS (5 colors):
+-------------------------
+color_1:  #f51b7f  (bright pink)
+color_2:  #ff3f4d  (red-pink)
+color_3:  #d19386  (dusty rose)
+color_4:  #8c2a50  (dark rose)
+color_5:  #f5c7bd  (pale pink)
+
+EUKARYOTA COLORS (13 colors):
+----------------------------
+color_1:  #416b7d  (steel blue)
+color_2:  #69c1d4  (sky blue)
+color_3:  #55d0ba  (turquoise)
+color_4:  #003ce1  (royal blue)
+color_5:  #c73de4  (magenta)
+color_6:  #65417a  (purple)
+color_7:  #68536c  (gray-purple)
+color_8:  #cf8ac6  (pink-purple)
+color_9:  #d24390  (hot pink)
+color_10: #475093  (dark blue)
+color_11: #663be6  (violet)
+color_12: #7a9dcd  (periwinkle)
+color_13: #2E8B57  (sea green - newly added)
+
+SUMMARY:
+--------
+Total colors: 34
+- Bacteria: 16 colors (greens, oranges, teals, purples, brown)
+- Archaea: 5 colors (pink/red theme)
+- Eukaryota: 13 colors (blues, purples, teals)
+
+USAGE:
+------
+1. Edit any hex code in the JSON files to change colors
+2. Run simple_color_viewer.R to generate PNG preview (if graphics work)
+3. Copy updated colors back to mega_comprehensive_stacked_visual.R

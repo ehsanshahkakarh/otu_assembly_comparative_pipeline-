@@ -1,0 +1,17 @@
+{
+  "archaea_colors": {
+    "color_1": "#f51b7f",
+    "color_2": "#ff3f4d",
+    "color_3": "#d19386",
+    "color_4": "#8c2a50",
+    "color_5": "#f5c7bd"
+  },
+  "color_groups": {
+    "pink_red_palette": ["#f51b7f", "#ff3f4d", "#d19386", "#8c2a50", "#f5c7bd"]
+  },
+  "notes": {
+    "description": "5-color archaea palette for mega comprehensive stacked visual",
+    "usage": "Colors are applied to archaeal phyla in order, cycling through if more than 5 phyla exist",
+    "theme": "Pink and red tones for archaea domain"
+  }
+}

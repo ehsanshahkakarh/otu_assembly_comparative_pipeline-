@@ -1,0 +1,27 @@
+#Legacy Naming in the OTU dataset, comprehensive list of old -> new names 
+1. Nolandellidae  -> Eukaryota;Amoebozoa;Tubulinea;Euamoebida;Nolandellidae
+2. Neobodonidae -> Eukaryota;Discoba;Euglenozoa;Kinetoplastea;Metakinetoplastina;Neobodonida;Neobodonidae
+3. Tholoniidae -> Eukaryota;Sar;Rhizaria;Retaria;Radiolaria;Polycystinea;Spumellaria;Tholoniidae
+4. Ophryoglenida -> Eukaryota;Sar;Alveolata;Ciliophora;Intramacronucleata;Oligohymenophorea;Hymenostomatida;Ophryoglenidae
+5. Diplophrydaceae -> Eukaryota;Sar;Stramenopila;Bigyra;Sagenista;Labyrinthulomycetes;Amphitremida;Diplophryidae
+6. Allobodonidae -> NOTE: No valid taxonomic group found for "Allobodonidae".
+7. Chytridiomycetaceae  -> Eukaryota;Opisthokonta;Fungi;Chytridiomycota;Chytridiomycetes;Chytridiales;Chytridiaceae
+8. Eupetalomonads -> NOTE: This is likely the Order Petalomonadida, not a Family. Lineage: Eukaryota;Discoba;Euglenozoa;Euglenoidea;Petalomonadida
+9. Choanocystidae -> Eukaryota;Sar;Heliozoa;Centrohelea;Centrohelida;Pterocystina;Choanocystidae
+10. Nucleohelea -> NOTE: Nucleohelea is a Class, not a Family. Lineage: Eukaryota;Sar;Rhizaria;Cercozoa;Nucleohelea
+11. Paracercomonadidae -> Eukaryota;Sar;Rhizaria;Cercozoa;Sarcomonadea;Paracercomonadida;Paracercomonadidae
+12. Filamoebidae -> Eukaryota;Amorphea;Amoebozoa;Gracilipodida;Filamoebidae
+13. Platythecidia -> NOTE: No valid taxonomic group found for "Platythecidia".
+14. Massiteriidae -> Eukaryota;Sar;Rhizaria;Cercozoa;Granofilosea;Leucodictyida;Massisteriidae
+15. Gymnophrydidae -> Eukaryota;Sar;Rhizaria;Cercozoa;Gymnophrea;Gymnophryida;Gymnophryidae
+16. Sphenomonadidae -> Eukaryota;Discoba;Euglenozoa;Stavomonadea;Petalomonadida;Sphenomonadidae
+17. Pseudodifflugiidae -> Eukaryota;Sar;Rhizaria;Cercozoa;Thecofilosea;Tectofilosida;Pseudodifflugiidae
+18. Skeletonemaceae  -> Eukaryota;Sar;Stramenopila;Ochrophyta;Bacillariophyta;Coscinodiscophyceae;Thalassiosirales;Skeletonemaceae
+19. Cyclotrichium -> NOTE: Cyclotrichium is a Genus, not a Family. Lineage: Eukaryota;Sar;Alveolata;Ciliophora;Gymnostomatea;Cyclotrichida;Mesodiniidae;Cyclotrichium
+20. Paradinida -> NOTE: Paradinida is an Order, not a Family. Lineage: Eukaryota;Sar;Alveolata;Myzozoa;Syndiniales;Paradinida
+21. Craniata -> NOTE: Craniata is a major group of Chordate animals (vertebrates, etc.) and not a Family of protists. Lineage: Eukaryota;Opisthokonta;Holozoa;Metazoa;Eumetazoa;Bilateria;Deuterostomia;Chordata;Craniata
+22. Maxillopoda -> NOTE: Maxillopoda is a Class of Crustaceans, not a Family of protists. Lineage: Eukaryota;Opisthokonta;Holozoa;Metazoa;Eumetazoa;Bilateria;Protostomia;Ecdysozoa;Panarthropoda;Arthropoda;Pancrustacea;Crustacea;Maxillopoda
+23. Allogromiina -> NOTE: Allogromiina is a Suborder, not a Genus. Lineage: Eukaryota;Sar;Rhizaria;Retaria;Foraminifera;Tubothalamea;Allogromiida;Allogromiina
+24. Hyplorynchus -> NOTE: No valid taxonomic group found for "Hyplorynchus".
+25. Corallicolla -> Eukaryota;Sar;Alveolata;Apicomplexa;Maromastigomonada;Corallicolida;Corallicolidae;Corallicola
+26. Alphamonadea -> Eukaryota;Sar;Alveolata;Myzozoa;Perkinsea;Colpodellida;Alphamonadaceae;Alphamonas

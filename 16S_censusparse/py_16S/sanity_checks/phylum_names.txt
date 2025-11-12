@@ -1,0 +1,95 @@
+Abditibacteriota
+Acidobacteriota
+Actinomycetota
+Apicoplast
+Aquificota
+Archaea.U.phylum
+Armatimonadota
+Asgard group.U.phylum
+Atribacterota
+Bacillota
+Bacteria.U.phylum
+Bacteroidota
+Bdellovibrionota
+Caldisericota
+Calditrichota
+Campylobacterota
+Candidatus Aenigmarchaeota
+Candidatus Aerophobetes
+Candidatus Altiarchaeota
+Candidatus Bathyarchaeota.U.phylum
+Candidatus Berkelbacteria
+Candidatus Bipolaricaulota
+Candidatus Calescamantes
+Candidatus Cloacimonadota
+Candidatus Cloacimonetes
+Candidatus Dadabacteria
+Candidatus Dependentiae.U.phylum
+Candidatus Desantisbacteria
+Candidatus Diapherotrites
+Candidatus Edwardsbacteria
+Candidatus Fermentibacteria
+Candidatus Fervidibacteria
+Candidatus Firestonebacteria
+Candidatus Gracilibacteria
+Candidatus Hydrogenedentes
+Candidatus Hydrothermae
+Candidatus Hydrothermarchaeota
+Candidatus Korarchaeota
+Candidatus Latescibacteria
+Candidatus Lokiarchaeota
+Candidatus Margulisbacteria
+Candidatus Marinimicrobia
+Candidatus Melainabacteria
+Candidatus Micrarchaeota
+Candidatus Microgenomates
+Candidatus Moduliflexus
+Candidatus Nanohaloarchaeota
+Candidatus Omnitrophica
+Candidatus Parcubacteria
+Candidatus Poribacteria
+Candidatus Saccharibacteria
+Candidatus Schekmanbacteria
+Candidatus Sumerlaeota
+Candidatus Tectomicrobia
+Candidatus Thermoplasmatota
+Candidatus Verstraetearchaeota
+Chlamydiota
+Chlorobiota
+Chloroflexota
+Chloroplast
+Chrysiogenota
+Coprothermobacterota
+Cyanobacteriota
+Cyanobacteriota/Melainabacteria.U.phylum
+Deferribacterota
+Deinococcota
+Dictyoglomota
+Elusimicrobiota
+Euryarchaeota
+Fibrobacterota
+Fusobacteriota
+Gemmatimonadota
+Heimdallarchaeia
+Ignavibacteriota
+Lokiarchaeia
+Mitochondria
+Mycoplasmatota
+Myxococcota
+Nanoarchaeota
+Nitrososphaerota
+Nitrospinota
+Nitrospirota
+Odinarchaeia
+Patescibacteria
+Planctomycetota
+Pseudomonadota
+Spirochaetota
+Synergistota
+Thermodesulfobacteriota
+Thermomicrobiota
+Thermoproteota
+Thermotogota
+Verrucomicrobiota
+candidate division NC10
+candidate division Zixibacteria
