@@ -1,0 +1,96 @@
+# UNIFIED 16S PROKARYOTIC OVERREPRESENTED TAXONOMIC GROUPS
+# TaxID-Based Extraction Results - Complete Ranking
+# Generated: 2025-11-12 20:27:13
+# ======================================================================
+
+🎯 COMPLETE UNIFIED RANKING (ALL PROKARYOTIC OVERREPRESENTED GROUPS):
+================================================================================
+📊 SUMMARY STATISTICS:
+   Total taxonomic groups: 14
+   Total genomes: 5,893
+   Average genomes per group: 420.9
+
+   Bacteria: 9 groups, 4,958 genomes (84.1%)
+   Archaea: 5 groups, 935 genomes (15.9%)
+
+🏆 UNIFIED RANKING (by genome count):
+
+   [ 1] 🦠 Bartonellaceae: 2,191 genomes (37.2%)
+        68 genera, 538 species
+        Bartonella (25.0% genomes)
+        🌳 DIVERSE
+
+   [ 2] 🦠 Metamycoplasmataceae: 1,523 genomes (25.8%)
+        3 genera, 80 species
+        Mycoplasmopsis (62.0% genomes)
+        📊 MODERATELY CONCENTRATED
+
+   [ 3] 🦠 Chlamydiaceae: 969 genomes (16.4%)
+        19 genera, 65 species
+        Chlamydia (80.1% genomes)
+        🔥 HIGHLY CONCENTRATED
+
+   [ 4] 🔥 Haloferacaceae: 459 genomes (7.8%)
+        25 genera, 264 species
+        Halorubrum (37.3% genomes)
+        🌳 DIVERSE
+
+   [ 5] 🔥 Thermococcaceae: 205 genomes (3.5%)
+        3 genera, 78 species
+        Thermococcus (87.3% genomes)
+        🔥 HIGHLY CONCENTRATED
+
+   [ 6] 🔥 Natrialbaceae: 174 genomes (3.0%)
+        26 genera, 130 species
+        Natrinema (27.6% genomes)
+        🌳 DIVERSE
+
+   [ 7] 🦠 Chlorobiaceae: 109 genomes (1.8%)
+        4 genera, 34 species
+        Chlorobium (54.1% genomes)
+        📊 MODERATELY CONCENTRATED
+
+   [ 8] 🔥 Methanomassiliicoccaceae: 94 genomes (1.6%)
+        3 genera, 29 species
+        Methanomassiliicoccus (78.7% genomes)
+        📊 MODERATELY CONCENTRATED
+
+   [ 9] 🦠 Thermosynechococcaceae: 57 genomes (1.0%)
+        3 genera, 47 species
+        Thermosynechococcus (96.5% genomes)
+        🔥 HIGHLY CONCENTRATED
+
+   [10] 🦠 Sirenicapillariaceae: 51 genomes (0.9%)
+        3 genera, 35 species
+        Limnospira (78.4% genomes)
+        📊 MODERATELY CONCENTRATED
+
+   [11] 🦠 Gloeomargaritaceae: 26 genomes (0.4%)
+        1 genera, 26 species
+        Gloeomargarita (100.0% genomes)
+        🔥 HIGHLY CONCENTRATED
+
+   [12] 🦠 Simkaniaceae: 20 genomes (0.3%)
+        5 genera, 8 species
+        Simkania (60.0% genomes)
+        📊 MODERATELY CONCENTRATED
+
+   [13] 🦠 Ancalomicrobiaceae: 12 genomes (0.2%)
+        4 genera, 7 species
+        Pinisolibacter (33.3% genomes)
+        📊 MODERATELY CONCENTRATED
+
+   [14] 🔥 Picrophilaceae: 3 genomes (0.1%)
+        1 genera, 2 species
+        Picrophilus (100.0% genomes)
+        🔥 HIGHLY CONCENTRATED
+
+🎯 TOP 5 ANALYSIS:
+========================================
+Top 5 groups represent 5,347 genomes (90.7% of all overrepresented prokaryotic genomes)
+
+1. Bartonellaceae (Bacteria): 2,191 genomes (37.2%)
+2. Metamycoplasmataceae (Bacteria): 1,523 genomes (25.8%)
+3. Chlamydiaceae (Bacteria): 969 genomes (16.4%)
+4. Haloferacaceae (Archaea): 459 genomes (7.8%)
+5. Thermococcaceae (Archaea): 205 genomes (3.5%)

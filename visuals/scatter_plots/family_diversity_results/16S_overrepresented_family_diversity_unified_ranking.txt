@@ -1,0 +1,117 @@
+# UNIFIED 16S PROKARYOTIC OVERREPRESENTED TAXONOMIC GROUPS
+# TaxID-Based Extraction Results
+# Generated: 2025-11-12 20:20:58
+# ======================================================================
+
+🎯 UNIFIED RANKING OF ALL PROKARYOTIC OVERREPRESENTED TAXONOMIC GROUPS:
+==========================================================================================
+Total taxonomic groups: 14
+Total genomes: 2,182
+Total genera: 168
+Total species: 1,343
+Average genomes per group: 155.9
+
+📊 COMPLETE RANKING (Bacteria + Archaea combined, by genome count):
+
+   [ 1] Chlamydiaceae: 969 genomes (TaxID: 809)
+        Diversity: 19 genera, 65 species
+        Top genus: Chlamydia (80.1% of group genomes)
+        📊 MODERATELY CONCENTRATED
+
+   [ 2] Haloferacaceae: 459 genomes (TaxID: 1644056)
+        Diversity: 25 genera, 264 species
+        Top genus: Halorubrum (37.3% of group genomes)
+        🌳 DIVERSE
+
+   [ 3] Thermococcaceae: 205 genomes (TaxID: 2259)
+        Diversity: 3 genera, 78 species
+        Top genus: Thermococcus (87.3% of group genomes)
+        🔥 HIGHLY CONCENTRATED
+
+   [ 4] Natrialbaceae: 174 genomes (TaxID: 1644061)
+        Diversity: 26 genera, 130 species
+        Top genus: Natrinema (27.6% of group genomes)
+        🔥 HIGHLY CONCENTRATED
+
+   [ 5] Chlorobiaceae: 109 genomes (TaxID: 191412)
+        Diversity: 4 genera, 34 species
+        Top genus: Chlorobium (54.1% of group genomes)
+        📊 MODERATELY CONCENTRATED
+
+   [ 6] Methanomassiliicoccaceae: 94 genomes (TaxID: 1577788)
+        Diversity: 3 genera, 29 species
+        Top genus: Methanomassiliicoccus (78.7% of group genomes)
+        📊 MODERATELY CONCENTRATED
+
+   [ 7] Thermosynechococcaceae: 57 genomes (TaxID: 2881378)
+        Diversity: 3 genera, 47 species
+        Top genus: Thermosynechococcus (96.5% of group genomes)
+        🔥 HIGHLY CONCENTRATED
+
+   [ 8] Sirenicapillariaceae: 51 genomes (TaxID: 2934961)
+        Diversity: 3 genera, 35 species
+        Top genus: Limnospira (78.4% of group genomes)
+        📊 MODERATELY CONCENTRATED
+
+   [ 9] Gloeomargaritaceae: 26 genomes (TaxID: 1955043)
+        Diversity: 1 genera, 26 species
+        Top genus: Gloeomargarita (100.0% of group genomes)
+        
+
+   [10] Simkaniaceae: 20 genomes (TaxID: 92712)
+        Diversity: 5 genera, 8 species
+        Top genus: Simkania (60.0% of group genomes)
+        📊 MODERATELY CONCENTRATED
+
+   [11] Ancalomicrobiaceae: 12 genomes (TaxID: 2172021)
+        Diversity: 4 genera, 7 species
+        Top genus: Pinisolibacter (33.3% of group genomes)
+        📊 MODERATELY CONCENTRATED
+
+   [12] Picrophilaceae: 3 genomes (TaxID: 46630)
+        Diversity: 1 genera, 2 species
+        Top genus: Picrophilus (100.0% of group genomes)
+        
+
+   [13] Bartonellaceae: 2 genomes (TaxID: 772)
+        Diversity: 68 genera, 538 species
+        Top genus: Bartonella (25.0% of group genomes)
+        🌳 DIVERSE
+
+   [14] Metamycoplasmataceae: 1 genomes (TaxID: 2895623)
+        Diversity: 3 genera, 80 species
+        Top genus: Mycoplasmopsis (62.0% of group genomes)
+        📊 MODERATELY CONCENTRATED
+
+🔍 CONCENTRATION ANALYSIS:
+==================================================
+🔥 Highly concentrated groups (3): Thermococcaceae, Natrialbaceae, Thermosynechococcaceae
+📊 Moderately concentrated groups (7): Chlamydiaceae, Chlorobiaceae, Methanomassiliicoccaceae, Sirenicapillariaceae, Simkaniaceae, Ancalomicrobiaceae, Metamycoplasmataceae
+🌳 Diverse groups (2): Haloferacaceae, Bartonellaceae
+
+🏆 TOP 5 OVERREPRESENTED PROKARYOTIC TAXONOMIC GROUPS:
+============================================================
+1. **Chlamydiaceae**: 969 genomes (44.4% of all overrepresented prokaryotic genomes)
+   - Diversity: 19 genera across 65 species
+   - Dominated by: Chlamydia (80.1% of group)
+   - Classification: 📊 MODERATELY CONCENTRATED
+
+2. **Haloferacaceae**: 459 genomes (21.0% of all overrepresented prokaryotic genomes)
+   - Diversity: 25 genera across 264 species
+   - Dominated by: Halorubrum (37.3% of group)
+   - Classification: 🌳 DIVERSE
+
+3. **Thermococcaceae**: 205 genomes (9.4% of all overrepresented prokaryotic genomes)
+   - Diversity: 3 genera across 78 species
+   - Dominated by: Thermococcus (87.3% of group)
+   - Classification: 🔥 HIGHLY CONCENTRATED
+
+4. **Natrialbaceae**: 174 genomes (8.0% of all overrepresented prokaryotic genomes)
+   - Diversity: 26 genera across 130 species
+   - Dominated by: Natrinema (27.6% of group)
+   - Classification: 🔥 HIGHLY CONCENTRATED
+
+5. **Chlorobiaceae**: 109 genomes (5.0% of all overrepresented prokaryotic genomes)
+   - Diversity: 4 genera across 34 species
+   - Dominated by: Chlorobium (54.1% of group)
+   - Classification: 📊 MODERATELY CONCENTRATED

@@ -1,0 +1,116 @@
+{
+  "taxa_with_taxids": [
+    {
+      "name": "Gloeomargaritaceae",
+      "taxid": 1955043,
+      "matched_name": "Gloeomargaritaceae",
+      "domain": "Bacteria",
+      "lineage": "cellular organisms;Bacteria;Bacillati;Cyanobacteriota/Melainabacteria group;Cyanobacteriota;Cyanophyceae;Gloeomargaritales;Gloeomargaritaceae",
+      "source": "family",
+      "genomes": 28,
+      "species": 28
+    },
+    {
+      "name": "Bartonellaceae",
+      "taxid": 772,
+      "matched_name": "Bartonellaceae",
+      "domain": "Bacteria",
+      "lineage": "cellular organisms;Bacteria;Pseudomonadati;Pseudomonadota;Alphaproteobacteria;Hyphomicrobiales;Bartonellaceae",
+      "source": "family",
+      "genomes": 555,
+      "species": 278
+    },
+    {
+      "name": "Chlorobiaceae",
+      "taxid": 191412,
+      "matched_name": "Chlorobiaceae",
+      "domain": "Bacteria",
+      "lineage": "cellular organisms;Bacteria;Pseudomonadati;FCB group;Bacteroidota/Chlorobiota group;Chlorobiota;Chlorobiia;Chlorobiales;Chlorobiaceae",
+      "source": "family",
+      "genomes": 658,
+      "species": 36
+    },
+    {
+      "name": "Thermosynechococcaceae",
+      "taxid": 2881378,
+      "matched_name": "Thermosynechococcaceae",
+      "domain": "Bacteria",
+      "lineage": "cellular organisms;Bacteria;Bacillati;Cyanobacteriota/Melainabacteria group;Cyanobacteriota;Cyanophyceae;Acaryochloridales;Thermosynechococcaceae",
+      "source": "family",
+      "genomes": 66,
+      "species": 51
+    },
+    {
+      "name": "Simkaniaceae",
+      "taxid": 92712,
+      "matched_name": "Simkaniaceae",
+      "domain": "Bacteria",
+      "lineage": "cellular organisms;Bacteria;Pseudomonadati;PVC group;Chlamydiota;Chlamydiia;Parachlamydiales;Simkaniaceae",
+      "source": "family",
+      "genomes": 37,
+      "species": 9
+    },
+    {
+      "name": "Ancalomicrobiaceae",
+      "taxid": 2172021,
+      "matched_name": "Ancalomicrobiaceae",
+      "domain": "Bacteria",
+      "lineage": "cellular organisms;Bacteria;Pseudomonadati;Pseudomonadota;Alphaproteobacteria;Hyphomicrobiales;Ancalomicrobiaceae",
+      "source": "family",
+      "genomes": 14,
+      "species": 8
+    },
+    {
+      "name": "Metamycoplasmataceae",
+      "taxid": 2895623,
+      "matched_name": "Metamycoplasmataceae",
+      "domain": "Bacteria",
+      "lineage": "cellular organisms;Bacteria;Bacillati;Mycoplasmatota;Mycoplasmoidales;Metamycoplasmataceae",
+      "source": "family",
+      "genomes": 1524,
+      "species": 81
+    },
+    {
+      "name": "Sirenicapillariaceae",
+      "taxid": 2934961,
+      "matched_name": "Sirenicapillariaceae",
+      "domain": "Bacteria",
+      "lineage": "cellular organisms;Bacteria;Bacillati;Cyanobacteriota/Melainabacteria group;Cyanobacteriota;Cyanophyceae;Oscillatoriophycideae;Oscillatoriales;Sirenicapillariaceae",
+      "source": "family",
+      "genomes": 51,
+      "species": 35
+    },
+    {
+      "name": "Chlamydiaceae",
+      "taxid": 809,
+      "matched_name": "Chlamydiaceae (from lineage)",
+      "domain": "Bacteria",
+      "lineage": "cellular organisms;Bacteria;Pseudomonadati;PVC group;Chlamydiota;Chlamydiia;Chlamydiales;Chlamydiaceae;Chlamydia/Chlamydophila group;Chlamydia",
+      "source": "genus_lineage",
+      "genomes": 823,
+      "species": 58,
+      "genera_count": 11
+    }
+  ],
+  "original_taxa_names": [
+    "Gloeomargaritaceae",
+    "Bartonellaceae",
+    "Breoghaniaceae",
+    "Chlorobiaceae",
+    "Thermosynechococcaceae",
+    "Simkaniaceae",
+    "Ancalomicrobiaceae",
+    "Metamycoplasmataceae",
+    "Sirenicapillariaceae",
+    "Chlamydiaceae"
+  ],
+  "not_found": [
+    "Breoghaniaceae"
+  ],
+  "conversion_stats": {
+    "total_taxa": 10,
+    "converted": 9,
+    "not_found": 1,
+    "domain": "Bacteria"
+  }
+}

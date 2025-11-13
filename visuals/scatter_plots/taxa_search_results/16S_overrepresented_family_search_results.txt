@@ -1,0 +1,74 @@
+# Taxa Search Results
+# Generated: 2025-11-12 14:07:16
+# Command: python search_taxa_in_census.py --gene 16S --category overrepresented --rank family
+# ======================================================================
+
+🚀 STARTING TAXA SEARCH
+Gene: 16S | Category: overrepresented | Rank: family
+📊 Loaded census data: 799 total family entries from 16S
+📋 Loaded 10 overrepresented bacteria family taxa from JSON
+
+🔍 SEARCHING OVERREPRESENTED BACTERIA FAMILY TAXA IN 16S CENSUS DATA
+================================================================================
+✅ FOUND: 10 taxa
+❌ NOT FOUND: 0 taxa
+📊 MATCH RATE: 10/10 (100.0%)
+
+📈 MATCHED TAXA DISTRIBUTION:
+--------------------------------------------------------------------------------
+Rank Taxon                     OTU_Count  Size_Count   OTU_%    Size_%  
+--------------------------------------------------------------------------------
+1   Bartonellaceae            15         196          0.01     0.02    
+2   Metamycoplasmataceae      11         58           0.00     0.00    
+3   Breoghaniaceae            7          13           0.00     0.00    
+4   Thermosynechococcaceae    5          24           0.00     0.00    
+5   Sirenicapillariaceae      5          24           0.00     0.00    
+6   Chlamydiaceae             5          47           0.00     0.00    
+7   Chlorobiaceae             2          3            0.00     0.00    
+8   Gloeomargaritaceae        1          16           0.00     0.00    
+9   Simkaniaceae              1          1            0.00     0.00    
+10  Ancalomicrobiaceae        1          11           0.00     0.00    
+--------------------------------------------------------------------------------
+📊 SUMMARY STATISTICS:
+   Total OTU count: 53
+   Total size count: 393
+   Average OTU per taxon: 5.3
+   Average size per taxon: 39.3
+   Distribution skew: 15.0x (top/bottom ratio)
+   Top taxon: Bartonellaceae (15 OTUs)
+   Bottom taxon: Ancalomicrobiaceae (1 OTUs)
+📋 Loaded 6 overrepresented archaea family taxa from JSON
+
+🔍 SEARCHING OVERREPRESENTED ARCHAEA FAMILY TAXA IN 16S CENSUS DATA
+================================================================================
+✅ FOUND: 6 taxa
+❌ NOT FOUND: 0 taxa
+📊 MATCH RATE: 6/6 (100.0%)
+
+📈 MATCHED TAXA DISTRIBUTION:
+--------------------------------------------------------------------------------
+Rank Taxon                     OTU_Count  Size_Count   OTU_%    Size_%  
+--------------------------------------------------------------------------------
+1   Halorubraceae             263        1265         0.10     0.11    
+2   Haloferacaceae            220        653          0.08     0.05    
+3   Natrialbaceae             131        452          0.05     0.04    
+4   Methanomassiliicoccaceae  52         550          0.02     0.05    
+5   Thermococcaceae           48         369          0.02     0.03    
+6   Picrophilaceae            1          2            0.00     0.00    
+--------------------------------------------------------------------------------
+📊 SUMMARY STATISTICS:
+   Total OTU count: 715
+   Total size count: 3,291
+   Average OTU per taxon: 119.2
+   Average size per taxon: 548.5
+   Distribution skew: 263.0x (top/bottom ratio)
+   Top taxon: Halorubraceae (263 OTUs)
+   Bottom taxon: Picrophilaceae (1 OTUs)
+
+🎯 OVERALL SUMMARY FOR 16S OVERREPRESENTED FAMILY:
+================================================================================
+Total domains searched: 2
+Total matches found: 16
+Total not found: 0
+Combined OTU count: 768
+Average OTU per matched taxon: 48.0

@@ -1,0 +1,72 @@
+# Taxa Search Results
+# Generated: 2025-11-12 14:07:13
+# Command: python search_taxa_in_census.py --gene 16S --category novel --rank phylum
+# ======================================================================
+
+🚀 STARTING TAXA SEARCH
+Gene: 16S | Category: novel | Rank: phylum
+📊 Loaded census data: 52 total phylum entries from 16S
+📋 Loaded 10 novel bacteria phylum taxa from JSON
+
+🔍 SEARCHING NOVEL BACTERIA PHYLUM TAXA IN 16S CENSUS DATA
+================================================================================
+✅ FOUND: 10 taxa
+❌ NOT FOUND: 0 taxa
+📊 MATCH RATE: 10/10 (100.0%)
+
+📈 MATCHED TAXA DISTRIBUTION:
+--------------------------------------------------------------------------------
+Rank Taxon                     OTU_Count  Size_Count   OTU_%    Size_%  
+--------------------------------------------------------------------------------
+1   Chloroflexota             13,210     58834        5.04     4.93    
+2   Planctomycetota           13,119     44891        5.00     3.76    
+3   Verrucomicrobiota         10,214     45775        3.89     3.83    
+4   Acidobacteriota           9,124      44683        3.48     3.74    
+5   Myxococcota               3,648      15086        1.39     1.26    
+6   Gemmatimonadota           2,576      11870        0.98     0.99    
+7   Armatimonadota            1,473      5017         0.56     0.42    
+8   Thermomicrobiota          511        1946         0.19     0.16    
+9   Calditrichota             455        1257         0.17     0.11    
+10  Abditibacteriota          257        816          0.10     0.07    
+--------------------------------------------------------------------------------
+📊 SUMMARY STATISTICS:
+   Total OTU count: 54,587
+   Total size count: 230,175
+   Average OTU per taxon: 5,458.7
+   Average size per taxon: 23,017.5
+   Distribution skew: 51.4x (top/bottom ratio)
+   Top taxon: Chloroflexota (13,210 OTUs)
+   Bottom taxon: Abditibacteriota (257 OTUs)
+📋 Loaded 4 novel archaea phylum taxa from JSON
+
+🔍 SEARCHING NOVEL ARCHAEA PHYLUM TAXA IN 16S CENSUS DATA
+================================================================================
+✅ FOUND: 4 taxa
+❌ NOT FOUND: 0 taxa
+📊 MATCH RATE: 4/4 (100.0%)
+
+📈 MATCHED TAXA DISTRIBUTION:
+--------------------------------------------------------------------------------
+Rank Taxon                     OTU_Count  Size_Count   OTU_%    Size_%  
+--------------------------------------------------------------------------------
+1   Euryarchaeota             3,600      18821        1.37     1.58    
+2   Nanoarchaeota             3,178      9061         1.21     0.76    
+3   Nitrososphaerota          1,458      10698        0.56     0.90    
+4   Thermoproteota            569        2540         0.22     0.21    
+--------------------------------------------------------------------------------
+📊 SUMMARY STATISTICS:
+   Total OTU count: 8,805
+   Total size count: 41,120
+   Average OTU per taxon: 2,201.2
+   Average size per taxon: 10,280.0
+   Distribution skew: 6.3x (top/bottom ratio)
+   Top taxon: Euryarchaeota (3,600 OTUs)
+   Bottom taxon: Thermoproteota (569 OTUs)
+
+🎯 OVERALL SUMMARY FOR 16S NOVEL PHYLUM:
+================================================================================
+Total domains searched: 2
+Total matches found: 14
+Total not found: 0
+Combined OTU count: 63,392
+Average OTU per matched taxon: 4,528.0

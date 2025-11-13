@@ -1,0 +1,31 @@
+# Taxa Search Results
+# Generated: 2025-11-12 14:07:19
+# Command: python search_taxa_in_census.py --gene 18S --category overrepresented --rank phylum
+# ======================================================================
+
+🚀 STARTING TAXA SEARCH
+Gene: 18S | Category: overrepresented | Rank: phylum
+📊 Loaded census data: 22 total phylum entries from 18S
+📋 Loaded 2 overrepresented eukaryota phylum taxa from JSON
+
+🔍 SEARCHING OVERREPRESENTED EUKARYOTA PHYLUM TAXA IN 18S CENSUS DATA
+================================================================================
+✅ FOUND: 2 taxa
+❌ NOT FOUND: 0 taxa
+📊 MATCH RATE: 2/2 (100.0%)
+
+📈 MATCHED TAXA DISTRIBUTION:
+--------------------------------------------------------------------------------
+Rank Taxon                     OTU_Count  Size_Count   OTU_%    Size_%  
+--------------------------------------------------------------------------------
+1   Streptophyta              2,252      16099        N/A      N/A     
+2   Rhodophyta                2          21           N/A      N/A     
+--------------------------------------------------------------------------------
+📊 SUMMARY STATISTICS:
+   Total OTU count: 2,254
+   Total size count: 16,120
+   Average OTU per taxon: 1,127.0
+   Average size per taxon: 8,060.0
+   Distribution skew: 1126.0x (top/bottom ratio)
+   Top taxon: Streptophyta (2,252 OTUs)
+   Bottom taxon: Rhodophyta (2 OTUs)

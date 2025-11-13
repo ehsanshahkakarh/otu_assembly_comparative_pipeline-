@@ -1,0 +1,704 @@
+# NCBI TaxID-Based Overrepresented Taxonomic Diversity Analysis
+# Generated: 2025-11-12 20:19:55
+# Command: python extract_ncbi_taxid_diversity.py --gene 16S --category overrepresented --output family_diversity_results/16S_overrepresented_family_diversity.txt
+# ======================================================================
+
+🚀 STARTING NCBI TAXID-BASED OVERREPRESENTED DIVERSITY EXTRACTION
+Gene: 16S | Category: overrepresented
+Output: family_diversity_results/16S_overrepresented_family_diversity.txt
+📊 Loaded NCBI genus data: 16,717 total genus entries
+📋 Loaded 9 overrepresented bacteria family taxa with TaxIDs from JSON
+
+📊 Domain BACTERIA: 4,831 genera
+
+🔍 EXTRACTING NCBI DIVERSITY FOR OVERREPRESENTED BACTERIA TAXONOMIC GROUPS (TaxID-based)
+==========================================================================================
+
+🏷️  TAXONOMIC GROUP: Gloeomargaritaceae (TaxID: 1955043)
+----------------------------------------------------------------------
+   📊 Total genomes: 26 (across 1 genera)
+   🌳 TAXONOMIC DIVERSITY:
+      Genera: 1 | Species: 26
+
+   🔬 TOP GENERA (by genome count):
+      Gloeomargarita: 26 genomes (100.0%)
+
+   🔍 DETAILED BREAKDOWN (Top 3 genera):
+
+      🧬 GENUS: Gloeomargarita (26 genomes)
+         TaxID: 1188227
+         Context: ...;Cyanophyceae;Gloeomargaritales;Gloeomargaritaceae;Gloeomargarita
+         Genomes: 26 | Species: 26
+
+   🎯 SINGLE GENUS GROUP: Gloeomargarita (100% of taxonomic group)
+======================================================================
+
+🏷️  TAXONOMIC GROUP: Bartonellaceae (TaxID: 772)
+----------------------------------------------------------------------
+   📊 Total genomes: 2,191 (across 68 genera)
+   🌳 TAXONOMIC DIVERSITY:
+      Genera: 68 | Species: 538
+
+   🔬 TOP GENERA (by genome count):
+      Bartonella: 548 genomes (25.0%)
+      Candidatus Acidiferrum: 185 genomes (8.4%)
+      Candidatus Sulfotelmatobacter: 178 genomes (8.1%)
+      Terracidiphilus: 164 genomes (7.5%)
+      Granulicella: 127 genomes (5.8%)
+      Chloracidobacterium: 97 genomes (4.4%)
+      Chthonomonas: 94 genomes (4.3%)
+      Candidatus Angelobacter: 92 genomes (4.2%)
+      Edaphobacter: 60 genomes (2.7%)
+      Terriglobus: 48 genomes (2.2%)
+      ... and 58 more genera (598 genomes)
+
+   🔍 DETAILED BREAKDOWN (Top 3 genera):
+
+      🧬 GENUS: Bartonella (548 genomes)
+         TaxID: 773
+         Context: ...;Alphaproteobacteria;Hyphomicrobiales;Bartonellaceae;Bartonella
+         Genomes: 548 | Species: 275
+
+      🧬 GENUS: Candidatus Acidiferrum (185 genomes)
+         TaxID: 2817524
+         Context: ...;Acidobacteriota;Terriglobia;Candidatus Acidiferrales;Candidatus Acidiferrum
+         Genomes: 185 | Species: 3
+
+      🧬 GENUS: Candidatus Sulfotelmatobacter (178 genomes)
+         TaxID: 2136116
+         Context: ...;Terriglobia;Terriglobales;Candidatus Korobacteraceae;Candidatus Sulfotelmatobacter
+         Genomes: 178 | Species: 6
+
+   🎯 CONCENTRATION ANALYSIS:
+      Top genus: Bartonella (25.0% of taxonomic group)
+      Top 3 genera: 41.6% of taxonomic group genomes
+      Genus diversity: 68 genera total
+      🌳 DIVERSE: Genomes spread across many genera
+======================================================================
+
+🏷️  TAXONOMIC GROUP: Chlorobiaceae (TaxID: 191412)
+----------------------------------------------------------------------
+   📊 Total genomes: 109 (across 4 genera)
+   🌳 TAXONOMIC DIVERSITY:
+      Genera: 4 | Species: 34
+
+   🔬 TOP GENERA (by genome count):
+      Chlorobium: 59 genomes (54.1%)
+      Prosthecochloris: 27 genomes (24.8%)
+      Chlorobaculum: 15 genomes (13.8%)
+      Pelodictyon: 8 genomes (7.3%)
+
+   🔍 DETAILED BREAKDOWN (Top 3 genera):
+
+      🧬 GENUS: Chlorobium (59 genomes)
+         TaxID: 1091
+         Context: ...;Chlorobiales;Chlorobiaceae;Chlorobium/Pelodictyon group;Chlorobium
+         Genomes: 59 | Species: 11
+
+      🧬 GENUS: Prosthecochloris (27 genomes)
+         TaxID: 1101
+         Context: ...;Chlorobiia;Chlorobiales;Chlorobiaceae;Prosthecochloris
+         Genomes: 27 | Species: 13
+
+      🧬 GENUS: Chlorobaculum (15 genomes)
+         TaxID: 256319
+         Context: ...;Chlorobiia;Chlorobiales;Chlorobiaceae;Chlorobaculum
+         Genomes: 15 | Species: 7
+
+   🎯 CONCENTRATION ANALYSIS:
+      Top genus: Chlorobium (54.1% of taxonomic group)
+      Top 3 genera: 92.7% of taxonomic group genomes
+      Genus diversity: 4 genera total
+      📊 MODERATELY CONCENTRATED: Top 3 genera dominate
+======================================================================
+
+🏷️  TAXONOMIC GROUP: Thermosynechococcaceae (TaxID: 2881378)
+----------------------------------------------------------------------
+   📊 Total genomes: 57 (across 3 genera)
+   🌳 TAXONOMIC DIVERSITY:
+      Genera: 3 | Species: 47
+
+   🔬 TOP GENERA (by genome count):
+      Thermosynechococcus: 55 genomes (96.5%)
+      Pseudocalidococcus: 1 genomes (1.8%)
+      Parathermosynechococcus: 1 genomes (1.8%)
+
+   🔍 DETAILED BREAKDOWN (Top 3 genera):
+
+      🧬 GENUS: Thermosynechococcus (55 genomes)
+         TaxID: 146785
+         Context: ...;Cyanophyceae;Acaryochloridales;Thermosynechococcaceae;Thermosynechococcus
+         Genomes: 55 | Species: 45
+
+      🧬 GENUS: Pseudocalidococcus (1 genomes)
+         TaxID: 3110321
+         Context: ...;Cyanophyceae;Acaryochloridales;Thermosynechococcaceae;Pseudocalidococcus
+         Genomes: 1 | Species: 1
+
+      🧬 GENUS: Parathermosynechococcus (1 genomes)
+         TaxID: 3161592
+         Context: ...;Cyanophyceae;Acaryochloridales;Thermosynechococcaceae;Parathermosynechococcus
+         Genomes: 1 | Species: 1
+
+   🎯 CONCENTRATION ANALYSIS:
+      Top genus: Thermosynechococcus (96.5% of taxonomic group)
+      Top 3 genera: 100.0% of taxonomic group genomes
+      Genus diversity: 3 genera total
+      🔥 HIGHLY CONCENTRATED: Thermosynechococcus dominates this taxonomic group!
+======================================================================
+
+🏷️  TAXONOMIC GROUP: Simkaniaceae (TaxID: 92712)
+----------------------------------------------------------------------
+   📊 Total genomes: 20 (across 5 genera)
+   🌳 TAXONOMIC DIVERSITY:
+      Genera: 5 | Species: 8
+
+   🔬 TOP GENERA (by genome count):
+      Simkania: 12 genomes (60.0%)
+      Candidatus Neptunochlamydia: 4 genomes (20.0%)
+      Thermorudis: 2 genomes (10.0%)
+      Candidatus Amphrikana: 1 genomes (5.0%)
+      Candidatus Algichlamydia: 1 genomes (5.0%)
+
+   🔍 DETAILED BREAKDOWN (Top 3 genera):
+
+      🧬 GENUS: Simkania (12 genomes)
+         TaxID: 34093
+         Context: ...;Chlamydiia;Parachlamydiales;Simkaniaceae;Simkania
+         Genomes: 12 | Species: 2
+
+      🧬 GENUS: Candidatus Neptunochlamydia (4 genomes)
+         TaxID: 1891669
+         Context: ...;Chlamydiia;Parachlamydiales;Simkaniaceae;Candidatus Neptunochlamydia
+         Genomes: 4 | Species: 3
+
+      🧬 GENUS: Thermorudis (2 genomes)
+         TaxID: 1649508
+         Context: ...;Thermomicrobiota;Thermomicrobia;Thermomicrobia incertae sedis;Thermorudis
+         Genomes: 2 | Species: 1
+
+   🎯 CONCENTRATION ANALYSIS:
+      Top genus: Simkania (60.0% of taxonomic group)
+      Top 3 genera: 90.0% of taxonomic group genomes
+      Genus diversity: 5 genera total
+      📊 MODERATELY CONCENTRATED: Top 3 genera dominate
+======================================================================
+
+🏷️  TAXONOMIC GROUP: Ancalomicrobiaceae (TaxID: 2172021)
+----------------------------------------------------------------------
+   📊 Total genomes: 12 (across 4 genera)
+   🌳 TAXONOMIC DIVERSITY:
+      Genera: 4 | Species: 7
+
+   🔬 TOP GENERA (by genome count):
+      Pinisolibacter: 4 genomes (33.3%)
+      Prosthecodimorpha: 4 genomes (33.3%)
+      Siculibacillus: 3 genomes (25.0%)
+      Methyloraptor: 1 genomes (8.3%)
+
+   🔍 DETAILED BREAKDOWN (Top 3 genera):
+
+      🧬 GENUS: Pinisolibacter (4 genomes)
+         TaxID: 2172022
+         Context: ...;Alphaproteobacteria;Hyphomicrobiales;Ancalomicrobiaceae;Pinisolibacter
+         Genomes: 4 | Species: 2
+
+      🧬 GENUS: Prosthecodimorpha (4 genomes)
+         TaxID: 2981530
+         Context: ...;Alphaproteobacteria;Hyphomicrobiales;Ancalomicrobiaceae;Prosthecodimorpha
+         Genomes: 4 | Species: 2
+
+      🧬 GENUS: Siculibacillus (3 genomes)
+         TaxID: 2610842
+         Context: ...;Alphaproteobacteria;Hyphomicrobiales;Ancalomicrobiaceae;Siculibacillus
+         Genomes: 3 | Species: 2
+
+   🎯 CONCENTRATION ANALYSIS:
+      Top genus: Pinisolibacter (33.3% of taxonomic group)
+      Top 3 genera: 91.7% of taxonomic group genomes
+      Genus diversity: 4 genera total
+      📊 MODERATELY CONCENTRATED: Top 3 genera dominate
+======================================================================
+
+🏷️  TAXONOMIC GROUP: Metamycoplasmataceae (TaxID: 2895623)
+----------------------------------------------------------------------
+   📊 Total genomes: 1,523 (across 3 genera)
+   🌳 TAXONOMIC DIVERSITY:
+      Genera: 3 | Species: 80
+
+   🔬 TOP GENERA (by genome count):
+      Mycoplasmopsis: 945 genomes (62.0%)
+      Mesomycoplasma: 329 genomes (21.6%)
+      Metamycoplasma: 249 genomes (16.3%)
+
+   🔍 DETAILED BREAKDOWN (Top 3 genera):
+
+      🧬 GENUS: Mycoplasmopsis (945 genomes)
+         TaxID: 2767358
+         Context: ...;Mycoplasmatota;Mycoplasmoidales;Metamycoplasmataceae;Mycoplasmopsis
+         Genomes: 945 | Species: 44
+
+      🧬 GENUS: Mesomycoplasma (329 genomes)
+         TaxID: 2923352
+         Context: ...;Mycoplasmatota;Mycoplasmoidales;Metamycoplasmataceae;Mesomycoplasma
+         Genomes: 329 | Species: 13
+
+      🧬 GENUS: Metamycoplasma (249 genomes)
+         TaxID: 2895509
+         Context: ...;Mycoplasmatota;Mycoplasmoidales;Metamycoplasmataceae;Metamycoplasma
+         Genomes: 249 | Species: 23
+
+   🎯 CONCENTRATION ANALYSIS:
+      Top genus: Mycoplasmopsis (62.0% of taxonomic group)
+      Top 3 genera: 100.0% of taxonomic group genomes
+      Genus diversity: 3 genera total
+      📊 MODERATELY CONCENTRATED: Top 3 genera dominate
+======================================================================
+
+🏷️  TAXONOMIC GROUP: Sirenicapillariaceae (TaxID: 2934961)
+----------------------------------------------------------------------
+   📊 Total genomes: 51 (across 3 genera)
+   🌳 TAXONOMIC DIVERSITY:
+      Genera: 3 | Species: 35
+
+   🔬 TOP GENERA (by genome count):
+      Limnospira: 40 genomes (78.4%)
+      Limnoraphis: 10 genomes (19.6%)
+      Capilliphycus: 1 genomes (2.0%)
+
+   🔍 DETAILED BREAKDOWN (Top 3 genera):
+
+      🧬 GENUS: Limnospira (40 genomes)
+         TaxID: 2596745
+         Context: ...;Oscillatoriophycideae;Oscillatoriales;Sirenicapillariaceae;Limnospira
+         Genomes: 40 | Species: 32
+
+      🧬 GENUS: Limnoraphis (10 genomes)
+         TaxID: 1332112
+         Context: ...;Oscillatoriophycideae;Oscillatoriales;Sirenicapillariaceae;Limnoraphis
+         Genomes: 10 | Species: 2
+
+      🧬 GENUS: Capilliphycus (1 genomes)
+         TaxID: 2768926
+         Context: ...;Oscillatoriophycideae;Oscillatoriales;Sirenicapillariaceae;Capilliphycus
+         Genomes: 1 | Species: 1
+
+   🎯 CONCENTRATION ANALYSIS:
+      Top genus: Limnospira (78.4% of taxonomic group)
+      Top 3 genera: 100.0% of taxonomic group genomes
+      Genus diversity: 3 genera total
+      📊 MODERATELY CONCENTRATED: Top 3 genera dominate
+======================================================================
+
+🏷️  TAXONOMIC GROUP: Chlamydiaceae (TaxID: 809)
+----------------------------------------------------------------------
+   📊 Total genomes: 969 (across 19 genera)
+   🌳 TAXONOMIC DIVERSITY:
+      Genera: 19 | Species: 65
+
+   🔬 TOP GENERA (by genome count):
+      Chlamydia: 776 genomes (80.1%)
+      Candidatus Karelsulcia: 117 genomes (12.1%)
+      Kordiimonas: 38 genomes (3.9%)
+      Thermosynergistes: 8 genomes (0.8%)
+      Chlamydiifrater: 5 genomes (0.5%)
+      Zeimonas: 5 genomes (0.5%)
+      Candidatus Alangreenwoodia: 4 genomes (0.4%)
+      Candidatus Colicola: 4 genomes (0.4%)
+      Keratinibaculum: 2 genomes (0.2%)
+      Yunchengibacter: 1 genomes (0.1%)
+      ... and 9 more genera (9 genomes)
+
+   🔍 DETAILED BREAKDOWN (Top 3 genera):
+
+      🧬 GENUS: Chlamydia (776 genomes)
+         TaxID: 810
+         Context: ...;Chlamydiales;Chlamydiaceae;Chlamydia/Chlamydophila group;Chlamydia
+         Genomes: 776 | Species: 28
+
+      🧬 GENUS: Candidatus Karelsulcia (117 genomes)
+         TaxID: 336809
+         Context: ...;Flavobacteriia;Flavobacteriales;Flavobacteriales incertae sedis;Candidatus Karelsulcia
+         Genomes: 117 | Species: 1
+
+      🧬 GENUS: Kordiimonas (38 genomes)
+         TaxID: 288021
+         Context: ...;Alphaproteobacteria;Kordiimonadales;Kordiimonadaceae;Kordiimonas
+         Genomes: 38 | Species: 14
+
+   🎯 CONCENTRATION ANALYSIS:
+      Top genus: Chlamydia (80.1% of taxonomic group)
+      Top 3 genera: 96.1% of taxonomic group genomes
+      Genus diversity: 19 genera total
+      🔥 HIGHLY CONCENTRATED: Chlamydia dominates this taxonomic group!
+======================================================================
+
+🎯 OVERALL SUMMARY FOR 16S OVERREPRESENTED BACTERIA TAXONOMIC GROUPS:
+==========================================================================================
+Taxonomic groups analyzed: 9
+Total genomes found: 4,958
+Average genomes per group: 550.9
+
+📊 TAXONOMIC GROUP RANKING (by genome count):
+   [ 1] Bartonellaceae: 2,191 genomes
+        Diversity: 68 genera, 538 species
+        Top genus: Bartonella (25.0% genomes)
+        🌳 DIVERSE
+   [ 2] Metamycoplasmataceae: 1,523 genomes
+        Diversity: 3 genera, 80 species
+        Top genus: Mycoplasmopsis (62.0% genomes)
+        📊 MODERATELY CONCENTRATED
+   [ 3] Chlamydiaceae: 969 genomes
+        Diversity: 19 genera, 65 species
+        Top genus: Chlamydia (80.1% genomes)
+        🔥 HIGHLY CONCENTRATED
+   [ 4] Chlorobiaceae: 109 genomes
+        Diversity: 4 genera, 34 species
+        Top genus: Chlorobium (54.1% genomes)
+        📊 MODERATELY CONCENTRATED
+   [ 5] Thermosynechococcaceae: 57 genomes
+        Diversity: 3 genera, 47 species
+        Top genus: Thermosynechococcus (96.5% genomes)
+        🔥 HIGHLY CONCENTRATED
+   [ 6] Sirenicapillariaceae: 51 genomes
+        Diversity: 3 genera, 35 species
+        Top genus: Limnospira (78.4% genomes)
+        📊 MODERATELY CONCENTRATED
+   [ 7] Gloeomargaritaceae: 26 genomes
+        Diversity: 1 genera, 26 species
+        Top genus: Gloeomargarita (100.0% genomes)
+        🔥 HIGHLY CONCENTRATED
+   [ 8] Simkaniaceae: 20 genomes
+        Diversity: 5 genera, 8 species
+        Top genus: Simkania (60.0% genomes)
+        📊 MODERATELY CONCENTRATED
+   [ 9] Ancalomicrobiaceae: 12 genomes
+        Diversity: 4 genera, 7 species
+        Top genus: Pinisolibacter (33.3% genomes)
+        📊 MODERATELY CONCENTRATED
+📋 Loaded 5 overrepresented archaea family taxa with TaxIDs from JSON
+
+📊 Domain ARCHAEA: 311 genera
+
+🔍 EXTRACTING NCBI DIVERSITY FOR OVERREPRESENTED ARCHAEA TAXONOMIC GROUPS (TaxID-based)
+==========================================================================================
+
+🏷️  TAXONOMIC GROUP: Picrophilaceae (TaxID: 46630)
+----------------------------------------------------------------------
+   📊 Total genomes: 3 (across 1 genera)
+   🌳 TAXONOMIC DIVERSITY:
+      Genera: 1 | Species: 2
+
+   🔬 TOP GENERA (by genome count):
+      Picrophilus: 3 genomes (100.0%)
+
+   🔍 DETAILED BREAKDOWN (Top 3 genera):
+
+      🧬 GENUS: Picrophilus (3 genomes)
+         TaxID: 46631
+         Context: ...;Thermoplasmata;Thermoplasmatales;Picrophilaceae;Picrophilus
+         Genomes: 3 | Species: 2
+
+   🎯 SINGLE GENUS GROUP: Picrophilus (100% of taxonomic group)
+======================================================================
+
+🏷️  TAXONOMIC GROUP: Thermococcaceae (TaxID: 2259)
+----------------------------------------------------------------------
+   📊 Total genomes: 205 (across 3 genera)
+   🌳 TAXONOMIC DIVERSITY:
+      Genera: 3 | Species: 78
+
+   🔬 TOP GENERA (by genome count):
+      Thermococcus: 179 genomes (87.3%)
+      Pyrococcus: 23 genomes (11.2%)
+      Palaeococcus: 3 genomes (1.5%)
+
+   🔍 DETAILED BREAKDOWN (Top 3 genera):
+
+      🧬 GENUS: Thermococcus (179 genomes)
+         TaxID: 2263
+         Context: ...;Thermococci;Thermococcales;Thermococcaceae;Thermococcus
+         Genomes: 179 | Species: 67
+
+      🧬 GENUS: Pyrococcus (23 genomes)
+         TaxID: 2260
+         Context: ...;Thermococci;Thermococcales;Thermococcaceae;Pyrococcus
+         Genomes: 23 | Species: 8
+
+      🧬 GENUS: Palaeococcus (3 genomes)
+         TaxID: 83867
+         Context: ...;Thermococci;Thermococcales;Thermococcaceae;Palaeococcus
+         Genomes: 3 | Species: 3
+
+   🎯 CONCENTRATION ANALYSIS:
+      Top genus: Thermococcus (87.3% of taxonomic group)
+      Top 3 genera: 100.0% of taxonomic group genomes
+      Genus diversity: 3 genera total
+      🔥 HIGHLY CONCENTRATED: Thermococcus dominates this taxonomic group!
+======================================================================
+
+🏷️  TAXONOMIC GROUP: Methanomassiliicoccaceae (TaxID: 1577788)
+----------------------------------------------------------------------
+   📊 Total genomes: 94 (across 3 genera)
+   🌳 TAXONOMIC DIVERSITY:
+      Genera: 3 | Species: 29
+
+   🔬 TOP GENERA (by genome count):
+      Methanomassiliicoccus: 74 genomes (78.7%)
+      Candidatus Methanoplasma: 15 genomes (16.0%)
+      Candidatus Methanogranum: 5 genomes (5.3%)
+
+   🔍 DETAILED BREAKDOWN (Top 3 genera):
+
+      🧬 GENUS: Methanomassiliicoccus (74 genomes)
+         TaxID: 1080709
+         Context: ...;Thermoplasmata;Methanomassiliicoccales;Methanomassiliicoccaceae;Methanomassiliicoccus
+         Genomes: 74 | Species: 21
+
+      🧬 GENUS: Candidatus Methanoplasma (15 genomes)
+         TaxID: 1607807
+         Context: ...;Thermoplasmata;Methanomassiliicoccales;Methanomassiliicoccaceae;Candidatus Methanoplasma
+         Genomes: 15 | Species: 6
+
+      🧬 GENUS: Candidatus Methanogranum (5 genomes)
+         TaxID: 1577789
+         Context: ...;Thermoplasmata;Methanomassiliicoccales;Methanomassiliicoccaceae;Candidatus Methanogranum
+         Genomes: 5 | Species: 2
+
+   🎯 CONCENTRATION ANALYSIS:
+      Top genus: Methanomassiliicoccus (78.7% of taxonomic group)
+      Top 3 genera: 100.0% of taxonomic group genomes
+      Genus diversity: 3 genera total
+      📊 MODERATELY CONCENTRATED: Top 3 genera dominate
+======================================================================
+
+🏷️  TAXONOMIC GROUP: Haloferacaceae (TaxID: 1644056)
+----------------------------------------------------------------------
+   📊 Total genomes: 459 (across 25 genera)
+   🌳 TAXONOMIC DIVERSITY:
+      Genera: 25 | Species: 264
+
+   🔬 TOP GENERA (by genome count):
+      Halorubrum: 171 genomes (37.3%)
+      Haloferax: 76 genomes (16.6%)
+      Halobellus: 36 genomes (7.8%)
+      Haloplanus: 27 genomes (5.9%)
+      Halolamina: 24 genomes (5.2%)
+      Halobaculum: 24 genomes (5.2%)
+      Haloquadratum: 16 genomes (3.5%)
+      Halogeometricum: 13 genomes (2.8%)
+      Salinigranum: 11 genomes (2.4%)
+      Halonotius: 9 genomes (2.0%)
+      ... and 15 more genera (52 genomes)
+
+   🔍 DETAILED BREAKDOWN (Top 3 genera):
+
+      🧬 GENUS: Halorubrum (171 genomes)
+         TaxID: 56688
+         Context: ...;Halobacteria;Halobacteriales;Haloferacaceae;Halorubrum
+         Genomes: 171 | Species: 91
+
+      🧬 GENUS: Haloferax (76 genomes)
+         TaxID: 2251
+         Context: ...;Halobacteria;Halobacteriales;Haloferacaceae;Haloferax
+         Genomes: 76 | Species: 48
+
+      🧬 GENUS: Halobellus (36 genomes)
+         TaxID: 1073986
+         Context: ...;Halobacteria;Halobacteriales;Haloferacaceae;Halobellus
+         Genomes: 36 | Species: 19
+
+   🎯 CONCENTRATION ANALYSIS:
+      Top genus: Halorubrum (37.3% of taxonomic group)
+      Top 3 genera: 61.7% of taxonomic group genomes
+      Genus diversity: 25 genera total
+      🌳 DIVERSE: Genomes spread across many genera
+======================================================================
+
+🏷️  TAXONOMIC GROUP: Natrialbaceae (TaxID: 1644061)
+----------------------------------------------------------------------
+   📊 Total genomes: 174 (across 26 genera)
+   🌳 TAXONOMIC DIVERSITY:
+      Genera: 26 | Species: 130
+
+   🔬 TOP GENERA (by genome count):
+      Natrinema: 48 genomes (27.6%)
+      Natronorubrum: 18 genomes (10.3%)
+      Natronococcus: 14 genomes (8.0%)
+      Natrialba: 12 genomes (6.9%)
+      Haloterrigena: 10 genomes (5.7%)
+      Saliphagus: 8 genomes (4.6%)
+      Halovivax: 8 genomes (4.6%)
+      Natronobacterium: 8 genomes (4.6%)
+      Halostagnicola: 6 genomes (3.4%)
+      Natronosalvus: 6 genomes (3.4%)
+      ... and 16 more genera (36 genomes)
+
+   🔍 DETAILED BREAKDOWN (Top 3 genera):
+
+      🧬 GENUS: Natrinema (48 genomes)
+         TaxID: 88723
+         Context: ...;Halobacteria;Halobacteriales;Natrialbaceae;Natrinema
+         Genomes: 48 | Species: 33
+
+      🧬 GENUS: Natronorubrum (18 genomes)
+         TaxID: 134813
+         Context: ...;Halobacteria;Halobacteriales;Natrialbaceae;Natronorubrum
+         Genomes: 18 | Species: 12
+
+      🧬 GENUS: Natronococcus (14 genomes)
+         TaxID: 29287
+         Context: ...;Halobacteria;Halobacteriales;Natrialbaceae;Natronococcus
+         Genomes: 14 | Species: 11
+
+   🎯 CONCENTRATION ANALYSIS:
+      Top genus: Natrinema (27.6% of taxonomic group)
+      Top 3 genera: 46.0% of taxonomic group genomes
+      Genus diversity: 26 genera total
+      🌳 DIVERSE: Genomes spread across many genera
+======================================================================
+
+🎯 OVERALL SUMMARY FOR 16S OVERREPRESENTED ARCHAEA TAXONOMIC GROUPS:
+==========================================================================================
+Taxonomic groups analyzed: 5
+Total genomes found: 935
+Average genomes per group: 187.0
+
+📊 TAXONOMIC GROUP RANKING (by genome count):
+   [ 1] Haloferacaceae: 459 genomes
+        Diversity: 25 genera, 264 species
+        Top genus: Halorubrum (37.3% genomes)
+        🌳 DIVERSE
+   [ 2] Thermococcaceae: 205 genomes
+        Diversity: 3 genera, 78 species
+        Top genus: Thermococcus (87.3% genomes)
+        🔥 HIGHLY CONCENTRATED
+   [ 3] Natrialbaceae: 174 genomes
+        Diversity: 26 genera, 130 species
+        Top genus: Natrinema (27.6% genomes)
+        🌳 DIVERSE
+   [ 4] Methanomassiliicoccaceae: 94 genomes
+        Diversity: 3 genera, 29 species
+        Top genus: Methanomassiliicoccus (78.7% genomes)
+        📊 MODERATELY CONCENTRATED
+   [ 5] Picrophilaceae: 3 genomes
+        Diversity: 1 genera, 2 species
+        Top genus: Picrophilus (100.0% genomes)
+        🔥 HIGHLY CONCENTRATED
+
+
+==========================================================================================
+UNIFIED PROKARYOTIC RANKING (BACTERIA + ARCHAEA COMBINED)
+==========================================================================================
+
+==========================================================================================
+Total taxonomic groups: 14
+Total genomes: 2,182
+Total genera: 168
+Total species: 1,343
+Average genomes per group: 155.9
+
+📊 COMPLETE RANKING (Bacteria + Archaea combined, by genome count):
+
+   [ 1] Chlamydiaceae: 969 genomes (TaxID: 809)
+        Diversity: 19 genera, 65 species
+        Top genus: Chlamydia (80.1% of group genomes)
+        📊 MODERATELY CONCENTRATED
+
+   [ 2] Haloferacaceae: 459 genomes (TaxID: 1644056)
+        Diversity: 25 genera, 264 species
+        Top genus: Halorubrum (37.3% of group genomes)
+        🌳 DIVERSE
+
+   [ 3] Thermococcaceae: 205 genomes (TaxID: 2259)
+        Diversity: 3 genera, 78 species
+        Top genus: Thermococcus (87.3% of group genomes)
+        🔥 HIGHLY CONCENTRATED
+
+   [ 4] Natrialbaceae: 174 genomes (TaxID: 1644061)
+        Diversity: 26 genera, 130 species
+        Top genus: Natrinema (27.6% of group genomes)
+        🔥 HIGHLY CONCENTRATED
+
+   [ 5] Chlorobiaceae: 109 genomes (TaxID: 191412)
+        Diversity: 4 genera, 34 species
+        Top genus: Chlorobium (54.1% of group genomes)
+        📊 MODERATELY CONCENTRATED
+
+   [ 6] Methanomassiliicoccaceae: 94 genomes (TaxID: 1577788)
+        Diversity: 3 genera, 29 species
+        Top genus: Methanomassiliicoccus (78.7% of group genomes)
+        📊 MODERATELY CONCENTRATED
+
+   [ 7] Thermosynechococcaceae: 57 genomes (TaxID: 2881378)
+        Diversity: 3 genera, 47 species
+        Top genus: Thermosynechococcus (96.5% of group genomes)
+        🔥 HIGHLY CONCENTRATED
+
+   [ 8] Sirenicapillariaceae: 51 genomes (TaxID: 2934961)
+        Diversity: 3 genera, 35 species
+        Top genus: Limnospira (78.4% of group genomes)
+        📊 MODERATELY CONCENTRATED
+
+   [ 9] Gloeomargaritaceae: 26 genomes (TaxID: 1955043)
+        Diversity: 1 genera, 26 species
+        Top genus: Gloeomargarita (100.0% of group genomes)
+        
+
+   [10] Simkaniaceae: 20 genomes (TaxID: 92712)
+        Diversity: 5 genera, 8 species
+        Top genus: Simkania (60.0% of group genomes)
+        📊 MODERATELY CONCENTRATED
+
+   [11] Ancalomicrobiaceae: 12 genomes (TaxID: 2172021)
+        Diversity: 4 genera, 7 species
+        Top genus: Pinisolibacter (33.3% of group genomes)
+        📊 MODERATELY CONCENTRATED
+
+   [12] Picrophilaceae: 3 genomes (TaxID: 46630)
+        Diversity: 1 genera, 2 species
+        Top genus: Picrophilus (100.0% of group genomes)
+        
+
+   [13] Bartonellaceae: 2 genomes (TaxID: 772)
+        Diversity: 68 genera, 538 species
+        Top genus: Bartonella (25.0% of group genomes)
+        🌳 DIVERSE
+
+   [14] Metamycoplasmataceae: 1 genomes (TaxID: 2895623)
+        Diversity: 3 genera, 80 species
+        Top genus: Mycoplasmopsis (62.0% of group genomes)
+        📊 MODERATELY CONCENTRATED
+
+🔍 CONCENTRATION ANALYSIS:
+==================================================
+🔥 Highly concentrated groups (3): Thermococcaceae, Natrialbaceae, Thermosynechococcaceae
+📊 Moderately concentrated groups (7): Chlamydiaceae, Chlorobiaceae, Methanomassiliicoccaceae, Sirenicapillariaceae, Simkaniaceae, Ancalomicrobiaceae, Metamycoplasmataceae
+🌳 Diverse groups (2): Haloferacaceae, Bartonellaceae
+
+🏆 TOP 5 OVERREPRESENTED PROKARYOTIC TAXONOMIC GROUPS:
+============================================================
+1. **Chlamydiaceae**: 969 genomes (44.4% of all overrepresented prokaryotic genomes)
+   - Diversity: 19 genera across 65 species
+   - Dominated by: Chlamydia (80.1% of group)
+   - Classification: 📊 MODERATELY CONCENTRATED
+
+2. **Haloferacaceae**: 459 genomes (21.0% of all overrepresented prokaryotic genomes)
+   - Diversity: 25 genera across 264 species
+   - Dominated by: Halorubrum (37.3% of group)
+   - Classification: 🌳 DIVERSE
+
+3. **Thermococcaceae**: 205 genomes (9.4% of all overrepresented prokaryotic genomes)
+   - Diversity: 3 genera across 78 species
+   - Dominated by: Thermococcus (87.3% of group)
+   - Classification: 🔥 HIGHLY CONCENTRATED
+
+4. **Natrialbaceae**: 174 genomes (8.0% of all overrepresented prokaryotic genomes)
+   - Diversity: 26 genera across 130 species
+   - Dominated by: Natrinema (27.6% of group)
+   - Classification: 🔥 HIGHLY CONCENTRATED
+
+5. **Chlorobiaceae**: 109 genomes (5.0% of all overrepresented prokaryotic genomes)
+   - Diversity: 4 genera across 34 species
+   - Dominated by: Chlorobium (54.1% of group)
+   - Classification: 📊 MODERATELY CONCENTRATED

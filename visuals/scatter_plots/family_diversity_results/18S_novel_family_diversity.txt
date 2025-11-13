@@ -1,0 +1,402 @@
+# Family Diversity Analysis Results
+# Generated: 2025-11-12 16:52:43
+# Command: python extract_family_diversity.py --gene 18S --category novel --rank family
+# ======================================================================
+
+🚀 STARTING FAMILY DIVERSITY EXTRACTION
+Gene: 18S | Category: novel | Rank: family
+📊 Loaded original TSV: 70,899 total OTU clusters from 18S
+📋 Loaded 10 novel eukaryota family taxa from JSON
+
+🔍 EXTRACTING DIVERSITY FOR NOVEL EUKARYOTA FAMILIES
+==========================================================================================
+
+🏷️  FAMILY: Mastigamoebidae
+----------------------------------------------------------------------
+   📊 Total OTUs: 10,879 (from 1,609 clusters)
+   🌳 TAXONOMIC DIVERSITY:
+      Phyla: 1 | Genera: 1
+
+   📋 PHYLUM BREAKDOWN:
+      Evosea: 10,879 OTUs (100.0%)
+
+   🔬 TOP GENERA (by OTU count):
+      Mastigamoeba: 10,879 OTUs (100.0%)
+
+   🔍 DETAILED BREAKDOWN (Top 3 genera):
+
+      🧬 GENUS: Mastigamoeba (10,879 OTUs)
+         [1] IMG_3300037659.a_Ga0401922_000349...
+             OTUs: 77 | Members: 77
+         [2] IMG_3300038278.a_Ga0401948_001086...
+             OTUs: 70 | Members: 70
+         [3] REF_BRK_m64077_200204_130436_49809772_ccs_double-b...
+             OTUs: 69 | Members: 69
+         [4] IMG_3300004603.a_Ga0068918_1030891...
+             OTUs: 67 | Members: 67
+         [5] IMG_3300037636.a_Ga0401886_001940...
+             OTUs: 65 | Members: 65
+         ... and 1604 more clusters (10,531 OTUs)
+======================================================================
+
+🏷️  FAMILY: Euglenaceae
+----------------------------------------------------------------------
+   📊 Total OTUs: 1,572 (from 470 clusters)
+   🌳 TAXONOMIC DIVERSITY:
+      Phyla: 1 | Genera: 1
+
+   📋 PHYLUM BREAKDOWN:
+      Discoba: 1,572 OTUs (100.0%)
+
+   🔬 TOP GENERA (by OTU count):
+      Trachelomonas: 1,572 OTUs (100.0%)
+
+   🔍 DETAILED BREAKDOWN (Top 3 genera):
+
+      🧬 GENUS: Trachelomonas (1,572 OTUs)
+         [1] IMG_3300042862.a_Ga0453095_0015762...
+             OTUs: 61 | Members: 61
+         [2] IMG_3300006393.a_Ga0075517_1034097...
+             OTUs: 47 | Members: 47
+         [3] IMG_3300038278.a_Ga0401948_001823...
+             OTUs: 32 | Members: 32
+         [4] REF_SPR_AF190814.1.2264_Eukaryota_Discoba_Discicri...
+             OTUs: 30 | Members: 30
+         [5] REF_SPR_FJ719615.1.2228_Eukaryota_Discoba_Discicri...
+             OTUs: 27 | Members: 27
+         ... and 465 more clusters (1,375 OTUs)
+======================================================================
+
+🏷️  FAMILY: Neovahlkampfiidae
+----------------------------------------------------------------------
+   📊 Total OTUs: 780 (from 211 clusters)
+   🌳 TAXONOMIC DIVERSITY:
+      Phyla: 1 | Genera: 1
+
+   📋 PHYLUM BREAKDOWN:
+      Discoba: 780 OTUs (100.0%)
+
+   🔬 TOP GENERA (by OTU count):
+      Neovahlkampfia: 780 OTUs (100.0%)
+
+   🔍 DETAILED BREAKDOWN (Top 3 genera):
+
+      🧬 GENUS: Neovahlkampfia (780 OTUs)
+         [1] REF_SPR_LC126917.1.2087_U_18S_rRNA_nucleus__Eukary...
+             OTUs: 70 | Members: 70
+         [2] IMG_3300004470.a_Ga0068967_1005655...
+             OTUs: 51 | Members: 51
+         [3] IMG_3300003830.a_Ga0051980_10007279...
+             OTUs: 41 | Members: 41
+         [4] IMG_3300004473.a_Ga0068919_1053168...
+             OTUs: 36 | Members: 36
+         [5] IMG_3300042472.a_Ga0453232_0003649...
+             OTUs: 34 | Members: 34
+         ... and 206 more clusters (548 OTUs)
+======================================================================
+
+🏷️  FAMILY: Oxytrichidae
+----------------------------------------------------------------------
+   📊 Total OTUs: 7,715 (from 800 clusters)
+   🌳 TAXONOMIC DIVERSITY:
+      Phyla: 1 | Genera: 1
+
+   📋 PHYLUM BREAKDOWN:
+      Alveolata: 7,715 OTUs (100.0%)
+
+   🔬 TOP GENERA (by OTU count):
+      Stylonychia: 7,715 OTUs (100.0%)
+
+   🔍 DETAILED BREAKDOWN (Top 3 genera):
+
+      🧬 GENUS: Stylonychia (7,715 OTUs)
+         [1] REF_SPR_JQ924053.1.2998_Eukaryota_SAR_Alveolata_Ci...
+             OTUs: 229 | Members: 229
+         [2] IMG_3300042384.a_Ga0453972_0008145...
+             OTUs: 227 | Members: 227
+         [3] REF_SPR_AC237470.1750.3523_U_18S_rRNA_nucleus_clon...
+             OTUs: 225 | Members: 225
+         [4] REF_SPR_KU821589.1.1800_Eukaryota_SAR_Alveolata_Ci...
+             OTUs: 136 | Members: 136
+         [5] REF_SPR_KJ762339.1.1785_Eukaryota_SAR_Alveolata_Ci...
+             OTUs: 135 | Members: 135
+         ... and 795 more clusters (6,763 OTUs)
+======================================================================
+
+🏷️  FAMILY: Hexamitidae
+----------------------------------------------------------------------
+   📊 Total OTUs: 3,242 (from 573 clusters)
+   🌳 TAXONOMIC DIVERSITY:
+      Phyla: 1 | Genera: 4
+
+   📋 PHYLUM BREAKDOWN:
+      Metamonada: 3,242 OTUs (100.0%)
+
+   🔬 TOP GENERA (by OTU count):
+      Hexamitidae.U.genus: 3,018 OTUs (93.1%)
+      Hexamita: 113 OTUs (3.5%)
+      Trimitus: 88 OTUs (2.7%)
+      Trepomonas: 23 OTUs (0.7%)
+
+   🔍 DETAILED BREAKDOWN (Top 3 genera):
+
+      🧬 GENUS: Hexamitidae.U.genus (3,018 OTUs)
+         [1] IMG_3300003297.a_Ga0006818J48916_100178...
+             OTUs: 90 | Members: 90
+         [2] IMG_3300004620.a_Ga0068957_1002765...
+             OTUs: 85 | Members: 85
+         [3] IMG_3300004474.a_Ga0068968_1051590...
+             OTUs: 62 | Members: 62
+         [4] IMG_3300028745.a_Ga0302267_10019830...
+             OTUs: 57 | Members: 57
+         [5] IMG_3300028766.a_Ga0302269_1003387...
+             OTUs: 56 | Members: 56
+         ... and 479 more clusters (2,668 OTUs)
+
+      🧬 GENUS: Hexamita (113 OTUs)
+         [1] IMG_3300010976.a_Ga0138317_1031038...
+             OTUs: 31 | Members: 31
+         [2] IMG_3300029989.a_Ga0311365_10027117...
+             OTUs: 18 | Members: 18
+         [3] IMG_3300012411.a_Ga0153880_1275733...
+             OTUs: 10 | Members: 10
+         [4] IMG_3300043810.a_Ga0456169_006224...
+             OTUs: 7 | Members: 7
+         [5] IMG_3300012773.a_Ga0138290_1262311...
+             OTUs: 5 | Members: 5
+         ... and 27 more clusters (42 OTUs)
+
+      🧬 GENUS: Trimitus (88 OTUs)
+         [1] IMG_3300029986.a_Ga0302188_10006233...
+             OTUs: 14 | Members: 14
+         [2] IMG_3300026571.a_Ga0255289_1023378...
+             OTUs: 11 | Members: 11
+         [3] IMG_3300019191.a_Ga0180035_1070718...
+             OTUs: 6 | Members: 6
+         [4] IMG_3300019199.a_Ga0187789_1226725...
+             OTUs: 4 | Members: 4
+         [5] IMG_3300041949.a_Ga0439261_0224534...
+             OTUs: 4 | Members: 4
+         ... and 42 more clusters (49 OTUs)
+======================================================================
+
+🏷️  FAMILY: Gregarinidae
+----------------------------------------------------------------------
+   📊 Total OTUs: 692 (from 130 clusters)
+   🌳 TAXONOMIC DIVERSITY:
+      Phyla: 1 | Genera: 4
+
+   📋 PHYLUM BREAKDOWN:
+      Alveolata: 692 OTUs (100.0%)
+
+   🔬 TOP GENERA (by OTU count):
+      Leidyana2: 258 OTUs (37.3%)
+      Gregarina3: 218 OTUs (31.5%)
+      Gregarinidae.U.genus: 187 OTUs (27.0%)
+      Leidyana1: 29 OTUs (4.2%)
+
+   🔍 DETAILED BREAKDOWN (Top 3 genera):
+
+      🧬 GENUS: Leidyana2 (258 OTUs)
+         [1] IMG_3300036791.a_Ga0376662_0087331...
+             OTUs: 36 | Members: 36
+         [2] IMG_3300027502.a_Ga0209622_1000304...
+             OTUs: 24 | Members: 24
+         [3] IMG_3300005355.a_Ga0070671_100086745...
+             OTUs: 15 | Members: 15
+         [4] IMG_3300046459.a_Ga0495629_0011480...
+             OTUs: 13 | Members: 13
+         [5] IMG_3300044523.a_Ga0456066_0028370...
+             OTUs: 11 | Members: 11
+         ... and 68 more clusters (159 OTUs)
+
+      🧬 GENUS: Gregarina3 (218 OTUs)
+         [1] IMG_3300029907.a_Ga0311329_10016923...
+             OTUs: 170 | Members: 170
+         [2] REF_SPR_AF129882.1.1682_Eukaryota_SAR_Alveolata_Ap...
+             OTUs: 6 | Members: 6
+         [3] IMG_3300018427.a_Ga0187903_10080814...
+             OTUs: 4 | Members: 4
+         [4] IMG_3300003505.a_JGIcombinedJ51221_10044795...
+             OTUs: 4 | Members: 4
+         [5] REF_BRK_c-11078_conseq_Otu0955_4_soil_Sweden_Eukar...
+             OTUs: 4 | Members: 4
+         ... and 22 more clusters (30 OTUs)
+
+      🧬 GENUS: Gregarinidae.U.genus (187 OTUs)
+         [1] IMG_3300001411.a_JGI20182J14882_100048...
+             OTUs: 126 | Members: 126
+         [2] REF_BRK_c-2214_conseq_Otu388_3_soil_Svartberget-pe...
+             OTUs: 8 | Members: 8
+         [3] REF_BRK_c-2149_conseq_Otu207_19_soil_Svartberget-p...
+             OTUs: 6 | Members: 6
+         [4] IMG_3300037280.a_Ga0397554_0010986...
+             OTUs: 5 | Members: 5
+         [5] REF_SPR_L31799.1.1210_Eukaryota_SAR_Alveolata_Apic...
+             OTUs: 4 | Members: 4
+         ... and 22 more clusters (38 OTUs)
+======================================================================
+
+🏷️  FAMILY: Labyrinthulaceae
+----------------------------------------------------------------------
+   📊 Total OTUs: 238 (from 62 clusters)
+   🌳 TAXONOMIC DIVERSITY:
+      Phyla: 1 | Genera: 1
+
+   📋 PHYLUM BREAKDOWN:
+      Stramenopiles: 238 OTUs (100.0%)
+
+   🔬 TOP GENERA (by OTU count):
+      Labyrinthula: 238 OTUs (100.0%)
+
+   🔍 DETAILED BREAKDOWN (Top 3 genera):
+
+      🧬 GENUS: Labyrinthula (238 OTUs)
+         [1] REF_SPR_FR875308.1.1670_U_18S_rRNA_nucleus_clone_L...
+             OTUs: 53 | Members: 53
+         [2] REF_SPR_FJ800587.1.1365_Eukaryota_SAR_Stramenopile...
+             OTUs: 18 | Members: 18
+         [3] REF_SPR_CL603046.1.1056_U_18S_rRNA_nucleus__Eukary...
+             OTUs: 11 | Members: 11
+         [4] IMG_3300009863.a_Ga0132187_100663...
+             OTUs: 10 | Members: 10
+         [5] IMG_3300027848.a_Ga0209390_10132624...
+             OTUs: 8 | Members: 8
+         ... and 57 more clusters (138 OTUs)
+======================================================================
+
+🏷️  FAMILY: Vannellidae
+----------------------------------------------------------------------
+   📊 Total OTUs: 94 (from 56 clusters)
+   🌳 TAXONOMIC DIVERSITY:
+      Phyla: 1 | Genera: 1
+
+   📋 PHYLUM BREAKDOWN:
+      Discosea: 94 OTUs (100.0%)
+
+   🔬 TOP GENERA (by OTU count):
+      Vannella: 94 OTUs (100.0%)
+
+   🔍 DETAILED BREAKDOWN (Top 3 genera):
+
+      🧬 GENUS: Vannella (94 OTUs)
+         [1] IMG_3300010878.a_Ga0136899_10030885...
+             OTUs: 11 | Members: 11
+         [2] IMG_3300031411.a_Ga0102761_12762510...
+             OTUs: 5 | Members: 5
+         [3] IMG_3300001671.a_NGK4rrna_100053...
+             OTUs: 5 | Members: 5
+         [4] IMG_3300023309.a_Ga0256744_120600...
+             OTUs: 4 | Members: 4
+         [5] IMG_3300030841.a_Ga0075384_10026236...
+             OTUs: 3 | Members: 3
+         ... and 51 more clusters (66 OTUs)
+======================================================================
+
+🏷️  FAMILY: Paramoebidae
+----------------------------------------------------------------------
+   📊 Total OTUs: 81 (from 54 clusters)
+   🌳 TAXONOMIC DIVERSITY:
+      Phyla: 1 | Genera: 2
+
+   📋 PHYLUM BREAKDOWN:
+      Discosea: 81 OTUs (100.0%)
+
+   🔬 TOP GENERA (by OTU count):
+      Korotnevella: 50 OTUs (61.7%)
+      Paramoeba: 31 OTUs (38.3%)
+
+   🔍 DETAILED BREAKDOWN (Top 3 genera):
+
+      🧬 GENUS: Korotnevella (50 OTUs)
+         [1] IMG_3300007205.a_Ga0099763_1020694...
+             OTUs: 4 | Members: 4
+         [2] REF_SPR_JN202436.1.2100_Eukaryota_Amorphea_Amoeboz...
+             OTUs: 3 | Members: 3
+         [3] IMG_3300030783.a_Ga0102752_1006291...
+             OTUs: 3 | Members: 3
+         [4] IMG_3300017035.a_Ga0186503_101211...
+             OTUs: 2 | Members: 2
+         [5] REF_SPR_AY183893.1.2035_Eukaryota_Amorphea_Amoeboz...
+             OTUs: 2 | Members: 2
+         ... and 29 more clusters (36 OTUs)
+
+      🧬 GENUS: Paramoeba (31 OTUs)
+         [1] IMG_3300038290.a_Ga0401984_006209...
+             OTUs: 5 | Members: 5
+         [2] IMG_3300021387.a_Ga0223845_11340453...
+             OTUs: 3 | Members: 3
+         [3] IMG_2100351000.a_BMHBC_51823...
+             OTUs: 3 | Members: 3
+         [4] IMG_3300028888.a_Ga0247609_10306237...
+             OTUs: 2 | Members: 2
+         [5] IMG_3300010980.a_Ga0138321_10032875...
+             OTUs: 2 | Members: 2
+         ... and 15 more clusters (16 OTUs)
+======================================================================
+
+🏷️  FAMILY: Rhabdomonadales
+----------------------------------------------------------------------
+   📊 Total OTUs: 100 (from 26 clusters)
+   🌳 TAXONOMIC DIVERSITY:
+      Phyla: 1 | Genera: 1
+
+   📋 PHYLUM BREAKDOWN:
+      Discoba: 100 OTUs (100.0%)
+
+   🔬 TOP GENERA (by OTU count):
+      Gyropaigne: 100 OTUs (100.0%)
+
+   🔍 DETAILED BREAKDOWN (Top 3 genera):
+
+      🧬 GENUS: Gyropaigne (100 OTUs)
+         [1] IMG_3300022555.a_Ga0212088_10016201...
+             OTUs: 21 | Members: 21
+         [2] IMG_3300018034.a_Ga0187863_10002837...
+             OTUs: 15 | Members: 15
+         [3] IMG_3300016678.a_Ga0180045_108806...
+             OTUs: 8 | Members: 8
+         [4] REF_SPR_AY083243.1.2729_U_18S_rRNA_nucleus_strain_...
+             OTUs: 7 | Members: 7
+         [5] REF_BRK_c-47_conseq_Otu0784_5_freshwater_permafros...
+             OTUs: 6 | Members: 6
+         ... and 21 more clusters (43 OTUs)
+======================================================================
+
+🎯 OVERALL SUMMARY FOR 18S NOVEL EUKARYOTA FAMILIES:
+==========================================================================================
+Families analyzed: 10
+Total OTUs found: 25,393
+Average OTUs per family: 2,539.3
+
+📊 FAMILY RANKING (by OTU count):
+   [ 1] Mastigamoebidae: 10,879 OTUs
+        Diversity: 1 phyla, 1 genera
+        Top genus: Mastigamoeba (10,879 OTUs)
+   [ 2] Oxytrichidae: 7,715 OTUs
+        Diversity: 1 phyla, 1 genera
+        Top genus: Stylonychia (7,715 OTUs)
+   [ 3] Hexamitidae: 3,242 OTUs
+        Diversity: 1 phyla, 4 genera
+        Top genus: Hexamitidae.U.genus (3,018 OTUs)
+   [ 4] Euglenaceae: 1,572 OTUs
+        Diversity: 1 phyla, 1 genera
+        Top genus: Trachelomonas (1,572 OTUs)
+   [ 5] Neovahlkampfiidae: 780 OTUs
+        Diversity: 1 phyla, 1 genera
+        Top genus: Neovahlkampfia (780 OTUs)
+   [ 6] Gregarinidae: 692 OTUs
+        Diversity: 1 phyla, 4 genera
+        Top genus: Leidyana2 (258 OTUs)
+   [ 7] Labyrinthulaceae: 238 OTUs
+        Diversity: 1 phyla, 1 genera
+        Top genus: Labyrinthula (238 OTUs)
+   [ 8] Rhabdomonadales: 100 OTUs
+        Diversity: 1 phyla, 1 genera
+        Top genus: Gyropaigne (100 OTUs)
+   [ 9] Vannellidae: 94 OTUs
+        Diversity: 1 phyla, 1 genera
+        Top genus: Vannella (94 OTUs)
+   [10] Paramoebidae: 81 OTUs
+        Diversity: 1 phyla, 2 genera
+        Top genus: Korotnevella (50 OTUs)

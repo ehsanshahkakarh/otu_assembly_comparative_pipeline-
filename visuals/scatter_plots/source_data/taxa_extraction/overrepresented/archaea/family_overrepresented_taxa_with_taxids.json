@@ -1,0 +1,71 @@
+{
+  "taxa_with_taxids": [
+    {
+      "name": "Picrophilaceae",
+      "taxid": 46630,
+      "matched_name": "Picrophilaceae",
+      "domain": "Archaea",
+      "lineage": "cellular organisms;Archaea;Methanobacteriati;Thermoplasmatota;Thermoplasmata;Thermoplasmatales;Picrophilaceae",
+      "source": "family",
+      "genomes": 3,
+      "species": 2
+    },
+    {
+      "name": "Thermococcaceae",
+      "taxid": 2259,
+      "matched_name": "Thermococcaceae",
+      "domain": "Archaea",
+      "lineage": "cellular organisms;Archaea;Methanobacteriati;Methanobacteriota;Thermococci;Thermococcales;Thermococcaceae",
+      "source": "family",
+      "genomes": 221,
+      "species": 79
+    },
+    {
+      "name": "Methanomassiliicoccaceae",
+      "taxid": 1577788,
+      "matched_name": "Methanomassiliicoccaceae",
+      "domain": "Archaea",
+      "lineage": "cellular organisms;Archaea;Methanobacteriati;Thermoplasmatota;Thermoplasmata;Methanomassiliicoccales;Methanomassiliicoccaceae",
+      "source": "family",
+      "genomes": 246,
+      "species": 83
+    },
+    {
+      "name": "Haloferacaceae",
+      "taxid": 1644056,
+      "matched_name": "Haloferacaceae",
+      "domain": "Archaea",
+      "lineage": "cellular organisms;Archaea;Methanobacteriati;Methanobacteriota;Stenosarchaea group;Halobacteria;Halobacteriales;Haloferacaceae",
+      "source": "family",
+      "genomes": 503,
+      "species": 273
+    },
+    {
+      "name": "Natrialbaceae",
+      "taxid": 1644061,
+      "matched_name": "Natrialbaceae",
+      "domain": "Archaea",
+      "lineage": "cellular organisms;Archaea;Methanobacteriati;Methanobacteriota;Stenosarchaea group;Halobacteria;Halobacteriales;Natrialbaceae",
+      "source": "family",
+      "genomes": 199,
+      "species": 145
+    }
+  ],
+  "original_taxa_names": [
+    "Picrophilaceae",
+    "Thermococcaceae",
+    "Methanomassiliicoccaceae",
+    "Haloferacaceae",
+    "Natrialbaceae",
+    "Halorubraceae"
+  ],
+  "not_found": [
+    "Halorubraceae"
+  ],
+  "conversion_stats": {
+    "total_taxa": 6,
+    "converted": 5,
+    "not_found": 1,
+    "domain": "Archaea"
+  }
+}

@@ -1,0 +1,474 @@
+# NCBI TaxID-Based Overrepresented Taxonomic Diversity Analysis
+# Generated: 2025-11-12 20:19:56
+# Command: python extract_ncbi_taxid_diversity.py --gene 18S --category overrepresented --output family_diversity_results/18S_overrepresented_family_diversity.txt
+# ======================================================================
+
+🚀 STARTING NCBI TAXID-BASED OVERREPRESENTED DIVERSITY EXTRACTION
+Gene: 18S | Category: overrepresented
+Output: family_diversity_results/18S_overrepresented_family_diversity.txt
+📊 Loaded NCBI genus data: 16,717 total genus entries
+📋 Loaded 10 overrepresented eukaryota family taxa with TaxIDs from JSON
+
+📊 Domain EUKARYOTA: 8,770 genera
+
+🔍 EXTRACTING NCBI DIVERSITY FOR OVERREPRESENTED EUKARYOTA TAXONOMIC GROUPS (TaxID-based)
+==========================================================================================
+
+🏷️  TAXONOMIC GROUP: Lepidosauria (TaxID: 8504)
+----------------------------------------------------------------------
+   📊 Total genomes: 386 (across 175 genera)
+   🌳 TAXONOMIC DIVERSITY:
+      Genera: 175 | Species: 299
+
+   🔬 TOP GENERA (by genome count):
+      Podarcis: 30 genomes (7.8%)
+      Crotalus: 15 genomes (3.9%)
+      Anolis: 11 genomes (2.8%)
+      Hydrophis: 10 genomes (2.6%)
+      Pantherophis: 9 genomes (2.3%)
+      Vipera: 8 genomes (2.1%)
+      Darevskia: 7 genomes (1.8%)
+      Sceloporus: 6 genomes (1.6%)
+      Bothrops: 6 genomes (1.6%)
+      Varanus: 6 genomes (1.6%)
+      ... and 165 more genera (278 genomes)
+
+   🔍 DETAILED BREAKDOWN (Top 3 genera):
+
+      🧬 GENUS: Podarcis (30 genomes)
+         TaxID: 42163
+         Context: ...;Lacertibaenia;Lacertidae;Lacertinae;Podarcis
+         Genomes: 30 | Species: 14
+
+      🧬 GENUS: Crotalus (15 genomes)
+         TaxID: 8728
+         Context: ...;Colubroidea;Viperidae;Crotalinae;Crotalus
+         Genomes: 15 | Species: 11
+
+      🧬 GENUS: Anolis (11 genomes)
+         TaxID: 28376
+         Context: ...;Toxicofera;Iguania;Dactyloidae;Anolis
+         Genomes: 11 | Species: 8
+
+   🎯 CONCENTRATION ANALYSIS:
+      Top genus: Podarcis (7.8% of taxonomic group)
+      Top 3 genera: 14.5% of taxonomic group genomes
+      Genus diversity: 175 genera total
+      🌳 DIVERSE: Genomes spread across many genera
+======================================================================
+
+🏷️  TAXONOMIC GROUP: Amphibia (TaxID: 8292)
+----------------------------------------------------------------------
+   📊 Total genomes: 260 (across 93 genera)
+   🌳 TAXONOMIC DIVERSITY:
+      Genera: 93 | Species: 196
+
+   🔬 TOP GENERA (by genome count):
+      Desmognathus: 39 genomes (15.0%)
+      Leptodactylus: 10 genomes (3.8%)
+      Ptychadena: 10 genomes (3.8%)
+      Lithobates: 9 genomes (3.5%)
+      Xenopus: 8 genomes (3.1%)
+      Spea: 6 genomes (2.3%)
+      Rana: 5 genomes (1.9%)
+      Eurycea: 5 genomes (1.9%)
+      Bombina: 5 genomes (1.9%)
+      Lissotriton: 4 genomes (1.5%)
+      ... and 83 more genera (159 genomes)
+
+   🔍 DETAILED BREAKDOWN (Top 3 genera):
+
+      🧬 GENUS: Desmognathus (39 genomes)
+         TaxID: 43045
+         Context: ...;Salamandroidea;Plethodontidae;Plethodontinae;Desmognathus
+         Genomes: 39 | Species: 38
+
+      🧬 GENUS: Leptodactylus (10 genomes)
+         TaxID: 47563
+         Context: ...;Hyloidea;Leptodactylidae;Leptodactylinae;Leptodactylus
+         Genomes: 10 | Species: 9
+
+      🧬 GENUS: Ptychadena (10 genomes)
+         TaxID: 88030
+         Context: ...;Neobatrachia;Ranoidea;Ptychadenidae;Ptychadena
+         Genomes: 10 | Species: 10
+
+   🎯 CONCENTRATION ANALYSIS:
+      Top genus: Desmognathus (15.0% of taxonomic group)
+      Top 3 genera: 22.7% of taxonomic group genomes
+      Genus diversity: 93 genera total
+      🌳 DIVERSE: Genomes spread across many genera
+======================================================================
+
+🏷️  TAXONOMIC GROUP: Teleostei (TaxID: 32443)
+----------------------------------------------------------------------
+   📊 Total genomes: 2,886 (across 904 genera)
+   🌳 TAXONOMIC DIVERSITY:
+      Genera: 904 | Species: 1,798
+
+   🔬 TOP GENERA (by genome count):
+      Neolamprologus: 113 genomes (3.9%)
+      Sebastes: 112 genomes (3.9%)
+      Xenotilapia: 43 genomes (1.5%)
+      Oryzias: 42 genomes (1.5%)
+      Petrochromis: 33 genomes (1.1%)
+      Clupea: 32 genomes (1.1%)
+      Danio: 28 genomes (1.0%)
+      Tropheus: 27 genomes (0.9%)
+      Oncorhynchus: 25 genomes (0.9%)
+      Lactarius: 24 genomes (0.8%)
+      ... and 894 more genera (2,407 genomes)
+
+   🔍 DETAILED BREAKDOWN (Top 3 genera):
+
+      🧬 GENUS: Neolamprologus (113 genomes)
+         TaxID: 32506
+         Context: ...;African cichlids;Pseudocrenilabrinae;Lamprologini;Neolamprologus
+         Genomes: 113 | Species: 56
+
+      🧬 GENUS: Sebastes (112 genomes)
+         TaxID: 34820
+         Context: ...;Scorpaenoidei;Sebastidae;Sebastinae;Sebastes
+         Genomes: 112 | Species: 80
+
+      🧬 GENUS: Xenotilapia (43 genomes)
+         TaxID: 27764
+         Context: ...;African cichlids;Pseudocrenilabrinae;Ectodini;Xenotilapia
+         Genomes: 43 | Species: 20
+
+   🎯 CONCENTRATION ANALYSIS:
+      Top genus: Neolamprologus (3.9% of taxonomic group)
+      Top 3 genera: 9.3% of taxonomic group genomes
+      Genus diversity: 904 genera total
+      🌳 DIVERSE: Genomes spread across many genera
+======================================================================
+
+🏷️  TAXONOMIC GROUP: Kickxellales (TaxID: 4862)
+----------------------------------------------------------------------
+   📊 Total genomes: 197 (across 17 genera)
+   🌳 TAXONOMIC DIVERSITY:
+      Genera: 17 | Species: 172
+
+   🔬 TOP GENERA (by genome count):
+      Coemansia: 161 genomes (81.7%)
+      Nitzschia: 9 genomes (4.6%)
+      Ceratitis: 6 genomes (3.0%)
+      Kickxella: 3 genomes (1.5%)
+      Linderina: 3 genomes (1.5%)
+      Macrocentrus: 2 genomes (1.0%)
+      Gyrodactylus: 2 genomes (1.0%)
+      Geotria: 2 genomes (1.0%)
+      Spiromyces: 1 genomes (0.5%)
+      Protopolystoma: 1 genomes (0.5%)
+      ... and 7 more genera (7 genomes)
+
+   🔍 DETAILED BREAKDOWN (Top 3 genera):
+
+      🧬 GENUS: Coemansia (161 genomes)
+         TaxID: 4863
+         Context: ...;Kickxellomycetes;Kickxellales;Kickxellaceae;Coemansia
+         Genomes: 161 | Species: 146
+
+      🧬 GENUS: Nitzschia (9 genomes)
+         TaxID: 651811
+         Context: ...;Monopisthocotylea;Capsalidea;Capsalidae;Nitzschia
+         Genomes: 9 | Species: 7
+
+      🧬 GENUS: Ceratitis (6 genomes)
+         TaxID: 474492
+         Context: ...;Dacinae;Ceratitidini;Ceratitis;Ceratitis
+         Genomes: 6 | Species: 3
+
+   🎯 CONCENTRATION ANALYSIS:
+      Top genus: Coemansia (81.7% of taxonomic group)
+      Top 3 genera: 89.3% of taxonomic group genomes
+      Genus diversity: 17 genera total
+      🔥 HIGHLY CONCENTRATED: Coemansia dominates this taxonomic group!
+======================================================================
+
+🏷️  TAXONOMIC GROUP: Lipomycetaceae (TaxID: 29827)
+----------------------------------------------------------------------
+   📊 Total genomes: 68 (across 6 genera)
+   🌳 TAXONOMIC DIVERSITY:
+      Genera: 6 | Species: 36
+
+   🔬 TOP GENERA (by genome count):
+      Lipomyces: 44 genomes (64.7%)
+      Myxozyma: 13 genomes (19.1%)
+      Dipodascopsis: 5 genomes (7.4%)
+      Orchestes: 2 genomes (2.9%)
+      Kockiozyma: 2 genomes (2.9%)
+      Limtongia: 2 genomes (2.9%)
+
+   🔍 DETAILED BREAKDOWN (Top 3 genera):
+
+      🧬 GENUS: Lipomyces (44 genomes)
+         TaxID: 29828
+         Context: ...;Lipomycetes;Lipomycetales;Lipomycetaceae;Lipomyces
+         Genomes: 44 | Species: 19
+
+      🧬 GENUS: Myxozyma (13 genomes)
+         TaxID: 54096
+         Context: ...;Lipomycetes;Lipomycetales;Lipomycetaceae;Myxozyma
+         Genomes: 13 | Species: 12
+
+      🧬 GENUS: Dipodascopsis (5 genomes)
+         TaxID: 27312
+         Context: ...;Lipomycetes;Lipomycetales;Lipomycetaceae;Dipodascopsis
+         Genomes: 5 | Species: 2
+
+   🎯 CONCENTRATION ANALYSIS:
+      Top genus: Lipomyces (64.7% of taxonomic group)
+      Top 3 genera: 91.2% of taxonomic group genomes
+      Genus diversity: 6 genera total
+      📊 MODERATELY CONCENTRATED: Top 3 genera dominate
+======================================================================
+
+🏷️  TAXONOMIC GROUP: Selenastraceae (TaxID: 35466)
+----------------------------------------------------------------------
+   📊 Total genomes: 5 (across 3 genera)
+   🌳 TAXONOMIC DIVERSITY:
+      Genera: 3 | Species: 5
+
+   🔬 TOP GENERA (by genome count):
+      Monoraphidium: 3 genomes (60.0%)
+      Raphidocelis: 1 genomes (20.0%)
+      Messastrum: 1 genomes (20.0%)
+
+   🔍 DETAILED BREAKDOWN (Top 3 genera):
+
+      🧬 GENUS: Monoraphidium (3 genomes)
+         TaxID: 34111
+         Context: ...;CS clade;Sphaeropleales;Selenastraceae;Monoraphidium
+         Genomes: 3 | Species: 3
+
+      🧬 GENUS: Raphidocelis (1 genomes)
+         TaxID: 307506
+         Context: ...;CS clade;Sphaeropleales;Selenastraceae;Raphidocelis
+         Genomes: 1 | Species: 1
+
+      🧬 GENUS: Messastrum (1 genomes)
+         TaxID: 1916394
+         Context: ...;CS clade;Sphaeropleales;Selenastraceae;Messastrum
+         Genomes: 1 | Species: 1
+
+   🎯 CONCENTRATION ANALYSIS:
+      Top genus: Monoraphidium (60.0% of taxonomic group)
+      Top 3 genera: 100.0% of taxonomic group genomes
+      Genus diversity: 3 genera total
+      📊 MODERATELY CONCENTRATED: Top 3 genera dominate
+======================================================================
+
+🏷️  TAXONOMIC GROUP: Schizosaccharomycetes (TaxID: 4894)
+----------------------------------------------------------------------
+   📊 Total genomes: 197 (across 24 genera)
+   🌳 TAXONOMIC DIVERSITY:
+      Genera: 24 | Species: 54
+
+   🔬 TOP GENERA (by genome count):
+      Schizosaccharomyces: 94 genomes (47.7%)
+      Clupea: 32 genomes (16.2%)
+      Alosa: 11 genomes (5.6%)
+      Ditylenchus: 9 genomes (4.6%)
+      Eupsittula: 6 genomes (3.0%)
+      Sardinella: 6 genomes (3.0%)
+      Coilia: 5 genomes (2.5%)
+      Sardina: 4 genomes (2.0%)
+      Tenualosa: 4 genomes (2.0%)
+      Heracleum: 3 genomes (1.5%)
+      ... and 14 more genera (23 genomes)
+
+   🔍 DETAILED BREAKDOWN (Top 3 genera):
+
+      🧬 GENUS: Schizosaccharomyces (94 genomes)
+         TaxID: 4895
+         Context: ...;Schizosaccharomycetes;Schizosaccharomycetales;Schizosaccharomycetaceae;Schizosaccharomyces
+         Genomes: 94 | Species: 8
+
+      🧬 GENUS: Clupea (32 genomes)
+         TaxID: 7949
+         Context: ...;Clupeoidei;Clupeidae;Clupeinae;Clupea
+         Genomes: 32 | Species: 1
+
+      🧬 GENUS: Alosa (11 genomes)
+         TaxID: 34772
+         Context: ...;Clupeoidei;Clupeidae;Alosinae;Alosa
+         Genomes: 11 | Species: 5
+
+   🎯 CONCENTRATION ANALYSIS:
+      Top genus: Schizosaccharomyces (47.7% of taxonomic group)
+      Top 3 genera: 69.5% of taxonomic group genomes
+      Genus diversity: 24 genera total
+      🌳 DIVERSE: Genomes spread across many genera
+======================================================================
+
+🏷️  TAXONOMIC GROUP: Mammalia (TaxID: 40674)
+----------------------------------------------------------------------
+   📊 Total genomes: 4,336 (across 486 genera)
+   🌳 TAXONOMIC DIVERSITY:
+      Genera: 486 | Species: 982
+
+   🔬 TOP GENERA (by genome count):
+      Homo: 1,845 genomes (42.6%)
+      Bos: 241 genomes (5.6%)
+      Mus: 78 genomes (1.8%)
+      Ovis: 75 genomes (1.7%)
+      Lagorchestes: 70 genomes (1.6%)
+      Macaca: 51 genomes (1.2%)
+      Capra: 45 genomes (1.0%)
+      Sus: 45 genomes (1.0%)
+      Isoodon: 39 genomes (0.9%)
+      Mustela: 38 genomes (0.9%)
+      ... and 476 more genera (1,809 genomes)
+
+   🔍 DETAILED BREAKDOWN (Top 3 genera):
+
+      🧬 GENUS: Homo (1,845 genomes)
+         TaxID: 9605
+         Context: ...;Hominoidea;Hominidae;Homininae;Homo
+         Genomes: 1,845 | Species: 1
+
+      🧬 GENUS: Bos (241 genomes)
+         TaxID: 9903
+         Context: ...;Pecora;Bovidae;Bovinae;Bos
+         Genomes: 241 | Species: 10
+
+      🧬 GENUS: Mus (78 genomes)
+         TaxID: 862507
+         Context: ...;Muridae;Murinae;Mus;Mus
+         Genomes: 78 | Species: 6
+
+   🎯 CONCENTRATION ANALYSIS:
+      Top genus: Homo (42.6% of taxonomic group)
+      Top 3 genera: 49.9% of taxonomic group genomes
+      Genus diversity: 486 genera total
+      🌳 DIVERSE: Genomes spread across many genera
+======================================================================
+
+🏷️  TAXONOMIC GROUP: Scyphozoa (TaxID: 6142)
+----------------------------------------------------------------------
+   📊 Total genomes: 64 (across 20 genera)
+   🌳 TAXONOMIC DIVERSITY:
+      Genera: 20 | Species: 43
+
+   🔬 TOP GENERA (by genome count):
+      Aurelia: 8 genomes (12.5%)
+      Cassiopea: 8 genomes (12.5%)
+      Smittium: 7 genomes (10.9%)
+      Isotomurus: 6 genomes (9.4%)
+      Mastigias: 5 genomes (7.8%)
+      Chrysaora: 5 genomes (7.8%)
+      Schoenoplectus: 5 genomes (7.8%)
+      Rhopilema: 4 genomes (6.2%)
+      Pelagia: 2 genomes (3.1%)
+      Nausithoe: 2 genomes (3.1%)
+      ... and 10 more genera (12 genomes)
+
+   🔍 DETAILED BREAKDOWN (Top 3 genera):
+
+      🧬 GENUS: Aurelia (8 genomes)
+         TaxID: 6144
+         Context: ...;Scyphozoa;Semaeostomeae;Ulmaridae;Aurelia
+         Genomes: 8 | Species: 5
+
+      🧬 GENUS: Cassiopea (8 genomes)
+         TaxID: 12992
+         Context: ...;Scyphozoa;Rhizostomeae;Cassiopeidae;Cassiopea
+         Genomes: 8 | Species: 4
+
+      🧬 GENUS: Smittium (7 genomes)
+         TaxID: 4888
+         Context: ...;Harpellomycetes;Harpellales;Legeriomycetaceae;Smittium
+         Genomes: 7 | Species: 6
+
+   🎯 CONCENTRATION ANALYSIS:
+      Top genus: Aurelia (12.5% of taxonomic group)
+      Top 3 genera: 35.9% of taxonomic group genomes
+      Genus diversity: 20 genera total
+      🌳 DIVERSE: Genomes spread across many genera
+======================================================================
+
+🏷️  TAXONOMIC GROUP: Saprolegniales (TaxID: 4764)
+----------------------------------------------------------------------
+   📊 Total genomes: 31 (across 5 genera)
+   🌳 TAXONOMIC DIVERSITY:
+      Genera: 5 | Species: 10
+
+   🔬 TOP GENERA (by genome count):
+      Aphanomyces: 26 genomes (83.9%)
+      Saprolegnia: 2 genomes (6.5%)
+      Xenopsylla: 1 genomes (3.2%)
+      Thraustotheca: 1 genomes (3.2%)
+      Ctenocephalides: 1 genomes (3.2%)
+
+   🔍 DETAILED BREAKDOWN (Top 3 genera):
+
+      🧬 GENUS: Aphanomyces (26 genomes)
+         TaxID: 100860
+         Context: ...;Oomycota;Saprolegniales;Saprolegniaceae;Aphanomyces
+         Genomes: 26 | Species: 5
+
+      🧬 GENUS: Saprolegnia (2 genomes)
+         TaxID: 4769
+         Context: ...;Oomycota;Saprolegniales;Saprolegniaceae;Saprolegnia
+         Genomes: 2 | Species: 2
+
+      🧬 GENUS: Xenopsylla (1 genomes)
+         TaxID: 163158
+         Context: ...;Pulicoidea;Pulicidae;Xenopsyllinae;Xenopsylla
+         Genomes: 1 | Species: 1
+
+   🎯 CONCENTRATION ANALYSIS:
+      Top genus: Aphanomyces (83.9% of taxonomic group)
+      Top 3 genera: 93.5% of taxonomic group genomes
+      Genus diversity: 5 genera total
+      🔥 HIGHLY CONCENTRATED: Aphanomyces dominates this taxonomic group!
+======================================================================
+
+🎯 OVERALL SUMMARY FOR 18S OVERREPRESENTED EUKARYOTA TAXONOMIC GROUPS:
+==========================================================================================
+Taxonomic groups analyzed: 10
+Total genomes found: 8,430
+Average genomes per group: 843.0
+
+📊 TAXONOMIC GROUP RANKING (by genome count):
+   [ 1] Mammalia: 4,336 genomes
+        Diversity: 486 genera, 982 species
+        Top genus: Homo (42.6% genomes)
+        🌳 DIVERSE
+   [ 2] Teleostei: 2,886 genomes
+        Diversity: 904 genera, 1798 species
+        Top genus: Neolamprologus (3.9% genomes)
+        🌳 DIVERSE
+   [ 3] Lepidosauria: 386 genomes
+        Diversity: 175 genera, 299 species
+        Top genus: Podarcis (7.8% genomes)
+        🌳 DIVERSE
+   [ 4] Amphibia: 260 genomes
+        Diversity: 93 genera, 196 species
+        Top genus: Desmognathus (15.0% genomes)
+        🌳 DIVERSE
+   [ 5] Kickxellales: 197 genomes
+        Diversity: 17 genera, 172 species
+        Top genus: Coemansia (81.7% genomes)
+        🔥 HIGHLY CONCENTRATED
+   [ 6] Schizosaccharomycetes: 197 genomes
+        Diversity: 24 genera, 54 species
+        Top genus: Schizosaccharomyces (47.7% genomes)
+        🌳 DIVERSE
+   [ 7] Lipomycetaceae: 68 genomes
+        Diversity: 6 genera, 36 species
+        Top genus: Lipomyces (64.7% genomes)
+        📊 MODERATELY CONCENTRATED
+   [ 8] Scyphozoa: 64 genomes
+        Diversity: 20 genera, 43 species
+        Top genus: Aurelia (12.5% genomes)
+        🌳 DIVERSE
+   [ 9] Saprolegniales: 31 genomes
+        Diversity: 5 genera, 10 species
+        Top genus: Aphanomyces (83.9% genomes)
+        🔥 HIGHLY CONCENTRATED
+   [10] Selenastraceae: 5 genomes
+        Diversity: 3 genera, 5 species
+        Top genus: Monoraphidium (60.0% genomes)
+        📊 MODERATELY CONCENTRATED

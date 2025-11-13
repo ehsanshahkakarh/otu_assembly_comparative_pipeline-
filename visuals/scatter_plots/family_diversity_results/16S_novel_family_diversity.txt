@@ -1,0 +1,957 @@
+# Family Diversity Analysis Results
+# Generated: 2025-11-12 16:52:38
+# Command: python extract_family_diversity.py --gene 16S --category novel --rank family
+# ======================================================================
+
+🚀 STARTING FAMILY DIVERSITY EXTRACTION
+Gene: 16S | Category: novel | Rank: family
+📊 Loaded original TSV: 287,468 total OTU clusters from 16S
+📋 Loaded 10 novel bacteria family taxa from JSON
+
+🔍 EXTRACTING DIVERSITY FOR NOVEL BACTERIA FAMILIES
+==========================================================================================
+
+🏷️  FAMILY: Thermoanaerobaculaceae
+----------------------------------------------------------------------
+   📊 Total OTUs: 2,663 (from 708 clusters)
+   🌳 TAXONOMIC DIVERSITY:
+      Phyla: 1 | Genera: 2
+
+   📋 PHYLUM BREAKDOWN:
+      Acidobacteriota: 2,663 OTUs (100.0%)
+
+   🔬 TOP GENERA (by OTU count):
+      Thermoanaerobaculaceae.U.genus: 2,345 OTUs (88.1%)
+      Thermoanaerobaculum: 318 OTUs (11.9%)
+
+   🔍 DETAILED BREAKDOWN (Top 3 genera):
+
+      🧬 GENUS: Thermoanaerobaculaceae.U.genus (2,345 OTUs)
+         [1] IMG_3300006930.a:Ga0079303_10029719...
+             OTUs: 88 | Members: 88
+         [2] IMG_3300001154.a:JGI12636J13339_1000585...
+             OTUs: 79 | Members: 79
+         [3] REF_SILVA_JN977357.1.1551;Bacteria;Acidobacteriota...
+             OTUs: 76 | Members: 76
+         [4] IMG_3300006057.a:Ga0075026_100064119...
+             OTUs: 55 | Members: 55
+         [5] IMG_3300002448.a:JGIcombinedJ30088_10004140...
+             OTUs: 51 | Members: 51
+         ... and 661 more clusters (1,996 OTUs)
+
+      🧬 GENUS: Thermoanaerobaculum (318 OTUs)
+         [1] IMG_3300036980.a:Ga0393263_0000629...
+             OTUs: 61 | Members: 61
+         [2] IMG_3300032897.a:Ga0335071_10130974...
+             OTUs: 47 | Members: 47
+         [3] IMG_3300009167.a:Ga0113563_10091240...
+             OTUs: 29 | Members: 29
+         [4] REF_SILVA_MEKI01000066.5356.6913;Bacteria;Acidobac...
+             OTUs: 28 | Members: 28
+         [5] IMG_3300037501.a:Ga0394875_0002319...
+             OTUs: 22 | Members: 22
+         ... and 37 more clusters (131 OTUs)
+======================================================================
+
+🏷️  FAMILY: Thioalkalispiraceae
+----------------------------------------------------------------------
+   📊 Total OTUs: 362 (from 156 clusters)
+   🌳 TAXONOMIC DIVERSITY:
+      Phyla: 1 | Genera: 4
+
+   📋 PHYLUM BREAKDOWN:
+      Pseudomonadota: 362 OTUs (100.0%)
+
+   🔬 TOP GENERA (by OTU count):
+      Thioalkalispiraceae.U.genus: 206 OTUs (56.9%)
+      Thiohalophilus: 144 OTUs (39.8%)
+      Endothiovibrio: 11 OTUs (3.0%)
+      Thioalkalispira: 1 OTUs (0.3%)
+
+   🔍 DETAILED BREAKDOWN (Top 3 genera):
+
+      🧬 GENUS: Thioalkalispiraceae.U.genus (206 OTUs)
+         [1] IMG_3300021147.a:Ga0216211_103087...
+             OTUs: 23 | Members: 23
+         [2] REF_SILVA_FJ717203.1.1530;Bacteria;Proteobacteria;...
+             OTUs: 14 | Members: 14
+         [3] IMG_3300038408.a:Ga0436464_0019282...
+             OTUs: 9 | Members: 9
+         [4] REF_SILVA_GQ472320.1.1545;Bacteria;Proteobacteria;...
+             OTUs: 6 | Members: 6
+         [5] IMG_3300037470.a:Ga0395804_0005732...
+             OTUs: 6 | Members: 6
+         ... and 81 more clusters (148 OTUs)
+
+      🧬 GENUS: Thiohalophilus (144 OTUs)
+         [1] IMG_3300021514.a:Ga0190293_1022883...
+             OTUs: 21 | Members: 21
+         [2] REF_SILVA_JN977254.1.1536;Bacteria;Proteobacteria;...
+             OTUs: 14 | Members: 14
+         [3] IMG_3300032212.a:Ga0316207_10072433...
+             OTUs: 10 | Members: 10
+         [4] IMG_3300032257.a:Ga0316205_10000142...
+             OTUs: 6 | Members: 6
+         [5] REF_SILVA_EU652539.1.1508;Bacteria;Proteobacteria;...
+             OTUs: 6 | Members: 6
+         ... and 57 more clusters (87 OTUs)
+
+      🧬 GENUS: Endothiovibrio (11 OTUs)
+         [1] IMG_3300035398.a:Ga0316574_0011591...
+             OTUs: 3 | Members: 3
+         [2] REF_SILVA_JF344273.1.1499;Bacteria;Proteobacteria;...
+             OTUs: 3 | Members: 3
+         [3] IMG_3300026534.a:Ga0256841_1003028...
+             OTUs: 1 | Members: 1
+         [4] REF_SILVA_HQ379738.1.1530;Bacteria;Proteobacteria;...
+             OTUs: 1 | Members: 1
+         [5] IMG_3300040778.a:Ga0450781_203519...
+             OTUs: 1 | Members: 1
+         ... and 2 more clusters (2 OTUs)
+======================================================================
+
+🏷️  FAMILY: Blastocatellaceae
+----------------------------------------------------------------------
+   📊 Total OTUs: 1,683 (from 430 clusters)
+   🌳 TAXONOMIC DIVERSITY:
+      Phyla: 1 | Genera: 5
+
+   📋 PHYLUM BREAKDOWN:
+      Acidobacteriota: 1,683 OTUs (100.0%)
+
+   🔬 TOP GENERA (by OTU count):
+      Blastocatellaceae.U.genus: 1,019 OTUs (60.5%)
+      Blastocatella: 368 OTUs (21.9%)
+      Stenotrophobacter: 220 OTUs (13.1%)
+      Aridibacter: 71 OTUs (4.2%)
+      Tellurimicrobium: 5 OTUs (0.3%)
+
+   🔍 DETAILED BREAKDOWN (Top 3 genera):
+
+      🧬 GENUS: Blastocatellaceae.U.genus (1,019 OTUs)
+         [1] REF_SILVA_EU445218.1.1516;Bacteria;Acidobacteriota...
+             OTUs: 64 | Members: 64
+         [2] IMG_3300012131.a:Ga0153994_1000457...
+             OTUs: 52 | Members: 52
+         [3] REF_SILVA_EF632805.1.1514;Bacteria;Acidobacteriota...
+             OTUs: 46 | Members: 46
+         [4] REF_SILVA_JX945558.1.1522;Bacteria;Acidobacteriota...
+             OTUs: 32 | Members: 32
+         [5] IMG_3300014968.a:Ga0157379_10125951...
+             OTUs: 28 | Members: 28
+         ... and 229 more clusters (797 OTUs)
+
+      🧬 GENUS: Blastocatella (368 OTUs)
+         [1] IMG_3300012091.a:Ga0136625_1045642...
+             OTUs: 32 | Members: 32
+         [2] IMG_3300026500.a:Ga0247592_1010343...
+             OTUs: 21 | Members: 21
+         [3] REF_SILVA_KF037779.1.1488;Bacteria;Acidobacteriota...
+             OTUs: 19 | Members: 19
+         [4] IMG_3300037503.a:Ga0334906_000840...
+             OTUs: 13 | Members: 13
+         [5] IMG_3300037833.a:Ga0401341_10465...
+             OTUs: 12 | Members: 12
+         ... and 115 more clusters (271 OTUs)
+
+      🧬 GENUS: Stenotrophobacter (220 OTUs)
+         [1] REF_SILVA_Z95709.1.1515;Bacteria;Acidobacteriota;B...
+             OTUs: 31 | Members: 31
+         [2] IMG_3300002077.a:JGI24744J21845_10014321...
+             OTUs: 19 | Members: 19
+         [3] IMG_3300031995.a:Ga0307409_100000508...
+             OTUs: 16 | Members: 16
+         [4] REF_SILVA_KF712553.1.1487;Bacteria;Acidobacteriota...
+             OTUs: 14 | Members: 14
+         [5] REF_SILVA_JN868925.1.1513;Bacteria;Acidobacteriota...
+             OTUs: 12 | Members: 12
+         ... and 47 more clusters (128 OTUs)
+======================================================================
+
+🏷️  FAMILY: Kofleriaceae
+----------------------------------------------------------------------
+   📊 Total OTUs: 3,138 (from 749 clusters)
+   🌳 TAXONOMIC DIVERSITY:
+      Phyla: 1 | Genera: 2
+
+   📋 PHYLUM BREAKDOWN:
+      Myxococcota: 3,138 OTUs (100.0%)
+
+   🔬 TOP GENERA (by OTU count):
+      Haliangium: 3,124 OTUs (99.6%)
+      Kofleria: 14 OTUs (0.4%)
+
+   🔍 DETAILED BREAKDOWN (Top 3 genera):
+
+      🧬 GENUS: Haliangium (3,124 OTUs)
+         [1] IMG_3300046721.a:Ga0495517_0015203...
+             OTUs: 177 | Members: 177
+         [2] IMG_3300012358.a:Ga0137368_10036235...
+             OTUs: 131 | Members: 131
+         [3] IMG_3300005329.a:Ga0070683_100259030...
+             OTUs: 104 | Members: 104
+         [4] IMG_3300037476.a:Ga0400316_0006652...
+             OTUs: 100 | Members: 100
+         [5] REF_SILVA_EU445232.1.1554;Bacteria;Myxococcota;Pol...
+             OTUs: 99 | Members: 99
+         ... and 743 more clusters (2,513 OTUs)
+
+      🧬 GENUS: Kofleria (14 OTUs)
+         [1] IMG_3300038379.a:Ga0394873_0003277...
+             OTUs: 14 | Members: 14
+======================================================================
+
+🏷️  FAMILY: Pyrinomonadaceae
+----------------------------------------------------------------------
+   📊 Total OTUs: 3,239 (from 659 clusters)
+   🌳 TAXONOMIC DIVERSITY:
+      Phyla: 1 | Genera: 4
+
+   📋 PHYLUM BREAKDOWN:
+      Acidobacteriota: 3,239 OTUs (100.0%)
+
+   🔬 TOP GENERA (by OTU count):
+      Pyrinomonadaceae.U.genus: 3,208 OTUs (99.0%)
+      Arenimicrobium: 18 OTUs (0.6%)
+      Pyrinomonas: 7 OTUs (0.2%)
+      Brevitalea: 6 OTUs (0.2%)
+
+   🔍 DETAILED BREAKDOWN (Top 3 genera):
+
+      🧬 GENUS: Pyrinomonadaceae.U.genus (3,208 OTUs)
+         [1] IMG_3300025961.a:Ga0207712_10025413...
+             OTUs: 163 | Members: 163
+         [2] REF_SILVA_AH012920.32772.34324;Bacteria;Acidobacte...
+             OTUs: 154 | Members: 154
+         [3] IMG_3300019790.a:Ga0198867_155775...
+             OTUs: 149 | Members: 149
+         [4] REF_SILVA_JF833518.1.1603;Bacteria;Acidobacteriota...
+             OTUs: 140 | Members: 140
+         [5] IMG_3300031366.a:Ga0307506_10012281...
+             OTUs: 108 | Members: 108
+         ... and 649 more clusters (2,494 OTUs)
+
+      🧬 GENUS: Arenimicrobium (18 OTUs)
+         [1] IMG_3300041970.a:Ga0451474_000174...
+             OTUs: 18 | Members: 18
+
+      🧬 GENUS: Pyrinomonas (7 OTUs)
+         [1] IMG_3300003442.a:ERB454_1026095...
+             OTUs: 4 | Members: 4
+         [2] IMG_3300010288.a:Ga0116210_1025084...
+             OTUs: 2 | Members: 2
+         [3] REF_SILVA_EU490264.1.1467;Bacteria;Acidobacteriota...
+             OTUs: 1 | Members: 1
+======================================================================
+
+🏷️  FAMILY: Microscillaceae
+----------------------------------------------------------------------
+   📊 Total OTUs: 2,545 (from 617 clusters)
+   🌳 TAXONOMIC DIVERSITY:
+      Phyla: 1 | Genera: 3
+
+   📋 PHYLUM BREAKDOWN:
+      Bacteroidota: 2,545 OTUs (100.0%)
+
+   🔬 TOP GENERA (by OTU count):
+      Microscillaceae.U.genus: 2,494 OTUs (98.0%)
+      Microscilla: 38 OTUs (1.5%)
+      Eisenibacter: 13 OTUs (0.5%)
+
+   🔍 DETAILED BREAKDOWN (Top 3 genera):
+
+      🧬 GENUS: Microscillaceae.U.genus (2,494 OTUs)
+         [1] IMG_3300002092.a:JGI24218J26658_1000001...
+             OTUs: 213 | Members: 213
+         [2] IMG_3300017633.a:Ga0187991_100288...
+             OTUs: 135 | Members: 135
+         [3] IMG_3300021172.a:Ga0216332_10001714...
+             OTUs: 92 | Members: 92
+         [4] IMG_3300020524.a:Ga0208858_1003994...
+             OTUs: 86 | Members: 86
+         [5] IMG_3300005458.a:Ga0070681_10144031...
+             OTUs: 49 | Members: 49
+         ... and 598 more clusters (1,919 OTUs)
+
+      🧬 GENUS: Microscilla (38 OTUs)
+         [1] IMG_3300015360.a:Ga0163144_10077519...
+             OTUs: 14 | Members: 14
+         [2] REF_SILVA_FJ403054.1.1467;Bacteria;Bacteroidota;Ba...
+             OTUs: 7 | Members: 7
+         [3] REF_SILVA_MLAY01000031.210.1714;Bacteria;Bacteroid...
+             OTUs: 3 | Members: 3
+         [4] IMG_3300037311.a:Ga0394881_0032260...
+             OTUs: 3 | Members: 3
+         [5] REF_SILVA_AAWS01000102.3014.4457;Bacteria;Bacteroi...
+             OTUs: 3 | Members: 3
+         ... and 7 more clusters (8 OTUs)
+
+      🧬 GENUS: Eisenibacter (13 OTUs)
+         [1] IMG_3300004787.a:Ga0007755_1047015...
+             OTUs: 8 | Members: 8
+         [2] IMG_3300007237.a:Ga0075177_1015552...
+             OTUs: 5 | Members: 5
+======================================================================
+
+🏷️  FAMILY: Longimicrobiaceae
+----------------------------------------------------------------------
+   📊 Total OTUs: 757 (from 301 clusters)
+   🌳 TAXONOMIC DIVERSITY:
+      Phyla: 1 | Genera: 2
+
+   📋 PHYLUM BREAKDOWN:
+      Gemmatimonadota: 757 OTUs (100.0%)
+
+   🔬 TOP GENERA (by OTU count):
+      Longimicrobiaceae.U.genus: 669 OTUs (88.4%)
+      Longimicrobium: 88 OTUs (11.6%)
+
+   🔍 DETAILED BREAKDOWN (Top 3 genera):
+
+      🧬 GENUS: Longimicrobiaceae.U.genus (669 OTUs)
+         [1] IMG_3300035673.a:Ga0372939_0014463...
+             OTUs: 39 | Members: 39
+         [2] IMG_3300037313.a:Ga0395908_0264609...
+             OTUs: 17 | Members: 17
+         [3] IMG_3300005633.a:Ga0068839_100674...
+             OTUs: 16 | Members: 16
+         [4] IMG_3300018918.a:Ga0193616_1008628...
+             OTUs: 16 | Members: 16
+         [5] IMG_3300045996.a:Ga0456371_00917654...
+             OTUs: 15 | Members: 15
+         ... and 273 more clusters (566 OTUs)
+
+      🧬 GENUS: Longimicrobium (88 OTUs)
+         [1] IMG_3300018916.a:Ga0193615_1007475...
+             OTUs: 23 | Members: 23
+         [2] IMG_3300049032.a:Ga0498818_013681...
+             OTUs: 12 | Members: 12
+         [3] IMG_3300049220.a:Ga0498800_003583...
+             OTUs: 11 | Members: 11
+         [4] REF_SILVA_EU289445.1.1510;Bacteria;Gemmatimonadota...
+             OTUs: 8 | Members: 8
+         [5] IMG_3300034145.a:Ga0334963_002201...
+             OTUs: 5 | Members: 5
+         ... and 18 more clusters (29 OTUs)
+======================================================================
+
+🏷️  FAMILY: Chthoniobacteraceae
+----------------------------------------------------------------------
+   📊 Total OTUs: 4,749 (from 791 clusters)
+   🌳 TAXONOMIC DIVERSITY:
+      Phyla: 1 | Genera: 2
+
+   📋 PHYLUM BREAKDOWN:
+      Verrucomicrobiota: 4,749 OTUs (100.0%)
+
+   🔬 TOP GENERA (by OTU count):
+      Chthoniobacteraceae.U.genus: 3,212 OTUs (67.6%)
+      Chthoniobacter: 1,537 OTUs (32.4%)
+
+   🔍 DETAILED BREAKDOWN (Top 3 genera):
+
+      🧬 GENUS: Chthoniobacteraceae.U.genus (3,212 OTUs)
+         [1] REF_SILVA_KC541140.1.1558;Bacteria;Verrucomicrobio...
+             OTUs: 197 | Members: 197
+         [2] IMG_3300028880.a:Ga0307300_10018032...
+             OTUs: 194 | Members: 194
+         [3] IMG_3300035724.a:Ga0373933_0072631...
+             OTUs: 185 | Members: 185
+         [4] IMG_3300002374.a:B570J29620_1001264...
+             OTUs: 184 | Members: 184
+         [5] IMG_3300020516.a:Ga0207935_1001559...
+             OTUs: 116 | Members: 116
+         ... and 458 more clusters (2,336 OTUs)
+
+      🧬 GENUS: Chthoniobacter (1,537 OTUs)
+         [1] REF_SILVA_FJ872373.13200.14750;Bacteria;Verrucomic...
+             OTUs: 83 | Members: 83
+         [2] IMG_3300044814.a:Ga0467072_0000041...
+             OTUs: 77 | Members: 77
+         [3] IMG_3300029919.a:Ga0302141_1020081...
+             OTUs: 75 | Members: 75
+         [4] IMG_3300034124.a:Ga0370483_0004023...
+             OTUs: 63 | Members: 63
+         [5] IMG_3300034104.a:Ga0335031_0000185...
+             OTUs: 56 | Members: 56
+         ... and 323 more clusters (1,183 OTUs)
+======================================================================
+
+🏷️  FAMILY: Vicinamibacteraceae
+----------------------------------------------------------------------
+   📊 Total OTUs: 2,228 (from 549 clusters)
+   🌳 TAXONOMIC DIVERSITY:
+      Phyla: 1 | Genera: 3
+
+   📋 PHYLUM BREAKDOWN:
+      Acidobacteriota: 2,228 OTUs (100.0%)
+
+   🔬 TOP GENERA (by OTU count):
+      Vicinamibacteraceae.U.genus: 2,041 OTUs (91.6%)
+      Luteitalea: 158 OTUs (7.1%)
+      Vicinamibacter: 29 OTUs (1.3%)
+
+   🔍 DETAILED BREAKDOWN (Top 3 genera):
+
+      🧬 GENUS: Vicinamibacteraceae.U.genus (2,041 OTUs)
+         [1] IMG_3300021081.a:Ga0210379_10013156...
+             OTUs: 58 | Members: 58
+         [2] REF_SILVA_Z95733.1.1547;Bacteria;Acidobacteriota;V...
+             OTUs: 45 | Members: 45
+         [3] REF_SILVA_JN869111.1.1546;Bacteria;Acidobacteriota...
+             OTUs: 42 | Members: 42
+         [4] IMG_3300003461.a:P42013CM_1016140...
+             OTUs: 42 | Members: 42
+         [5] IMG_3300005879.a:Ga0075295_1002057...
+             OTUs: 42 | Members: 42
+         ... and 500 more clusters (1,812 OTUs)
+
+      🧬 GENUS: Luteitalea (158 OTUs)
+         [1] IMG_3300048583.a:Ga0498911_0012264...
+             OTUs: 47 | Members: 47
+         [2] IMG_3300035607.a:Ga0373514_00803...
+             OTUs: 13 | Members: 13
+         [3] IMG_3300033481.a:Ga0316600_10010783...
+             OTUs: 11 | Members: 11
+         [4] IMG_3300003890.a:Ga0063162_1002174...
+             OTUs: 8 | Members: 8
+         [5] REF_SILVA_KC683063.1.1548;Bacteria;Acidobacteriota...
+             OTUs: 7 | Members: 7
+         ... and 30 more clusters (72 OTUs)
+
+      🧬 GENUS: Vicinamibacter (29 OTUs)
+         [1] REF_SILVA_FPLS01047491.11.1542;Bacteria;Acidobacte...
+             OTUs: 12 | Members: 12
+         [2] IMG_3300034897.a:Ga0377334_158...
+             OTUs: 3 | Members: 3
+         [3] REF_SILVA_HQ119087.1.1524;Bacteria;Acidobacteriota...
+             OTUs: 3 | Members: 3
+         [4] REF_SILVA_AJ581610.1.1486;Bacteria;Acidobacteriota...
+             OTUs: 3 | Members: 3
+         [5] REF_SILVA_KX170873.1.1465;Bacteria;Acidobacteriota...
+             OTUs: 3 | Members: 3
+         ... and 4 more clusters (5 OTUs)
+======================================================================
+
+🏷️  FAMILY: Oligoflexaceae
+----------------------------------------------------------------------
+   📊 Total OTUs: 838 (from 299 clusters)
+   🌳 TAXONOMIC DIVERSITY:
+      Phyla: 1 | Genera: 2
+
+   📋 PHYLUM BREAKDOWN:
+      Bdellovibrionota: 838 OTUs (100.0%)
+
+   🔬 TOP GENERA (by OTU count):
+      Oligoflexaceae.U.genus: 708 OTUs (84.5%)
+      Oligoflexus: 130 OTUs (15.5%)
+
+   🔍 DETAILED BREAKDOWN (Top 3 genera):
+
+      🧬 GENUS: Oligoflexaceae.U.genus (708 OTUs)
+         [1] IMG_3300005527.a:Ga0068876_10011063...
+             OTUs: 143 | Members: 143
+         [2] IMG_3300008055.a:Ga0108970_10511312...
+             OTUs: 28 | Members: 28
+         [3] IMG_3300031707.a:Ga0315291_10235979...
+             OTUs: 28 | Members: 28
+         [4] IMG_3300005583.a:Ga0049085_10007941...
+             OTUs: 22 | Members: 22
+         [5] IMG_3300009180.a:Ga0114979_10010446...
+             OTUs: 17 | Members: 17
+         ... and 272 more clusters (470 OTUs)
+
+      🧬 GENUS: Oligoflexus (130 OTUs)
+         [1] IMG_3300012985.a:Ga0164308_10088679...
+             OTUs: 46 | Members: 46
+         [2] IMG_3300006056.a:Ga0075163_10194433...
+             OTUs: 29 | Members: 29
+         [3] IMG_3300005525.a:Ga0068877_10073892...
+             OTUs: 24 | Members: 24
+         [4] REF_SILVA_HM267052.1.1355;Bacteria;Bdellovibrionot...
+             OTUs: 4 | Members: 4
+         [5] IMG_3300031746.a:Ga0315293_10180385...
+             OTUs: 3 | Members: 3
+         ... and 17 more clusters (24 OTUs)
+======================================================================
+
+🎯 OVERALL SUMMARY FOR 16S NOVEL BACTERIA FAMILIES:
+==========================================================================================
+Families analyzed: 10
+Total OTUs found: 22,202
+Average OTUs per family: 2,220.2
+
+📊 FAMILY RANKING (by OTU count):
+   [ 1] Chthoniobacteraceae: 4,749 OTUs
+        Diversity: 1 phyla, 2 genera
+        Top genus: Chthoniobacteraceae.U.genus (3,212 OTUs)
+   [ 2] Pyrinomonadaceae: 3,239 OTUs
+        Diversity: 1 phyla, 4 genera
+        Top genus: Pyrinomonadaceae.U.genus (3,208 OTUs)
+   [ 3] Kofleriaceae: 3,138 OTUs
+        Diversity: 1 phyla, 2 genera
+        Top genus: Haliangium (3,124 OTUs)
+   [ 4] Thermoanaerobaculaceae: 2,663 OTUs
+        Diversity: 1 phyla, 2 genera
+        Top genus: Thermoanaerobaculaceae.U.genus (2,345 OTUs)
+   [ 5] Microscillaceae: 2,545 OTUs
+        Diversity: 1 phyla, 3 genera
+        Top genus: Microscillaceae.U.genus (2,494 OTUs)
+   [ 6] Vicinamibacteraceae: 2,228 OTUs
+        Diversity: 1 phyla, 3 genera
+        Top genus: Vicinamibacteraceae.U.genus (2,041 OTUs)
+   [ 7] Blastocatellaceae: 1,683 OTUs
+        Diversity: 1 phyla, 5 genera
+        Top genus: Blastocatellaceae.U.genus (1,019 OTUs)
+   [ 8] Oligoflexaceae: 838 OTUs
+        Diversity: 1 phyla, 2 genera
+        Top genus: Oligoflexaceae.U.genus (708 OTUs)
+   [ 9] Longimicrobiaceae: 757 OTUs
+        Diversity: 1 phyla, 2 genera
+        Top genus: Longimicrobiaceae.U.genus (669 OTUs)
+   [10] Thioalkalispiraceae: 362 OTUs
+        Diversity: 1 phyla, 4 genera
+        Top genus: Thioalkalispiraceae.U.genus (206 OTUs)
+📋 Loaded 10 novel archaea family taxa from JSON
+
+🔍 EXTRACTING DIVERSITY FOR NOVEL ARCHAEA FAMILIES
+==========================================================================================
+
+🏷️  FAMILY: Nitrosopumilaceae
+----------------------------------------------------------------------
+   📊 Total OTUs: 4,381 (from 529 clusters)
+   🌳 TAXONOMIC DIVERSITY:
+      Phyla: 1 | Genera: 3
+
+   📋 PHYLUM BREAKDOWN:
+      Nitrososphaerota: 4,381 OTUs (100.0%)
+
+   🔬 TOP GENERA (by OTU count):
+      Nitrosopumilaceae.U.genus: 3,920 OTUs (89.5%)
+      Nitrosarchaeum: 261 OTUs (6.0%)
+      Nitrosopumilus: 200 OTUs (4.6%)
+
+   🔍 DETAILED BREAKDOWN (Top 3 genera):
+
+      🧬 GENUS: Nitrosopumilaceae.U.genus (3,920 OTUs)
+         [1] IMG_3300000119.a:KGI_S1_ANT01_95mDRAFT_c10025367...
+             OTUs: 387 | Members: 387
+         [2] REF_SILVA_KX427672.1.1474;Archaea;Crenarchaeota;Ni...
+             OTUs: 356 | Members: 356
+         [3] REF_SILVA_CP007026.477690.479162;Archaea;Crenarcha...
+             OTUs: 211 | Members: 211
+         [4] IMG_3300006617.a:Ga0101443_122968...
+             OTUs: 132 | Members: 132
+         [5] IMG_3300002118.a:C687J26622_1000494...
+             OTUs: 116 | Members: 116
+         ... and 500 more clusters (2,718 OTUs)
+
+      🧬 GENUS: Nitrosarchaeum (261 OTUs)
+         [1] IMG_3300014304.a:Ga0075340_1001889...
+             OTUs: 113 | Members: 113
+         [2] IMG_3300011419.a:Ga0137446_1002500...
+             OTUs: 40 | Members: 40
+         [3] IMG_3300007985.a:Ga0100381_1070068...
+             OTUs: 20 | Members: 20
+         [4] IMG_3300009448.a:Ga0114940_10058265...
+             OTUs: 16 | Members: 16
+         [5] IMG_3300025318.a:Ga0209519_10002061...
+             OTUs: 14 | Members: 14
+         ... and 18 more clusters (58 OTUs)
+
+      🧬 GENUS: Nitrosopumilus (200 OTUs)
+         [1] REF_SILVA_KR737579.1.1474;Archaea;Crenarchaeota;Ni...
+             OTUs: 200 | Members: 200
+======================================================================
+
+🏷️  FAMILY: Nitrososphaeraceae
+----------------------------------------------------------------------
+   📊 Total OTUs: 3,133 (from 273 clusters)
+   🌳 TAXONOMIC DIVERSITY:
+      Phyla: 1 | Genera: 2
+
+   📋 PHYLUM BREAKDOWN:
+      Nitrososphaerota: 3,133 OTUs (100.0%)
+
+   🔬 TOP GENERA (by OTU count):
+      Nitrososphaeraceae.U.genus: 3,010 OTUs (96.1%)
+      Nitrososphaera: 123 OTUs (3.9%)
+
+   🔍 DETAILED BREAKDOWN (Top 3 genera):
+
+      🧬 GENUS: Nitrososphaeraceae.U.genus (3,010 OTUs)
+         [1] IMG_2124908021.a:BSRL3_Contig_5342...
+             OTUs: 578 | Members: 578
+         [2] IMG_3300025321.a:Ga0207656_10046513...
+             OTUs: 385 | Members: 385
+         [3] IMG_3300004594.a:Ga0068976_1022373...
+             OTUs: 245 | Members: 245
+         [4] IMG_3300005937.a:Ga0081455_10004729...
+             OTUs: 118 | Members: 118
+         [5] IMG_3300018933.a:Ga0193614_1004113...
+             OTUs: 86 | Members: 86
+         ... and 264 more clusters (1,598 OTUs)
+
+      🧬 GENUS: Nitrososphaera (123 OTUs)
+         [1] REF_SILVA_CP007536.892626.894095;Archaea;Crenarcha...
+             OTUs: 109 | Members: 109
+         [2] IMG_3300005532.a:Ga0070739_10002322...
+             OTUs: 12 | Members: 12
+         [3] IMG_3300009807.a:Ga0105061_1003401...
+             OTUs: 1 | Members: 1
+         [4] IMG_3300015357.a:Ga0134072_10033019...
+             OTUs: 1 | Members: 1
+======================================================================
+
+🏷️  FAMILY: Fervidicoccaceae
+----------------------------------------------------------------------
+   📊 Total OTUs: 75 (from 27 clusters)
+   🌳 TAXONOMIC DIVERSITY:
+      Phyla: 1 | Genera: 2
+
+   📋 PHYLUM BREAKDOWN:
+      Thermoproteota: 75 OTUs (100.0%)
+
+   🔬 TOP GENERA (by OTU count):
+      Fervidicoccaceae.U.genus: 42 OTUs (56.0%)
+      Fervidicoccus: 33 OTUs (44.0%)
+
+   🔍 DETAILED BREAKDOWN (Top 3 genera):
+
+      🧬 GENUS: Fervidicoccaceae.U.genus (42 OTUs)
+         [1] IMG_3300028675.a:Ga0272445_1006740...
+             OTUs: 13 | Members: 13
+         [2] IMG_3300007999.a:Ga0105163_1000537...
+             OTUs: 7 | Members: 7
+         [3] REF_SILVA_DQ228594.1.1363;Archaea;Crenarchaeota;Th...
+             OTUs: 3 | Members: 3
+         [4] IMG_3300022544.a:Ga0212120_1000433...
+             OTUs: 3 | Members: 3
+         [5] REF_SILVA_DQ228605.1.1012;Archaea;Crenarchaeota;Th...
+             OTUs: 3 | Members: 3
+         ... and 12 more clusters (13 OTUs)
+
+      🧬 GENUS: Fervidicoccus (33 OTUs)
+         [1] IMG_3300002966.a:JGI24721J44947_10003314...
+             OTUs: 18 | Members: 18
+         [2] IMG_3300005800.a:Ga0079639_1000048...
+             OTUs: 5 | Members: 5
+         [3] REF_SILVA_CP003423.1068522.1070023;Archaea;Crenarc...
+             OTUs: 3 | Members: 3
+         [4] REF_SILVA_HQ395717.1.1429;Archaea;Crenarchaeota;Th...
+             OTUs: 1 | Members: 1
+         [5] REF_SILVA_AY882728.1.1338;Archaea;Crenarchaeota;Th...
+             OTUs: 1 | Members: 1
+         ... and 5 more clusters (5 OTUs)
+======================================================================
+
+🏷️  FAMILY: Nanoarchaeaceae
+----------------------------------------------------------------------
+   📊 Total OTUs: 55 (from 17 clusters)
+   🌳 TAXONOMIC DIVERSITY:
+      Phyla: 1 | Genera: 1
+
+   📋 PHYLUM BREAKDOWN:
+      Nanoarchaeota: 55 OTUs (100.0%)
+
+   🔬 TOP GENERA (by OTU count):
+      Nanoarchaeum: 55 OTUs (100.0%)
+
+   🔍 DETAILED BREAKDOWN (Top 3 genera):
+
+      🧬 GENUS: Nanoarchaeum (55 OTUs)
+         [1] REF_SILVA_AJ318041.1.1500;Archaea;Nanoarchaeota;Na...
+             OTUs: 9 | Members: 9
+         [2] IMG_3300001337.a:JGI20131J14367_1000041...
+             OTUs: 9 | Members: 9
+         [3] REF_SILVA_JF262488.1.1319;Archaea;Nanoarchaeota;Na...
+             OTUs: 7 | Members: 7
+         [4] REF_SILVA_JF262534.1.1309;Archaea;Nanoarchaeota;Na...
+             OTUs: 7 | Members: 7
+         [5] IMG_3300009750.a:Ga0123368_1088557...
+             OTUs: 6 | Members: 6
+         ... and 12 more clusters (17 OTUs)
+======================================================================
+
+🏷️  FAMILY: Methanotrichaceae
+----------------------------------------------------------------------
+   📊 Total OTUs: 1,914 (from 246 clusters)
+   🌳 TAXONOMIC DIVERSITY:
+      Phyla: 1 | Genera: 1
+
+   📋 PHYLUM BREAKDOWN:
+      Euryarchaeota: 1,914 OTUs (100.0%)
+
+   🔬 TOP GENERA (by OTU count):
+      Methanothrix: 1,914 OTUs (100.0%)
+
+   🔍 DETAILED BREAKDOWN (Top 3 genera):
+
+      🧬 GENUS: Methanothrix (1,914 OTUs)
+         [1] IMG_3300000917.a:WSSedA2C3DRAFT_1001460...
+             OTUs: 501 | Members: 501
+         [2] IMG_3300021981.a:Ga0232629_10075898...
+             OTUs: 347 | Members: 347
+         [3] IMG_3300007588.a:Ga0099778_1026900...
+             OTUs: 141 | Members: 141
+         [4] REF_SILVA_FPLM01007832.8.1467;Archaea;Halobacterot...
+             OTUs: 107 | Members: 107
+         [5] IMG_3300014833.a:Ga0119870_1032172...
+             OTUs: 61 | Members: 61
+         ... and 241 more clusters (757 OTUs)
+======================================================================
+
+🏷️  FAMILY: Methanospirillaceae
+----------------------------------------------------------------------
+   📊 Total OTUs: 314 (from 58 clusters)
+   🌳 TAXONOMIC DIVERSITY:
+      Phyla: 1 | Genera: 1
+
+   📋 PHYLUM BREAKDOWN:
+      Euryarchaeota: 314 OTUs (100.0%)
+
+   🔬 TOP GENERA (by OTU count):
+      Methanospirillum: 314 OTUs (100.0%)
+
+   🔍 DETAILED BREAKDOWN (Top 3 genera):
+
+      🧬 GENUS: Methanospirillum (314 OTUs)
+         [1] IMG_2032320001.a:PCEOT_contig21127...
+             OTUs: 98 | Members: 98
+         [2] IMG_3300009692.a:Ga0116171_10024873...
+             OTUs: 25 | Members: 25
+         [3] IMG_2225789004.a:2227493804...
+             OTUs: 21 | Members: 21
+         [4] REF_SILVA_AJ133792.1.1480;Archaea;Halobacterota;Me...
+             OTUs: 19 | Members: 19
+         [5] IMG_3300025737.a:Ga0208694_1008254...
+             OTUs: 19 | Members: 19
+         ... and 53 more clusters (132 OTUs)
+======================================================================
+
+🏷️  FAMILY: Thermoplasmataceae
+----------------------------------------------------------------------
+   📊 Total OTUs: 86 (from 37 clusters)
+   🌳 TAXONOMIC DIVERSITY:
+      Phyla: 1 | Genera: 2
+
+   📋 PHYLUM BREAKDOWN:
+      Candidatus Thermoplasmatota: 86 OTUs (100.0%)
+
+   🔬 TOP GENERA (by OTU count):
+      Thermoplasmataceae.U.genus: 74 OTUs (86.0%)
+      Thermoplasma: 12 OTUs (14.0%)
+
+   🔍 DETAILED BREAKDOWN (Top 3 genera):
+
+      🧬 GENUS: Thermoplasmataceae.U.genus (74 OTUs)
+         [1] IMG_3300017831.a:Ga0189856_1002168...
+             OTUs: 16 | Members: 16
+         [2] REF_SILVA_KJ907755.1.1470;Archaea;Thermoplasmatota...
+             OTUs: 11 | Members: 11
+         [3] REF_SILVA_KJ907756.1.1470;Archaea;Thermoplasmatota...
+             OTUs: 7 | Members: 7
+         [4] IMG_3300017831.a:Ga0189856_1015834...
+             OTUs: 4 | Members: 4
+         [5] REF_SILVA_KJ907757.1.1470;Archaea;Thermoplasmatota...
+             OTUs: 3 | Members: 3
+         ... and 26 more clusters (33 OTUs)
+
+      🧬 GENUS: Thermoplasma (12 OTUs)
+         [1] REF_SILVA_BA000011.1518773.1520246;Archaea;Thermop...
+             OTUs: 6 | Members: 6
+         [2] REF_SILVA_AB931018.1.1338;Archaea;Thermoplasmatota...
+             OTUs: 2 | Members: 2
+         [3] REF_SILVA_LC158406.1.1303;Archaea;Thermoplasmatota...
+             OTUs: 1 | Members: 1
+         [4] REF_SILVA_EF535324.1.1006;Archaea;Thermoplasmatota...
+             OTUs: 1 | Members: 1
+         [5] REF_SILVA_AY350608.1.1001;Archaea;Thermoplasmatota...
+             OTUs: 1 | Members: 1
+         ... and 1 more clusters (1 OTUs)
+======================================================================
+
+🏷️  FAMILY: Methanocellaceae
+----------------------------------------------------------------------
+   📊 Total OTUs: 235 (from 60 clusters)
+   🌳 TAXONOMIC DIVERSITY:
+      Phyla: 1 | Genera: 2
+
+   📋 PHYLUM BREAKDOWN:
+      Euryarchaeota: 235 OTUs (100.0%)
+
+   🔬 TOP GENERA (by OTU count):
+      Methanocella: 142 OTUs (60.4%)
+      Methanocellaceae.U.genus: 93 OTUs (39.6%)
+
+   🔍 DETAILED BREAKDOWN (Top 3 genera):
+
+      🧬 GENUS: Methanocella (142 OTUs)
+         [1] REF_SILVA_AP011532.106585.108054;Archaea;Halobacte...
+             OTUs: 28 | Members: 28
+         [2] IMG_3300027898.a:Ga0209067_10077995...
+             OTUs: 11 | Members: 11
+         [3] IMG_3300032069.a:Ga0315282_10040737...
+             OTUs: 11 | Members: 11
+         [4] IMG_3300017975.a:Ga0187782_10100410...
+             OTUs: 11 | Members: 11
+         [5] IMG_3300006052.a:Ga0075029_100177711...
+             OTUs: 9 | Members: 9
+         ... and 33 more clusters (72 OTUs)
+
+      🧬 GENUS: Methanocellaceae.U.genus (93 OTUs)
+         [1] IMG_3300005259.a:Ga0071344_1067442...
+             OTUs: 59 | Members: 59
+         [2] IMG_3300012779.a:Ga0138284_1382089...
+             OTUs: 8 | Members: 8
+         [3] IMG_3300032892.a:Ga0335081_10288278...
+             OTUs: 3 | Members: 3
+         [4] IMG_3300043175.a:Ga0484856_0044813...
+             OTUs: 3 | Members: 3
+         [5] IMG_3300033991.a:Ga0334965_0001311...
+             OTUs: 3 | Members: 3
+         ... and 17 more clusters (17 OTUs)
+======================================================================
+
+🏷️  FAMILY: Desulfurococcaceae
+----------------------------------------------------------------------
+   📊 Total OTUs: 535 (from 145 clusters)
+   🌳 TAXONOMIC DIVERSITY:
+      Phyla: 1 | Genera: 11
+
+   📋 PHYLUM BREAKDOWN:
+      Thermoproteota: 535 OTUs (100.0%)
+
+   🔬 TOP GENERA (by OTU count):
+      Ignisphaera: 168 OTUs (31.4%)
+      Aeropyrum: 90 OTUs (16.8%)
+      Sulfophobococcus: 56 OTUs (10.5%)
+      Thermogladius: 50 OTUs (9.3%)
+      Desulfurococcus: 48 OTUs (9.0%)
+      Desulfurococcaceae.U.genus: 42 OTUs (7.9%)
+      Staphylothermus: 33 OTUs (6.2%)
+      Thermosphaera: 19 OTUs (3.6%)
+      Ignicoccus: 13 OTUs (2.4%)
+      Thermodiscus: 12 OTUs (2.2%)
+
+   🔍 DETAILED BREAKDOWN (Top 3 genera):
+
+      🧬 GENUS: Ignisphaera (168 OTUs)
+         [1] IMG_3300029977.a:Ga0272449_1000411...
+             OTUs: 14 | Members: 14
+         [2] IMG_3300009590.a:Ga0105159_1000264...
+             OTUs: 13 | Members: 13
+         [3] IMG_3300005966.a:Ga0081478_148820...
+             OTUs: 11 | Members: 11
+         [4] IMG_3300005573.a:Ga0078972_1000130...
+             OTUs: 10 | Members: 10
+         [5] IMG_3300025345.a:Ga0209669_100027...
+             OTUs: 9 | Members: 9
+         ... and 42 more clusters (111 OTUs)
+
+      🧬 GENUS: Aeropyrum (90 OTUs)
+         [1] IMG_3300005851.a:Ga0079996_115709...
+             OTUs: 15 | Members: 15
+         [2] IMG_3300000345.a:OctSS_8084CDRAFT_1000056...
+             OTUs: 12 | Members: 12
+         [3] IMG_2053563014.a:GBSSS_contig00017...
+             OTUs: 7 | Members: 7
+         [4] REF_SILVA_KY355651.1.900;Archaea;Crenarchaeota;The...
+             OTUs: 7 | Members: 7
+         [5] REF_SILVA_AP012489.1165170.1166817;Archaea;Crenarc...
+             OTUs: 6 | Members: 6
+         ... and 18 more clusters (43 OTUs)
+
+      🧬 GENUS: Sulfophobococcus (56 OTUs)
+         [1] IMG_3300042910.a:Ga0453288_0013...
+             OTUs: 9 | Members: 9
+         [2] IMG_3300018425.a:Ga0193580_1093227...
+             OTUs: 9 | Members: 9
+         [3] IMG_3300002966.a:JGI24721J44947_10013804...
+             OTUs: 7 | Members: 7
+         [4] IMG_3300005860.a:Ga0080004_1120479...
+             OTUs: 7 | Members: 7
+         [5] IMG_3300029625.a:Ga0311297_1066394...
+             OTUs: 4 | Members: 4
+         ... and 9 more clusters (20 OTUs)
+======================================================================
+
+🏷️  FAMILY: Methanocaldococcaceae
+----------------------------------------------------------------------
+   📊 Total OTUs: 172 (from 52 clusters)
+   🌳 TAXONOMIC DIVERSITY:
+      Phyla: 1 | Genera: 2
+
+   📋 PHYLUM BREAKDOWN:
+      Euryarchaeota: 172 OTUs (100.0%)
+
+   🔬 TOP GENERA (by OTU count):
+      Methanocaldococcus: 137 OTUs (79.7%)
+      Methanotorris: 35 OTUs (20.3%)
+
+   🔍 DETAILED BREAKDOWN (Top 3 genera):
+
+      🧬 GENUS: Methanocaldococcus (137 OTUs)
+         [1] IMG_3300010424.a:Ga0137500_10062...
+             OTUs: 22 | Members: 22
+         [2] IMG_3300005496.a:Ga0068679_1110584...
+             OTUs: 21 | Members: 21
+         [3] IMG_3300003332.a:GBSed_10033935...
+             OTUs: 12 | Members: 12
+         [4] IMG_3300026531.a:Ga0256835_1023691...
+             OTUs: 10 | Members: 10
+         [5] REF_SILVA_CP002009.1153919.1155396;Archaea;Euryarc...
+             OTUs: 7 | Members: 7
+         ... and 32 more clusters (65 OTUs)
+
+      🧬 GENUS: Methanotorris (35 OTUs)
+         [1] REF_SILVA_CP002737.1090341.1091810;Archaea;Euryarc...
+             OTUs: 9 | Members: 9
+         [2] IMG_3300013795.a:Ga0180408_114217...
+             OTUs: 8 | Members: 8
+         [3] IMG_3300007999.a:Ga0105163_1000051...
+             OTUs: 5 | Members: 5
+         [4] IMG_3300003949.a:Ga0064034_10007...
+             OTUs: 2 | Members: 2
+         [5] REF_SILVA_AY766308.1.1400;Archaea;Euryarchaeota;Me...
+             OTUs: 1 | Members: 1
+         ... and 10 more clusters (10 OTUs)
+======================================================================
+
+🎯 OVERALL SUMMARY FOR 16S NOVEL ARCHAEA FAMILIES:
+==========================================================================================
+Families analyzed: 10
+Total OTUs found: 10,900
+Average OTUs per family: 1,090.0
+
+📊 FAMILY RANKING (by OTU count):
+   [ 1] Nitrosopumilaceae: 4,381 OTUs
+        Diversity: 1 phyla, 3 genera
+        Top genus: Nitrosopumilaceae.U.genus (3,920 OTUs)
+   [ 2] Nitrososphaeraceae: 3,133 OTUs
+        Diversity: 1 phyla, 2 genera
+        Top genus: Nitrososphaeraceae.U.genus (3,010 OTUs)
+   [ 3] Methanotrichaceae: 1,914 OTUs
+        Diversity: 1 phyla, 1 genera
+        Top genus: Methanothrix (1,914 OTUs)
+   [ 4] Desulfurococcaceae: 535 OTUs
+        Diversity: 1 phyla, 11 genera
+        Top genus: Ignisphaera (168 OTUs)
+   [ 5] Methanospirillaceae: 314 OTUs
+        Diversity: 1 phyla, 1 genera
+        Top genus: Methanospirillum (314 OTUs)
+   [ 6] Methanocellaceae: 235 OTUs
+        Diversity: 1 phyla, 2 genera
+        Top genus: Methanocella (142 OTUs)
+   [ 7] Methanocaldococcaceae: 172 OTUs
+        Diversity: 1 phyla, 2 genera
+        Top genus: Methanocaldococcus (137 OTUs)
+   [ 8] Thermoplasmataceae: 86 OTUs
+        Diversity: 1 phyla, 2 genera
+        Top genus: Thermoplasmataceae.U.genus (74 OTUs)
+   [ 9] Fervidicoccaceae: 75 OTUs
+        Diversity: 1 phyla, 2 genera
+        Top genus: Fervidicoccaceae.U.genus (42 OTUs)
+   [10] Nanoarchaeaceae: 55 OTUs
+        Diversity: 1 phyla, 1 genera
+        Top genus: Nanoarchaeum (55 OTUs)

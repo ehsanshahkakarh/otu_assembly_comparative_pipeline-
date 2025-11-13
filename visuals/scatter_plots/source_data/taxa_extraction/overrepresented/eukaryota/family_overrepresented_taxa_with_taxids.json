@@ -1,0 +1,128 @@
+{
+  "taxa_with_taxids": [
+    {
+      "name": "Lepidosauria",
+      "taxid": 8504,
+      "matched_name": "Lepidosauria (from lineage)",
+      "domain": "Eukaryota",
+      "lineage": "cellular organisms;Eukaryota;Opisthokonta;Metazoa;Eumetazoa;Bilateria;Deuterostomia;Chordata;Craniata;Vertebrata;Gnathostomata;Teleostomi;Euteleostomi;Sarcopterygii;Dipnotetrapodomorpha;Tetrapoda;Amniota;Sauropsida;Sauria;Lepidosauria;Squamata;Bifurcata;Unidentata;Episquamata;Laterata;Lacertibaenia;Lacertidae;Lacertinae;Podarcis",
+      "source": "genus_lineage",
+      "genomes": 385,
+      "species": 298,
+      "genera_count": 174
+    },
+    {
+      "name": "Amphibia",
+      "taxid": 8292,
+      "matched_name": "Amphibia (from lineage)",
+      "domain": "Eukaryota",
+      "lineage": "cellular organisms;Eukaryota;Opisthokonta;Metazoa;Eumetazoa;Bilateria;Deuterostomia;Chordata;Craniata;Vertebrata;Gnathostomata;Teleostomi;Euteleostomi;Sarcopterygii;Dipnotetrapodomorpha;Tetrapoda;Amphibia;Batrachia;Caudata;Salamandroidea;Plethodontidae;Plethodontinae;Desmognathus",
+      "source": "genus_lineage",
+      "genomes": 257,
+      "species": 193,
+      "genera_count": 91
+    },
+    {
+      "name": "Teleostei",
+      "taxid": 32443,
+      "matched_name": "Teleostei (from lineage)",
+      "domain": "Eukaryota",
+      "lineage": "cellular organisms;Eukaryota;Opisthokonta;Metazoa;Eumetazoa;Bilateria;Deuterostomia;Chordata;Craniata;Vertebrata;Gnathostomata;Teleostomi;Euteleostomi;Actinopterygii;Actinopteri;Neopterygii;Teleostei;Osteoglossocephalai;Clupeocephala;Euteleosteomorpha;Neoteleostei;Eurypterygia;Ctenosquamata;Acanthomorphata;Euacanthomorphacea;Percomorphaceae;Ovalentaria;Cichlomorphae;Cichliformes;Cichlidae;African cichlids;Pseudocrenilabrinae;Lamprologini;Neolamprologus",
+      "source": "genus_lineage",
+      "genomes": 2886,
+      "species": 1798,
+      "genera_count": 904
+    },
+    {
+      "name": "Kickxellales",
+      "taxid": 4862,
+      "matched_name": "Kickxellaceae",
+      "domain": "Eukaryota",
+      "lineage": "cellular organisms;Eukaryota;Opisthokonta;Fungi;Fungi incertae sedis;Zoopagomycota;Kickxellomycotina;Kickxellomycetes;Kickxellales;Kickxellaceae",
+      "source": "family",
+      "genomes": 171,
+      "species": 153
+    },
+    {
+      "name": "Lipomycetaceae",
+      "taxid": 29827,
+      "matched_name": "Lipomycetaceae",
+      "domain": "Eukaryota",
+      "lineage": "cellular organisms;Eukaryota;Opisthokonta;Fungi;Dikarya;Ascomycota;saccharomyceta;Saccharomycotina;Lipomycetes;Lipomycetales;Lipomycetaceae",
+      "source": "family",
+      "genomes": 66,
+      "species": 35
+    },
+    {
+      "name": "Selenastraceae",
+      "taxid": 35466,
+      "matched_name": "Selenastraceae",
+      "domain": "Eukaryota",
+      "lineage": "cellular organisms;Eukaryota;Viridiplantae;Chlorophyta;core chlorophytes;Chlorophyceae;CS clade;Sphaeropleales;Selenastraceae",
+      "source": "family",
+      "genomes": 5,
+      "species": 5
+    },
+    {
+      "name": "Schizosaccharomycetes",
+      "taxid": 4894,
+      "matched_name": "Schizosaccharomycetaceae",
+      "domain": "Eukaryota",
+      "lineage": "cellular organisms;Eukaryota;Opisthokonta;Fungi;Dikarya;Ascomycota;Taphrinomycotina;Schizosaccharomycetes;Schizosaccharomycetales;Schizosaccharomycetaceae",
+      "source": "family",
+      "genomes": 94,
+      "species": 8
+    },
+    {
+      "name": "Mammalia",
+      "taxid": 40674,
+      "matched_name": "Mammalia (from lineage)",
+      "domain": "Eukaryota",
+      "lineage": "cellular organisms;Eukaryota;Opisthokonta;Metazoa;Eumetazoa;Bilateria;Deuterostomia;Chordata;Craniata;Vertebrata;Gnathostomata;Teleostomi;Euteleostomi;Sarcopterygii;Dipnotetrapodomorpha;Tetrapoda;Amniota;Mammalia;Theria;Eutheria;Boreoeutheria;Euarchontoglires;Primates;Haplorrhini;Simiiformes;Catarrhini;Hominoidea;Hominidae;Homininae;Homo",
+      "source": "genus_lineage",
+      "genomes": 4336,
+      "species": 982,
+      "genera_count": 486
+    },
+    {
+      "name": "Scyphozoa",
+      "taxid": 6142,
+      "matched_name": "Scyphozoa (from lineage)",
+      "domain": "Eukaryota",
+      "lineage": "cellular organisms;Eukaryota;Opisthokonta;Metazoa;Eumetazoa;Cnidaria;Scyphozoa;Semaeostomeae;Ulmaridae;Aurelia",
+      "source": "genus_lineage",
+      "genomes": 42,
+      "species": 24,
+      "genera_count": 13
+    },
+    {
+      "name": "Saprolegniales",
+      "taxid": 4764,
+      "matched_name": "Saprolegniaceae",
+      "domain": "Eukaryota",
+      "lineage": "cellular organisms;Eukaryota;Sar;Stramenopiles;Oomycota;Saprolegniales;Saprolegniaceae",
+      "source": "family",
+      "genomes": 30,
+      "species": 9
+    }
+  ],
+  "original_taxa_names": [
+    "Lepidosauria",
+    "Amphibia",
+    "Teleostei",
+    "Kickxellales",
+    "Lipomycetaceae",
+    "Selenastraceae",
+    "Schizosaccharomycetes",
+    "Mammalia",
+    "Scyphozoa",
+    "Saprolegniales"
+  ],
+  "not_found": [],
+  "conversion_stats": {
+    "total_taxa": 10,
+    "converted": 10,
+    "not_found": 0,
+    "domain": "Eukaryota"
+  }
+}

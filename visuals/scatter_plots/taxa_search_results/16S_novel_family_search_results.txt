@@ -1,0 +1,78 @@
+# Taxa Search Results
+# Generated: 2025-11-12 14:07:15
+# Command: python search_taxa_in_census.py --gene 16S --category novel --rank family
+# ======================================================================
+
+🚀 STARTING TAXA SEARCH
+Gene: 16S | Category: novel | Rank: family
+📊 Loaded census data: 799 total family entries from 16S
+📋 Loaded 10 novel bacteria family taxa from JSON
+
+🔍 SEARCHING NOVEL BACTERIA FAMILY TAXA IN 16S CENSUS DATA
+================================================================================
+✅ FOUND: 10 taxa
+❌ NOT FOUND: 0 taxa
+📊 MATCH RATE: 10/10 (100.0%)
+
+📈 MATCHED TAXA DISTRIBUTION:
+--------------------------------------------------------------------------------
+Rank Taxon                     OTU_Count  Size_Count   OTU_%    Size_%  
+--------------------------------------------------------------------------------
+1   Chthoniobacteraceae       791        4749         0.30     0.40    
+2   Kofleriaceae              749        3138         0.29     0.26    
+3   Thermoanaerobaculaceae    708        2663         0.27     0.22    
+4   Pyrinomonadaceae          659        3239         0.25     0.27    
+5   Microscillaceae           617        2545         0.24     0.21    
+6   Vicinamibacteraceae       549        2228         0.21     0.19    
+7   Blastocatellaceae         430        1683         0.16     0.14    
+8   Longimicrobiaceae         301        757          0.11     0.06    
+9   Oligoflexaceae            299        838          0.11     0.07    
+10  Thioalkalispiraceae       156        362          0.06     0.03    
+--------------------------------------------------------------------------------
+📊 SUMMARY STATISTICS:
+   Total OTU count: 5,259
+   Total size count: 22,202
+   Average OTU per taxon: 525.9
+   Average size per taxon: 2,220.2
+   Distribution skew: 5.1x (top/bottom ratio)
+   Top taxon: Chthoniobacteraceae (791 OTUs)
+   Bottom taxon: Thioalkalispiraceae (156 OTUs)
+📋 Loaded 10 novel archaea family taxa from JSON
+
+🔍 SEARCHING NOVEL ARCHAEA FAMILY TAXA IN 16S CENSUS DATA
+================================================================================
+✅ FOUND: 10 taxa
+❌ NOT FOUND: 0 taxa
+📊 MATCH RATE: 10/10 (100.0%)
+
+📈 MATCHED TAXA DISTRIBUTION:
+--------------------------------------------------------------------------------
+Rank Taxon                     OTU_Count  Size_Count   OTU_%    Size_%  
+--------------------------------------------------------------------------------
+1   Nitrosopumilaceae         529        4381         0.20     0.37    
+2   Nitrososphaeraceae        273        3133         0.10     0.26    
+3   Methanotrichaceae         246        1914         0.09     0.16    
+4   Desulfurococcaceae        145        535          0.06     0.04    
+5   Methanocellaceae          60         235          0.02     0.02    
+6   Methanospirillaceae       58         314          0.02     0.03    
+7   Methanocaldococcaceae     52         172          0.02     0.01    
+8   Thermoplasmataceae        37         86           0.01     0.01    
+9   Fervidicoccaceae          27         75           0.01     0.01    
+10  Nanoarchaeaceae           17         55           0.01     0.00    
+--------------------------------------------------------------------------------
+📊 SUMMARY STATISTICS:
+   Total OTU count: 1,444
+   Total size count: 10,900
+   Average OTU per taxon: 144.4
+   Average size per taxon: 1,090.0
+   Distribution skew: 31.1x (top/bottom ratio)
+   Top taxon: Nitrosopumilaceae (529 OTUs)
+   Bottom taxon: Nanoarchaeaceae (17 OTUs)
+
+🎯 OVERALL SUMMARY FOR 16S NOVEL FAMILY:
+================================================================================
+Total domains searched: 2
+Total matches found: 20
+Total not found: 0
+Combined OTU count: 6,703
+Average OTU per matched taxon: 335.1
