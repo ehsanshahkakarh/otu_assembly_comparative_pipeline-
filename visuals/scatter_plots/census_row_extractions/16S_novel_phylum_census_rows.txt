@@ -1,0 +1,201 @@
+# Census Row Extraction Results
+# Generated: 2025-11-12 14:21:02
+# Command: python extract_census_rows.py --gene 16S --category novel --rank phylum
+# ======================================================================
+
+🚀 STARTING CENSUS ROW EXTRACTION
+Gene: 16S | Category: novel | Rank: phylum
+📊 Loaded census data: 52 total phylum entries from 16S
+📋 Loaded 10 novel bacteria phylum taxa from JSON
+
+🔍 EXTRACTING CENSUS ROWS FOR NOVEL BACTERIA PHYLUM TAXA
+==========================================================================================
+✅ FOUND: 10 taxa
+❌ NOT FOUND: 0 taxa
+📊 MATCH RATE: 10/10 (100.0%)
+
+📋 COMPLETE CENSUS ROWS:
+==========================================================================================
+
+[ 1] Chloroflexota
+     OTU Count: 13,210
+     Size Count: 58,834
+     OTU %: 5.040%
+     Size %: 4.930%
+     TaxID: 200795.0
+     Lineage: cellular organisms;Bacteria;Bacillati;Chloroflexota
+     Ranks: cellular root;domain;kingdom;phylum
+     Lineage TaxIDs: 131567;2;1783272;200795
+------------------------------------------------------------------------------------------
+
+[ 2] Planctomycetota
+     OTU Count: 13,119
+     Size Count: 44,891
+     OTU %: 5.000%
+     Size %: 3.760%
+     TaxID: 203682.0
+     Lineage: cellular organisms;Bacteria;Pseudomonadati;PVC group;Planctomycetota
+     Ranks: cellular root;domain;kingdom;clade;phylum
+     Lineage TaxIDs: 131567;2;3379134;1783257;203682
+------------------------------------------------------------------------------------------
+
+[ 3] Verrucomicrobiota
+     OTU Count: 10,214
+     Size Count: 45,775
+     OTU %: 3.890%
+     Size %: 3.830%
+     TaxID: 74201.0
+     Lineage: cellular organisms;Bacteria;Pseudomonadati;PVC group;Verrucomicrobiota
+     Ranks: cellular root;domain;kingdom;clade;phylum
+     Lineage TaxIDs: 131567;2;3379134;1783257;74201
+------------------------------------------------------------------------------------------
+
+[ 4] Acidobacteriota
+     OTU Count: 9,124
+     Size Count: 44,683
+     OTU %: 3.480%
+     Size %: 3.740%
+     TaxID: 57723.0
+     Lineage: cellular organisms;Bacteria;Pseudomonadati;Acidobacteriota
+     Ranks: cellular root;domain;kingdom;phylum
+     Lineage TaxIDs: 131567;2;3379134;57723
+------------------------------------------------------------------------------------------
+
+[ 5] Myxococcota
+     OTU Count: 3,648
+     Size Count: 15,086
+     OTU %: 1.390%
+     Size %: 1.260%
+     TaxID: 2818505.0
+     Lineage: cellular organisms;Bacteria;Pseudomonadati;Myxococcota
+     Ranks: cellular root;domain;kingdom;phylum
+     Lineage TaxIDs: 131567;2;3379134;2818505
+------------------------------------------------------------------------------------------
+
+[ 6] Gemmatimonadota
+     OTU Count: 2,576
+     Size Count: 11,870
+     OTU %: 0.980%
+     Size %: 0.990%
+     TaxID: 142182.0
+     Lineage: cellular organisms;Bacteria;Pseudomonadati;FCB group;Gemmatimonadota
+     Ranks: cellular root;domain;kingdom;clade;phylum
+     Lineage TaxIDs: 131567;2;3379134;1783270;142182
+------------------------------------------------------------------------------------------
+
+[ 7] Armatimonadota
+     OTU Count: 1,473
+     Size Count: 5,017
+     OTU %: 0.560%
+     Size %: 0.420%
+     TaxID: 67819.0
+     Lineage: cellular organisms;Bacteria;Bacillati;Armatimonadota
+     Ranks: cellular root;domain;kingdom;phylum
+     Lineage TaxIDs: 131567;2;1783272;67819
+------------------------------------------------------------------------------------------
+
+[ 8] Thermomicrobiota
+     OTU Count: 511
+     Size Count: 1,946
+     OTU %: 0.190%
+     Size %: 0.160%
+     TaxID: 3027942.0
+     Lineage: cellular organisms;Bacteria;Pseudomonadati;Thermomicrobiota
+     Ranks: cellular root;domain;kingdom;phylum
+     Lineage TaxIDs: 131567;2;3379134;3027942
+------------------------------------------------------------------------------------------
+
+[ 9] Calditrichota
+     OTU Count: 455
+     Size Count: 1,257
+     OTU %: 0.170%
+     Size %: 0.110%
+     TaxID: 1930617.0
+     Lineage: cellular organisms;Bacteria;Pseudomonadati;Calditrichota
+     Ranks: cellular root;domain;kingdom;phylum
+     Lineage TaxIDs: 131567;2;3379134;1930617
+------------------------------------------------------------------------------------------
+
+[10] Abditibacteriota
+     OTU Count: 257
+     Size Count: 816
+     OTU %: 0.100%
+     Size %: 0.070%
+     TaxID: 2109258.0
+     Lineage: cellular organisms;Bacteria;Pseudomonadati;Abditibacteriota
+     Ranks: cellular root;domain;kingdom;phylum
+     Lineage TaxIDs: 131567;2;3379134;2109258
+------------------------------------------------------------------------------------------
+
+📊 SUMMARY:
+   Total OTU count: 54,587
+   Average OTU per taxon: 5,458.7
+   Top taxon: Chloroflexota (13,210 OTUs)
+   Bottom taxon: Abditibacteriota (257 OTUs)
+📋 Loaded 4 novel archaea phylum taxa from JSON
+
+🔍 EXTRACTING CENSUS ROWS FOR NOVEL ARCHAEA PHYLUM TAXA
+==========================================================================================
+✅ FOUND: 4 taxa
+❌ NOT FOUND: 0 taxa
+📊 MATCH RATE: 4/4 (100.0%)
+
+📋 COMPLETE CENSUS ROWS:
+==========================================================================================
+
+[ 1] Euryarchaeota
+     OTU Count: 3,600
+     Size Count: 18,821
+     OTU %: 1.370%
+     Size %: 1.580%
+     TaxID: 28890.0
+     Lineage: cellular organisms;Archaea;Methanobacteriati;Methanobacteriota
+     Ranks: cellular root;domain;kingdom;phylum
+     Lineage TaxIDs: 131567;2157;3366610;28890
+------------------------------------------------------------------------------------------
+
+[ 2] Nanoarchaeota
+     OTU Count: 3,178
+     Size Count: 9,061
+     OTU %: 1.210%
+     Size %: 0.760%
+     TaxID: 192989.0
+     Lineage: cellular organisms;Archaea;Nanobdellati;Nanobdellota
+     Ranks: cellular root;domain;kingdom;phylum
+     Lineage TaxIDs: 131567;2157;1783276;192989
+------------------------------------------------------------------------------------------
+
+[ 3] Nitrososphaerota
+     OTU Count: 1,458
+     Size Count: 10,698
+     OTU %: 0.560%
+     Size %: 0.900%
+     TaxID: 651137.0
+     Lineage: cellular organisms;Archaea;Thermoproteati;Nitrososphaerota
+     Ranks: cellular root;domain;kingdom;phylum
+     Lineage TaxIDs: 131567;2157;1783275;651137
+------------------------------------------------------------------------------------------
+
+[ 4] Thermoproteota
+     OTU Count: 569
+     Size Count: 2,540
+     OTU %: 0.220%
+     Size %: 0.210%
+     TaxID: 28889.0
+     Lineage: cellular organisms;Archaea;Thermoproteati;Thermoproteota
+     Ranks: cellular root;domain;kingdom;phylum
+     Lineage TaxIDs: 131567;2157;1783275;28889
+------------------------------------------------------------------------------------------
+
+📊 SUMMARY:
+   Total OTU count: 8,805
+   Average OTU per taxon: 2,201.2
+   Top taxon: Euryarchaeota (3,600 OTUs)
+   Bottom taxon: Thermoproteota (569 OTUs)
+
+🎯 COMBINED SUMMARY FOR 16S NOVEL PHYLUM:
+==========================================================================================
+Total domains: 2
+Total matched taxa: 14
+Combined OTU count: 63,392
+Overall average: 4,528.0 OTUs per taxon

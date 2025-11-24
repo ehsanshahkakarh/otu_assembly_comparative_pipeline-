@@ -12,7 +12,19 @@ suppressPackageStartupMessages({
   library(cowplot)
   library(ggrepel)
   library(ggtext)
+  library(yaml)
 })
+
+# ============================================================================
+# Load shared taxonomic color mapping configuration
+# This ensures consistency across all visualization types
+load_shared_color_config <- function() {
+  config_path <- file.path("..", "shared_config", "taxonomic_color_mapping.yaml")
+  if (!file.exists(config_path)) {
+    stop("Shared color config not found at: ", config_path)
+  }
+  yaml::read_yaml(config_path)
+}
 
 # Robust path handling - detect script location and set paths relative to it
 script_dir <- dirname(normalizePath(ifelse(interactive(), 
@@ -57,32 +69,34 @@ if (!dir.exists(config$ncbi_data_dir)) {
 dir.create(config$output_dir, recursive = TRUE, showWarnings = FALSE)
 dir.create(config$source_data_dir, recursive = TRUE, showWarnings = FALSE)
 
-# Master color palette for bacteria (from 16S script)
+# Master color palettes using shared taxonomic color mapping
 get_master_16s_color_palette <- function() {
-  bacteria_colors <- c("#1f77b4", "#ff7f0e", "#2ca02c", "#d62728", "#9467bd", 
-                      "#8c564b", "#e377c2", "#7f7f7f", "#bcbd22", "#17becf",
-                      "#aec7e8", "#ffbb78", "#98df8a", "#ff9896", "#c5b0d5",
-                      "#c49c94", "#f7b6d3", "#c7c7c7", "#dbdb8d", "#9edae5")
-  
-  archaea_colors <- c("#C0342B", "#5247A6", "#1D8890", "#B78933", "#8B4513", 
-                     "#2F4F4F", "#800080", "#008B8B", "#B22222", "#556B2F",
-                     "#A0522D", "#BC8F8F", "#F5DEB3", "#FFE4B5", "#FFDAB9")
-  
+  # Load shared color configuration
+  color_config <- load_shared_color_config()
+
+  # Extract colors from shared config
+  bacteria_colors <- unname(unlist(color_config$bacteria_colors))
+  archaea_colors <- unname(unlist(color_config$archaea_colors))
+
+  cat("🎨 LOADED SHARED 16S COLOR CONFIG:\n")
+  cat(paste("   Bacteria colors:", length(bacteria_colors), "\n"))
+  cat(paste("   Archaea colors:", length(archaea_colors), "\n"))
+
   return(list(bacteria = bacteria_colors, archaea = archaea_colors))
 }
 
-# Master color palette for eukaryotic divisions (from 18S script)
+# Master color palette for eukaryotic divisions using shared config
 get_master_18s_color_palette <- function() {
-  provided_colors <- c("6934b4","fda2da","bf00bf","bee869","ffef44","ff7f00",
-                      "4e7abc","859d9a","0000ff","6f2c2e","fb9a9a","ff0002")
+  # Load shared color configuration
+  color_config <- load_shared_color_config()
 
-  plotted_divisions <- c("Opisthokonta", "Alveolata", "Rhizaria", "Discoba",
-                        "Stramenopiles", "Evosea", "Streptophyta", "Chlorophyta",
-                        "Tubulinea", "Metamonada", "Discosea", "Rhodophyta")
+  # Extract eukaryota division-to-color mapping from shared config
+  eukaryota_color_map <- color_config$eukaryota_colors
 
-  # Create color mapping
-  eukaryota_color_map <- setNames(paste0("#", provided_colors[1:length(plotted_divisions)]),
-                                 plotted_divisions)
+  cat("🎨 LOADED SHARED 18S COLOR CONFIG:\n")
+  cat(paste("   Eukaryota divisions:", length(eukaryota_color_map), "\n"))
+  cat(paste("   Divisions:", paste(names(eukaryota_color_map), collapse = ", "), "\n"))
+
   return(eukaryota_color_map)
 }
 

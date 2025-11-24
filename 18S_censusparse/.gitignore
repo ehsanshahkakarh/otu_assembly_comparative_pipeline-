@@ -12,6 +12,7 @@
 !*.md
 !*.txt
 !.gitignore
+!*.csv 
 
 # Keep folders but ignore metadata files inside them
 metadata/*.csv
@@ -22,7 +23,7 @@ metadata/*.yml
 metadata/*.xml
 metadata/*.txt
 
-csv_ncbi/*.csv
+
 csv_ncbi/*.tsv
 csv_ncbi/*.json
 csv_ncbi/*.yaml

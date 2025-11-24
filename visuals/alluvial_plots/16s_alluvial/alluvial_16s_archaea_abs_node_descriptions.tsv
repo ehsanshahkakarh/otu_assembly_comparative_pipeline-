@@ -1,0 +1,5 @@
+Node	Node_Order	Description	Total_Count	Data_Type
+Genbank_Genome_Count	1	Genbank Total Genomes (Archaea)	14,849	Absolute Count
+IMG_Genome_Count	2	IMG Genome Count (16S sequences)	41,207	Absolute Count
+16S_OTU_Count	3	16S OTU Count	8,835	Absolute Count
+Genbank_Species_Count	4	Genbank Total Species (Archaea)	2,287	Absolute Count

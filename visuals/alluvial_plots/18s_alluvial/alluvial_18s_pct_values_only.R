@@ -5,9 +5,9 @@
 # ============================================================================
 # This script creates percentage-based alluvial plots for 18S eukaryotic data
 # using ONLY the clean merged data files for consistency and reliability.
-# 
+#
 # Data Flow: NCBI Eukaryota Genomes → 18S EukCensus Sequences → 18S EukCensus OTUs → NCBI Eukaryota Species
-# 
+#
 # Key Features:
 # - Uses only merged CSV files (no raw assembly dependencies)
 # - Advanced alluvial preprocessing for clean flows
@@ -21,6 +21,10 @@ library(ggalluvial)
 library(dplyr)
 library(scales)
 library(tidyr)
+library(yaml)
+
+# Load shared color mapping functions
+source("../../shared_config/color_mapping_functions.R")
 
 cat("=== 18S Eukaryotic Alluvial Plot (Percentage Values) ===\n")
 cat("Using clean merged data approach for reliable visualization\n\n")
@@ -57,45 +61,20 @@ process_eukaryotic_data <- function() {
            !is.na(ncbi_genome_count) & !is.na(ncbi_species_count) & !is.na(phylum)) %>%
     filter(phylum != "N/A" & phylum != "" & !is.null(phylum)) %>%
     filter(domain == "Eukaryota")
-  
+
   return(matched_data)
 }
 
-# Get eukaryotic color mappings
-get_eukaryotic_colors <- function() {
-  eukaryotic_color_map <- c(
-    "Opisthokonta" = "#2E5984",      # Deep navy blue - most abundant
-    "Streptophyta" = "#8B4513",      # Saddle brown - land plants
-    "Stramenopiles" = "#FF8C00",     # Dark orange - diverse protists
-    "Alveolata" = "#F0A0C0",         # Light pink - ciliates, dinoflagellates
-    "Chlorophyta" = "#CD853F",       # Peru - green algae
-    "Discoba" = "#2F4F4F",           # Dark slate gray - flagellates
-    "Rhizaria" = "#DC143C",          # Crimson red - amoeboid protists
-    "Rhodophyta" = "#B8860B",        # Dark goldenrod - red algae
-    "Metamonada" = "#8FBC8F",        # Dark sea green - anaerobic flagellates
-    "Cryptista" = "#A0522D",         # Sienna - cryptophytes and related
-    "Amoebozoa" = "#4682B4",         # Steel blue - amoeboid organisms
-    "Haptista" = "#D2691E"           # Chocolate - haptophytes
-  )
-  return(eukaryotic_color_map)
-}
-
-# Extended color palette for unmapped eukaryotic divisions
-get_extended_eukaryotic_colors <- function() {
-  extended_colors <- c(
-    "#9370DB", "#20B2AA", "#FF6347", "#32CD32", "#FFD700",
-    "#FF69B4", "#00CED1", "#FFA500", "#98FB98", "#F0E68C",
-    "#DDA0DD", "#87CEEB", "#F4A460", "#90EE90", "#FFB6C1"
-  )
-  return(extended_colors)
-}
+# Load shared color configuration
+cat("Loading shared color configuration...\n")
+color_config <- load_taxonomic_colors()
 
 # Extract eukaryotic .U. entries from census data
 get_eukaryotic_u_entries <- function(census_data) {
   u_entries <- census_data %>%
     filter(grepl("\\.U\\.", Name_to_use)) %>%
     filter(otu_count >= 10) %>%
-    filter(grepl("Eukaryota", Name_to_use) | 
+    filter(grepl("Eukaryota", Name_to_use) |
            (!grepl("Bacteria", Name_to_use) & !grepl("Archaea", Name_to_use))) %>%
     select(phylum = Name_to_use, census_otu_count = otu_count, census_size_count = size_count) %>%
     mutate(
@@ -104,7 +83,7 @@ get_eukaryotic_u_entries <- function(census_data) {
       domain = "Eukaryota",
       match_status = "census_only"
     )
-  
+
   return(u_entries)
 }
 
@@ -165,8 +144,8 @@ for (i in 1:nrow(top_phyla)) {
   phylum_data <- data.frame(
     alluvium = rep(i, 4),
     phylum = rep(paste0(i, ". ", top_phyla$phylum[i]), 4),
-    x = c("NCBI_Genomes_%", "18S_Sequences_%", "18S_OTUs_%", "NCBI_Species_%"),
-    stratum = c("NCBI_Genomes_%", "18S_Sequences_%", "18S_OTUs_%", "NCBI_Species_%"),
+    x = c("Genbank_Genome_%", "IMG_Genome_%", "18S_OTU_%", "Genbank_Species_%"),
+    stratum = c("Genbank_Genome_%", "IMG_Genome_%", "18S_OTU_%", "Genbank_Species_%"),
     percentage = c(
       top_phyla$genome_pct[i],    # Node 1: NCBI Genome %
       top_phyla$size_pct[i],      # Node 2: 18S Sequence %
@@ -182,17 +161,17 @@ for (i in 1:nrow(top_phyla)) {
 other_data <- data.frame(
   alluvium = rep(nrow(top_phyla) + 1, 4),
   phylum = rep("Other", 4),
-  x = c("NCBI_Genomes_%", "18S_Sequences_%", "18S_OTUs_%", "NCBI_Species_%"),
-  stratum = c("NCBI_Genomes_%", "18S_Sequences_%", "18S_OTUs_%", "NCBI_Species_%"),
+  x = c("Genbank_Genome_%", "IMG_Genome_%", "18S_OTU_%", "Genbank_Species_%"),
+  stratum = c("Genbank_Genome_%", "IMG_Genome_%", "18S_OTU_%", "Genbank_Species_%"),
   percentage = c(other_genome_pct, other_size_pct, other_otu_pct, other_species_pct),
   stringsAsFactors = FALSE
 )
 
 long_data <- rbind(long_data, other_data)
 
-# Fix x-axis ordering
-long_data$x <- factor(long_data$x, levels = c("NCBI_Genomes_%", "18S_Sequences_%", "18S_OTUs_%", "NCBI_Species_%"))
-long_data$stratum <- factor(long_data$stratum, levels = c("NCBI_Genomes_%", "18S_Sequences_%", "18S_OTUs_%", "NCBI_Species_%"))
+# Fix x-axis ordering to prevent alphabetical reordering
+long_data$x <- factor(long_data$x, levels = c("Genbank_Genome_%", "IMG_Genome_%", "18S_OTU_%", "Genbank_Species_%"))
+long_data$stratum <- factor(long_data$stratum, levels = c("Genbank_Genome_%", "IMG_Genome_%", "18S_OTU_%", "Genbank_Species_%"))
 
 cat("Long data created with", nrow(long_data), "rows\n")
 
@@ -218,36 +197,15 @@ long_data_f <- long_data_f %>%
 
 cat("Advanced preprocessing complete - data optimized for clean alluvial flows\n")
 
-# Create professional color palette using eukaryotic colors
+# Create professional color palette using shared color system
 phyla_names <- unique(long_data_f$phylum)
-n_colors <- length(phyla_names)
+cat("Assigning colors for", length(phyla_names), "eukaryotic divisions...\n")
 
-# Get eukaryotic color mappings
-eukaryotic_colors <- get_eukaryotic_colors()
-extended_colors <- get_extended_eukaryotic_colors()
+# Use shared color mapping system
+colors <- get_domain_colors(phyla_names, "Eukaryota", color_config)
 
-# Assign colors to phyla
-colors <- character(n_colors)
-names(colors) <- phyla_names
-
-for (i in seq_along(phyla_names)) {
-  phylum_name <- phyla_names[i]
-  clean_phylum <- gsub("^\\d+\\. ", "", phylum_name)
-  
-  if (phylum_name == "Other") {
-    colors[i] <- "#808080"  # Gray for Other
-  } else if (grepl("\\.U\\.", clean_phylum)) {
-    colors[i] <- "#ffcc99"  # Light orange for eukaryotic .U. entries
-  } else if (clean_phylum %in% names(eukaryotic_colors)) {
-    colors[i] <- eukaryotic_colors[clean_phylum]
-  } else {
-    # Use extended fallback colors for unmapped phyla
-    fallback_index <- ((i - 1) %% length(extended_colors)) + 1
-    colors[i] <- extended_colors[fallback_index]
-  }
-}
-
-cat("Color mapping complete for", length(colors), "phyla\n")
+# Print color assignments for verification
+print_color_summary(phyla_names, colors, "Eukaryota")
 
 # Create ADVANCED percentage alluvial plot with optimized aesthetics
 p_pct <- ggplot(
@@ -299,10 +257,173 @@ p_pct <- ggplot(
 ggsave("alluvial_18s_pct_values_only.png", p_pct, width = 24, height = 10, dpi = 300, bg = "white")
 ggsave("alluvial_18s_pct_values_only.pdf", p_pct, width = 24, height = 10, dpi = 300, bg = "white")
 
+# Create detailed flow annotations with percentages and absolute values
+cat("Creating detailed flow annotations file...\n")
+
+# Create detailed annotations for each taxon at each node (including "Other")
+flow_annotations <- data.frame()
+
+# Add annotations for top phyla
+for (i in 1:nrow(top_phyla)) {
+  taxon_name <- top_phyla$phylum[i]
+
+  # Node 1: Genbank Genomes
+  flow_annotations <- rbind(flow_annotations, data.frame(
+    Taxon = taxon_name,
+    Node = "Genbank_Genome_%",
+    Node_Order = 1,
+    Absolute_Count = top_phyla$ncbi_genome_count[i],
+    Percentage = round(top_phyla$genome_pct[i], 2),
+    Flow_Width = top_phyla$genome_pct[i],
+    stringsAsFactors = FALSE
+  ))
+
+  # Node 2: IMG Genomes
+  flow_annotations <- rbind(flow_annotations, data.frame(
+    Taxon = taxon_name,
+    Node = "IMG_Genome_%",
+    Node_Order = 2,
+    Absolute_Count = top_phyla$census_size_count[i],
+    Percentage = round(top_phyla$size_pct[i], 2),
+    Flow_Width = top_phyla$size_pct[i],
+    stringsAsFactors = FALSE
+  ))
+
+  # Node 3: 18S OTUs
+  flow_annotations <- rbind(flow_annotations, data.frame(
+    Taxon = taxon_name,
+    Node = "18S_OTU_%",
+    Node_Order = 3,
+    Absolute_Count = top_phyla$census_otu_count[i],
+    Percentage = round(top_phyla$otu_pct[i], 2),
+    Flow_Width = top_phyla$otu_pct[i],
+    stringsAsFactors = FALSE
+  ))
+
+  # Node 4: Genbank Species
+  flow_annotations <- rbind(flow_annotations, data.frame(
+    Taxon = taxon_name,
+    Node = "Genbank_Species_%",
+    Node_Order = 4,
+    Absolute_Count = top_phyla$ncbi_species_count[i],
+    Percentage = round(top_phyla$species_pct[i], 2),
+    Flow_Width = top_phyla$species_pct[i],
+    stringsAsFactors = FALSE
+  ))
+}
+
+# Add "Other" category annotations
+other_genome_count <- sum(combined_data$ncbi_genome_count[!combined_data$phylum %in% top_phyla$phylum], na.rm = TRUE)
+other_size_count <- sum(combined_data$census_size_count[!combined_data$phylum %in% top_phyla$phylum], na.rm = TRUE)
+other_otu_count <- sum(combined_data$census_otu_count[!combined_data$phylum %in% top_phyla$phylum], na.rm = TRUE)
+other_species_count <- sum(combined_data$ncbi_species_count[!combined_data$phylum %in% top_phyla$phylum], na.rm = TRUE)
+
+# Other category flows
+flow_annotations <- rbind(flow_annotations, data.frame(
+  Taxon = "Other",
+  Node = "Genbank_Genome_%",
+  Node_Order = 1,
+  Absolute_Count = other_genome_count,
+  Percentage = round(other_genome_pct, 2),
+  Flow_Width = other_genome_pct,
+  stringsAsFactors = FALSE
+))
+
+flow_annotations <- rbind(flow_annotations, data.frame(
+  Taxon = "Other",
+  Node = "IMG_Genome_%",
+  Node_Order = 2,
+  Absolute_Count = other_size_count,
+  Percentage = round(other_size_pct, 2),
+  Flow_Width = other_size_pct,
+  stringsAsFactors = FALSE
+))
+
+flow_annotations <- rbind(flow_annotations, data.frame(
+  Taxon = "Other",
+  Node = "18S_OTU_%",
+  Node_Order = 3,
+  Absolute_Count = other_otu_count,
+  Percentage = round(other_otu_pct, 2),
+  Flow_Width = other_otu_pct,
+  stringsAsFactors = FALSE
+))
+
+flow_annotations <- rbind(flow_annotations, data.frame(
+  Taxon = "Other",
+  Node = "Genbank_Species_%",
+  Node_Order = 4,
+  Absolute_Count = other_species_count,
+  Percentage = round(other_species_pct, 2),
+  Flow_Width = other_species_pct,
+  stringsAsFactors = FALSE
+))
+
+# Sort by node order and then by flow width (descending)
+flow_annotations <- flow_annotations %>%
+  arrange(Node_Order, desc(Flow_Width))
+
+write.table(flow_annotations, "alluvial_18s_pct_flow_annotations.tsv", sep = "\t", row.names = FALSE, quote = FALSE)
+
+# Create simple node descriptions file
+node_descriptions <- data.frame(
+  Node = c("Genbank_Genome_%", "IMG_Genome_%", "18S_OTU_%", "Genbank_Species_%"),
+  Node_Order = c(1, 2, 3, 4),
+  Description = c(
+    "Genbank Total Genomes (Eukaryota)",
+    "IMG Genome Count (18S sequences)",
+    "18S OTU Count",
+    "Genbank Total Species (Eukaryota)"
+  ),
+  Total_Count = c(
+    scales::comma(total_genome_count),
+    scales::comma(total_size_count),
+    scales::comma(total_otu_count),
+    scales::comma(total_species_count)
+  ),
+  Data_Type = c("Percentage", "Percentage", "Percentage", "Percentage"),
+  stringsAsFactors = FALSE
+)
+
+write.table(node_descriptions, "alluvial_18s_pct_node_descriptions.tsv", sep = "\t", row.names = FALSE, quote = FALSE)
+
+# Create summary statistics file
+cat("Creating summary statistics file...\n")
+summary_stats <- data.frame(
+  Metric = c(
+    "Total_Phyla_Shown",
+    "Top_Phyla_Count",
+    "Other_Category_Included",
+    "Total_Eukaryota_Genomes",
+    "Total_18S_Sequences",
+    "Total_18S_OTUs",
+    "Total_Eukaryota_Species",
+    "Filtering_Method",
+    "Color_System"
+  ),
+  Value = c(
+    nrow(top_phyla) + 1,  # +1 for Other category
+    nrow(top_phyla),
+    "Yes",
+    scales::comma(total_genome_count),
+    scales::comma(total_size_count),
+    scales::comma(total_otu_count),
+    scales::comma(total_species_count),
+    "Top 8 by total representation",
+    "Shared taxonomic color mapping"
+  ),
+  stringsAsFactors = FALSE
+)
+
+write.table(summary_stats, "alluvial_18s_pct_summary.tsv", sep = "\t", row.names = FALSE, quote = FALSE)
+
 cat("\n=== 18S Eukaryotic Percentage Alluvial Plot Created Successfully ===\n")
 cat("Files saved:\n")
 cat("  - alluvial_18s_pct_values_only.png\n")
 cat("  - alluvial_18s_pct_values_only.pdf\n")
+cat("  - alluvial_18s_pct_flow_annotations.tsv\n")
+cat("  - alluvial_18s_pct_node_descriptions.tsv\n")
+cat("  - alluvial_18s_pct_summary.tsv\n")
 cat("\n18S eukaryotic percentage alluvial plot generated with:\n")
 cat("  - Clean merged data approach\n")
 cat("  - Percentage normalization (0-100%)\n")

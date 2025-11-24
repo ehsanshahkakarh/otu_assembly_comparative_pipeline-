@@ -1,0 +1,165 @@
+# Comprehensive Mega Stacked Visual Configuration
+# ==============================================
+# This YAML file contains all settings, thresholds, and parameters for the 
+# mega_comprehensive_stacked_visual.R script
+
+# File Paths and Data Sources
+# ---------------------------
+data_sources:
+  # Input data directories (relative to script location)
+  data_dir_16s: "../../Eukcensus_merge/16s_merged/csv_results"
+  data_dir_18s: "../../Eukcensus_merge/18s_merged/csv_results"
+  ncbi_data_dir: "../../00ncbi_parse/csv_ncbi"
+  
+  # Output directories
+  output_dir: "final_visualizations"
+  source_data_dir: "source_data"
+  
+  # Input file patterns
+  file_pattern_16s: "16s_ncbi_merged_clean_{level}.csv"
+  file_pattern_18s: "18s_ncbi_merged_clean_{level}.csv"
+
+# Data Filtering and Selection Criteria
+# -------------------------------------
+data_filtering:
+  # Taxonomic factor thresholds
+  novelty_threshold: 1.0        # Minimum novelty factor for consideration
+  coverage_threshold: 1.0       # Minimum overrepresentation factor for consideration
+  
+  # Count thresholds for data inclusion
+  min_census_otu_count: 0       # Minimum census OTU count (>0 required)
+  min_ncbi_species_count: 0     # Minimum NCBI species count (>0 required)
+  
+  # Top taxa selection
+  top_n_novelty: 10            # Maximum number of top novelty taxa to highlight
+  top_n_coverage: 10           # Maximum number of top coverage taxa to highlight
+  
+  # Domain filtering
+  domains_16s: ["Bacteria", "Archaea"]
+  domain_18s: "Eukaryota"
+  
+  # Taxonomic levels to process
+  taxonomic_levels: ["phylum", "family"]
+
+# Circle Size Calculation
+# ----------------------
+circle_sizing:
+  # Size mapping based on isolate percentage
+  size_0_percent: 25           # Circle size for 0% isolates
+  size_low_percent: 20         # Circle size for <10% isolates  
+  size_medium_percent: 15      # Circle size for <50% isolates
+  size_high_percent: 10        # Circle size for ≥50% isolates
+  
+  # Size range for plots
+  plot_size_range: [10, 22]    # Min and max circle sizes in plots
+
+# Plot Dimensions and Layout
+# --------------------------
+plot_layout:
+  # Overall plot dimensions (inches)
+  plot_width: 54
+  plot_height: 20
+  dpi: 300
+  
+  # Grid layout proportions
+  col_widths: [0.1, 1, 0.02, 1, 0.02, 1]  # Label, Bacteria, gap, Archaea, gap, Eukaryota
+  row_heights: [0.1, 1, 0.05, 1]           # Header, phylum, gap, family
+  
+  # Spacing
+  col_spacing: 0.02
+  row_spacing: 0.05
+  legend_width_ratio: 0.15
+  main_plot_ratio: 0.85
+
+# Visual Styling
+# --------------
+visual_style:
+  # Text and fonts
+  text_size: 11
+  
+  # Circle aesthetics
+  circle_shape: 21             # Filled circle with border
+  circle_stroke: 0.6           # Border thickness
+  circle_alpha: 0.9            # Circle transparency
+  bg_alpha: 0.3                # Background transparency
+  
+  # Axis settings
+  axis_limits_x: [1, 10000]    # X-axis (census OTU count) log scale limits
+  axis_limits_y: [1, 10000]    # Y-axis (NCBI species count) log scale limits
+  
+  # Annotation settings
+  annotation_nudge_novelty: 0.2    # Upward nudge for novelty annotations
+  annotation_nudge_coverage: -0.2  # Downward nudge for coverage annotations
+  annotation_random_seed_novelty: 123
+  annotation_random_seed_coverage: 456
+
+# Color Configuration
+# ------------------
+color_config:
+  # Use shared taxonomic color mapping system
+  use_shared_colors: true
+  shared_color_file: "../shared_config/taxonomic_color_mapping.yaml"
+
+  # Legacy color palettes (kept for backward compatibility)
+  # These are now defined in the shared color mapping file
+  legacy_note: "Color assignments moved to shared_config/taxonomic_color_mapping.yaml for consistency across all visualizations"
+
+# Data Organization and Output
+# ----------------------------
+data_organization:
+  # Source data sorting order
+  sort_novelty_descending: true
+  sort_coverage_descending: true
+  sort_others_alphabetical: true
+  
+  # Columns to remove during processing (duplicates/unnecessary)
+  columns_to_remove: 
+    - "Census_OTU_Count"
+    - "NCBI_Species_Count" 
+    - "NCBI_Genome_Count"
+    - "Isolate_Count"
+    - "Novelty_Ratio"
+    - "Coverage_Factor"
+    - "Domain"
+    - "Level"
+    - "coverage_percentage"
+  
+  # Output file naming
+  output_filename: "comprehensive_mega_stacked_visual"
+  source_data_pattern: "{domain}_{level}_source_data.csv"
+
+# Quality Control and Validation
+# ------------------------------
+quality_control:
+  # Minimum data requirements
+  min_taxa_per_domain: 1       # Minimum taxa required per domain to proceed
+  min_novelty_candidates: 0    # Minimum novelty candidates required
+  min_coverage_candidates: 0   # Minimum coverage candidates required
+  
+  # Validation checks
+  validate_file_existence: true
+  validate_column_presence: true
+  validate_numeric_columns: ["census_otu_count", "ncbi_species_count", "novelty_factor", "overrepresentation_factor"]
+  
+  # Error handling
+  continue_on_missing_files: false
+  continue_on_empty_datasets: true
+
+# Advanced Settings
+# ----------------
+advanced:
+  # Memory and performance
+  max_taxa_per_plot: 1000      # Maximum taxa to process per plot
+  
+  # Reproducibility
+  set_random_seed: true
+  random_seed: 42
+  
+  # Debug and logging
+  verbose_output: true
+  save_intermediate_data: true
+  create_source_data_index: true
+  
+  # Experimental features
+  use_weighted_ratios: false   # Whether to use weighted ratios for ranking
+  enable_interactive_plots: false

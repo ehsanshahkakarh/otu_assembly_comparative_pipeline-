@@ -1,0 +1,204 @@
+# ============================================================================
+# Alluvial Plot Filtering Configuration
+# ============================================================================
+# Centralized configuration for 18S and 16S alluvial plot data filtering
+# Controls which taxa are included, thresholds, and display parameters
+# 
+# Author: Alluvial Config Team
+# Date: 2025-01-17
+# ============================================================================
+
+# Global Settings
+# ---------------
+global:
+  # Default number of top taxa to show (before "Other" category)
+  default_top_n: 8
+  
+  # Minimum thresholds for inclusion
+  min_otu_count: 10
+  min_genome_count: 1
+  min_species_count: 1
+  
+  # Special category handling
+  include_other_category: true
+  other_category_name: "Other"
+  
+  # .U. (unidentified) entry handling
+  include_u_entries: true
+  u_entry_min_otu_threshold: 10  # Lower threshold for .U. entries
+
+# 18S Eukaryotic Data Configuration
+# ---------------------------------
+eukaryota_18s:
+  # Data source paths (relative to alluvial script location)
+  data_sources:
+    merged_data: "../../../Eukcensus_merge/18s_merged/csv_results/18s_ncbi_merged_clean_phylum.csv"
+    census_data: "../../../18S_censusparse/csv_outputs/eukcensus_18S_by_division.csv"
+  
+  # Filtering strategy
+  filtering:
+    strategy: "hybrid"  # Options: "top_abundance", "threshold_based", "hybrid"
+    
+    # For "top_abundance" strategy
+    top_n: 8
+    
+    # For "threshold_based" strategy  
+    novelty_threshold: 1.0
+    overrepresentation_threshold: 1.0
+    
+    # For "hybrid" strategy (combines both approaches)
+    hybrid:
+      min_top_abundance: 6        # Always include top 6 by abundance
+      novelty_threshold: 10.0     # Include if novelty > 10.0
+      overrepresentation_threshold: 1.5  # Include if overrep > 1.5
+      max_total_taxa: 12          # Cap total taxa shown
+  
+  # Domain-specific filtering
+  domain_filter: "Eukaryota"
+  
+  # Required data columns
+  required_columns:
+    - "phylum"
+    - "census_otu_count" 
+    - "census_size_count"
+    - "ncbi_genome_count"
+    - "ncbi_species_count"
+    - "match_status"
+    - "domain"
+  
+  # .U. entry configuration
+  u_entries:
+    enabled: true
+    min_otu_count: 10
+    domain_patterns:
+      - "Eukaryota"
+      - "!Bacteria"  # Exclude bacteria
+      - "!Archaea"   # Exclude archaea
+    
+  # Taxa exclusions (taxa to never include)
+  exclude_taxa:
+    - "N/A"
+    - ""
+    - "Unknown"
+    - "Unclassified"
+
+# 16S Bacterial Data Configuration  
+# ---------------------------------
+bacteria_16s:
+  # Data source paths
+  data_sources:
+    merged_data: "../../../Eukcensus_merge/16s_merged/csv_results/16s_ncbi_merged_clean_phylum.csv"
+    census_data: "../../../16S_censusparse/csv_outputs/eukcensus_16S_by_phylum.csv"
+  
+  # Filtering strategy
+  filtering:
+    strategy: "hybrid"
+    
+    # Hybrid strategy parameters
+    hybrid:
+      min_top_abundance: 8        # Always include top 8 by abundance
+      novelty_threshold: 5.0      # Include if novelty > 5.0
+      overrepresentation_threshold: 1.2  # Include if overrep > 1.2
+      max_total_taxa: 15          # Cap total taxa shown
+  
+  # Domain-specific filtering
+  domain_filter: "Bacteria"
+  
+  # Required data columns (same as 18S)
+  required_columns:
+    - "phylum"
+    - "census_otu_count"
+    - "census_size_count" 
+    - "ncbi_genome_count"
+    - "ncbi_species_count"
+    - "match_status"
+    - "domain"
+  
+  # .U. entry configuration
+  u_entries:
+    enabled: true
+    min_otu_count: 20  # Higher threshold for bacteria
+    domain_patterns:
+      - "Bacteria"
+      - "!Eukaryota"
+      - "!Archaea"
+
+# 16S Archaeal Data Configuration
+# -------------------------------
+archaea_16s:
+  # Data source paths
+  data_sources:
+    merged_data: "../../../Eukcensus_merge/16s_merged/csv_results/16s_ncbi_merged_clean_phylum.csv"
+    census_data: "../../../16S_censusparse/csv_outputs/eukcensus_16S_by_phylum.csv"
+  
+  # Filtering strategy
+  filtering:
+    strategy: "top_abundance"  # Simpler for archaea due to fewer taxa
+    top_n: 5
+  
+  # Domain-specific filtering
+  domain_filter: "Archaea"
+  
+  # Required data columns
+  required_columns:
+    - "phylum"
+    - "census_otu_count"
+    - "census_size_count"
+    - "ncbi_genome_count" 
+    - "ncbi_species_count"
+    - "match_status"
+    - "domain"
+  
+  # .U. entry configuration
+  u_entries:
+    enabled: true
+    min_otu_count: 5   # Lower threshold for archaea
+    domain_patterns:
+      - "Archaea"
+      - "!Bacteria"
+      - "!Eukaryota"
+
+# Plot Aesthetics Configuration
+# -----------------------------
+plot_aesthetics:
+  # Node and flow styling
+  node_width: 0.1
+  flow_alpha: 0.7
+  
+  # Color handling
+  use_shared_colors: true
+  shared_color_config: "../../shared_config/taxonomic_color_mapping.yaml"
+  
+  # Special colors
+  other_color: "#808080"      # Gray for "Other" category
+  u_entry_color: "#ffcc99"    # Light orange for .U. entries
+  
+  # Plot dimensions
+  plot_width: 16
+  plot_height: 10
+  dpi: 300
+
+# Output Configuration
+# -------------------
+output:
+  # File naming patterns
+  file_patterns:
+    abs_values: "{domain}_alluvial_abs_values"
+    pct_values: "{domain}_alluvial_pct_values"
+    summary: "{domain}_alluvial_summary"
+    node_annotations: "{domain}_alluvial_node_annotations"
+  
+  # Export formats
+  formats:
+    - "png"
+    - "pdf"
+  
+  # Summary statistics to include
+  summary_stats:
+    - "total_phyla"
+    - "top_n_phyla" 
+    - "total_genomes"
+    - "total_sequences"
+    - "total_otus"
+    - "total_species"
+    - "coverage_percentages"

@@ -22,6 +22,7 @@ library(ggalluvial)
 library(dplyr)
 library(scales)
 library(tidyr)
+library(yaml)
 
 # CONFIGURATION: Change this to switch between domains
 PROCESS_DOMAIN <- "Bacteria"  # Change to "Archaea" for archaea plot
@@ -65,40 +66,50 @@ process_domain_data <- function(domain_name) {
   return(matched_data)
 }
 
-# Get bacterial color mappings (from mega 16S script)
-get_bacteria_colors <- function() {
-  bacteria_color_map <- c(
-    "Pseudomonadota" = "#1f77b4",    # Blue
-    "Bacillota" = "#ff7f0e",         # Orange  
-    "Actinomycetota" = "#2ca02c",    # Green
-    "Bacteroidota" = "#d62728",      # Red
-    "Cyanobacteriota" = "#9467bd",   # Purple
-    "Chloroflexota" = "#b2f3fd",     # Light blue
-    "Verrucomicrobiota" = "#8d0571", # Dark purple
-    "Planctomycetota" = "#923052"    # Dark red
-  )
-  return(bacteria_color_map)
+# Load shared color configuration
+source("../../shared_config/color_mapping_functions.R")
+
+# Load colors from shared configuration
+cat("Loading colors from shared configuration...\n")
+color_config <- load_taxonomic_colors("../../shared_config/taxonomic_color_mapping.yaml")
+
+# Get bacterial colors from shared configuration
+get_bacterial_colors <- function() {
+  bacteria_list <- color_config$bacteria_colors
+  bacteria_colors <- character(length(bacteria_list))
+  names(bacteria_colors) <- names(bacteria_list)
+  for (name in names(bacteria_list)) {
+    bacteria_colors[name] <- as.character(bacteria_list[[name]])
+  }
+  return(bacteria_colors)
 }
 
-# Get archaea color mappings (from mega 16S script)
+# Extended fallback colors for bacteria phyla not in main palette
+get_extended_bacterial_colors <- function() {
+  c("#FF6B6B", "#4ECDC4", "#45B7D1", "#96CEB4", "#FFEAA7", "#DDA0DD",
+    "#98D8C8", "#F7DC6F", "#BB8FCE", "#85C1E9", "#F8C471", "#82E0AA",
+    "#F1948A", "#C39BD3", "#D7BDE2", "#A9DFBF", "#F9E79F")
+}
+
+# Excluded phyla that use fallback colors (same as mega 16S script)
+get_excluded_phyla <- function() {
+  c("Campylobacterota", "Mycoplasmatota", "Thermotogota")
+}
+
+# Master archaea color palette from mega 16S script
 get_archaea_colors <- function() {
   archaea_color_map <- c(
-    "Euryarchaeota" = "#55ee79",     # Light green
-    "Nitrososphaerota" = "#ef9e17",  # Orange
-    "Thermoproteota" = "#f61e5d",    # Pink/red
-    "Nanoarchaeota" = "#4ad9d5"      # Cyan
+    "Euryarchaeota" = "#55ee79",        # Most common archaea phylum - bright green
+    "Nitrososphaerota" = "#ef9e17",     # Important ammonia-oxidizing archaea
+    "Thermoproteota" = "#f61e5d",       # Hyperthermophilic archaea
+    "Nanoarchaeota" = "#4ad9d5"         # Highest novelty factor (117.7×)
   )
   return(archaea_color_map)
 }
 
-# Extended color palette for unmapped phyla
-get_extended_colors <- function() {
-  extended_colors <- c(
-    "#8c564b", "#e377c2", "#7f7f7f", "#bcbd22", "#17becf",
-    "#aec7e8", "#ffbb78", "#98df8a", "#ff9896", "#c5b0d5",
-    "#c49c94", "#f7b6d3", "#c7c7c7", "#dbdb8d", "#9edae5"
-  )
-  return(extended_colors)
+# Extended fallback colors for archaea phyla not in main palette
+get_extended_archaea_colors <- function() {
+  c("#8B4513", "#2F4F4F", "#800080", "#008B8B", "#B22222", "#FF4500", "#32CD32", "#9932CC")
 }
 
 # Extract domain-specific .U. entries from census data
@@ -162,6 +173,8 @@ top_phyla <- combined_data %>%
   arrange(desc(total_representation)) %>%
   head(top_n)
 
+cat("Selected top", top_n, PROCESS_DOMAIN, "phyla by total representation\n")
+
 cat("Top", top_n, PROCESS_DOMAIN, "phyla selected for visualization\n\n")
 
 # Calculate "Other" percentages
@@ -179,18 +192,21 @@ other_size_pct <- max(0, 100 - top_size_pct)
 cat("Creating percentage-based alluvial data...\n")
 long_data <- data.frame()
 
-# Add top phyla data
+# Add top phyla data (handling .U. entries correctly)
 for (i in 1:nrow(top_phyla)) {
+  # Check if this is a .U. entry (census_only)
+  is_u_entry <- top_phyla$match_status[i] == "census_only"
+
   phylum_data <- data.frame(
     alluvium = rep(i, 4),
-    phylum = rep(paste0(i, ". ", top_phyla$phylum[i]), 4),
-    x = c("NCBI_Genomes_%", "16S_Sequences_%", "16S_OTUs_%", "NCBI_Species_%"),
-    stratum = c("NCBI_Genomes_%", "16S_Sequences_%", "16S_OTUs_%", "NCBI_Species_%"),
+    phylum = rep(paste0(i, ". ", top_phyla$phylum[i]), 4),  # Restore numbered prefixes for color matching
+    x = c("Genbank_Genome_%", "IMG_Genome_%", "16S_OTU_%", "Genbank_Species_%"),
+    stratum = c("Genbank_Genome_%", "IMG_Genome_%", "16S_OTU_%", "Genbank_Species_%"),
     percentage = c(
-      top_phyla$genome_pct[i],    # Node 1: NCBI Genome %
-      top_phyla$size_pct[i],      # Node 2: 16S Sequence %
-      top_phyla$otu_pct[i],       # Node 3: 16S OTU %
-      top_phyla$species_pct[i]    # Node 4: NCBI Species %
+      if (is_u_entry) 0 else top_phyla$genome_pct[i],    # Node 1: 0% for .U. entries
+      top_phyla$size_pct[i],                             # Node 2: IMG Genome % (16S sequences)
+      top_phyla$otu_pct[i],                              # Node 3: 16S OTU %
+      if (is_u_entry) 0 else top_phyla$species_pct[i]    # Node 4: 0% for .U. entries
     ),
     stringsAsFactors = FALSE
   )
@@ -201,8 +217,8 @@ for (i in 1:nrow(top_phyla)) {
 other_data <- data.frame(
   alluvium = rep(nrow(top_phyla) + 1, 4),
   phylum = rep("Other", 4),
-  x = c("NCBI_Genomes_%", "16S_Sequences_%", "16S_OTUs_%", "NCBI_Species_%"),
-  stratum = c("NCBI_Genomes_%", "16S_Sequences_%", "16S_OTUs_%", "NCBI_Species_%"),
+  x = c("Genbank_Genome_%", "IMG_Genome_%", "16S_OTU_%", "Genbank_Species_%"),
+  stratum = c("Genbank_Genome_%", "IMG_Genome_%", "16S_OTU_%", "Genbank_Species_%"),
   percentage = c(other_genome_pct, other_size_pct, other_otu_pct, other_species_pct),
   stringsAsFactors = FALSE
 )
@@ -210,22 +226,25 @@ other_data <- data.frame(
 long_data <- rbind(long_data, other_data)
 
 # Fix x-axis ordering
-long_data$x <- factor(long_data$x, levels = c("NCBI_Genomes_%", "16S_Sequences_%", "16S_OTUs_%", "NCBI_Species_%"))
-long_data$stratum <- factor(long_data$stratum, levels = c("NCBI_Genomes_%", "16S_Sequences_%", "16S_OTUs_%", "NCBI_Species_%"))
+long_data$x <- factor(long_data$x, levels = c("Genbank_Genome_%", "IMG_Genome_%", "16S_OTU_%", "Genbank_Species_%"))
+long_data$stratum <- factor(long_data$stratum, levels = c("Genbank_Genome_%", "IMG_Genome_%", "16S_OTU_%", "Genbank_Species_%"))
 
 cat("Long data created with", nrow(long_data), "rows\n")
 
 # ADVANCED ALLUVIAL PREPROCESSING - Fix aesthetic issues
 cat("Applying advanced alluvial preprocessing...\n")
 
-# 1. Ensure each phylum has a row at every axis (fill missing with 0)
-long_data_f <- long_data %>%
-  complete(x, phylum, fill = list(percentage = 0)) %>%
-  group_by(phylum) %>%
-  mutate(alluvium = cur_group_id()) %>%  # stable id per phylum
-  ungroup()
+# 1. Use original data structure (don't create artificial zero entries)
+# The complete() function was creating too many artificial entries that interfered with alluvium structure
+# IMPORTANT: Keep the original alluvium IDs - DO NOT reassign them!
+long_data_f <- long_data
 
-# 2. Order phyla by size at the first axis (prettier strata stacking)
+# 2. Only replace zero values for .U. entries (not all zeros)
+# This prevents ggalluvial issues while preserving real data structure
+long_data_f <- long_data_f %>%
+  mutate(percentage = ifelse(percentage == 0 & grepl("\\.U\\.", phylum), 0.1, percentage))
+
+# 3. Order phyla by size at the first axis (prettier strata stacking)
 first_axis <- sort(unique(long_data_f$x))[1]
 sizes_first <- long_data_f %>%
   filter(x == first_axis) %>%
@@ -235,37 +254,38 @@ sizes_first <- long_data_f %>%
 long_data_f <- long_data_f %>%
   mutate(phylum = factor(phylum, levels = unique(c(sizes_first, setdiff(phylum, sizes_first)))))
 
-cat("Advanced preprocessing complete - data optimized for clean alluvial flows\n")
+cat("Advanced preprocessing complete - preserved original alluvium IDs and data structure\n")
 
-# Create professional color palette using domain-specific colors
+# Create professional color palette using bacterial colors from mega 16S script
 phyla_names <- unique(long_data_f$phylum)
 n_colors <- length(phyla_names)
 
-# Get domain-specific color mappings
-if (PROCESS_DOMAIN == "Bacteria") {
-  domain_colors <- get_bacteria_colors()
-  u_color <- "#ff9999"  # Light red for bacterial .U. entries
-} else {
-  domain_colors <- get_archaea_colors()
-  u_color <- "#ffcc99"  # Light orange for archaea .U. entries
-}
+# Get bacterial color mappings
+bacterial_colors <- get_bacterial_colors()
+extended_colors <- get_extended_bacterial_colors()
+excluded_phyla <- get_excluded_phyla()
 
-extended_colors <- get_extended_colors()
-
-# Assign colors to phyla
+# Assign colors to phyla (matching mega 16S script logic)
 colors <- character(n_colors)
 names(colors) <- phyla_names
 
 for (i in seq_along(phyla_names)) {
   phylum_name <- phyla_names[i]
-  clean_phylum <- gsub("^\\d+\\. ", "", phylum_name)
-  
-  if (phylum_name == "Other") {
-    colors[i] <- "#808080"  # Gray for Other
+
+  # Remove numbering prefix for color matching (e.g., "1. Pseudomonadota" -> "Pseudomonadota")
+  clean_phylum <- gsub("^[0-9]+\\. ", "", phylum_name)
+
+  if (clean_phylum == "Other") {
+    colors[i] <- "#808080"  # Gray for "Other"
   } else if (grepl("\\.U\\.", clean_phylum)) {
-    colors[i] <- u_color  # Domain-specific color for .U. entries
-  } else if (clean_phylum %in% names(domain_colors)) {
-    colors[i] <- domain_colors[clean_phylum]
+    # Distinctive yellow-green color for all .U. entries - reduces purple and distinguishes from other greens
+    colors[i] <- "#9ACD32"  # Yellow-green - distinctive for unclassified entries
+  } else if (clean_phylum %in% excluded_phyla) {
+    # Excluded phyla use fallback colors (same as mega 16S script)
+    fallback_index <- ((i - 1) %% length(extended_colors)) + 1
+    colors[i] <- extended_colors[fallback_index]
+  } else if (clean_phylum %in% names(bacterial_colors)) {
+    colors[i] <- bacterial_colors[clean_phylum]
   } else {
     # Use extended fallback colors for unmapped phyla
     fallback_index <- ((i - 1) %% length(extended_colors)) + 1
@@ -273,7 +293,52 @@ for (i in seq_along(phyla_names)) {
   }
 }
 
-cat("Color mapping complete for", length(colors), "phyla\n")
+cat("Color mapping complete for", length(colors), PROCESS_DOMAIN, "phyla\n")
+
+# Prepare node annotations data
+node_labels <- data.frame(
+  x = factor(c("Genbank_Genome_%", "IMG_Genome_%", "16S_OTU_%", "Genbank_Species_%"),
+             levels = c("Genbank_Genome_%", "IMG_Genome_%", "16S_OTU_%", "Genbank_Species_%")),
+  label = c(
+    paste0("Genbank Genomes\n", scales::comma(total_genome_count)),
+    paste0("IMG Sequences\n", scales::comma(total_size_count)),
+    paste0("16S OTUs\n", scales::comma(total_otu_count)),
+    paste0("Genbank Species\n", scales::comma(total_species_count))
+  ),
+  y = 102,  # Position above the plot
+  stringsAsFactors = FALSE
+)
+
+# DEBUG: Print color assignments
+cat("\n=== DEBUG: COLOR ASSIGNMENTS ===\n")
+for (i in seq_along(phyla_names)) {
+  cat(sprintf("%2d. %-30s -> %s\n", i, phyla_names[i], colors[i]))
+}
+
+# DEBUG: Check for Pseudomonadota
+pseudo_check <- grep("Pseudomonadota", phyla_names, value = TRUE)
+if (length(pseudo_check) > 0) {
+  cat("\n✅ Pseudomonadota found in phyla_names:", pseudo_check, "\n")
+  cat("   Color:", colors[pseudo_check], "\n")
+} else {
+  cat("\n❌ Pseudomonadota NOT found in phyla_names!\n")
+}
+
+# DEBUG: Check data structure
+cat("\n=== DEBUG: DATA STRUCTURE ===\n")
+cat("Total rows in long_data_f:", nrow(long_data_f), "\n")
+cat("Unique phyla:", length(unique(long_data_f$phylum)), "\n")
+cat("Unique alluvium IDs:", length(unique(long_data_f$alluvium)), "\n")
+
+pseudo_rows <- long_data_f[grepl("Pseudomonadota", long_data_f$phylum), ]
+if (nrow(pseudo_rows) > 0) {
+  cat("\n✅ Pseudomonadota data rows:", nrow(pseudo_rows), "\n")
+  cat("Pseudomonadota percentages:\n")
+  print(pseudo_rows[, c("phylum", "x", "percentage", "alluvium")])
+} else {
+  cat("\n❌ NO Pseudomonadota rows in long_data_f!\n")
+}
+cat("=== END DEBUG ===\n\n")
 
 # Create ADVANCED percentage alluvial plot with optimized aesthetics
 p_pct <- ggplot(
@@ -286,12 +351,15 @@ p_pct <- ggplot(
   # Minimal nodes (strata) - flows meet directly at axis lines
   geom_stratum(alpha = 0.95, decreasing = FALSE, color = "white",
                linewidth = 0.2, width = 0.02) +
+  # Add node labels with counts
+  geom_text(data = node_labels, aes(x = x, y = y, label = label, fill = NULL, stratum = NULL, alluvium = NULL),
+            inherit.aes = FALSE, size = 6, fontface = "bold", hjust = 0.5, vjust = 0) +
   scale_fill_manual(values = colors, name = "Phylum") +
   scale_x_discrete(expand = expansion(mult = 0, add = 0)) +
   scale_y_continuous(
     labels = function(x) paste0(x, "%"),
-    limits = c(0, 100),
-    expand = expansion(mult = c(0, 0.02))
+    limits = c(0, 110),  # Increased to accommodate node labels
+    expand = expansion(mult = c(0, 0))
   ) +
   theme_minimal(base_size = 14) +
   theme(
@@ -330,10 +398,167 @@ output_pdf <- paste0("alluvial_16s_", domain_suffix, "_pct_values_only.pdf")
 ggsave(output_png, p_pct, width = 24, height = 10, dpi = 300, bg = "white")
 ggsave(output_pdf, p_pct, width = 24, height = 10, dpi = 300, bg = "white")
 
+# Create detailed flow annotations with percentages and absolute values
+cat("Creating detailed flow annotations file...\n")
+
+# Create detailed annotations for each taxon at each node
+flow_annotations <- data.frame()
+
+# Add annotations for top phyla
+for (i in 1:nrow(top_phyla)) {
+  taxon_name <- top_phyla$phylum[i]
+
+  # Node 1: Genbank Genomes
+  flow_annotations <- rbind(flow_annotations, data.frame(
+    Taxon = taxon_name,
+    Node = "Genbank_Genome_%",
+    Node_Order = 1,
+    Absolute_Count = top_phyla$ncbi_genome_count[i],
+    Percentage = round(top_phyla$genome_pct[i], 2),
+    Flow_Width = top_phyla$genome_pct[i],
+    stringsAsFactors = FALSE
+  ))
+
+  # Node 2: IMG Genomes
+  flow_annotations <- rbind(flow_annotations, data.frame(
+    Taxon = taxon_name,
+    Node = "IMG_Genome_%",
+    Node_Order = 2,
+    Absolute_Count = top_phyla$census_size_count[i],
+    Percentage = round(top_phyla$size_pct[i], 2),
+    Flow_Width = top_phyla$size_pct[i],
+    stringsAsFactors = FALSE
+  ))
+
+  # Node 3: 16S OTUs
+  flow_annotations <- rbind(flow_annotations, data.frame(
+    Taxon = taxon_name,
+    Node = "16S_OTU_%",
+    Node_Order = 3,
+    Absolute_Count = top_phyla$census_otu_count[i],
+    Percentage = round(top_phyla$otu_pct[i], 2),
+    Flow_Width = top_phyla$otu_pct[i],
+    stringsAsFactors = FALSE
+  ))
+
+  # Node 4: Genbank Species
+  flow_annotations <- rbind(flow_annotations, data.frame(
+    Taxon = taxon_name,
+    Node = "Genbank_Species_%",
+    Node_Order = 4,
+    Absolute_Count = top_phyla$ncbi_species_count[i],
+    Percentage = round(top_phyla$species_pct[i], 2),
+    Flow_Width = top_phyla$species_pct[i],
+    stringsAsFactors = FALSE
+  ))
+}
+
+# Add "Other" category annotations
+flow_annotations <- rbind(flow_annotations, data.frame(
+  Taxon = "Other",
+  Node = "Genbank_Genome_%",
+  Node_Order = 1,
+  Absolute_Count = other_genome_count,
+  Percentage = round(other_genome_pct, 2),
+  Flow_Width = other_genome_pct,
+  stringsAsFactors = FALSE
+))
+
+flow_annotations <- rbind(flow_annotations, data.frame(
+  Taxon = "Other",
+  Node = "IMG_Genome_%",
+  Node_Order = 2,
+  Absolute_Count = other_size_count,
+  Percentage = round(other_size_pct, 2),
+  Flow_Width = other_size_pct,
+  stringsAsFactors = FALSE
+))
+
+flow_annotations <- rbind(flow_annotations, data.frame(
+  Taxon = "Other",
+  Node = "16S_OTU_%",
+  Node_Order = 3,
+  Absolute_Count = other_otu_count,
+  Percentage = round(other_otu_pct, 2),
+  Flow_Width = other_otu_pct,
+  stringsAsFactors = FALSE
+))
+
+flow_annotations <- rbind(flow_annotations, data.frame(
+  Taxon = "Other",
+  Node = "Genbank_Species_%",
+  Node_Order = 4,
+  Absolute_Count = other_species_count,
+  Percentage = round(other_species_pct, 2),
+  Flow_Width = other_species_pct,
+  stringsAsFactors = FALSE
+))
+
+# Sort by node order and then by flow width (descending)
+flow_annotations <- flow_annotations %>%
+  arrange(Node_Order, desc(Flow_Width))
+
+write.table(flow_annotations, paste0("alluvial_16s_", tolower(PROCESS_DOMAIN), "_pct_flow_annotations.tsv"), sep = "\t", row.names = FALSE, quote = FALSE)
+
+# Create simple node descriptions file
+node_descriptions <- data.frame(
+  Node = c("Genbank_Genome_%", "IMG_Genome_%", "16S_OTU_%", "Genbank_Species_%"),
+  Node_Order = c(1, 2, 3, 4),
+  Description = c(
+    paste("Genbank Total Genomes (", PROCESS_DOMAIN, ")", sep = ""),
+    "IMG Genome Count (16S sequences)",
+    "16S OTU Count",
+    paste("Genbank Total Species (", PROCESS_DOMAIN, ")", sep = "")
+  ),
+  Total_Count = c(
+    scales::comma(total_genome_count),
+    scales::comma(total_size_count),
+    scales::comma(total_otu_count),
+    scales::comma(total_species_count)
+  ),
+  Data_Type = c("Percentage", "Percentage", "Percentage", "Percentage"),
+  stringsAsFactors = FALSE
+)
+
+write.table(node_descriptions, paste0("alluvial_16s_", tolower(PROCESS_DOMAIN), "_pct_node_descriptions.tsv"), sep = "\t", row.names = FALSE, quote = FALSE)
+
+# Create summary statistics file
+summary_stats <- data.frame(
+  Metric = c(
+    "Total_Taxa_Shown",
+    "Top_Taxa_Count",
+    "Other_Category_Included",
+    paste("Total_", PROCESS_DOMAIN, "_Genomes", sep = ""),
+    "Total_16S_Sequences",
+    "Total_16S_OTUs",
+    paste("Total_", PROCESS_DOMAIN, "_Species", sep = ""),
+    "Filtering_Method",
+    "Color_System"
+  ),
+  Value = c(
+    nrow(top_phyla) + 1,  # +1 for Other category
+    nrow(top_phyla),
+    "Yes",
+    scales::comma(total_genome_count),
+    scales::comma(total_size_count),
+    scales::comma(total_otu_count),
+    scales::comma(total_species_count),
+    paste("Top", nrow(top_phyla), "by total representation"),
+    paste(PROCESS_DOMAIN, "color mapping")
+  ),
+  stringsAsFactors = FALSE
+)
+
+write.table(summary_stats, paste0("alluvial_16s_", tolower(PROCESS_DOMAIN), "_pct_summary.tsv"), sep = "\t", row.names = FALSE, quote = FALSE)
+
 cat("\n=== 16S", PROCESS_DOMAIN, "Percentage Alluvial Plot Created Successfully ===\n")
 cat("Files saved:\n")
 cat("  -", output_png, "\n")
 cat("  -", output_pdf, "\n")
+cat(paste("  - alluvial_16s_", tolower(PROCESS_DOMAIN), "_pct_flow_annotations.tsv\n", sep = ""))
+cat(paste("  - alluvial_16s_", tolower(PROCESS_DOMAIN), "_pct_node_descriptions.tsv\n", sep = ""))
+cat(paste("  - alluvial_16s_", tolower(PROCESS_DOMAIN), "_pct_summary.tsv\n", sep = ""))
+
 cat("\n16S", PROCESS_DOMAIN, "percentage alluvial plot generated with:\n")
 cat("  - Clean merged data approach\n")
 cat("  - Percentage normalization (0-100%)\n")
@@ -342,7 +567,9 @@ cat("  - Optimized flow guidance\n")
 cat("  - Professional", PROCESS_DOMAIN, "color scheme\n")
 cat("  - Thin nodes and elegant flows\n")
 cat("  - Legend positioned far right\n")
-cat("  - Node titles moved down\n\n")
+cat("  - Node titles moved down\n")
+cat("  - Detailed flow annotations (TSV format)\n")
+cat("  - Node descriptions and summary statistics\n\n")
 
 cat("Percentage plot advantages:\n")
 cat("  - Better comparison across different data types\n")

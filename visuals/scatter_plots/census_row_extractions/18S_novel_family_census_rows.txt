@@ -1,0 +1,114 @@
+# Census Row Extraction Results
+# Generated: 2025-11-12 14:21:06
+# Command: python extract_census_rows.py --gene 18S --category novel --rank family
+# ======================================================================
+
+🚀 STARTING CENSUS ROW EXTRACTION
+Gene: 18S | Category: novel | Rank: family
+📊 Loaded census data: 314 total family entries from 18S
+📋 Loaded 10 novel eukaryota family taxa from JSON
+
+🔍 EXTRACTING CENSUS ROWS FOR NOVEL EUKARYOTA FAMILY TAXA
+==========================================================================================
+✅ FOUND: 10 taxa
+❌ NOT FOUND: 0 taxa
+📊 MATCH RATE: 10/10 (100.0%)
+
+📋 COMPLETE CENSUS ROWS:
+==========================================================================================
+
+[ 1] Mastigamoebidae
+     OTU Count: 1,609
+     Size Count: 10,879
+     TaxID: 174815
+     Lineage: cellular organisms;Eukaryota;Amoebozoa;Evosea;Archamoebae;Mastigamoebida;Mastigamoebidae
+     Ranks: cellular root;domain;clade;phylum;clade;order;family
+     Lineage TaxIDs: 131567;2759;554915;2605435;555406;2682482;174815
+------------------------------------------------------------------------------------------
+
+[ 2] Oxytrichidae
+     OTU Count: 800
+     Size Count: 7,715
+     TaxID: 57506
+     Lineage: cellular organisms;Eukaryota;Sar;Alveolata;Ciliophora;Intramacronucleata;Spirotrichea;Stichotrichia;Sporadotrichida;Oxytrichidae
+     Ranks: cellular root;domain;clade;clade;phylum;subphylum;class;subclass;order;family
+     Lineage TaxIDs: 131567;2759;2698737;33630;5878;431838;33829;194286;693921;57506
+------------------------------------------------------------------------------------------
+
+[ 3] Hexamitidae
+     OTU Count: 573
+     Size Count: 3,242
+     TaxID: 5739
+     Lineage: cellular organisms;Eukaryota;Metamonada;Fornicata;Diplomonadida;Hexamitidae
+     Ranks: cellular root;domain;clade;phylum;order;family
+     Lineage TaxIDs: 131567;2759;2611341;207245;5738;5739
+------------------------------------------------------------------------------------------
+
+[ 4] Euglenaceae
+     OTU Count: 470
+     Size Count: 1,572
+     TaxID: 1131320
+     Lineage: cellular organisms;Eukaryota;Discoba;Euglenozoa;Euglenida;Spirocuta;Euglenophyceae;Euglenales;Euglenaceae
+     Ranks: cellular root;domain;clade;phylum;class;clade;subclass;order;family
+     Lineage TaxIDs: 131567;2759;2611352;33682;3035;2570567;2704141;86650;1131320
+------------------------------------------------------------------------------------------
+
+[ 5] Neovahlkampfiidae
+     OTU Count: 211
+     Size Count: 780
+     TaxID: 2602010
+     Lineage: cellular organisms;Eukaryota;Discoba;Heterolobosea;Tetramitia;Neovahlkampfiidae
+     Ranks: cellular root;domain;clade;phylum;clade;family
+     Lineage TaxIDs: 131567;2759;2611352;5752;2601529;2602010
+------------------------------------------------------------------------------------------
+
+[ 6] Gregarinidae
+     OTU Count: 130
+     Size Count: 692
+     TaxID: 35088
+     Lineage: cellular organisms;Eukaryota;Sar;Alveolata;Apicomplexa;Conoidasida;Gregarinasina;Eugregarinorida;Gregarinidae
+     Ranks: cellular root;domain;clade;clade;phylum;class;subclass;order;family
+     Lineage TaxIDs: 131567;2759;2698737;33630;5794;1280412;35086;35087;35088
+------------------------------------------------------------------------------------------
+
+[ 7] Labyrinthulaceae
+     OTU Count: 62
+     Size Count: 238
+     TaxID: 35132
+     Lineage: cellular organisms;Eukaryota;Sar;Stramenopiles;Bigyra;Labyrinthulomycetes;Labyrinthulida;Labyrinthulaceae
+     Ranks: cellular root;domain;clade;clade;class;subclass;order;family
+     Lineage TaxIDs: 131567;2759;2698737;33634;2683628;35131;2699527;35132
+------------------------------------------------------------------------------------------
+
+[ 8] Vannellidae
+     OTU Count: 56
+     Size Count: 94
+     TaxID: 95227
+     Lineage: cellular organisms;Eukaryota;Amoebozoa;Discosea;Flabellinia;Vannellidae
+     Ranks: cellular root;domain;clade;phylum;class;family
+     Lineage TaxIDs: 131567;2759;554915;555280;1485085;95227
+------------------------------------------------------------------------------------------
+
+[ 9] Paramoebidae
+     OTU Count: 54
+     Size Count: 81
+     TaxID: 200887
+     Lineage: cellular organisms;Eukaryota;Amoebozoa;Discosea;Flabellinia;Dactylopodida;Paramoebidae
+     Ranks: cellular root;domain;clade;phylum;class;order;family
+     Lineage TaxIDs: 131567;2759;554915;555280;1485085;555392;200887
+------------------------------------------------------------------------------------------
+
+[10] Rhabdomonadales
+     OTU Count: 26
+     Size Count: 100
+     TaxID: 86649
+     Lineage: cellular organisms;Eukaryota;Discoba;Euglenozoa;Euglenida;Spirocuta;Aphagea;Rhabdomonadales
+     Ranks: cellular root;domain;clade;phylum;class;clade;clade;order
+     Lineage TaxIDs: 131567;2759;2611352;33682;3035;2570567;2704112;86649
+------------------------------------------------------------------------------------------
+
+📊 SUMMARY:
+   Total OTU count: 3,991
+   Average OTU per taxon: 399.1
+   Top taxon: Mastigamoebidae (1,609 OTUs)
+   Bottom taxon: Rhabdomonadales (26 OTUs)

@@ -1,0 +1,109 @@
+# Census Row Extraction Results
+# Generated: 2025-11-12 14:21:04
+# Command: python extract_census_rows.py --gene 16S --category overrepresented --rank phylum
+# ======================================================================
+
+🚀 STARTING CENSUS ROW EXTRACTION
+Gene: 16S | Category: overrepresented | Rank: phylum
+📊 Loaded census data: 52 total phylum entries from 16S
+📋 Loaded 7 overrepresented bacteria phylum taxa from JSON
+
+🔍 EXTRACTING CENSUS ROWS FOR OVERREPRESENTED BACTERIA PHYLUM TAXA
+==========================================================================================
+✅ FOUND: 7 taxa
+❌ NOT FOUND: 0 taxa
+📊 MATCH RATE: 7/7 (100.0%)
+
+📋 COMPLETE CENSUS ROWS:
+==========================================================================================
+
+[ 1] Actinomycetota
+     OTU Count: 15,932
+     Size Count: 109,549
+     OTU %: 6.070%
+     Size %: 9.170%
+     TaxID: 201174.0
+     Lineage: cellular organisms;Bacteria;Bacillati;Actinomycetota
+     Ranks: cellular root;domain;kingdom;phylum
+     Lineage TaxIDs: 131567;2;1783272;201174
+------------------------------------------------------------------------------------------
+
+[ 2] Cyanobacteriota
+     OTU Count: 2,484
+     Size Count: 12,888
+     OTU %: 0.950%
+     Size %: 1.080%
+     TaxID: 1117.0
+     Lineage: cellular organisms;Bacteria;Bacillati;Cyanobacteriota/Melainabacteria group;Cyanobacteriota
+     Ranks: cellular root;domain;kingdom;clade;phylum
+     Lineage TaxIDs: 131567;2;1783272;1798711;1117
+------------------------------------------------------------------------------------------
+
+[ 3] Chlamydiota
+     OTU Count: 12
+     Size Count: 54
+     OTU %: 0.000%
+     Size %: 0.000%
+     TaxID: 204428.0
+     Lineage: cellular organisms;Bacteria;Pseudomonadati;PVC group;Chlamydiota
+     Ranks: cellular root;domain;kingdom;clade;phylum
+     Lineage TaxIDs: 131567;2;3379134;1783257;204428
+------------------------------------------------------------------------------------------
+
+[ 4] Ignavibacteriota
+     OTU Count: 11
+     Size Count: 25
+     OTU %: 0.000%
+     Size %: 0.000%
+     TaxID: 1134404.0
+     Lineage: cellular organisms;Bacteria;Pseudomonadati;FCB group;Bacteroidota/Chlorobiota group;Ignavibacteriota
+     Ranks: cellular root;domain;kingdom;clade;clade;phylum
+     Lineage TaxIDs: 131567;2;3379134;1783270;68336;1134404
+------------------------------------------------------------------------------------------
+
+[ 5] Dictyoglomota
+     OTU Count: 7
+     Size Count: 133
+     OTU %: 0.000%
+     Size %: 0.010%
+     TaxID: 68297.0
+     Lineage: cellular organisms;Bacteria;Pseudomonadati;Dictyoglomota
+     Ranks: cellular root;domain;kingdom;phylum
+     Lineage TaxIDs: 131567;2;3379134;68297
+------------------------------------------------------------------------------------------
+
+[ 6] Chrysiogenota
+     OTU Count: 5
+     Size Count: 13
+     OTU %: 0.000%
+     Size %: 0.000%
+     TaxID: 200938.0
+     Lineage: cellular organisms;Bacteria;Pseudomonadati;Chrysiogenota
+     Ranks: cellular root;domain;kingdom;phylum
+     Lineage TaxIDs: 131567;2;3379134;200938
+------------------------------------------------------------------------------------------
+
+[ 7] Chlorobiota
+     OTU Count: 3
+     Size Count: 4
+     OTU %: 0.000%
+     Size %: 0.000%
+     TaxID: 1090.0
+     Lineage: cellular organisms;Bacteria;Pseudomonadati;FCB group;Bacteroidota/Chlorobiota group;Chlorobiota
+     Ranks: cellular root;domain;kingdom;clade;clade;phylum
+     Lineage TaxIDs: 131567;2;3379134;1783270;68336;1090
+------------------------------------------------------------------------------------------
+
+📊 SUMMARY:
+   Total OTU count: 18,454
+   Average OTU per taxon: 2,636.3
+   Top taxon: Actinomycetota (15,932 OTUs)
+   Bottom taxon: Chlorobiota (3 OTUs)
+❌ JSON file not found: source_data/taxa_extraction/overrepresented/archaea/phylum_overrepresented_taxa.json
+
+🎯 COMBINED SUMMARY FOR 16S OVERREPRESENTED PHYLUM:
+==========================================================================================
+Total domains: 2
+Total matched taxa: 7
+Combined OTU count: 18,454
+Overall average: 2,636.3 OTUs per taxon

@@ -1,0 +1,223 @@
+# Census Row Extraction Results
+# Generated: 2025-11-12 14:21:05
+# Command: python extract_census_rows.py --gene 16S --category overrepresented --rank family
+# ======================================================================
+
+🚀 STARTING CENSUS ROW EXTRACTION
+Gene: 16S | Category: overrepresented | Rank: family
+📊 Loaded census data: 799 total family entries from 16S
+📋 Loaded 10 overrepresented bacteria family taxa from JSON
+
+🔍 EXTRACTING CENSUS ROWS FOR OVERREPRESENTED BACTERIA FAMILY TAXA
+==========================================================================================
+✅ FOUND: 10 taxa
+❌ NOT FOUND: 0 taxa
+📊 MATCH RATE: 10/10 (100.0%)
+
+📋 COMPLETE CENSUS ROWS:
+==========================================================================================
+
+[ 1] Bartonellaceae
+     OTU Count: 15
+     Size Count: 196
+     OTU %: 0.010%
+     Size %: 0.020%
+     TaxID: 772.0
+     Lineage: cellular organisms;Bacteria;Pseudomonadati;Pseudomonadota;Alphaproteobacteria;Hyphomicrobiales;Bartonellaceae
+     Ranks: cellular root;domain;kingdom;phylum;class;order;family
+     Lineage TaxIDs: 131567;2;3379134;1224;28211;356;772
+------------------------------------------------------------------------------------------
+
+[ 2] Metamycoplasmataceae
+     OTU Count: 11
+     Size Count: 58
+     OTU %: 0.000%
+     Size %: 0.000%
+     TaxID: 2895623.0
+     Lineage: cellular organisms;Bacteria;Bacillati;Mycoplasmatota;Mycoplasmoidales;Metamycoplasmataceae
+     Ranks: cellular root;domain;kingdom;phylum;order;family
+     Lineage TaxIDs: 131567;2;1783272;544448;2790996;2895623
+------------------------------------------------------------------------------------------
+
+[ 3] Breoghaniaceae
+     OTU Count: 7
+     Size Count: 13
+     OTU %: 0.000%
+     Size %: 0.000%
+     TaxID: 2821832.0
+     Lineage: cellular organisms;Bacteria;Pseudomonadati;Pseudomonadota;Alphaproteobacteria;Hyphomicrobiales;Stappiaceae
+     Ranks: cellular root;domain;kingdom;phylum;class;order;family
+     Lineage TaxIDs: 131567;2;3379134;1224;28211;356;2821832
+------------------------------------------------------------------------------------------
+
+[ 4] Chlamydiaceae
+     OTU Count: 5
+     Size Count: 47
+     OTU %: 0.000%
+     Size %: 0.000%
+     TaxID: 809.0
+     Lineage: cellular organisms;Bacteria;Pseudomonadati;PVC group;Chlamydiota;Chlamydiia;Chlamydiales;Chlamydiaceae
+     Ranks: cellular root;domain;kingdom;clade;phylum;class;order;family
+     Lineage TaxIDs: 131567;2;3379134;1783257;204428;204429;51291;809
+------------------------------------------------------------------------------------------
+
+[ 5] Sirenicapillariaceae
+     OTU Count: 5
+     Size Count: 24
+     OTU %: 0.000%
+     Size %: 0.000%
+     TaxID: 2934961.0
+     Lineage: cellular organisms;Bacteria;Bacillati;Cyanobacteriota/Melainabacteria group;Cyanobacteriota;Cyanophyceae;Oscillatoriophycideae;Oscillatoriales;Sirenicapillariaceae
+     Ranks: cellular root;domain;kingdom;clade;phylum;class;subclass;order;family
+     Lineage TaxIDs: 131567;2;1783272;1798711;1117;3028117;1301283;1150;2934961
+------------------------------------------------------------------------------------------
+
+[ 6] Thermosynechococcaceae
+     OTU Count: 5
+     Size Count: 24
+     OTU %: 0.000%
+     Size %: 0.000%
+     TaxID: 2881378.0
+     Lineage: cellular organisms;Bacteria;Bacillati;Cyanobacteriota/Melainabacteria group;Cyanobacteriota;Cyanophyceae;Acaryochloridales;Thermosynechococcaceae
+     Ranks: cellular root;domain;kingdom;clade;phylum;class;order;family
+     Lineage TaxIDs: 131567;2;1783272;1798711;1117;3028117;3079744;2881378
+------------------------------------------------------------------------------------------
+
+[ 7] Chlorobiaceae
+     OTU Count: 2
+     Size Count: 3
+     OTU %: 0.000%
+     Size %: 0.000%
+     TaxID: 191412.0
+     Lineage: cellular organisms;Bacteria;Pseudomonadati;FCB group;Bacteroidota/Chlorobiota group;Chlorobiota;Chlorobiia;Chlorobiales;Chlorobiaceae
+     Ranks: cellular root;domain;kingdom;clade;clade;phylum;class;order;family
+     Lineage TaxIDs: 131567;2;3379134;1783270;68336;1090;191410;191411;191412
+------------------------------------------------------------------------------------------
+
+[ 8] Gloeomargaritaceae
+     OTU Count: 1
+     Size Count: 16
+     OTU %: 0.000%
+     Size %: 0.000%
+     TaxID: 1955043.0
+     Lineage: cellular organisms;Bacteria;Bacillati;Cyanobacteriota/Melainabacteria group;Cyanobacteriota;Cyanophyceae;Gloeomargaritales;Gloeomargaritaceae
+     Ranks: cellular root;domain;kingdom;clade;phylum;class;order;family
+     Lineage TaxIDs: 131567;2;1783272;1798711;1117;3028117;1955042;1955043
+------------------------------------------------------------------------------------------
+
+[ 9] Simkaniaceae
+     OTU Count: 1
+     Size Count: 1
+     OTU %: 0.000%
+     Size %: 0.000%
+     TaxID: 92712.0
+     Lineage: cellular organisms;Bacteria;Pseudomonadati;PVC group;Chlamydiota;Chlamydiia;Parachlamydiales;Simkaniaceae
+     Ranks: cellular root;domain;kingdom;clade;phylum;class;order;family
+     Lineage TaxIDs: 131567;2;3379134;1783257;204428;204429;1963360;92712
+------------------------------------------------------------------------------------------
+
+[10] Ancalomicrobiaceae
+     OTU Count: 1
+     Size Count: 11
+     OTU %: 0.000%
+     Size %: 0.000%
+     TaxID: 2172021.0
+     Lineage: cellular organisms;Bacteria;Pseudomonadati;Pseudomonadota;Alphaproteobacteria;Hyphomicrobiales;Ancalomicrobiaceae
+     Ranks: cellular root;domain;kingdom;phylum;class;order;family
+     Lineage TaxIDs: 131567;2;3379134;1224;28211;356;2172021
+------------------------------------------------------------------------------------------
+
+📊 SUMMARY:
+   Total OTU count: 53
+   Average OTU per taxon: 5.3
+   Top taxon: Bartonellaceae (15 OTUs)
+   Bottom taxon: Ancalomicrobiaceae (1 OTUs)
+📋 Loaded 6 overrepresented archaea family taxa from JSON
+
+🔍 EXTRACTING CENSUS ROWS FOR OVERREPRESENTED ARCHAEA FAMILY TAXA
+==========================================================================================
+✅ FOUND: 6 taxa
+❌ NOT FOUND: 0 taxa
+📊 MATCH RATE: 6/6 (100.0%)
+
+📋 COMPLETE CENSUS ROWS:
+==========================================================================================
+
+[ 1] Halorubraceae
+     OTU Count: 263
+     Size Count: 1,265
+     OTU %: 0.100%
+     Size %: 0.110%
+     TaxID: 1644056.0
+     Lineage: cellular organisms;Archaea;Methanobacteriati;Methanobacteriota;Stenosarchaea group;Halobacteria;Halobacteriales;Haloferacaceae
+     Ranks: cellular root;domain;kingdom;phylum;clade;class;order;family
+     Lineage TaxIDs: 131567;2157;3366610;28890;2290931;183963;2235;1644056
+------------------------------------------------------------------------------------------
+
+[ 2] Haloferacaceae
+     OTU Count: 220
+     Size Count: 653
+     OTU %: 0.080%
+     Size %: 0.050%
+     TaxID: 1644056.0
+     Lineage: cellular organisms;Archaea;Methanobacteriati;Methanobacteriota;Stenosarchaea group;Halobacteria;Halobacteriales;Haloferacaceae
+     Ranks: cellular root;domain;kingdom;phylum;clade;class;order;family
+     Lineage TaxIDs: 131567;2157;3366610;28890;2290931;183963;2235;1644056
+------------------------------------------------------------------------------------------
+
+[ 3] Natrialbaceae
+     OTU Count: 131
+     Size Count: 452
+     OTU %: 0.050%
+     Size %: 0.040%
+     TaxID: 1644061.0
+     Lineage: cellular organisms;Archaea;Methanobacteriati;Methanobacteriota;Stenosarchaea group;Halobacteria;Halobacteriales;Natrialbaceae
+     Ranks: cellular root;domain;kingdom;phylum;clade;class;order;family
+     Lineage TaxIDs: 131567;2157;3366610;28890;2290931;183963;2235;1644061
+------------------------------------------------------------------------------------------
+
+[ 4] Methanomassiliicoccaceae
+     OTU Count: 52
+     Size Count: 550
+     OTU %: 0.020%
+     Size %: 0.050%
+     TaxID: 1577788.0
+     Lineage: cellular organisms;Archaea;Methanobacteriati;Thermoplasmatota;Thermoplasmata;Methanomassiliicoccales;Methanomassiliicoccaceae
+     Ranks: cellular root;domain;kingdom;phylum;class;order;family
+     Lineage TaxIDs: 131567;2157;3366610;2283796;183967;1235850;1577788
+------------------------------------------------------------------------------------------
+
+[ 5] Thermococcaceae
+     OTU Count: 48
+     Size Count: 369
+     OTU %: 0.020%
+     Size %: 0.030%
+     TaxID: 2259.0
+     Lineage: cellular organisms;Archaea;Methanobacteriati;Methanobacteriota;Thermococci;Thermococcales;Thermococcaceae
+     Ranks: cellular root;domain;kingdom;phylum;class;order;family
+     Lineage TaxIDs: 131567;2157;3366610;28890;183968;2258;2259
+------------------------------------------------------------------------------------------
+
+[ 6] Picrophilaceae
+     OTU Count: 1
+     Size Count: 2
+     OTU %: 0.000%
+     Size %: 0.000%
+     TaxID: 46630.0
+     Lineage: cellular organisms;Archaea;Methanobacteriati;Thermoplasmatota;Thermoplasmata;Thermoplasmatales;Picrophilaceae
+     Ranks: cellular root;domain;kingdom;phylum;class;order;family
+     Lineage TaxIDs: 131567;2157;3366610;2283796;183967;2301;46630
+------------------------------------------------------------------------------------------
+
+📊 SUMMARY:
+   Total OTU count: 715
+   Average OTU per taxon: 119.2
+   Top taxon: Halorubraceae (263 OTUs)
+   Bottom taxon: Picrophilaceae (1 OTUs)
+
+🎯 COMBINED SUMMARY FOR 16S OVERREPRESENTED FAMILY:
+==========================================================================================
+Total domains: 2
+Total matched taxa: 16
+Combined OTU count: 768
+Overall average: 48.0 OTUs per taxon

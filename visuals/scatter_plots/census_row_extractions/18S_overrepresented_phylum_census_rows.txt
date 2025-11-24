@@ -1,0 +1,42 @@
+# Census Row Extraction Results
+# Generated: 2025-11-12 14:21:07
+# Command: python extract_census_rows.py --gene 18S --category overrepresented --rank phylum
+# ======================================================================
+
+🚀 STARTING CENSUS ROW EXTRACTION
+Gene: 18S | Category: overrepresented | Rank: phylum
+📊 Loaded census data: 22 total phylum entries from 18S
+📋 Loaded 2 overrepresented eukaryota phylum taxa from JSON
+
+🔍 EXTRACTING CENSUS ROWS FOR OVERREPRESENTED EUKARYOTA PHYLUM TAXA
+==========================================================================================
+✅ FOUND: 2 taxa
+❌ NOT FOUND: 0 taxa
+📊 MATCH RATE: 2/2 (100.0%)
+
+📋 COMPLETE CENSUS ROWS:
+==========================================================================================
+
+[ 1] Streptophyta
+     OTU Count: 2,252
+     Size Count: 16,099
+     TaxID: 35493.0
+     Lineage: cellular organisms;Eukaryota;Viridiplantae;Streptophyta
+     Ranks: cellular root;domain;kingdom;phylum
+     Lineage TaxIDs: 131567;2759;33090;35493
+------------------------------------------------------------------------------------------
+
+[ 2] Rhodophyta
+     OTU Count: 2
+     Size Count: 21
+     TaxID: 2763.0
+     Lineage: cellular organisms;Eukaryota;Rhodophyta
+     Ranks: cellular root;domain;phylum
+     Lineage TaxIDs: 131567;2759;2763
+------------------------------------------------------------------------------------------
+
+📊 SUMMARY:
+   Total OTU count: 2,254
+   Average OTU per taxon: 1,127.0
+   Top taxon: Streptophyta (2,252 OTUs)
+   Bottom taxon: Rhodophyta (2 OTUs)

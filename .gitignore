@@ -82,4 +82,5 @@ Rplots.pdf
 temp_taxa_batch_*.txt
 
 # Large batch processing files
-**/txt_s/temp_taxa_batch_*.txt
+txt_s/
+**/txt_s/

@@ -1,0 +1,10 @@
+Metric	Value
+Total_Taxa_Shown	6
+Top_Taxa_Count	5
+Other_Category_Included	Yes
+Total_Archaea_Genomes	14,849
+Total_16S_Sequences	41,207
+Total_16S_OTUs	8,835
+Total_Archaea_Species	2,287
+Filtering_Method	Top 5 by total representation
+Color_System	Archaea color mapping

@@ -1,0 +1,114 @@
+# Census Row Extraction Results
+# Generated: 2025-11-12 14:21:08
+# Command: python extract_census_rows.py --gene 18S --category overrepresented --rank family
+# ======================================================================
+
+🚀 STARTING CENSUS ROW EXTRACTION
+Gene: 18S | Category: overrepresented | Rank: family
+📊 Loaded census data: 314 total family entries from 18S
+📋 Loaded 10 overrepresented eukaryota family taxa from JSON
+
+🔍 EXTRACTING CENSUS ROWS FOR OVERREPRESENTED EUKARYOTA FAMILY TAXA
+==========================================================================================
+✅ FOUND: 10 taxa
+❌ NOT FOUND: 0 taxa
+📊 MATCH RATE: 10/10 (100.0%)
+
+📋 COMPLETE CENSUS ROWS:
+==========================================================================================
+
+[ 1] Mammalia
+     OTU Count: 257
+     Size Count: 852
+     TaxID: 40674
+     Lineage: cellular organisms;Eukaryota;Opisthokonta;Metazoa;Eumetazoa;Bilateria;Deuterostomia;Chordata;Craniata;Vertebrata;Gnathostomata;Teleostomi;Euteleostomi;Sarcopterygii;Dipnotetrapodomorpha;Tetrapoda;Amniota;Mammalia
+     Ranks: cellular root;domain;clade;kingdom;clade;clade;clade;phylum;subphylum;clade;clade;clade;clade;superclass;clade;clade;clade;class
+     Lineage TaxIDs: 131567;2759;33154;33208;6072;33213;33511;7711;89593;7742;7776;117570;117571;8287;1338369;32523;32524;40674
+------------------------------------------------------------------------------------------
+
+[ 2] Teleostei
+     OTU Count: 65
+     Size Count: 111
+     TaxID: 32443
+     Lineage: cellular organisms;Eukaryota;Opisthokonta;Metazoa;Eumetazoa;Bilateria;Deuterostomia;Chordata;Craniata;Vertebrata;Gnathostomata;Teleostomi;Euteleostomi;Actinopterygii;Actinopteri;Neopterygii;Teleostei
+     Ranks: cellular root;domain;clade;kingdom;clade;clade;clade;phylum;subphylum;clade;clade;clade;clade;superclass;class;subclass;infraclass
+     Lineage TaxIDs: 131567;2759;33154;33208;6072;33213;33511;7711;89593;7742;7776;117570;117571;7898;186623;41665;32443
+------------------------------------------------------------------------------------------
+
+[ 3] Scyphozoa
+     OTU Count: 13
+     Size Count: 32
+     TaxID: 6142
+     Lineage: cellular organisms;Eukaryota;Opisthokonta;Metazoa;Eumetazoa;Cnidaria;Scyphozoa
+     Ranks: cellular root;domain;clade;kingdom;clade;phylum;class
+     Lineage TaxIDs: 131567;2759;33154;33208;6072;6073;6142
+------------------------------------------------------------------------------------------
+
+[ 4] Kickxellales
+     OTU Count: 12
+     Size Count: 40
+     TaxID: 4861
+     Lineage: cellular organisms;Eukaryota;Opisthokonta;Fungi;Fungi incertae sedis;Zoopagomycota;Kickxellomycotina;Kickxellomycetes;Kickxellales
+     Ranks: cellular root;domain;clade;kingdom;no rank;phylum;subphylum;class;order
+     Lineage TaxIDs: 131567;2759;33154;4751;112252;1913638;451828;2219690;4861
+------------------------------------------------------------------------------------------
+
+[ 5] Saprolegniales
+     OTU Count: 5
+     Size Count: 126
+     TaxID: 4763
+     Lineage: cellular organisms;Eukaryota;Sar;Stramenopiles;Oomycota;Saprolegniales
+     Ranks: cellular root;domain;clade;clade;phylum;order
+     Lineage TaxIDs: 131567;2759;2698737;33634;4762;4763
+------------------------------------------------------------------------------------------
+
+[ 6] Amphibia
+     OTU Count: 5
+     Size Count: 9
+     TaxID: 8292
+     Lineage: cellular organisms;Eukaryota;Opisthokonta;Metazoa;Eumetazoa;Bilateria;Deuterostomia;Chordata;Craniata;Vertebrata;Gnathostomata;Teleostomi;Euteleostomi;Sarcopterygii;Dipnotetrapodomorpha;Tetrapoda;Amphibia
+     Ranks: cellular root;domain;clade;kingdom;clade;clade;clade;phylum;subphylum;clade;clade;clade;clade;superclass;clade;clade;class
+     Lineage TaxIDs: 131567;2759;33154;33208;6072;33213;33511;7711;89593;7742;7776;117570;117571;8287;1338369;32523;8292
+------------------------------------------------------------------------------------------
+
+[ 7] Lepidosauria
+     OTU Count: 4
+     Size Count: 42
+     TaxID: 8504
+     Lineage: cellular organisms;Eukaryota;Opisthokonta;Metazoa;Eumetazoa;Bilateria;Deuterostomia;Chordata;Craniata;Vertebrata;Gnathostomata;Teleostomi;Euteleostomi;Sarcopterygii;Dipnotetrapodomorpha;Tetrapoda;Amniota;Sauropsida;Sauria;Lepidosauria
+     Ranks: cellular root;domain;clade;kingdom;clade;clade;clade;phylum;subphylum;clade;clade;clade;clade;superclass;clade;clade;clade;clade;clade;class
+     Lineage TaxIDs: 131567;2759;33154;33208;6072;33213;33511;7711;89593;7742;7776;117570;117571;8287;1338369;32523;32524;8457;32561;8504
+------------------------------------------------------------------------------------------
+
+[ 8] Lipomycetaceae
+     OTU Count: 3
+     Size Count: 6
+     TaxID: 29827
+     Lineage: cellular organisms;Eukaryota;Opisthokonta;Fungi;Dikarya;Ascomycota;saccharomyceta;Saccharomycotina;Lipomycetes;Lipomycetales;Lipomycetaceae
+     Ranks: cellular root;domain;clade;kingdom;subkingdom;phylum;clade;subphylum;class;order;family
+     Lineage TaxIDs: 131567;2759;33154;4751;451864;4890;716545;147537;3243770;3243773;29827
+------------------------------------------------------------------------------------------
+
+[ 9] Schizosaccharomycetes
+     OTU Count: 2
+     Size Count: 13
+     TaxID: 147554
+     Lineage: cellular organisms;Eukaryota;Opisthokonta;Fungi;Dikarya;Ascomycota;Taphrinomycotina;Schizosaccharomycetes
+     Ranks: cellular root;domain;clade;kingdom;subkingdom;phylum;subphylum;class
+     Lineage TaxIDs: 131567;2759;33154;4751;451864;4890;451866;147554
+------------------------------------------------------------------------------------------
+
+[10] Selenastraceae
+     OTU Count: 1
+     Size Count: 1
+     TaxID: 35466
+     Lineage: cellular organisms;Eukaryota;Viridiplantae;Chlorophyta;core chlorophytes;Chlorophyceae;CS clade;Sphaeropleales;Selenastraceae
+     Ranks: cellular root;domain;kingdom;phylum;clade;class;clade;order;family
+     Lineage TaxIDs: 131567;2759;33090;3041;2692248;3166;2812636;35491;35466
+------------------------------------------------------------------------------------------
+
+📊 SUMMARY:
+   Total OTU count: 367
+   Average OTU per taxon: 36.7
+   Top taxon: Mammalia (257 OTUs)
+   Bottom taxon: Selenastraceae (1 OTUs)

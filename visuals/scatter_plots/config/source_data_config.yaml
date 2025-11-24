@@ -1,0 +1,213 @@
+# Source Data Configuration for Comprehensive Visual
+# =================================================
+# This YAML file contains all settings specifically for source data generation,
+# filtering, and organization used in the mega comprehensive stacked visual
+
+# Data Sources and File Paths
+# ---------------------------
+data_sources:
+  # Input data directories (relative to script location)
+  data_dir_16s: "../../Eukcensus_merge/16s_merged/csv_results"
+  data_dir_18s: "../../Eukcensus_merge/18s_merged/csv_results"
+  ncbi_data_dir: "../../00ncbi_parse/csv_ncbi"
+  
+  # Output directory for source data
+  source_data_dir: "source_data"
+  
+  # Input file naming patterns
+  file_pattern_16s: "16s_ncbi_merged_clean_{level}.csv"
+  file_pattern_18s: "18s_ncbi_merged_clean_{level}.csv"
+  
+  # Output file naming pattern
+  source_data_pattern: "{domain}_{level}_source_data.csv"
+
+# Data Filtering Criteria
+# -----------------------
+filtering:
+  # Basic data quality requirements
+  basic_filters:
+    min_census_otu_count: 0       # Must be > 0 (actual filter: > 0)
+    min_ncbi_species_count: 0     # Must be > 0 (actual filter: > 0)
+    exclude_zero_counts: true     # Exclude taxa with zero counts
+  
+  # Taxonomic factor thresholds for highlighting
+  factor_thresholds:
+    novelty_threshold: 1.0        # Minimum novelty factor for top taxa consideration
+    coverage_threshold: 1.0       # Minimum overrepresentation factor for top taxa consideration
+    
+  # Top taxa selection limits
+  top_taxa_limits:
+    max_novelty_taxa: 10          # Maximum novelty taxa to flag (fewer if less meet criteria)
+    max_coverage_taxa: 10         # Maximum coverage taxa to flag (fewer if less meet criteria)
+    enforce_exact_count: false    # If false, allows fewer than max if criteria not met
+  
+  # Domain and taxonomic level filtering
+  taxonomic_scope:
+    domains_16s: ["Bacteria", "Archaea"]
+    domain_18s: "Eukaryota"
+    levels: ["phylum", "family"]
+
+# Data Processing and Cleanup
+# ---------------------------
+data_processing:
+  # Columns to remove during processing (duplicates and unnecessary columns)
+  columns_to_remove:
+    - "Census_OTU_Count"          # Duplicate of census_otu_count
+    - "NCBI_Species_Count"        # Duplicate of ncbi_species_count
+    - "NCBI_Genome_Count"         # Duplicate of ncbi_genome_count
+    - "Isolate_Count"             # Duplicate of isolate_count
+    - "Novelty_Ratio"             # Duplicate of novelty_factor
+    - "Coverage_Factor"           # Duplicate of overrepresentation_factor
+    - "Domain"                    # Redundant uppercase version
+    - "Level"                     # Obvious from filename
+    - "coverage_percentage"       # Not needed for visualization
+  
+  # Column standardization
+  standardize_columns:
+    first_column_name: "Taxon"    # Rename first column to "Taxon"
+    add_computed_columns: true    # Add Circle_Size, Division, flags
+  
+  # Required columns for processing (validation)
+  required_columns:
+    - "census_otu_count"
+    - "ncbi_species_count"
+    - "ncbi_genome_count"
+    - "isolate_count"
+    - "novelty_factor"
+    - "overrepresentation_factor"
+    - "domain"
+
+# Circle Size Calculation
+# -----------------------
+circle_sizing:
+  # Size mapping based on isolate percentage (isolate_count / ncbi_genome_count * 100)
+  size_mapping:
+    zero_percent: 25              # Circle size for 0% isolates (poorly cultured)
+    low_percent: 20               # Circle size for <10% isolates
+    medium_percent: 15            # Circle size for <50% isolates
+    high_percent: 10              # Circle size for ≥50% isolates (well cultured)
+  
+  # Thresholds for size categories
+  size_thresholds:
+    low_threshold: 10.0           # Below this % = low category
+    medium_threshold: 50.0        # Below this % = medium category
+  
+  # Inverted scale explanation
+  scale_logic: "Larger circles represent poorly cultured organisms (low isolate percentage)"
+
+# Data Organization Rules
+# ----------------------
+organization:
+  # Sorting order for source data output
+  sort_order:
+    primary: "novelty_first"      # Novelty taxa first
+    secondary: "coverage_second"  # Coverage taxa second  
+    tertiary: "alphabetical"      # Remaining taxa alphabetically
+  
+  # Sorting directions
+  sort_directions:
+    novelty_factor: "descending"  # Highest novelty first
+    overrepresentation_factor: "descending"  # Highest coverage first
+    taxon_name: "ascending"       # Alphabetical for others
+  
+  # Flag assignment
+  flag_assignment:
+    novelty_flag: "Is_Top_Novelty"
+    coverage_flag: "Is_Top_Coverage"
+    flag_logic: "threshold_and_top_n"  # Must meet threshold AND be in top N
+
+# Quality Control
+# ---------------
+quality_control:
+  # Validation checks
+  validation:
+    check_file_existence: true
+    check_required_columns: true
+    check_numeric_columns: ["census_otu_count", "ncbi_species_count", "novelty_factor", "overrepresentation_factor"]
+    check_positive_counts: true
+  
+  # Minimum data requirements
+  minimum_requirements:
+    min_taxa_per_dataset: 1       # Minimum taxa required to proceed
+    min_novelty_candidates: 0     # Minimum novelty candidates (0 = no minimum)
+    min_coverage_candidates: 0    # Minimum coverage candidates (0 = no minimum)
+  
+  # Error handling
+  error_handling:
+    continue_on_missing_files: false
+    continue_on_empty_datasets: true
+    continue_on_validation_errors: false
+
+# Output Specifications
+# --------------------
+output:
+  # Final source data structure (22 columns expected)
+  expected_columns:
+    core_data: 18                 # Original data columns (1-18)
+    computed_columns: 4           # Added columns (Circle_Size, Division, flags)
+    total_expected: 22            # Total columns in clean output
+  
+  # Column order in output
+  column_order:
+    - "Taxon"                     # 1. Taxonomic name
+    - "census_otu_count"          # 2. Census OTU count
+    - "census_size_count"         # 3. Census size count
+    - "otu_percentage"            # 4. OTU percentage
+    - "size_percentage"           # 5. Size percentage
+    - "ncbi_genome_count"         # 6. NCBI genome count
+    - "ncbi_species_count"        # 7. NCBI species count
+    - "isolate_count"             # 8. Isolate count
+    - "genome_pct_db"             # 9. Genome percentage in database
+    - "species_pct"               # 10. Species percentage
+    - "isolate_percentage"        # 11. Isolate percentage
+    - "novelty_factor"            # 12. Novelty factor
+    - "overrepresentation_factor" # 13. Overrepresentation factor
+    - "direct_matches"            # 14. Direct matches
+    - "lineage_matches"           # 15. Lineage matches
+    - "total_matches"             # 16. Total matches
+    - "match_status"              # 17. Match status
+    - "domain"                    # 18. Domain
+    - "Circle_Size"               # 19. Computed circle size
+    - "Division"                  # 20. Division/Phylum info
+    - "Is_Top_Novelty"            # 21. Novelty flag
+    - "Is_Top_Coverage"           # 22. Coverage flag
+  
+  # File format settings
+  file_format:
+    format: "CSV"
+    include_row_names: false
+    quote_strings: true
+    decimal_separator: "."
+
+# Current Status Documentation
+# ---------------------------
+current_status:
+  # Expected flag counts based on current data (as of last update)
+  expected_flag_counts:
+    Archaea_family: {novelty: 10, coverage: 5}
+    Archaea_phylum: {novelty: 4, coverage: 0}
+    Bacteria_family: {novelty: 10, coverage: 10}
+    Bacteria_phylum: {novelty: 10, coverage: 7}
+    Eukaryota_family: {novelty: 10, coverage: 10}
+    Eukaryota_phylum: {novelty: 10, coverage: 2}
+  
+  # Notes on flag counts
+  flag_count_notes: |
+    Flag counts may be less than 10 if fewer taxa meet the threshold criteria.
+    This is expected behavior - we only flag taxa that genuinely meet the >1.0 threshold
+    AND are in the top N by their respective factors.
+
+# Advanced Settings
+# ----------------
+advanced:
+  # Performance settings
+  max_taxa_per_file: 10000       # Maximum taxa to process per file
+  
+  # Reproducibility
+  random_seed: 42
+  set_seed_for_sorting: false     # Whether to set seed for reproducible sorting
+  
+  # Debug and logging
+  verbose_logging: true
+  save_processing_log: true
+  log_file_pattern: "source_data_processing_{timestamp}.log"

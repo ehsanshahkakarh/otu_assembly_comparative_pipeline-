@@ -15,6 +15,17 @@ suppressPackageStartupMessages({
 })
 
 # ============================================================================
+# Load shared taxonomic color mapping configuration
+# This ensures consistency across all visualization types
+load_shared_color_config <- function() {
+  config_path <- file.path("..", "shared_config", "taxonomic_color_mapping.yaml")
+  if (!file.exists(config_path)) {
+    stop("Shared color config not found at: ", config_path)
+  }
+  yaml::read_yaml(config_path)
+}
+
+# ============================================================================
 # BACTERIA PHYLA COLOR ASSIGNMENT SECTION
 # ============================================================================
 # Assign specific colors to bacterial phyla from the BAC color scheme
@@ -26,12 +37,16 @@ suppressPackageStartupMessages({
 #                   "#b1caae","#c37231","#68a200","#4bca8f","#dbb579","#ffb06b",
 #                   "#386529","#74c4d2","#7cce54","#b8e08f","#45ffea","#994417"]
 
-# Master color palette for bacteria (using your BAC colors)
+# Master color palette for bacteria using shared taxonomic color mapping
 get_master_bacteria_color_palette <- function() {
-  bacteria_colors <- c("#548877", "#82dd83", "#ff7200", "#ccdd75", "#a58c26",
-                      "#e5b726", "#b1caae", "#c37231", "#68a200", "#4bca8f",
-                      "#dbb579", "#ffb06b", "#386529", "#74c4d2", "#7cce54",
-                      "#b8e08f", "#45ffea", "#994417")
+  # Load shared color configuration
+  color_config <- load_shared_color_config()
+
+  # Extract bacteria colors from shared config
+  bacteria_colors <- unname(unlist(color_config$bacteria_colors))
+
+  cat("🎨 LOADED SHARED BACTERIA COLOR CONFIG:\n")
+  cat(paste("   Bacteria colors:", length(bacteria_colors), "\n"))
 
   return(bacteria_colors)
 }
@@ -367,22 +382,28 @@ create_bacteria_scatter <- function(data, level) {
   }
 
   if (nrow(top_data) > 0) {
-    # Get unique phyla and assign colors (same method as comprehensive script)
+    # Get unique phyla and assign colors using shared config mapping
     plot_phyla <- sort(unique(top_data$Phylum[!top_data$Phylum %in% c("Unknown", "", "Other", NA)]))
     cat(paste("Plot phyla found:", paste(plot_phyla, collapse = ", "), "\n"))
 
-    # Get master color palette and assign sequentially (like comprehensive script)
-    master_colors <- get_master_bacteria_color_palette()
+    # Load shared color configuration for specific phylum-to-color mapping
+    color_config <- load_shared_color_config()
 
-    # Assign colors sequentially to phyla (same as comprehensive script method)
-    # Handle case where we have more phyla than colors by cycling through colors
-    color_indices <- ((1:length(plot_phyla) - 1) %% length(master_colors)) + 1
-    phyla_colors <- master_colors[color_indices]
+    # Assign colors using specific phylum-to-color mapping from shared config
+    phyla_colors <- sapply(plot_phyla, function(phylum) {
+      if (phylum %in% names(color_config$bacteria_colors)) {
+        return(color_config$bacteria_colors[[phylum]])
+      } else {
+        # Use fallback colors for unmapped phyla
+        fallback_colors <- unlist(color_config$fallback_colors$bacteria)
+        return(fallback_colors[((match(phylum, plot_phyla) - 1) %% length(fallback_colors)) + 1])
+      }
+    })
     names(phyla_colors) <- plot_phyla
 
-    cat("Final color mapping:\n")
+    cat("🎨 BACTERIA PHYLUM COLOR MAPPING:\n")
     for (i in 1:length(phyla_colors)) {
-      cat(paste("  ", names(phyla_colors)[i], "->", phyla_colors[i], "\n"))
+      cat(paste("   ", names(phyla_colors)[i], "->", phyla_colors[i], "\n"))
     }
 
     # Add colored points with black outline
@@ -644,19 +665,19 @@ main <- function() {
 
 # Function to create color legend reference
 create_color_legend_reference <- function() {
-  # Create a reference file showing the BAC color palette
-  bacteria_colors <- get_master_bacteria_color_palette()
+  # Create a reference file showing the shared bacteria color mapping
+  color_config <- load_shared_color_config()
 
   legend_data <- data.frame(
-    Color_Index = 1:length(bacteria_colors),
-    Color = bacteria_colors,
-    Note = "Colors assigned sequentially to phyla as they appear in data",
+    Phylum = names(color_config$bacteria_colors),
+    Color = unlist(color_config$bacteria_colors),
+    Note = "Colors assigned using shared taxonomic color mapping",
     stringsAsFactors = FALSE
   )
 
-  legend_file <- file.path(config$source_data_dir, "bacteria_color_palette.csv")
+  legend_file <- file.path(config$source_data_dir, "bacteria_color_mapping.csv")
   write.csv(legend_data, legend_file, row.names = FALSE)
-  cat(paste("🎨 Color palette saved:", legend_file, "\n"))
+  cat(paste("🎨 Shared color mapping saved:", legend_file, "\n"))
 }
 
 # Execute main function if script is run directly

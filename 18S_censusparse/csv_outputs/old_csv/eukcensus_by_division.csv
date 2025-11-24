@@ -1,0 +1,23 @@
+Name_to_use,taxid,otu_count,size_count,lineage,lineage_ranks,lineage_taxids
+Alveolata,33630,9042,60488,cellular organisms;Eukaryota;Sar;Alveolata,cellular root;domain;clade;clade,131567;2759;2698737;33630
+Amoebozoa.U.division,554915,4214,15143,cellular organisms;Eukaryota;Amoebozoa,cellular root;domain;clade,131567;2759;554915
+Archaeplastida.U.division,NA,342,1480,,,
+Centroplasthelida,193537,185,530,cellular organisms;Eukaryota;Haptista;Centroplasthelida,cellular root;domain;clade;class,131567;2759;2608109;193537
+Chlorophyta,3041,1505,14229,cellular organisms;Eukaryota;Viridiplantae;Chlorophyta,cellular root;domain;kingdom;phylum,131567;2759;33090;3041
+Discoba,2611352,5496,21089,cellular organisms;Eukaryota;Discoba,cellular root;domain;clade,131567;2759;2611352
+Discosea,555280,399,1365,cellular organisms;Eukaryota;Amoebozoa;Discosea,cellular root;domain;clade;phylum,131567;2759;554915;555280
+Eukaryota.U.division,2759,9333,39360,cellular organisms;Eukaryota,cellular root;domain,131567;2759
+Evosea,229752,2431,13475,cellular organisms;Eukaryota;Opisthokonta;Metazoa;Eumetazoa;Bilateria;Protostomia;Ecdysozoa;Panarthropoda;Arthropoda;Chelicerata;Arachnida;Acari;Acariformes;Sarcoptiformes;Oribatida;Parhyposomata;Parhypochthonioidea;Parhypochthoniidae;Parhypochthonius,cellular root;domain;clade;kingdom;clade;clade;clade;clade;clade;phylum;subphylum;class;subclass;superorder;order;suborder;infraorder;superfamily;family;genus,131567;2759;33154;33208;6072;33213;33317;1206794;88770;6656;6843;6854;6933;6946;83137;66551;229888;83160;229751;229752
+Hemimastigophora,2489521,20,81,cellular organisms;Eukaryota;Hemimastigophora,cellular root;domain;phylum,131567;2759;2489521
+Metamonada,2611341,573,3242,cellular organisms;Eukaryota;Metamonada,cellular root;domain;clade,131567;2759;2611341
+Nebulidia,3004449,1,3,cellular organisms;Eukaryota;Provora;Nebulidia,cellular root;domain;clade;phylum,131567;2759;3004206;3004449
+Nibbleridia,3004207,3,11,cellular organisms;Eukaryota;Provora;Nibbleridia,cellular root;domain;clade;phylum,131567;2759;3004206;3004207
+Opisthokonta,7028,24345,158758,cellular organisms;Eukaryota;Opisthokonta;Metazoa;Eumetazoa;Bilateria;Protostomia;Ecdysozoa;Panarthropoda;Arthropoda;Mandibulata;Pancrustacea;Hexapoda;Insecta;Dicondylia;Pterygota;Neoptera;Paraneoptera;Hemiptera;Sternorrhyncha;Aphidomorpha;Aphidoidea;Aphididae;Aphidinae;Macrosiphini;Acyrthosiphon,cellular root;domain;clade;kingdom;clade;clade;clade;clade;clade;phylum;clade;clade;subphylum;class;clade;subclass;infraclass;cohort;order;suborder;infraorder;superfamily;family;subfamily;tribe;genus,131567;2759;33154;33208;6072;33213;33317;1206794;88770;6656;197563;197562;6960;50557;85512;7496;33340;33342;7524;33373;33380;33385;27482;133076;33386;7028
+Picozoa,419944,51,366,cellular organisms;Eukaryota;Eukaryota incertae sedis;Picozoa,cellular root;domain;no rank;phylum,131567;2759;2683617;419944
+Rhizaria,543769,5126,24072,cellular organisms;Eukaryota;Sar;Rhizaria,cellular root;domain;clade;clade,131567;2759;2698737;543769
+Rhodophyta,2763,2,21,cellular organisms;Eukaryota;Rhodophyta,cellular root;domain;phylum,131567;2759;2763
+Rigifilida,1237875,79,246,cellular organisms;Eukaryota;CRuMs;Rigifilida,cellular root;domain;clade;order,131567;2759;2608240;1237875
+Stramenopiles,33634,3668,24799,cellular organisms;Eukaryota;Sar;Stramenopiles,cellular root;domain;clade;clade,131567;2759;2698737;33634
+Streptophyta,35493,2252,16099,cellular organisms;Eukaryota;Viridiplantae;Streptophyta,cellular root;domain;kingdom;phylum,131567;2759;33090;35493
+TSAR.U.division,NA,509,1675,,,
+Tubulinea,555369,1323,4810,cellular organisms;Eukaryota;Amoebozoa;Tubulinea,cellular root;domain;clade;phylum,131567;2759;554915;555369

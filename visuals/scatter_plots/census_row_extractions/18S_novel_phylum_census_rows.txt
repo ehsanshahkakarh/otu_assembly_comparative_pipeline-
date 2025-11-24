@@ -1,0 +1,114 @@
+# Census Row Extraction Results
+# Generated: 2025-11-12 14:21:06
+# Command: python extract_census_rows.py --gene 18S --category novel --rank phylum
+# ======================================================================
+
+🚀 STARTING CENSUS ROW EXTRACTION
+Gene: 18S | Category: novel | Rank: phylum
+📊 Loaded census data: 22 total phylum entries from 18S
+📋 Loaded 10 novel eukaryota phylum taxa from JSON
+
+🔍 EXTRACTING CENSUS ROWS FOR NOVEL EUKARYOTA PHYLUM TAXA
+==========================================================================================
+✅ FOUND: 10 taxa
+❌ NOT FOUND: 0 taxa
+📊 MATCH RATE: 10/10 (100.0%)
+
+📋 COMPLETE CENSUS ROWS:
+==========================================================================================
+
+[ 1] Opisthokonta
+     OTU Count: 24,345
+     Size Count: 158,758
+     TaxID: 33154.0
+     Lineage: cellular organisms;Eukaryota;Opisthokonta
+     Ranks: cellular root;domain;clade
+     Lineage TaxIDs: 131567;2759;33154
+------------------------------------------------------------------------------------------
+
+[ 2] Alveolata
+     OTU Count: 9,042
+     Size Count: 60,488
+     TaxID: 33630.0
+     Lineage: cellular organisms;Eukaryota;Sar;Alveolata
+     Ranks: cellular root;domain;clade;clade
+     Lineage TaxIDs: 131567;2759;2698737;33630
+------------------------------------------------------------------------------------------
+
+[ 3] Discoba
+     OTU Count: 5,496
+     Size Count: 21,089
+     TaxID: 2611352.0
+     Lineage: cellular organisms;Eukaryota;Discoba
+     Ranks: cellular root;domain;clade
+     Lineage TaxIDs: 131567;2759;2611352
+------------------------------------------------------------------------------------------
+
+[ 4] Rhizaria
+     OTU Count: 5,126
+     Size Count: 24,072
+     TaxID: 543769.0
+     Lineage: cellular organisms;Eukaryota;Sar;Rhizaria
+     Ranks: cellular root;domain;clade;clade
+     Lineage TaxIDs: 131567;2759;2698737;543769
+------------------------------------------------------------------------------------------
+
+[ 5] Stramenopiles
+     OTU Count: 3,668
+     Size Count: 24,799
+     TaxID: 33634.0
+     Lineage: cellular organisms;Eukaryota;Sar;Stramenopiles
+     Ranks: cellular root;domain;clade;clade
+     Lineage TaxIDs: 131567;2759;2698737;33634
+------------------------------------------------------------------------------------------
+
+[ 6] Evosea
+     OTU Count: 2,431
+     Size Count: 13,475
+     TaxID: 2605435.0
+     Lineage: cellular organisms;Eukaryota;Amoebozoa;Evosea
+     Ranks: cellular root;domain;clade;phylum
+     Lineage TaxIDs: 131567;2759;554915;2605435
+------------------------------------------------------------------------------------------
+
+[ 7] Chlorophyta
+     OTU Count: 1,505
+     Size Count: 14,229
+     TaxID: 3041.0
+     Lineage: cellular organisms;Eukaryota;Viridiplantae;Chlorophyta
+     Ranks: cellular root;domain;kingdom;phylum
+     Lineage TaxIDs: 131567;2759;33090;3041
+------------------------------------------------------------------------------------------
+
+[ 8] Tubulinea
+     OTU Count: 1,323
+     Size Count: 4,810
+     TaxID: 555369.0
+     Lineage: cellular organisms;Eukaryota;Amoebozoa;Tubulinea
+     Ranks: cellular root;domain;clade;phylum
+     Lineage TaxIDs: 131567;2759;554915;555369
+------------------------------------------------------------------------------------------
+
+[ 9] Metamonada
+     OTU Count: 573
+     Size Count: 3,242
+     TaxID: 2611341.0
+     Lineage: cellular organisms;Eukaryota;Metamonada
+     Ranks: cellular root;domain;clade
+     Lineage TaxIDs: 131567;2759;2611341
+------------------------------------------------------------------------------------------
+
+[10] Discosea
+     OTU Count: 399
+     Size Count: 1,365
+     TaxID: 555280.0
+     Lineage: cellular organisms;Eukaryota;Amoebozoa;Discosea
+     Ranks: cellular root;domain;clade;phylum
+     Lineage TaxIDs: 131567;2759;554915;555280
+------------------------------------------------------------------------------------------
+
+📊 SUMMARY:
+   Total OTU count: 53,908
+   Average OTU per taxon: 5,390.8
+   Top taxon: Opisthokonta (24,345 OTUs)
+   Bottom taxon: Discosea (399 OTUs)
