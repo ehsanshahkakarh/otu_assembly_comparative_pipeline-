@@ -13,7 +13,7 @@
 !*.txt
 !.gitignore
 
-# Keep folders but ignore metadata files inside them
+# Keep folders but ignore metadata files inside them (CSV files kept blocked for now)
 metadata/*.csv
 metadata/*.tsv
 metadata/*.json

@@ -1,0 +1,4 @@
+Taxonomic_Level,Total_Taxa,Matched_Taxa,Taxa_Census_Only,Coverage_Percentage,Avg_Coverage,Median_Coverage
+Division,18,17,1,94.4%,89.70%,2.02%
+Family,170,72,98,42.4%,5.84%,0.00%
+Genus,283,103,180,36.4%,8.39%,0.00%
