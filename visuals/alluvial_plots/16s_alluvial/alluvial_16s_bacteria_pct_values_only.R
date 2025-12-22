@@ -1,20 +1,20 @@
 #!/usr/bin/env Rscript
 
 # ============================================================================
-# 16S Archaeal Alluvial Plot - PERCENTAGE VALUES (Archaea-Specific Approach)
+# 16S Bacterial Alluvial Plot - PERCENTAGE VALUES (Bacteria-Specific Approach)
 # ============================================================================
-# This script creates percentage-based alluvial plots for 16S archaeal data
-# using ONLY archaea-specific data filtering and percentage calculations.
+# This script creates percentage-based alluvial plots for 16S bacterial data
+# using ONLY bacteria-specific data filtering and percentage calculations.
 # 
 # Data Flow: Genbank Genomes → IMG Sequences → 16S OTUs → Genbank Species
 # 
 # Key Features:
-# - Uses only archaea domain data for percentage calculations
+# - Uses only bacteria domain data for percentage calculations
 # - Advanced alluvial preprocessing for clean flows
-# - Professional archaea color schemes
+# - Professional bacteria color schemes from shared config
 # - Optimized aesthetics (thin nodes, elegant flows)
-# - Percentage normalization based on archaea-only totals
-# - Archaea-specific phyla organization and filtering
+# - Percentage normalization based on bacteria-only totals
+# - Bacteria-specific phyla organization and filtering
 # ============================================================================
 
 library(ggplot2)
@@ -24,8 +24,8 @@ library(scales)
 library(tidyr)
 library(yaml)
 
-cat("=== 16S Archaea Alluvial Plot (Percentage Values) ===\n")
-cat("Using archaea-specific data approach for reliable visualization\n\n")
+cat("=== 16S Bacteria Alluvial Plot (Percentage Values) ===\n")
+cat("Using bacteria-specific data approach for reliable visualization\n\n")
 
 # Create output directories if they don't exist
 if (!dir.exists("figures")) {
@@ -62,30 +62,66 @@ cat("Data loaded successfully\n")
 cat("16S merged data:", nrow(data_16s), "rows\n")
 cat("16S census data:", nrow(census_division_data), "rows\n\n")
 
-# Process archaea-specific data
-process_archaea_data <- function() {
+# Load shared color configuration
+source("../../shared_config/color_mapping_functions.R")
+
+# Load colors from shared configuration
+cat("Loading colors from shared configuration...\n")
+color_config <- load_taxonomic_colors("../../shared_config/taxonomic_color_mapping.yaml")
+
+# Get bacterial colors from shared configuration
+get_bacterial_colors <- function() {
+  bacteria_list <- color_config$bacteria_colors
+  bacteria_colors <- character(length(bacteria_list))
+  names(bacteria_colors) <- names(bacteria_list)
+  
+  for (i in 1:length(bacteria_list)) {
+    bacteria_colors[names(bacteria_list)[i]] <- bacteria_list[[i]]
+  }
+  
+  return(bacteria_colors)
+}
+
+bacterial_colors <- get_bacterial_colors()
+cat("Loaded", length(bacterial_colors), "bacterial colors from shared configuration\n")
+
+# Extended color palette for unmapped phyla
+extended_colors <- c(
+  "#e6194B", "#3cb44b", "#ffe119", "#4363d8", "#f58231",
+  "#911eb4", "#42d4f4", "#f032e6", "#bfef45", "#fabed4",
+  "#469990", "#dcbeff", "#9A6324", "#fffac8", "#800000",
+  "#aaffc3", "#808000", "#ffd8b1", "#000075", "#a9a9a9"
+)
+
+# Process bacteria-specific data
+process_bacteria_data <- function() {
   matched_data <- data_16s %>%
     filter(match_status == 'matched') %>%
     filter(!is.na(census_size_count) & !is.na(census_otu_count) &
            !is.na(ncbi_genome_count) & !is.na(ncbi_species_count) & !is.na(phylum)) %>%
     filter(phylum != "N/A" & phylum != "" & !is.null(phylum)) %>%
-    filter(domain == "Archaea")  # ARCHAEA ONLY
+    filter(domain == "Bacteria")  # BACTERIA ONLY
   
   return(matched_data)
 }
 
-# Get archaea .U. entries
-get_archaea_u_entries <- function(census_data) {
-  # Filter for archaea .U. entries with specific patterns
+# Get bacteria .U. entries
+get_bacteria_u_entries <- function(census_data) {
+  # Filter for bacterial .U. entries with specific patterns
   u_entries <- census_data %>%
     filter(grepl("\\.U\\.", Name_to_use)) %>%
-    filter(otu_count >= 10) %>%
-    filter(grepl("Archaea", Name_to_use)) %>%
+    filter(otu_count >= 50) %>%
+    filter(grepl("Bacteria", Name_to_use) |
+           grepl("Proteobacteria", Name_to_use) |
+           grepl("Firmicutes", Name_to_use) |
+           grepl("Bacteroidetes", Name_to_use) |
+           grepl("Actinobacteria", Name_to_use) |
+           (!grepl("Eukaryota", Name_to_use) & !grepl("Archaea", Name_to_use))) %>%
     select(phylum = Name_to_use, census_otu_count = otu_count, census_size_count = size_count) %>%
     mutate(
       ncbi_genome_count = 0,
       ncbi_species_count = 0,
-      domain = "Archaea",
+      domain = "Bacteria",
       match_status = "census_only"
     )
   
@@ -93,26 +129,26 @@ get_archaea_u_entries <- function(census_data) {
 }
 
 # Process the data
-matched_data <- process_archaea_data()
-u_entries <- get_archaea_u_entries(census_division_data)
+matched_data <- process_bacteria_data()
+u_entries <- get_bacteria_u_entries(census_division_data)
 
-cat("Archaea data processing results:\n")
-cat("  - Matched archaea phyla:", nrow(matched_data), "\n")
-cat("  - Archaea .U. entries:", nrow(u_entries), "\n")
+cat("Bacteria data processing results:\n")
+cat("  - Matched bacteria phyla:", nrow(matched_data), "\n")
+cat("  - Bacteria .U. entries:", nrow(u_entries), "\n")
 
-# Display archaea phyla found
+# Display bacteria phyla found
 if (nrow(matched_data) > 0) {
-  cat("\nArchaea phyla in dataset:\n")
-  archaea_phyla <- unique(matched_data$phylum)
-  for (i in 1:length(archaea_phyla)) {
-    phylum_data <- matched_data[matched_data$phylum == archaea_phyla[i], ]
+  cat("\nBacteria phyla in dataset:\n")
+  bacteria_phyla <- unique(matched_data$phylum)
+  for (i in 1:length(bacteria_phyla)) {
+    phylum_data <- matched_data[matched_data$phylum == bacteria_phyla[i], ]
     total_genomes <- sum(phylum_data$ncbi_genome_count, na.rm = TRUE)
     total_species <- sum(phylum_data$ncbi_species_count, na.rm = TRUE)
     total_otus <- sum(phylum_data$census_otu_count, na.rm = TRUE)
     total_sequences <- sum(phylum_data$census_size_count, na.rm = TRUE)
-    
-    cat(sprintf("  %d. %-20s | Genomes: %6s | Species: %6s | OTUs: %8s | Sequences: %8s\n",
-                i, archaea_phyla[i],
+
+    cat(sprintf("  %d. %-25s | Genomes: %8s | Species: %8s | OTUs: %8s | Sequences: %8s\n",
+                i, bacteria_phyla[i],
                 format(total_genomes, big.mark = ","),
                 format(total_species, big.mark = ","),
                 format(total_otus, big.mark = ","),
@@ -120,46 +156,74 @@ if (nrow(matched_data) > 0) {
   }
 }
 
-# Combine matched data with .U. entries
+# Combine matched bacteria data with bacteria .U. entries
 combined_data <- bind_rows(matched_data, u_entries)
 
-# Calculate totals for percentage calculations (ARCHAEA-ONLY)
+# Calculate totals from BACTERIA-ONLY data for proper percentage calculations
 total_genome_count <- sum(matched_data$ncbi_genome_count, na.rm = TRUE)
 total_species_count <- sum(matched_data$ncbi_species_count, na.rm = TRUE)
 
-# For sequences and OTUs, use COMBINED archaea data (matched + .U. entries)
-# This matches the approach used in 18S scripts
-total_otu_count <- sum(combined_data$census_otu_count, na.rm = TRUE)
+# For sequences and OTUs, use COMBINED bacteria data (matched + .U. entries)
 total_size_count <- sum(combined_data$census_size_count, na.rm = TRUE)
+total_otu_count <- sum(combined_data$census_otu_count, na.rm = TRUE)
 
-cat("\nTotal counts for percentage calculations (ARCHAEA-ONLY):\n")
-cat("  - Total Archaea Genomes:", scales::comma(total_genome_count), "\n")
-cat("  - Total Archaea Species:", scales::comma(total_species_count), "\n")
-cat("  - Total 16S OTUs:", scales::comma(total_otu_count), "\n")
-cat("  - Total 16S Sequences:", scales::comma(total_size_count), "\n\n")
+cat(paste("\nTotal counts (BACTERIA-ONLY calculations):\n"))
+cat(paste("  Bacteria Genomes:", scales::comma(total_genome_count), "\n"))
+cat("  Bacteria 16S Sequences:", scales::comma(total_size_count), "\n")
+cat("  Bacteria 16S OTUs:", scales::comma(total_otu_count), "\n")
+cat(paste("  Bacteria Species:", scales::comma(total_species_count), "\n\n"))
 
-# Select top entries by total representation (archaea-appropriate number)
-top_n <- 6  # Fewer archaea phyla than bacteria
-
-top_phyla <- combined_data %>%
+# Calculate percentages for matched data
+matched_data <- matched_data %>%
   mutate(
     genome_pct = (ncbi_genome_count / total_genome_count) * 100,
     species_pct = (ncbi_species_count / total_species_count) * 100,
-    otu_pct = (census_otu_count / total_otu_count) * 100,
     size_pct = (census_size_count / total_size_count) * 100,
-    total_representation = genome_pct + species_pct + otu_pct + size_pct
-  ) %>%
-  arrange(desc(total_representation)) %>%
-  head(top_n)
+    otu_pct = (census_otu_count / total_otu_count) * 100
+  )
 
-cat("Top archaea phyla selected by total representation:\n")
-for (i in 1:nrow(top_phyla)) {
-  entry_type <- if (top_phyla$match_status[i] == "census_only") "[.U.]" else "[matched]"
-  cat(sprintf("  %d. %-20s %6s | Total rep: %6.2f%%\n",
-              i, top_phyla$phylum[i], entry_type, top_phyla$total_representation[i]))
+# Calculate percentages for .U. entries
+if (nrow(u_entries) > 0) {
+  u_entries <- u_entries %>%
+    mutate(
+      genome_pct = 0,  # No genomes for .U. entries
+      species_pct = 0,  # No species for .U. entries
+      size_pct = (census_size_count / total_size_count) * 100,
+      otu_pct = (census_otu_count / total_otu_count) * 100
+    )
 }
 
-# Calculate "Other" category percentages
+# Combine matched and .U. data
+combined_data <- bind_rows(matched_data, u_entries)
+
+# Calculate total representation for each phylum (sum of all 4 percentages)
+combined_data <- combined_data %>%
+  mutate(total_representation = genome_pct + species_pct + size_pct + otu_pct)
+
+# Select top 12 bacteria phyla by total representation
+n_top <- 12
+top_phyla <- combined_data %>%
+  arrange(desc(total_representation)) %>%
+  head(n_top)
+
+cat(paste("Top", n_top, "bacteria phyla selected by total representation\n\n"))
+
+# Display selected phyla
+cat("=== Top", n_top, "Bacteria Phyla ===\n")
+for (i in 1:nrow(top_phyla)) {
+  entry_type <- if(grepl("\\.U\\.", top_phyla$phylum[i])) "(.U.)" else "(matched)"
+  cat(sprintf("%2d. %-25s %10s | Total Rep: %6.2f%% | Genomes: %6.2f%% | Species: %6.2f%% | OTUs: %6.2f%% | Seqs: %6.2f%%\n",
+              i,
+              top_phyla$phylum[i],
+              entry_type,
+              top_phyla$total_representation[i],
+              top_phyla$genome_pct[i],
+              top_phyla$species_pct[i],
+              top_phyla$otu_pct[i],
+              top_phyla$size_pct[i]))
+}
+
+# Calculate "Other" category
 other_data <- combined_data %>%
   filter(!phylum %in% top_phyla$phylum)
 
@@ -173,20 +237,19 @@ other_species_pct <- (other_species_count / total_species_count) * 100
 other_otu_pct <- (other_otu_count / total_otu_count) * 100
 other_size_pct <- (other_size_count / total_size_count) * 100
 
-cat(sprintf("\nOther category: %.2f%% total representation\n", 
-            other_genome_pct + other_species_pct + other_otu_pct + other_size_pct))
+cat(sprintf("\nOther category: %.2f%% genomes, %.2f%% species, %.2f%% OTUs, %.2f%% sequences\n\n",
+            other_genome_pct, other_species_pct, other_otu_pct, other_size_pct))
 
 # Create long format data for alluvial plot
 long_data <- data.frame()
 
-# Add top phyla data (handling .U. entries correctly)
 for (i in 1:nrow(top_phyla)) {
-  # Check if this is a .U. entry (census_only)
-  is_u_entry <- top_phyla$match_status[i] == "census_only"
+  phylum_name <- top_phyla$phylum[i]
+  is_u_entry <- grepl("\\.U\\.", phylum_name)
 
   phylum_data <- data.frame(
     alluvium = rep(i, 4),
-    phylum = rep(paste0(i, ". ", top_phyla$phylum[i]), 4),
+    phylum = rep(phylum_name, 4),
     x = c("Genbank_Genome_%", "IMG_Genome_%", "16S_OTU_%", "Genbank_Species_%"),
     stratum = c("Genbank_Genome_%", "IMG_Genome_%", "16S_OTU_%", "Genbank_Species_%"),
     percentage = c(
@@ -201,7 +264,7 @@ for (i in 1:nrow(top_phyla)) {
 }
 
 # Add "Other" category
-other_data <- data.frame(
+other_data_long <- data.frame(
   alluvium = rep(nrow(top_phyla) + 1, 4),
   phylum = rep("Other", 4),
   x = c("Genbank_Genome_%", "IMG_Genome_%", "16S_OTU_%", "Genbank_Species_%"),
@@ -210,7 +273,7 @@ other_data <- data.frame(
   stringsAsFactors = FALSE
 )
 
-long_data <- rbind(long_data, other_data)
+long_data <- rbind(long_data, other_data_long)
 
 # Fix x-axis ordering
 long_data$x <- factor(long_data$x, levels = c("Genbank_Genome_%", "IMG_Genome_%", "16S_OTU_%", "Genbank_Species_%"))
@@ -218,85 +281,58 @@ long_data$stratum <- factor(long_data$stratum, levels = c("Genbank_Genome_%", "I
 
 cat("Long data created with", nrow(long_data), "rows\n")
 
-# ADVANCED ALLUVIAL PREPROCESSING - Fix aesthetic issues
+# ADVANCED ALLUVIAL PREPROCESSING - Keep original alluvium IDs intact
 cat("Applying advanced alluvial preprocessing...\n")
 
-# Handle zero flows properly for ggalluvial
-# Simple solution: Replace zero values with minimal visible values (0.1)
-# This keeps the alluvium structure intact while making zeros barely visible
-
+# Keep original data structure - DO NOT reassign alluvium IDs!
 long_data_f <- long_data
 
-# Replace zero values with minimal flow width (0.1%)
-long_data_f$percentage[long_data_f$percentage == 0] <- 0.1
+# Replace zero values with minimal visible values (0.1%) for .U. entries only
+long_data_f <- long_data_f %>%
+  mutate(percentage = ifelse(percentage == 0 & grepl("\\.U\\.", phylum), 0.1, percentage))
 
-cat("Advanced preprocessing complete - replaced zero values with 0.1% minimal flows\n")
+# Order phyla by size at the first axis (prettier strata stacking)
+first_axis <- sort(unique(long_data_f$x))[1]
+sizes_first <- long_data_f %>%
+  filter(x == first_axis) %>%
+  arrange(desc(percentage)) %>%
+  select(phylum) %>% pull()
 
-# Load shared color configuration
-source("../../shared_config/color_mapping_functions.R")
+long_data_f <- long_data_f %>%
+  mutate(phylum = factor(phylum, levels = unique(c(sizes_first, setdiff(phylum, sizes_first)))))
 
-# Load archaea colors from shared configuration
-cat("Loading archaea colors from shared configuration...\n")
-color_config <- load_taxonomic_colors("../../shared_config/taxonomic_color_mapping.yaml")
+cat("Advanced preprocessing complete - preserved original alluvium IDs and data structure\n")
 
-# Extract archaea colors and convert to named vector
-archaea_colors_list <- color_config$archaea_colors
-archaea_colors <- character(length(archaea_colors_list))
-names(archaea_colors) <- names(archaea_colors_list)
-for (name in names(archaea_colors_list)) {
-  archaea_colors[name] <- as.character(archaea_colors_list[[name]])
-}
+# Assign colors to phyla using shared configuration
+cat("\nAssigning colors to phyla from shared configuration...\n")
 
-# Extended color palette for unmapped phyla
-get_extended_colors <- function() {
-  extended_colors <- c(
-    "#8c564b", "#e377c2", "#7f7f7f", "#bcbd22", "#17becf",
-    "#aec7e8", "#ffbb78", "#98df8a", "#ff9896", "#c5b0d5",
-    "#c49c94", "#f7b6d3", "#c7c7c7", "#dbdb8d", "#9edae5"
-  )
-  return(extended_colors)
-}
+phyla_in_plot <- unique(long_data_f$phylum)
+colors <- character(length(phyla_in_plot))
+names(colors) <- phyla_in_plot
 
-# Generate colors for the plot using shared configuration
-extended_colors <- get_extended_colors()
+for (i in 1:length(phyla_in_plot)) {
+  phylum_name <- as.character(phyla_in_plot[i])
 
-# Map colors to phyla in the plot
-unique_phyla <- unique(long_data_f$phylum)
-colors <- character(length(unique_phyla))
-names(colors) <- unique_phyla
-
-for (i in 1:length(unique_phyla)) {
-  phylum_name <- unique_phyla[i]
-
-  # Skip "Other" category for now
+  # Handle "Other" category
   if (phylum_name == "Other") {
+    colors[i] <- "#CCCCCC"  # Light gray for "Other"
     next
   }
 
-  # Extract base phylum name (remove numbering)
-  base_phylum <- gsub("^\\d+\\. ", "", phylum_name)
+  # Clean phylum name for matching (remove .U. suffix if present)
+  clean_phylum <- gsub("\\.U\\..*$", "", phylum_name)
 
-  # Check for .U. entries first and assign distinctive color
-  if (grepl("\\.U\\.", base_phylum)) {
-    colors[phylum_name] <- "#9ACD32"  # Yellow-green - distinctive for unclassified entries
-  } else if (base_phylum %in% names(archaea_colors)) {
-    # Try to match with archaea color palette
-    colors[phylum_name] <- archaea_colors[base_phylum]
+  # Try to match with bacterial color palette from shared config
+  if (clean_phylum %in% names(bacterial_colors)) {
+    colors[i] <- bacterial_colors[clean_phylum]
   } else {
-    # Use extended colors for unmapped phyla
-    color_index <- ((i - 1) %% length(extended_colors)) + 1
-    colors[phylum_name] <- extended_colors[color_index]
+    # Use extended fallback colors for unmapped phyla
+    fallback_index <- ((i - 1) %% length(extended_colors)) + 1
+    colors[i] <- extended_colors[fallback_index]
   }
 }
 
-# Set "Other" category to light gray
-colors["Other"] <- "#CCCCCC"
-
-cat("Color mapping for archaea phyla:\n")
-for (i in 1:length(colors)) {
-  cat(sprintf("  %-25s: %s\n", names(colors)[i], colors[i]))
-}
-cat("\n")
+cat("Colors assigned to", length(colors), "phyla\n")
 
 # Prepare node annotations data
 node_labels <- data.frame(
@@ -312,7 +348,7 @@ node_labels <- data.frame(
   stringsAsFactors = FALSE
 )
 
-# Create ADVANCED percentage alluvial plot with optimized aesthetics
+# Create ADVANCED alluvial plot with optimized aesthetics
 p_pct <- ggplot(
   long_data_f,
   aes(x = x, stratum = phylum, alluvium = alluvium, y = percentage, fill = phylum)
@@ -326,10 +362,10 @@ p_pct <- ggplot(
   # Add node labels with counts
   geom_text(data = node_labels, aes(x = x, y = y, label = label, fill = NULL, stratum = NULL, alluvium = NULL),
             inherit.aes = FALSE, size = 6, fontface = "bold", hjust = 0.5, vjust = 0) +
-  scale_fill_manual(values = colors, name = "Archaea Division") +
+  scale_fill_manual(values = colors, name = "Phylum") +
   scale_x_discrete(expand = expansion(mult = 0, add = 0)) +
   scale_y_continuous(
-    labels = function(x) paste0(round(x, 1), "%"),
+    labels = function(x) paste0(x, "%"),
     limits = c(0, 110),  # Increased to accommodate node labels
     expand = expansion(mult = c(0, 0))
   ) +
@@ -338,75 +374,47 @@ p_pct <- ggplot(
     # No node titles - clean minimal appearance
     axis.text.x = element_blank(),
     # Y-axis ticks - larger and bold
-    axis.text.y = element_text(size = 12, color = "black", face = "bold"),
-    axis.title.y = element_text(size = 14, face = "bold", margin = margin(r = 15)),
+    axis.text.y = element_text(size = 20, face = "bold"),
     axis.title.x = element_blank(),
-    # Legend positioning and styling
+    axis.title.y = element_text(size = 24, face = "bold"),
+    panel.grid.major.x = element_blank(),
+    panel.grid.minor = element_blank(),
+    # Legend styling - moved much further right
     legend.position = "right",
-    legend.title = element_text(size = 13, face = "bold"),
-    legend.text = element_text(size = 11),
-    legend.key.size = unit(0.8, "cm"),
-    legend.margin = margin(l = 20),
-    # Plot margins and background
-    plot.margin = margin(20, 20, 20, 20),
-    panel.grid = element_blank(),
-    panel.background = element_rect(fill = "white", color = NA),
-    plot.background = element_rect(fill = "white", color = NA),
-    # Title styling
-    plot.title = element_text(size = 16, face = "bold", hjust = 0.5, margin = margin(b = 20)),
-    plot.subtitle = element_text(size = 12, hjust = 0.5, color = "gray40", margin = margin(b = 15))
+    legend.title = element_text(size = 22, face = "bold"),
+    legend.text = element_text(size = 16, face = "bold"),
+    legend.key.size = unit(1.2, "cm"),
+    plot.margin = margin(10, 10, 10, 10)
   ) +
-  labs(
-    title = "16S Archaeal Taxonomic Coverage Flow (Percentage Values)",
-    subtitle = paste("Genbank Genomes → IMG Sequences → 16S OTUs → Genbank Species | Top", nrow(top_phyla), "Archaea Phyla"),
-    y = "Percentage (%)"
-  )
+  labs(y = "Percentage (%)")
 
-# Save the plot to figures/ directory
-output_png <- "figures/alluvial_16s_archaea_pct_values_only.png"
-output_pdf <- "figures/alluvial_16s_archaea_pct_values_only.pdf"
+# Save plot to figures/ directory
+cat("\nSaving plot...\n")
+ggsave("figures/alluvial_16s_bacteria_pct_values_only.png", p_pct, width = 24, height = 10, dpi = 300, bg = "white")
+ggsave("figures/alluvial_16s_bacteria_pct_values_only.pdf", p_pct, width = 24, height = 10, dpi = 300, bg = "white")
 
-cat("Saving archaea percentage alluvial plot to figures/ directory...\n")
-ggsave(output_png, p_pct, width = 24, height = 10, dpi = 300, bg = "white")
-ggsave(output_pdf, p_pct, width = 24, height = 10, dpi = 300, bg = "white")
+cat("Plot saved successfully to figures/ directory\n")
 
-# Check which phyla have NCBI data for summary
-ncbi_visible <- top_phyla %>%
-  filter(ncbi_genome_count > 0 | ncbi_species_count > 0)
+# Create detailed flow annotations file
+cat("\nCreating flow annotations file...\n")
 
-if (nrow(ncbi_visible) == 0) {
-  cat("\n⚠️  WARNING: No archaea phyla have NCBI genome or species data!\n")
-  cat("   This suggests archaea are severely underrepresented in NCBI databases.\n")
-  cat("   The plot will show flows only through 16S census data (sequences/OTUs).\n\n")
-} else {
-  cat("\n✅ Archaea phyla with NCBI representation:\n")
-  for (i in 1:nrow(ncbi_visible)) {
-    cat(sprintf("   - %-20s: %.2f%% genomes, %.2f%% species\n",
-                ncbi_visible$phylum[i],
-                ncbi_visible$genome_pct[i],
-                ncbi_visible$species_pct[i]))
-  }
-}
+flow_annotations <- data.frame(
+  Taxon = character(),
+  Node = character(),
+  Node_Order = integer(),
+  Absolute_Count = numeric(),
+  Percentage = numeric(),
+  Flow_Width = numeric(),
+  stringsAsFactors = FALSE
+)
 
-cat("\n📊 Summary (Archaea percentage data):\n")
-cat("   - Total archaea phyla:", nrow(matched_data), "\n")
-cat("   - Top entries displayed:", nrow(top_phyla), "\n")
-cat("   - Phyla with NCBI genomes:", nrow(ncbi_visible), "\n")
-cat("   - Percentage calculations based on archaea-only totals\n")
-
-# Create detailed flow annotations with percentages and absolute values
-cat("\nCreating detailed flow annotations file...\n")
-
-# Create detailed annotations for each taxon at each node
-flow_annotations <- data.frame()
-
-# Add annotations for top phyla
+# Add annotations for each phylum at each node
 for (i in 1:nrow(top_phyla)) {
-  taxon_name <- top_phyla$phylum[i]
+  phylum_name <- top_phyla$phylum[i]
 
-  # Node 1: Genbank Genomes
+  # Node 1: Genbank Genome %
   flow_annotations <- rbind(flow_annotations, data.frame(
-    Taxon = taxon_name,
+    Taxon = phylum_name,
     Node = "Genbank_Genome_%",
     Node_Order = 1,
     Absolute_Count = top_phyla$ncbi_genome_count[i],
@@ -415,9 +423,9 @@ for (i in 1:nrow(top_phyla)) {
     stringsAsFactors = FALSE
   ))
 
-  # Node 2: IMG Genomes
+  # Node 2: IMG Genome %
   flow_annotations <- rbind(flow_annotations, data.frame(
-    Taxon = taxon_name,
+    Taxon = phylum_name,
     Node = "IMG_Genome_%",
     Node_Order = 2,
     Absolute_Count = top_phyla$census_size_count[i],
@@ -426,9 +434,9 @@ for (i in 1:nrow(top_phyla)) {
     stringsAsFactors = FALSE
   ))
 
-  # Node 3: 16S OTUs
+  # Node 3: 16S OTU %
   flow_annotations <- rbind(flow_annotations, data.frame(
-    Taxon = taxon_name,
+    Taxon = phylum_name,
     Node = "16S_OTU_%",
     Node_Order = 3,
     Absolute_Count = top_phyla$census_otu_count[i],
@@ -437,9 +445,9 @@ for (i in 1:nrow(top_phyla)) {
     stringsAsFactors = FALSE
   ))
 
-  # Node 4: Genbank Species
+  # Node 4: Genbank Species %
   flow_annotations <- rbind(flow_annotations, data.frame(
-    Taxon = taxon_name,
+    Taxon = phylum_name,
     Node = "Genbank_Species_%",
     Node_Order = 4,
     Absolute_Count = top_phyla$ncbi_species_count[i],
@@ -494,17 +502,17 @@ flow_annotations <- rbind(flow_annotations, data.frame(
 flow_annotations <- flow_annotations %>%
   arrange(Node_Order, desc(Flow_Width))
 
-write.table(flow_annotations, "annotations/alluvial_16s_archaea_pct_flow_annotations.tsv", sep = "\t", row.names = FALSE, quote = FALSE)
+write.table(flow_annotations, "annotations/alluvial_16s_bacteria_pct_flow_annotations.tsv", sep = "\t", row.names = FALSE, quote = FALSE)
 
 # Create simple node descriptions file
 node_descriptions <- data.frame(
   Node = c("Genbank_Genome_%", "IMG_Genome_%", "16S_OTU_%", "Genbank_Species_%"),
   Node_Order = c(1, 2, 3, 4),
   Description = c(
-    "Genbank Total Genomes (Archaea)",
+    "Genbank Total Genomes (Bacteria)",
     "IMG Genome Count (16S sequences)",
     "16S OTU Count",
-    "Genbank Total Species (Archaea)"
+    "Genbank Total Species (Bacteria)"
   ),
   Total_Count = c(
     scales::comma(total_genome_count),
@@ -516,7 +524,7 @@ node_descriptions <- data.frame(
   stringsAsFactors = FALSE
 )
 
-write.table(node_descriptions, "annotations/alluvial_16s_archaea_pct_node_descriptions.tsv", sep = "\t", row.names = FALSE, quote = FALSE)
+write.table(node_descriptions, "annotations/alluvial_16s_bacteria_pct_node_descriptions.tsv", sep = "\t", row.names = FALSE, quote = FALSE)
 
 # Create summary statistics file
 summary_stats <- data.frame(
@@ -524,10 +532,10 @@ summary_stats <- data.frame(
     "Total_Taxa_Shown",
     "Top_Taxa_Count",
     "Other_Category_Included",
-    "Total_Archaea_Genomes",
+    "Total_Bacteria_Genomes",
     "Total_16S_Sequences",
     "Total_16S_OTUs",
-    "Total_Archaea_Species",
+    "Total_Bacteria_Species",
     "Filtering_Method",
     "Color_System",
     "Percentage_Base"
@@ -541,35 +549,31 @@ summary_stats <- data.frame(
     scales::comma(total_otu_count),
     scales::comma(total_species_count),
     paste("Top", nrow(top_phyla), "by total representation"),
-    "Archaea color mapping",
-    "Archaea-only totals"
+    "Bacteria color mapping from shared config",
+    "Bacteria-only totals"
   ),
   stringsAsFactors = FALSE
 )
 
-write.table(summary_stats, "annotations/alluvial_16s_archaea_pct_summary.tsv", sep = "\t", row.names = FALSE, quote = FALSE)
+write.table(summary_stats, "annotations/alluvial_16s_bacteria_pct_summary.tsv", sep = "\t", row.names = FALSE, quote = FALSE)
 
-cat("\n=== 16S Archaea Percentage Alluvial Plot Created Successfully ===\n")
+cat("\n=== 16S Bacteria Percentage Alluvial Plot Created Successfully ===\n")
 cat("Files saved:\n")
 cat("  📊 Figures:\n")
-cat("     - figures/alluvial_16s_archaea_pct_values_only.png\n")
-cat("     - figures/alluvial_16s_archaea_pct_values_only.pdf\n")
+cat("     - figures/alluvial_16s_bacteria_pct_values_only.png\n")
+cat("     - figures/alluvial_16s_bacteria_pct_values_only.pdf\n")
 cat("  📋 Annotations:\n")
-cat("     - annotations/alluvial_16s_archaea_pct_flow_annotations.tsv\n")
-cat("     - annotations/alluvial_16s_archaea_pct_node_descriptions.tsv\n")
-cat("     - annotations/alluvial_16s_archaea_pct_summary.tsv\n")
+cat("     - annotations/alluvial_16s_bacteria_pct_flow_annotations.tsv\n")
+cat("     - annotations/alluvial_16s_bacteria_pct_node_descriptions.tsv\n")
+cat("     - annotations/alluvial_16s_bacteria_pct_summary.tsv\n")
 
-cat("\n16S Archaea percentage alluvial plot generated with:\n")
-cat("  - Archaea-specific data filtering and percentage calculations\n")
+cat("\n16S Bacteria percentage alluvial plot generated with:\n")
+cat("  - Bacteria-specific data filtering and percentage calculations\n")
 cat("  - Advanced alluvial aesthetics with optimized flow guidance\n")
-cat("  - Professional archaea color scheme\n")
+cat("  - Professional bacteria color scheme from shared config\n")
 cat("  - Detailed flow annotations (TSV format)\n")
 cat("  - Node descriptions and summary statistics\n")
-cat("  - Percentage normalization based on archaea-only totals\n")
+cat("  - Percentage normalization based on bacteria-only totals\n")
 cat("  - Clean minimal appearance with thin nodes\n")
+cat("  - Preserved alluvium IDs for proper flow continuity\n")
 
-cat("\n⚠️  Note: If flows appear thin, this is expected for archaea:\n")
-cat("   1. Archaea are less abundant than bacteria in most environments\n")
-cat("   2. Archaea are underrepresented in NCBI genome databases\n")
-cat("   3. Most archaea diversity is captured in 16S census data, not genomes\n")
-cat("   4. Percentage calculations are based on archaea-only totals for accuracy\n")

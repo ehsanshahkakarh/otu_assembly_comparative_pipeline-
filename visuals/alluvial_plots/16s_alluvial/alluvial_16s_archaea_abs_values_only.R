@@ -28,6 +28,17 @@ library(yaml)
 
 cat("=== 16S rRNA Archaeal Alluvial Plot Generator (Absolute Values) ===\n\n")
 
+# Create output directories if they don't exist
+if (!dir.exists("figures")) {
+  dir.create("figures")
+  cat("Created 'figures/' directory for plot outputs\n")
+}
+
+if (!dir.exists("annotations")) {
+  dir.create("annotations")
+  cat("Created 'annotations/' directory for TSV outputs\n")
+}
+
 # Robust path handling - works from script location
 # Define relative paths from alluvial script location to data directories
 merged_data_path <- "../../../Eukcensus_merge/16s_merged/csv_results/16s_ncbi_merged_clean_phylum.csv"
@@ -393,11 +404,11 @@ p_abs <- ggplot(
     y = "Absolute Count"
   )
 
-# Save the plot
-output_png <- "alluvial_16s_archaea_abs_values_only.png"
-output_pdf <- "alluvial_16s_archaea_abs_values_only.pdf"
+# Save the plot to figures/ directory
+output_png <- "figures/alluvial_16s_archaea_abs_values_only.png"
+output_pdf <- "figures/alluvial_16s_archaea_abs_values_only.pdf"
 
-cat("Saving archaea alluvial plot...\n")
+cat("Saving archaea alluvial plot to figures/ directory...\n")
 ggsave(output_png, p_abs, width = 24, height = 10, dpi = 300, bg = "white")
 ggsave(output_pdf, p_abs, width = 24, height = 10, dpi = 300, bg = "white")
 
@@ -539,7 +550,7 @@ flow_annotations <- rbind(flow_annotations, data.frame(
 flow_annotations <- flow_annotations %>%
   arrange(Node_Order, desc(Flow_Width))
 
-write.table(flow_annotations, "alluvial_16s_archaea_abs_flow_annotations.tsv", sep = "\t", row.names = FALSE, quote = FALSE)
+write.table(flow_annotations, "annotations/alluvial_16s_archaea_abs_flow_annotations.tsv", sep = "\t", row.names = FALSE, quote = FALSE)
 
 # Create simple node descriptions file
 node_descriptions <- data.frame(
@@ -561,7 +572,7 @@ node_descriptions <- data.frame(
   stringsAsFactors = FALSE
 )
 
-write.table(node_descriptions, "alluvial_16s_archaea_abs_node_descriptions.tsv", sep = "\t", row.names = FALSE, quote = FALSE)
+write.table(node_descriptions, "annotations/alluvial_16s_archaea_abs_node_descriptions.tsv", sep = "\t", row.names = FALSE, quote = FALSE)
 
 # Create summary statistics file
 summary_stats <- data.frame(
@@ -590,15 +601,17 @@ summary_stats <- data.frame(
   stringsAsFactors = FALSE
 )
 
-write.table(summary_stats, "alluvial_16s_archaea_abs_summary.tsv", sep = "\t", row.names = FALSE, quote = FALSE)
+write.table(summary_stats, "annotations/alluvial_16s_archaea_abs_summary.tsv", sep = "\t", row.names = FALSE, quote = FALSE)
 
 cat("\n=== 16S Archaea Alluvial Plot Created Successfully ===\n")
 cat("Files saved:\n")
-cat("  - alluvial_16s_archaea_abs_values_only.png\n")
-cat("  - alluvial_16s_archaea_abs_values_only.pdf\n")
-cat("  - alluvial_16s_archaea_abs_flow_annotations.tsv\n")
-cat("  - alluvial_16s_archaea_abs_node_descriptions.tsv\n")
-cat("  - alluvial_16s_archaea_abs_summary.tsv\n")
+cat("  📊 Figures:\n")
+cat("     - figures/alluvial_16s_archaea_abs_values_only.png\n")
+cat("     - figures/alluvial_16s_archaea_abs_values_only.pdf\n")
+cat("  📋 Annotations:\n")
+cat("     - annotations/alluvial_16s_archaea_abs_flow_annotations.tsv\n")
+cat("     - annotations/alluvial_16s_archaea_abs_node_descriptions.tsv\n")
+cat("     - annotations/alluvial_16s_archaea_abs_summary.tsv\n")
 
 cat("\n16S Archaea alluvial plot generated with:\n")
 cat("  - Archaea-specific data filtering and totals\n")
