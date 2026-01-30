@@ -1,0 +1,320 @@
+DATASET_SIMPLEBAR
+SEPARATOR TAB
+DATASET_LABEL	Archaea_species_per_genus
+COLOR	#4a90e2
+LEGEND_TITLE	Species Count
+LEGEND_SHAPES	1
+LEGEND_COLORS	#4a90e2
+LEGEND_LABELS	Number of species
+DATA
+Nitrosopumilus_genus_338191	38
+Methanobrevibacter_genus_2172	49
+Methanothrix_genus_2222	31
+Methanocorpusculum_genus_2192	14
+Candidatus Caldarchaeum_genus_1048752	2
+Nitrososphaera_genus_497726	13
+Candidatus Iainarchaeum_genus_1462418	3
+Ignisphaera_genus_334767	4
+Methanoregula_genus_395331	21
+Candidatus Nitrosopelagicus_genus_1593364	11
+Thermococcus_genus_2263	67
+Metallosphaera_genus_41980	11
+Methanosarcina_genus_2207	58
+Candidatus Methanoperedens_genus_1392997	5
+Methanoculleus_genus_45989	52
+Methanobacterium_genus_2160	80
+Candidatus Nitrosocaldus_genus_498374	5
+Nitrosarchaeum_genus_1007082	5
+Saccharolobus_genus_2100760	7
+Methanomethylophilus_genus_1291539	5
+Thermofilum_genus_2268	8
+Pyrobaculum_genus_2276	12
+Sulfolobus_genus_2284	21
+Zestosphaera_genus_2303493	2
+Candidatus Nitrosotenuis_genus_1825023	7
+Nitrosotalea_genus_1078904	8
+Candidatus Poseidonia_genus_2599198	2
+Halorubrum_genus_56688	91
+Ferroplasma_genus_74968	4
+Candidatus Nitrosocosmicus_genus_1826864	8
+Candidatus Methanofastidiosum_genus_2666130	2
+Methanolinea_genus_499551	16
+Halobacterium_genus_2239	21
+Methanococcus_genus_2184	5
+Candidatus Korarchaeum_genus_498845	2
+Candidatus Thalassarchaeum_genus_3134675	2
+Thermosphaera_genus_54253	4
+Vulcanisaeta_genus_164450	16
+Acidilobus_genus_105850	9
+Thermoproteus_genus_2270	8
+Methanospirillum_genus_2202	6
+Natronomonas_genus_63743	13
+Methanomassiliicoccus_genus_1080709	21
+Caldivirga_genus_76886	7
+Candidatus Mancarchaeum_genus_2490204	2
+Methanosphaera_genus_2316	16
+Methanothermobacter_genus_145260	15
+Acidiplasma_genus_507753	4
+Candidatus Methanosuratincola (ex Wu et al. 2024)_genus_3415501	3
+Methanolobus_genus_2220	25
+Halodesulfurarchaeum_genus_1980514	3
+Haloferax_genus_2251	48
+Candidatus Methanarcanum_genus_2911855	2
+Methanomethylovorans_genus_101191	5
+Candidatus Geocrenenecus_genus_2978051	4
+Methanomicrobium_genus_2204	4
+Candidatus Wolframiiraptor_genus_2978052	5
+Candidatus Cenarchaeum_genus_46769	17
+Candidatus Rehaiarchaeum_genus_3036157	1
+Candidatus Terraquivivens_genus_2978050	4
+Candidatus Nanopusillus_genus_1890407	3
+Halovenus_genus_1377992	6
+Geoglobus_genus_190818	5
+Candidatus Nitrosopolaris_genus_2959592	5
+Candidatus Hadarchaeum_genus_2767083	2
+Candidatus Aciduliprofundum_genus_379546	5
+Pyrococcus_genus_2260	8
+Desulfurococcus_genus_2273	3
+Haloquadratum_genus_293431	3
+Caldisphaera_genus_200414	2
+Halolamina_genus_1075397	9
+Archaeoglobus_genus_2233	30
+Halobellus_genus_1073986	19
+Candidatus Nitrosomaritimum_genus_3342351	3
+Candidatus Altarchaeum_genus_1803512	9
+Candidatus Methanoplasma_genus_1607807	6
+Halanaeroarchaeum_genus_1656823	3
+Candidatus Tiamatella_genus_3144221	2
+Candidatus Bathycorpusculum_genus_3139623	9
+Candidatus Argoarchaeum_genus_2608792	1
+Candidatus Huberarchaeum_genus_2582955	1
+Candidatus Methanosuratincola (ex Vanwonterghem et al. 2016)_genus_1915412	2
+Candidatus Parvarchaeum_genus_662758	4
+Haloarcula_genus_2237	64
+Methanothermococcus_genus_155862	10
+Methanococcoides_genus_2225	12
+Candidatus Haiyanarchaeum_genus_3036155	1
+Candidatus Jingweiarchaeum_genus_3036154	1
+Thermocladium_genus_62608	4
+Thermodiscus_genus_54249	2
+Candidatus Bathyarchaeum_genus_3072969	2
+Salinarchaeum_genus_1269201	5
+Ferroglobus_genus_54260	2
+Thermogladius_genus_477695	2
+Cuniculiplasma_genus_1747777	3
+Halogeometricum_genus_60846	8
+Methanogenium_genus_2195	6
+Candidatus Saliniplasma_genus_2945046	2
+Halapricum_genus_1542963	5
+Halocatena_genus_2907493	3
+Pyrodictium_genus_2308	4
+Fervidicoccus_genus_685950	2
+Haloplanus_genus_376170	16
+Candidatus Natronoplasma_genus_2945047	1
+Methanocaldococcus_genus_196118	9
+Promethearchaeum_genus_3366645	2
+Candidatus Nanohalobium_genus_2856051	2
+Methanocella_genus_570266	6
+Candidatus Micrarchaeum_genus_662756	4
+Candidatus Nitrosomarinus_genus_1993653	2
+Acidianus_genus_12914	10
+Candidatus Acidifodinimicrobium_genus_2898727	1
+Methanocalculus_genus_71151	9
+Candidatus Methanocomedens_genus_3386226	1
+Methanohalophilus_genus_2175	12
+Candidatus Methanomethylicus_genus_1915411	3
+Methanofollis_genus_81416	10
+Natronobacterium_genus_2256	4
+Natronococcus_genus_29287	11
+Candidatus Culexarchaeum_genus_2986812	2
+Candidatus Methanospirare_genus_2982590	1
+Sulfuracidifex_genus_2705406	2
+Natrinema_genus_88723	33
+Candidatus Methanogranum_genus_1577789	2
+Halorientalis_genus_1073987	10
+Salinigranum_genus_1644057	6
+Halomicrobium_genus_203135	9
+Candidatus Hestiella_genus_3144222	2
+Salinirussus_genus_2036001	2
+Candidatus Sysuiplasma_genus_2888739	3
+Candidatus Methanogaster_genus_3386252	2
+Candidatus Methanomarinus_genus_3386227	2
+Haladaptatus_genus_367188	25
+Haloarchaeobius_genus_1269031	6
+Candidatus Nanobsidianus_genus_1996557	1
+Halobium_genus_2033608	2
+Salinirubellus_genus_2162630	4
+Sulfurisphaera_genus_69655	3
+Methanimicrococcus_genus_91559	8
+Candidatus Syntrophoarchaeum_genus_1912923	5
+Saliphagus_genus_2039236	6
+Aeropyrum_genus_56635	3
+Halobaculum_genus_43927	15
+Hyperthermus_genus_54247	3
+Halorhabdus_genus_146825	10
+Thermoplasma_genus_2302	4
+Halohasta_genus_1450140	4
+Natronorubrum_genus_134813	12
+Halospeciosus_genus_3116496	1
+Halomarina_genus_871740	7
+Halosegnis_genus_2841540	4
+Halalkalicoccus_genus_332246	10
+Halosimplex_genus_171163	9
+Candidatus Nanoanaerosalina_genus_2987739	2
+Halorussus_genus_1070314	20
+Candidatus Hikarchaeum_genus_3397668	1
+Candidatus Nitrosothermus_genus_2927300	1
+Candidatus Borrarchaeum_genus_2798933	3
+Halopenitus_genus_1209988	6
+Halomontanus_genus_3125902	1
+Candidatus Calypsonella_genus_3144223	2
+Candidatus Ethanoperedens_genus_2766896	1
+Halopelagius_genus_1008195	3
+Candidatus Methanodesulfokora_genus_2545700	2
+Picrophilus_genus_46631	2
+Salinirubrum_genus_1644062	1
+Natrialba_genus_63742	10
+Candidatus Aenigmarchaeum_genus_1462427	2
+Methermicoccus_genus_660063	2
+Salarchaeum_genus_1075398	3
+Halogranum_genus_695982	3
+Haloterrigena_genus_121871	7
+Natronoarchaeum_genus_926359	5
+Halorubellus_genus_1269048	4
+Halococcoides_genus_2907507	2
+Methanosalsum_genus_196136	3
+Candidatus Pelearchaeum_genus_3079261	2
+Methanopyrus_genus_2319	3
+Methanohalobium_genus_2321	2
+Halovivax_genus_332951	6
+Natribaculum_genus_1699375	3
+Candidatus Calditenuis_genus_3071569	2
+Candidatus Bilamarchaeum_genus_2885758	2
+Natrarchaeobaculum_genus_2765402	3
+Infirmifilum_genus_2856573	4
+Methanolacinia_genus_230355	2
+Candidatus Aramenus_genus_2489210	3
+Haloglomus_genus_2806252	5
+Candidatus Nanosalina_genus_1051666	3
+Staphylothermus_genus_2279	3
+Sulfodiicoccus_genus_2017961	1
+Natrarchaeobius_genus_2501796	3
+Halosolutus_genus_2993618	3
+Candidatus Methanoxibalbensis_genus_2982589	1
+Thermogymnomonas_genus_482135	1
+Candidatus Mnemosynella_genus_3072937	3
+Candidatus Hecatella_genus_3072904	1
+Natronolimnobius_genus_253106	2
+Methanotorris_genus_196119	2
+Halococcus_genus_2249	13
+Halostella_genus_1843185	6
+Candidatus Culexmicrobium_genus_2986813	3
+Halarchaeum_genus_744724	8
+Candidatus Nanohalococcus_genus_3157592	1
+Natronoglomus_genus_3135281	1
+Candidatus Jordarchaeum_genus_2823880	5
+Candidatus Haladaptatiplasma_genus_2945045	1
+Candidatus Halarchaeoplasma_genus_2945043	1
+Natronosalvus_genus_3076685	6
+Candidatus Lokiarchaeum_genus_1655637	2
+Methanonatronarchaeum_genus_2022711	3
+Stygiolobus_genus_41674	7
+Natranaeroarchaeum_genus_2917705	3
+Candidatus Heimdallarchaeum_genus_3053649	2
+Haloprofundus_genus_1911573	6
+Candidatus Methanoliparum_genus_2545692	2
+Natronocalculus_genus_2945980	1
+Halalkaliarchaeum_genus_2678343	3
+Candidatus Burarchaeum_genus_2885750	2
+Candidatus Tiddalikarchaeum_genus_2885755	1
+Candidatus Gugararchaeum_genus_2885740	1
+Candidatus Anstonella_genus_2885743	1
+Candidatus Norongarragalina_genus_2885746	1
+Candidatus Forterrea_genus_2107589	2
+Halonotius_genus_869896	9
+Candidatus Naiadarchaeum_genus_2821828	1
+Candidatus Undinarchaeum_genus_2821829	1
+Halorarum_genus_3163375	3
+Palaeococcus_genus_83867	3
+Actinarchaeum_genus_3118923	1
+Candidatus Wukongarchaeum_genus_2798930	1
+Candidatus Hodarchaeum_genus_2798931	1
+Candidatus Baldrarchaeum_genus_2798934	1
+Candidatus Hermodarchaeum_genus_2798935	1
+Methanoplanus_genus_2314	2
+Candidatus Sifarchaeum_genus_2792796	3
+Candidatus Fermentimicrarchaeum_genus_2795013	1
+Salinibaculum_genus_2732368	5
+Candidatus Chewarchaeum_genus_3138742	1
+Candidatus Asbonarchaeum_genus_3138744	1
+Candidatus Afararchaeum_genus_3138743	1
+Methanorbis_genus_3136059	3
+Candidatus Methanofilum_genus_3136060	1
+Candidatus Methanofrustulum_genus_3136069	1
+Candidatus Methanomicula_genus_3136103	1
+Candidatus Methanoglobus_genus_3075683	1
+Methanothermus_genus_2179	1
+Natronorarus_genus_3386557	1
+Candidatus Atabeyarchaeum_genus_3402006	1
+Candidatus Methanoflexus_genus_3110795	1
+Candidatus Methanorudis_genus_3110796	1
+Candidatus Methanovirga_genus_3110797	5
+Candidatus Methanovorans_genus_3386230	1
+Candidatus Methanoprimaticola_genus_2911791	2
+Candidatus Asgardarchaeum (ex Tamarit et al. 2024)_genus_3067291	2
+Candidatus Lutacidiplasma_genus_3345207	1
+Candidatus Gagatemarchaeum_genus_3345211	1
+Halostagnicola_genus_353799	6
+Candidatus Nanohalalkaliarchaeum_genus_2987740	1
+Methanolapillus_genus_3136068	3
+Halorarius_genus_3056835	2
+Natronobeatus_genus_3065678	1
+Natrononativus_genus_3065677	1
+Salinilacihabitans_genus_3065676	1
+Candidatus Benthortus_genus_2973086	1
+Candidatus Nanohalovita_genus_3157591	1
+Candidatus Alkanophaga_genus_3060409	2
+Natronolimnohabitans_genus_2765403	2
+Candidatus Njordarchaeum_genus_3036988	2
+Salinirarus_genus_3415185	1
+Pyrofollis_genus_3088728	1
+Oxyplasma_genus_3373586	1
+Candidatus Nitrosoabyssus_genus_3373015	1
+Halovalidus_genus_3383206	1
+Methanocrinis_genus_3082135	2
+Candidatus Freyrarchaeum_genus_3036977	1
+Candidatus Sigynarchaeum_genus_3036982	1
+Candidatus Zestomicrobium_genus_3376204	1
+Candidatus Harpocratesius_genus_3049169	1
+Haloparvum_genus_1820337	2
+Natronobiforma_genus_2174848	1
+Halomicrococcus_genus_2614447	1
+Conexivisphaera_genus_2613912	1
+Candidatus Odinarchaeum_genus_2964766	1
+Candidatus Methanohalarchaeum_genus_2022712	1
+Methanovulcanius_genus_3097381	1
+Methanosphaerula_genus_475087	1
+Nanoarchaeum_genus_193568	2
+Ignicoccus_genus_54258	3
+Halopiger_genus_387342	4
+Halocalculus_genus_1779002	1
+Candidatus Halobonum_genus_1431544	2
+Candidatus Nanosalinarum_genus_1051667	1
+Halobiforma_genus_203193	1
+Salinadaptatus_genus_2798309	1
+Halorutilus_genus_3035923	1
+Candidatus Methanolliviera_genus_2545693	3
+Candidatus Methanophaga_genus_3386225	3
+Methanofervidicoccus_genus_2607661	2
+Methanochimaera_genus_3385476	1
+Halalkalirubrum_genus_2806916	1
+Nanobdella_genus_2974824	1
+Candidatus Scotarchaeum_genus_3072916	1
+Candidatus Geothermarchaeum_genus_3072912	1
+Candidatus Pyrohabitans_genus_3072874	2
+Candidatus Hydrothermarchaeum_genus_2767080	1
+Candidatus Nanoclepta_genus_2303498	1
+Candidatus Methanobinarius_genus_3110793	1
+Methanooceanicella_genus_3141690	1
+Halegenticoccus_genus_2663399	2
+Pyrolobus_genus_54251	2
