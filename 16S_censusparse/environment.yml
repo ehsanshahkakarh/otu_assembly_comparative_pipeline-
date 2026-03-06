@@ -1,0 +1,25 @@
+name: 16s_censusparse
+channels:
+  - conda-forge
+  - bioconda
+  - defaults
+dependencies:
+  # Python runtime
+  - python>=3.8
+  
+  # Core data processing
+  - pandas>=1.3.0
+  
+  # Progress bars
+  - tqdm>=4.62.0
+  
+  # NCBI taxonomy tools (critical dependency)
+  - bioconda::taxonkit>=0.14.0
+  
+  # Optional: for development and testing
+  - pip
+  
+  # Pip-installable packages (if any)
+  - pip:
+    # Add any pip-only packages here if needed
+

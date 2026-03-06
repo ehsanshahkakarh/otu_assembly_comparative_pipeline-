@@ -1,0 +1,21 @@
+# Python dependencies for 16S Census Parser
+# ==========================================
+#
+# This file lists all Python packages required to run the 16S census parser.
+#
+# Installation:
+#   pip install -r requirements.txt
+#
+# Or use the conda environment (recommended):
+#   conda env create -f environment.yml
+
+# Core data processing
+pandas>=1.3.0
+
+# Progress bars for long-running operations
+tqdm>=4.62.0
+
+# Note: taxonkit is a Go binary and must be installed separately
+# See environment.yml for conda-based installation or
+# install manually from: https://github.com/shenwei356/taxonkit
+
