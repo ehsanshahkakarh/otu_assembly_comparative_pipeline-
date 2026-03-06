@@ -1,24 +1,22 @@
 #!/usr/bin/env python3
 """
-Enhanced EukCensus 16S Cluster Parser with Organelle Handling and Comprehensive Taxa Preservation
+Enhanced EukCensus 16S Cluster Parser with Organelle Handling and Taxonomic Rank Filtering
 
 This script processes EukCensus 16S cluster metadata with enhanced features:
 1. Better organelle entry handling (e.g., Vitis_vinifera:plas.Chloroplast)
 2. Taxonomic rank filtering to remove inappropriate rank entries
 3. Improved species name cleaning for organellar sequences
-4. PRESERVES .U. and unidentified taxa for downstream visualization
 
 Key improvements:
 - Enhanced organelle detection and cleaning
 - Taxonomic rank validation against lineage information
 - Better handling of species-level entries in genus/family parsing
 - Improved logging and verification
-- UPDATED: Preserves .U. entries and unidentified taxa (no longer filtered out)
 
 Output files:
-- eukcensus16S_by_division.csv
-- eukcensus16S_by_family.csv
-- eukcensus16S_by_genus.csv
+- eukcensus_by_phylum_enhanced.csv
+- eukcensus_by_family_enhanced.csv
+- eukcensus_by_genus_enhanced.csv
 """
 
 import pandas as pd
@@ -32,38 +30,17 @@ import sys
 import time
 from datetime import datetime
 import re
-from pathlib import Path
 from tqdm import tqdm
 
-def setup_directory_paths():
-    """
-    Set up directory paths for the reorganized 16S_censusparse structure.
-
-    Returns:
-        Tuple of (script_dir, metadata_dir, csv_output_dir, log_dir)
-    """
-    script_dir = Path(__file__).resolve().parent
-    censusparse_dir = script_dir.parent
-    metadata_dir = censusparse_dir / "metadata"
-    csv_output_dir = censusparse_dir / "csv_16S"
-    log_dir = script_dir / "logs"
-
-    # Ensure directories exist
-    csv_output_dir.mkdir(exist_ok=True)
-    log_dir.mkdir(exist_ok=True)
-
-    return script_dir, metadata_dir, csv_output_dir, log_dir
-
-def setup_logging(log_dir, output_prefix="eukcensus16S"):
+def setup_logging(output_prefix="eukcensus_enhanced"):
     """
     Set up logging configuration for the enhanced script.
 
     Args:
-        log_dir: Directory to store log files
         output_prefix: Prefix for output files to include in log messages
     """
-    # Create log file path in the logs directory
-    log_file = log_dir / "eukcensus16S_processing.log"
+    # Create log file path
+    log_file = "eukcensus_enhanced_processing.log"
 
     # Configure logging
     logging.basicConfig(
@@ -76,8 +53,7 @@ def setup_logging(log_dir, output_prefix="eukcensus16S"):
     )
 
     # Log the start of processing
-    logging.info(f"Starting enhanced EukCensus 16S processing: eukcensus_16S.clusters.97.tsv -> {output_prefix}_*")
-    logging.info(f"Log file: {log_file}")
+    logging.info(f"🚀 Starting enhanced EukCensus processing with organelle handling: {output_prefix}_*")
     return logging.getLogger(__name__)
 
 def detect_organelle_type(taxon_name):
@@ -197,23 +173,17 @@ def clean_organelle_taxon_name(taxon_name):
     # Candidatus taxa are now preserved in NCBI taxonomy - no stripping needed
     # The NCBI taxonomic mapping scripts have been updated to handle Candidatus taxa properly
 
-    # Handle .U. patterns (e.g., "Gammaproteobacteria.U.family" -> "Gammaproteobacteria")
-    if '.U.' in taxon_name:
-        # Extract the base taxonomic name before the .U. pattern
-        base_name = taxon_name.split('.U.')[0]
-        return strip_trailing_numbers(base_name)
-
-    # Replace underscores with two spaces for species-level names and EukCensus patterns
+    # Replace underscores with spaces for species-level names
     if '_' in taxon_name:
         # Check if this looks like a binomial species name
         parts = taxon_name.split('_')
         if len(parts) == 2 and not any(char.isdigit() for char in parts[1]):
-            # Likely a species name like Genus_species - use single space for species
+            # Likely a species name like Genus_species
             cleaned = taxon_name.replace('_', ' ')
             return strip_trailing_numbers(cleaned)
         else:
-            # Handle other underscore cases (like _XX patterns) - use two spaces
-            cleaned = taxon_name.replace('_', '  ')
+            # Handle other underscore cases
+            cleaned = taxon_name.replace('_', ' ')
             return strip_trailing_numbers(cleaned)
 
     # Handle trailing numbers
@@ -442,126 +412,9 @@ def strip_trailing_numbers(taxon_name):
     # If no trailing numbers found, return as is
     return taxon_name
 
-def clean_taxon_name(taxon_name):
-    """
-    Clean a taxon name by replacing underscores with two spaces and removing trailing numbers.
-
-    This handles EukCensus patterns like "_XX" by removing everything after the underscore
-    and adding two spaces to help with taxonkit matching.
-
-    Args:
-        taxon_name: The taxon name to clean
-
-    Returns:
-        The cleaned taxon name
-    """
-    # Replace underscores with two spaces and remove trailing numbers
-    cleaned = taxon_name.replace("_", "  ")
-    return strip_trailing_numbers(cleaned)
-
-def should_append_name_to_lineage(name_to_use):
-    """
-    Check if the name_to_use should be appended to the lineage.
-
-    Appends the original name for entries that contain:
-    - Numbers (e.g., "Theileria1")
-    - .U. patterns (e.g., "Eukaryota.U.family")
-    - Underscores (e.g., "Embryophyceae_XX")
-
-    Args:
-        name_to_use: The original taxonomic name
-
-    Returns:
-        True if the name should be appended to lineage, False otherwise
-    """
-    if not name_to_use or name_to_use == "NA":
-        return False
-
-    # Check for numbers
-    if any(char.isdigit() for char in name_to_use):
-        return True
-
-    # Check for .U. patterns
-    if ".U." in name_to_use:
-        return True
-
-    # Check for underscores
-    if "_" in name_to_use:
-        return True
-
-    return False
-
-def append_name_to_lineage(lineage, lineage_ranks, lineage_taxids, name_to_use, taxid, env=None, taxid_to_lineage_cache=None):
-    """
-    Append the name_to_use to the end of lineage components if it meets criteria.
-    If we have a taxid but no lineage, try to retrieve the lineage first.
-
-    Args:
-        lineage: Original lineage string
-        lineage_ranks: Original lineage ranks string
-        lineage_taxids: Original lineage taxids string
-        name_to_use: The original taxonomic name
-        taxid: The taxid for this entry
-        env: Environment for taxonkit subprocess calls
-        taxid_to_lineage_cache: Dictionary to update with newly retrieved lineages
-
-    Returns:
-        Tuple of (updated_lineage, updated_ranks, updated_taxids)
-    """
-    if not should_append_name_to_lineage(name_to_use):
-        return lineage, lineage_ranks, lineage_taxids
-
-    # If we have a taxid but no lineage, try to get the lineage
-    if taxid != "NA" and not lineage and env:
-        try:
-            result = subprocess.run(
-                ["taxonkit", "lineage", "-R", "-t"],
-                input=taxid,
-                stdout=subprocess.PIPE,
-                stderr=subprocess.PIPE,
-                text=True,
-                env=env
-            )
-
-            if result.returncode == 0 and result.stdout.strip():
-                parts = result.stdout.strip().split('\t')
-                if len(parts) >= 4:
-                    lineage = parts[1]
-                    lineage_taxids = parts[2]
-                    lineage_ranks = parts[3]
-
-                    # Update the cache so the log reflects the newly retrieved lineage
-                    if taxid_to_lineage_cache is not None:
-                        taxid_to_lineage_cache[taxid] = (lineage, lineage_ranks, lineage_taxids)
-                        logging.info(f"Retrieved missing lineage for taxid {taxid}: {lineage}")
-
-        except Exception as e:
-            logging.warning(f"Failed to retrieve lineage for taxid {taxid}: {e}")
-
-    # Append the name_to_use to lineage components
-    if lineage:
-        updated_lineage = f"{lineage};{name_to_use}"
-    else:
-        updated_lineage = name_to_use
-
-    if lineage_ranks:
-        updated_ranks = f"{lineage_ranks};original_name"
-    else:
-        updated_ranks = "original_name"
-
-    if lineage_taxids:
-        updated_taxids = f"{lineage_taxids};{taxid}" if taxid != "NA" else f"{lineage_taxids};NA"
-    else:
-        updated_taxids = taxid if taxid != "NA" else "NA"
-
-    return updated_lineage, updated_ranks, updated_taxids
-
 def should_filter_taxon(taxon_name):
     """
     Check if a taxon name should be filtered out.
-
-    UPDATED: Removed .U. filtering to preserve unidentified taxa for downstream visualization.
-    Now only filters out truly empty/null entries.
 
     Args:
         taxon_name: The taxon name to check
@@ -571,12 +424,17 @@ def should_filter_taxon(taxon_name):
     """
     if not taxon_name or pd.isna(taxon_name):
         return True
-
-    # REMOVED: .U. pattern filtering - these entries are now preserved for visualization
-    # REMOVED: unidentified pattern filtering - these entries are now preserved
-
-    # Only filter out completely empty strings after stripping whitespace
-    if isinstance(taxon_name, str) and taxon_name.strip() == "":
+        
+    # Filter out entries with ".U.phylum", ".U.genus", etc.
+    if any(pattern in taxon_name for pattern in [".U.phylum", ".U.genus", ".U.family", ".U.order", ".U.class", ".U.species", ".U.division"]):
+        return True
+    
+    # Filter out clearly unidentified entries
+    unidentified_patterns = ['unidentified', 'unknown', 'uncultured', 'environmental']
+    taxon_lower = taxon_name.lower()
+    
+    # Only filter if the entire name is just an unidentified pattern
+    if taxon_lower in unidentified_patterns:
         return True
 
     return False
@@ -764,7 +622,7 @@ def vectorized_organelle_detection(taxon_names):
     return organellar_names, lookup_names
 
 
-def get_taxids_using_taxonkit(taxon_names, rank_name):
+def get_taxids_using_taxonkit_optimized(taxon_names, rank_name):
     """
     Optimized taxid lookup with batch processing and smart fallback strategies.
     Enhanced with organelle handling to infer taxonomy from host organisms.
@@ -795,7 +653,7 @@ def get_taxids_using_taxonkit(taxon_names, rank_name):
     print(f"📝 Step 1: Vectorized organelle detection and variant generation...")
 
     # Use vectorized organelle detection for much better performance
-    organellar_names, _ = vectorized_organelle_detection(taxon_names)
+    organellar_names, primary_lookup_names = vectorized_organelle_detection(taxon_names)
 
     name_variants = {}  # original_name -> [list of variants to try]
     all_variants = []   # flat list of all variants
@@ -867,22 +725,25 @@ def get_taxids_using_taxonkit(taxon_names, rank_name):
 
             if result.returncode == 0 and result.stdout.strip():
                 lines = result.stdout.strip().split('\n')
+                valid_lines = [line for line in lines if line.strip()]
 
-                # Parse results - more robust parsing that matches names to taxids
-                for line in lines:
-                    if not line.strip():
-                        continue
+                # Parse results
+                line_idx = 0
+                for variant in all_variants:
+                    if line_idx < len(valid_lines):
+                        line = valid_lines[line_idx]
+                        parts = line.strip().split('\t')
 
-                    parts = line.strip().split('\t')
-                    if len(parts) >= 2:
-                        variant_name = parts[0]
-                        taxid = parts[1].strip()
+                        if len(parts) >= 2 and parts[1] != "0" and parts[1].strip():
+                            variant_to_taxid[variant] = parts[1].strip()
+                            line_idx += 1
 
-                        # Only store valid taxids (not "0" or empty)
-                        if taxid and taxid != "0":
-                            # Only store if this variant was actually requested
-                            if variant_name in all_variants:
-                                variant_to_taxid[variant_name] = taxid
+                            # Skip multiple results for same variant
+                            while (line_idx < len(valid_lines) and
+                                   valid_lines[line_idx].startswith(parts[0] + '\t')):
+                                line_idx += 1
+                        else:
+                            line_idx += 1
 
         except Exception as e:
             logging.error(f"❌ Error in optimized taxonkit call: {e}")
@@ -918,7 +779,10 @@ def get_taxids_using_taxonkit(taxon_names, rank_name):
 
     return name_to_taxid
 
-
+# Keep the old function as fallback
+def get_taxids_using_taxonkit(taxon_names, rank_name):
+    """Wrapper to use optimized version by default."""
+    return get_taxids_using_taxonkit_optimized(taxon_names, rank_name)
 
 def get_lineages_using_taxonkit(taxids):
     """
@@ -964,8 +828,6 @@ def get_lineages_using_taxonkit(taxids):
         if result.returncode == 0 and result.stdout.strip():
             # Parse results
             lines = result.stdout.strip().split('\n')
-            failed_taxids = []
-
             for line in tqdm(lines, desc="Parsing lineage results", leave=False, ncols=80):
                 if not line.strip():
                     continue
@@ -977,27 +839,11 @@ def get_lineages_using_taxonkit(taxids):
                     lineage_taxids = parts[2]
                     lineage_ranks = parts[3]
 
-                    # Only store if we have actual lineage data
-                    if lineage and lineage.strip():
-                        taxid_to_lineage[taxid] = (lineage, lineage_ranks, lineage_taxids)
-                    else:
-                        failed_taxids.append(taxid)
-                else:
-                    # Malformed line - try to extract taxid for error reporting
-                    if parts:
-                        failed_taxids.append(parts[0])
-
-            # Report any failures
-            if failed_taxids:
-                print(f"⚠️  Failed to get lineages for {len(failed_taxids)} taxids")
-                if len(failed_taxids) <= 10:  # Show details for small numbers
-                    print(f"Failed taxids: {', '.join(failed_taxids)}")
+                    taxid_to_lineage[taxid] = (lineage, lineage_ranks, lineage_taxids)
         else:
             print(f"❌ taxonkit lineage failed: {result.stderr}")
 
-        success_count = len(taxid_to_lineage)
-        total_requested = len(valid_taxids)
-        print(f"✅ Successfully retrieved lineages for {success_count}/{total_requested} taxids ({success_count/total_requested*100:.1f}%)")
+        print(f"✅ Successfully retrieved lineages for {len(taxid_to_lineage)} taxids")
 
     except Exception as e:
         print(f"❌ Error in taxonkit lineage: {e}")
@@ -1006,7 +852,7 @@ def get_lineages_using_taxonkit(taxids):
 
 def create_comprehensive_unmapped_log(phylum_data, family_data, genus_data,
                                     phylum_to_taxid, family_to_taxid, genus_to_taxid,
-                                    taxid_to_lineage, log_dir, output_prefix):
+                                    taxid_to_lineage, output_prefix):
     """
     Create a comprehensive log of all unmapped taxonomic names with enhanced analysis.
 
@@ -1014,10 +860,9 @@ def create_comprehensive_unmapped_log(phylum_data, family_data, genus_data,
         phylum_data, family_data, genus_data: Data dictionaries for each rank
         phylum_to_taxid, family_to_taxid, genus_to_taxid: Taxid mapping dictionaries
         taxid_to_lineage: Lineage information dictionary
-        log_dir: Directory to store log files
         output_prefix: Prefix for output files
     """
-    log_file = log_dir / f"{output_prefix}_comprehensive_unmapped.log"
+    log_file = f"{output_prefix}_comprehensive_unmapped.log"
     print(f"📝 Creating enhanced comprehensive unmapped log...")
 
     with open(log_file, 'w') as f:
@@ -1025,7 +870,7 @@ def create_comprehensive_unmapped_log(phylum_data, family_data, genus_data,
         f.write(f"# Generated: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}\n")
         f.write("# This log contains all taxonomic names that failed to get NCBI taxids or lineages\n")
         f.write("# Enhanced with fallback strategy analysis and improved pattern recognition\n")
-        f.write("# Format: Rank | Original_Name | Cleaned_Name | Appropriate_Name | OTU_Count | Size_Count | Taxid | Reason\n\n")
+        f.write("# Format: Rank | Original_Name | Cleaned_Name | Appropriate_Name | Size_Count | Occurrence_Count | Taxid | Reason\n\n")
 
         # Summary statistics
         f.write("=== SUMMARY STATISTICS ===\n")
@@ -1087,19 +932,19 @@ def create_comprehensive_unmapped_log(phylum_data, family_data, genus_data,
                         'original_name': orig_name,
                         'cleaned_name': data.get('cleaned_name', ''),
                         'appropriate_name': data.get('appropriate_name', ''),
-                        'otu_count': data['otu_count'],
-                        'size_count': data.get('size_count', 0),
+                        'size_count': data['size_count'],
+                        'count': data['count'],
                         'taxid': taxid,
                         'reason': reason
                     })
 
             f.write(f"Total unmapped {rank_name} entries: {len(unmapped_entries)}\n\n")
 
-            # Sort by OTU count (descending)
-            unmapped_entries.sort(key=lambda x: x['otu_count'], reverse=True)
+            # Sort by occurrence count (descending)
+            unmapped_entries.sort(key=lambda x: x['count'], reverse=True)
 
             for entry in unmapped_entries:
-                f.write(f"{rank_name.upper()} | {entry['original_name']} | {entry['cleaned_name']} | {entry['appropriate_name']} | {entry['otu_count']} | {entry['size_count']} | {entry['taxid']} | {entry['reason']}\n")
+                f.write(f"{rank_name.upper()} | {entry['original_name']} | {entry['cleaned_name']} | {entry['appropriate_name']} | {entry['size_count']} | {entry['count']} | {entry['taxid']} | {entry['reason']}\n")
 
             f.write(f"\n")
 
@@ -1119,8 +964,7 @@ def create_comprehensive_unmapped_log(phylum_data, family_data, genus_data,
                     all_unmapped.append({
                         'rank': rank_name,
                         'name': orig_name,
-                        'otu_count': data['otu_count'],
-                        'size_count': data.get('size_count', 0)
+                        'count': data['count']
                     })
 
         # Analyze patterns
@@ -1137,14 +981,13 @@ def create_comprehensive_unmapped_log(phylum_data, family_data, genus_data,
         for pattern_name, pattern_names in patterns.items():
             if pattern_names:
                 count = len(pattern_names)
-                total_otu_occurrences = sum(n['otu_count'] for n in pattern_names)
-                total_size_occurrences = sum(n['size_count'] for n in pattern_names)
-                f.write(f"{pattern_name.replace('_', ' ').title()}: {count} names ({total_otu_occurrences} total OTU occurrences, {total_size_occurrences} total sequence occurrences)\n")
+                total_occurrences = sum(n['count'] for n in pattern_names)
+                f.write(f"{pattern_name.replace('_', ' ').title()}: {count} names ({total_occurrences} total occurrences)\n")
 
                 # Show top 5 most frequent for each pattern
-                top_names = sorted(pattern_names, key=lambda x: x['otu_count'], reverse=True)[:5]
+                top_names = sorted(pattern_names, key=lambda x: x['count'], reverse=True)[:5]
                 for name_info in top_names:
-                    f.write(f"  {name_info['name']} ({name_info['rank']}) - {name_info['otu_count']} OTU occurrences, {name_info['size_count']} sequence occurrences\n")
+                    f.write(f"  {name_info['name']} ({name_info['rank']}) - {name_info['count']} occurrences\n")
                 f.write("\n")
 
         f.write("=== RECOMMENDATIONS ===\n")
@@ -1173,13 +1016,12 @@ def process_taxonomic_level(df, col_name, target_rank):
     """
     print(f"📊 Processing {target_rank} level...")
 
-    # Filter out only NaN values - preserve all identified taxa including .U. entries
-    level_df = df[~df[col_name].isna()]
+    # Filter out unidentified taxa and NaN values
+    level_df = df[~df[col_name].isna() & (df[col_name] != "Unknown")]
     filtered_count = len(df) - len(level_df)
 
     # Initialize data dictionary - KEY CHANGE: Use original names as keys
-    # Added size_count to track total sequence count (sum of cluster sizes)
-    data_dict = defaultdict(lambda: {'otu_count': 0, 'size_count': 0, 'cleaned_name': '', 'appropriate_name': ''})
+    data_dict = defaultdict(lambda: {'size_count': 0, 'count': 0, 'cleaned_name': '', 'appropriate_name': ''})
 
     # Process each entry with progress bar
     for _, row in tqdm(level_df.iterrows(), total=len(level_df), desc=f"Processing {target_rank} entries", leave=False, ncols=80):
@@ -1194,18 +1036,13 @@ def process_taxonomic_level(df, col_name, target_rank):
         if appropriate_name is None:
             continue  # Filtered out
 
-        # Get the size value from the row (number of sequences in this cluster)
-        cluster_size = row.get('size', 1)  # Default to 1 if size column missing
-        if pd.isna(cluster_size):
-            cluster_size = 1
-
         # Store data using ORIGINAL name as key
-        data_dict[original_taxon]['otu_count'] += 1  # Count of clusters/OTUs
-        data_dict[original_taxon]['size_count'] += int(cluster_size)  # Sum of sequence counts
+        data_dict[original_taxon]['size_count'] += row['size']
+        data_dict[original_taxon]['count'] += 1
         data_dict[original_taxon]['cleaned_name'] = clean_organelle_taxon_name(original_taxon)
         data_dict[original_taxon]['appropriate_name'] = appropriate_name
 
-    print(f"✅ Processed {len(data_dict)} unique {target_rank} entries (filtered {filtered_count} null entries, preserved .U. and unidentified taxa)")
+    print(f"✅ Processed {len(data_dict)} unique {target_rank} entries (filtered {filtered_count} unidentified)")
 
     return dict(data_dict)
 
@@ -1217,243 +1054,157 @@ def main():
     - This prevents thousands of individual subprocess calls
     - Expected speedup: 10-100x for datasets with many organellar sequences
     """
-    # Set up directory paths for reorganized structure
-    _, metadata_dir, csv_output_dir, log_dir = setup_directory_paths()
-
-    # Parse command line arguments for custom input/output
+    # Parse command line arguments
     if len(sys.argv) > 1:
         input_file = sys.argv[1]
-        # If relative path provided, make it relative to metadata directory
-        if not os.path.isabs(input_file):
-            input_file = metadata_dir / input_file
     else:
-        input_file = metadata_dir / "eukcensus_16S.clusters.97.tsv"
+        input_file = "eukcensus_16S.clusters.97.tsv"
 
     if len(sys.argv) > 2:
         output_prefix = sys.argv[2]
     else:
-        output_prefix = "eukcensus16S"
+        output_prefix = "eukcensus_enhanced"
 
-    # Set up logging with proper log directory
-    setup_logging(log_dir, output_prefix)
+    # Set up logging
+    setup_logging(output_prefix)
     start_time = time.time()
 
-    # Output file paths - using csv_16S directory with new naming
-    phylum_output = csv_output_dir / f"{output_prefix}_by_division.csv"
-    family_output = csv_output_dir / f"{output_prefix}_by_family.csv"
-    genus_output = csv_output_dir / f"{output_prefix}_by_genus.csv"
+    # Output file names
+    output_dir = "."
+    phylum_output = os.path.join(output_dir, f"{output_prefix}_by_phylum.csv")
+    family_output = os.path.join(output_dir, f"{output_prefix}_by_family.csv")
+    genus_output = os.path.join(output_dir, f"{output_prefix}_by_genus.csv")
 
-    # Log the paths being used
-    logging.info(f"Input file: {input_file}")
-    logging.info(f"Output directory: {csv_output_dir}")
-    logging.info(f"Log directory: {log_dir}")
-
-    print(f"Processing file: {input_file}")
+    print(f"📁 Processing file: {input_file}")
 
     # Read the TSV file
     try:
-        logging.info("Loading input file...")
-
-        # Use chunked reading with progress bar for large files
-        chunk_size = 50000
-        chunks = []
-
-        logging.info(f"Loading file in chunks of {chunk_size:,}...")
-
-        # Read chunks with progress bar
-        chunk_iterator = pd.read_csv(input_file, sep='\t', chunksize=chunk_size)
-        for chunk in tqdm(chunk_iterator, desc="Loading chunks", unit="chunk"):
-            chunks.append(chunk)
-
-        # Combine chunks if multiple chunks were read
-        if len(chunks) > 1:
-            logging.info(f"Combining {len(chunks)} chunks...")
-            df = pd.concat(chunks, ignore_index=True)
-        else:
-            df = chunks[0]
-
-        logging.info(f"Successfully loaded {len(df)} rows")
+        print(f"📖 Reading input file...")
+        df = pd.read_csv(input_file, sep='\t')
+        print(f"✅ Successfully loaded {len(df)} rows")
     except Exception as e:
-        logging.error(f"Error reading input file: {e}")
+        print(f"❌ Error reading input file: {e}")
         return
 
     # Check if required columns exist
     required_columns = ['centroid', 'members', 'size', 'phylum', 'familiy', 'genus']
     for col in required_columns:
         if col not in df.columns:
-            logging.error(f"Required column '{col}' not found in the input file")
+            print(f"❌ Required column '{col}' not found in the input file")
             return
 
     # Process each taxonomic level with enhanced logic
-    logging.info("Processing taxonomic levels...")
     phylum_data = process_taxonomic_level(df, 'phylum', 'phylum')
     family_data = process_taxonomic_level(df, 'familiy', 'family')
     genus_data = process_taxonomic_level(df, 'genus', 'genus')
 
     # Get taxids for each taxonomic level using appropriate names for lookup
-    logging.info("Getting taxids using enhanced taxonkit processing...")
+    print("🔬 Getting taxids using enhanced taxonkit processing...")
 
     # OPTIMIZATION: Vectorized collection and processing of unique names
-    logging.info("Vectorized optimization: Collecting unique names across all ranks...")
+    print("🚀 Vectorized optimization: Collecting unique names across all ranks...")
 
     all_unique_names = set()
     all_unique_names.update(phylum_data.keys())
     all_unique_names.update(family_data.keys())
     all_unique_names.update(genus_data.keys())
 
-    logging.info(f"Total unique names across all ranks: {len(all_unique_names)}")
+    print(f"📊 Total unique names across all ranks: {len(all_unique_names)}")
 
     # Single vectorized lookup for all unique names (with optimized organelle handling)
-    all_names_to_taxid = get_taxids_using_taxonkit(list(all_unique_names), "all_ranks")
+    all_names_to_taxid = get_taxids_using_taxonkit_optimized(list(all_unique_names), "all_ranks")
 
     # Map results to individual ranks
     phylum_to_taxid = {name: all_names_to_taxid.get(name, "NA") for name in phylum_data.keys()}
     family_to_taxid = {name: all_names_to_taxid.get(name, "NA") for name in family_data.keys()}
     genus_to_taxid = {name: all_names_to_taxid.get(name, "NA") for name in genus_data.keys()}
 
-    # Collect all valid taxids with progress tracking
-    logging.info("Collecting taxids for lineage retrieval...")
+    # Collect all valid taxids
     all_taxids = set()
-
-    taxid_sources = [
-        ("phylum", phylum_to_taxid),
-        ("family", family_to_taxid),
-        ("genus", genus_to_taxid)
-    ]
-
-    for _, taxid_dict in tqdm(taxid_sources, desc="Collecting taxids", unit="source"):
+    for taxid_dict in [phylum_to_taxid, family_to_taxid, genus_to_taxid]:
         for taxid in taxid_dict.values():
             if taxid != "NA":
                 all_taxids.add(taxid)
 
-    logging.info(f"Collected {len(all_taxids)} unique taxids for lineage retrieval")
+    print(f"🧬 Collected {len(all_taxids)} unique taxids for lineage retrieval")
 
     # Get lineages for all taxids
     taxid_to_lineage = get_lineages_using_taxonkit(list(all_taxids))
 
-    # Calculate totals for percentage calculations
-    logging.info("Calculating database totals for percentage calculations...")
+    # Write results to CSV files with enhanced information
+    print("💾 Writing results to CSV files...")
 
-    # Calculate total OTU count and total size count across all taxonomic levels
-    total_otu_count = sum(data['otu_count'] for data in phylum_data.values())
-    total_size_count = sum(data['size_count'] for data in phylum_data.values())
-
-    logging.info(f"📊 Total OTUs in database: {total_otu_count:,}")
-    logging.info(f"📊 Total size count in database: {total_size_count:,}")
-
-    # Write results to CSV files with enhanced information including percentages
-    logging.info("Writing results to CSV files...")
-
-    # Write phylum data (now called division to match 18S)
-    logging.info(f"Writing division data to {phylum_output}")
+    # Write phylum data
     with open(phylum_output, 'w', newline='') as f:
         writer = csv.writer(f)
-        writer.writerow(['Name_to_use', 'taxid', 'otu_count', 'otu_percentage', 'size_count', 'size_percentage', 'lineage', 'lineage_ranks', 'lineage_taxids'])
+        writer.writerow(['Name_to_use', 'taxid', 'size_count', 'count', 'lineage', 'lineage_ranks', 'lineage_taxids'])
 
-        sorted_phyla = sorted(phylum_data.items(), key=lambda x: x[1]['otu_count'], reverse=True)
+        sorted_phyla = sorted(phylum_data.items(), key=lambda x: x[1]['count'], reverse=True)
 
-        for phylum, data in tqdm(sorted_phyla, desc="Writing division data", unit="entry"):
+        for phylum, data in tqdm(sorted_phyla, desc="Writing phylum data", leave=False, ncols=80):
             taxid = phylum_to_taxid.get(phylum, "NA")
             lineage_info = taxid_to_lineage.get(taxid, ("", "", "")) if taxid != "NA" else ("", "", "")
             lineage, lineage_ranks, lineage_taxids = lineage_info
 
-            # Append name_to_use to lineage if it contains numbers, .U., or underscores
-            env = os.environ.copy()
-            lineage, lineage_ranks, lineage_taxids = append_name_to_lineage(
-                lineage, lineage_ranks, lineage_taxids, phylum, taxid, env, taxid_to_lineage
-            )
-
-            # Calculate percentages
-            otu_percentage = round((data['otu_count'] / total_otu_count * 100), 2) if total_otu_count > 0 else 0
-            size_percentage = round((data['size_count'] / total_size_count * 100), 2) if total_size_count > 0 else 0
-
             writer.writerow([
                 phylum,  # Original name preserved
                 taxid,
-                data['otu_count'],
-                otu_percentage,
                 data['size_count'],
-                size_percentage,
+                data['count'],
                 lineage,
                 lineage_ranks,
                 lineage_taxids
             ])
 
     # Write family data
-    logging.info(f"Writing family data to {family_output}")
     with open(family_output, 'w', newline='') as f:
         writer = csv.writer(f)
-        writer.writerow(['Name_to_use', 'taxid', 'otu_count', 'otu_percentage', 'size_count', 'size_percentage', 'lineage', 'lineage_ranks', 'lineage_taxids'])
+        writer.writerow(['Name_to_use', 'taxid', 'size_count', 'count', 'lineage', 'lineage_ranks', 'lineage_taxids'])
 
-        sorted_families = sorted(family_data.items(), key=lambda x: x[1]['otu_count'], reverse=True)
+        sorted_families = sorted(family_data.items(), key=lambda x: x[1]['count'], reverse=True)
 
-        for family, data in tqdm(sorted_families, desc="Writing family data", unit="entry"):
+        for family, data in tqdm(sorted_families, desc="Writing family data", leave=False, ncols=80):
             taxid = family_to_taxid.get(family, "NA")
             lineage_info = taxid_to_lineage.get(taxid, ("", "", "")) if taxid != "NA" else ("", "", "")
             lineage, lineage_ranks, lineage_taxids = lineage_info
 
-            # Append name_to_use to lineage if it contains numbers, .U., or underscores
-            env = os.environ.copy()
-            lineage, lineage_ranks, lineage_taxids = append_name_to_lineage(
-                lineage, lineage_ranks, lineage_taxids, family, taxid, env, taxid_to_lineage
-            )
-
-            # Calculate percentages
-            otu_percentage = round((data['otu_count'] / total_otu_count * 100), 2) if total_otu_count > 0 else 0
-            size_percentage = round((data['size_count'] / total_size_count * 100), 2) if total_size_count > 0 else 0
-
             writer.writerow([
                 family,  # Original name preserved
                 taxid,
-                data['otu_count'],
-                otu_percentage,
                 data['size_count'],
-                size_percentage,
+                data['count'],
                 lineage,
                 lineage_ranks,
                 lineage_taxids
             ])
 
     # Write genus data
-    logging.info(f"Writing genus data to {genus_output}")
     with open(genus_output, 'w', newline='') as f:
         writer = csv.writer(f)
-        writer.writerow(['Name_to_use', 'taxid', 'otu_count', 'otu_percentage', 'size_count', 'size_percentage', 'lineage', 'lineage_ranks', 'lineage_taxids'])
+        writer.writerow(['Name_to_use', 'taxid', 'size_count', 'count', 'lineage', 'lineage_ranks', 'lineage_taxids'])
 
-        sorted_genera = sorted(genus_data.items(), key=lambda x: x[1]['otu_count'], reverse=True)
+        sorted_genera = sorted(genus_data.items(), key=lambda x: x[1]['count'], reverse=True)
 
-        for genus, data in tqdm(sorted_genera, desc="Writing genus data", unit="entry"):
+        for genus, data in tqdm(sorted_genera, desc="Writing genus data", leave=False, ncols=80):
             taxid = genus_to_taxid.get(genus, "NA")
             lineage_info = taxid_to_lineage.get(taxid, ("", "", "")) if taxid != "NA" else ("", "", "")
             lineage, lineage_ranks, lineage_taxids = lineage_info
 
-            # Append name_to_use to lineage if it contains numbers, .U., or underscores
-            env = os.environ.copy()
-            lineage, lineage_ranks, lineage_taxids = append_name_to_lineage(
-                lineage, lineage_ranks, lineage_taxids, genus, taxid, env, taxid_to_lineage
-            )
-
-            # Calculate percentages
-            otu_percentage = round((data['otu_count'] / total_otu_count * 100), 2) if total_otu_count > 0 else 0
-            size_percentage = round((data['size_count'] / total_size_count * 100), 2) if total_size_count > 0 else 0
-
             writer.writerow([
                 genus,  # Original name preserved
                 taxid,
-                data['otu_count'],
-                otu_percentage,
                 data['size_count'],
-                size_percentage,
+                data['count'],
                 lineage,
                 lineage_ranks,
                 lineage_taxids
             ])
 
     # Create comprehensive unmapped log
-    create_comprehensive_unmapped_log(
+    unmapped_log = create_comprehensive_unmapped_log(
         phylum_data, family_data, genus_data,
         phylum_to_taxid, family_to_taxid, genus_to_taxid,
-        taxid_to_lineage, log_dir, output_prefix
+        taxid_to_lineage, output_prefix
     )
 
     # Calculate and log performance metrics
@@ -1470,27 +1221,26 @@ def main():
     family_success_rate = (family_success / len(family_data) * 100) if len(family_data) > 0 else 0
     genus_success_rate = (genus_success / len(genus_data) * 100) if len(genus_data) > 0 else 0
 
-    logging.info("Saving results to CSV files...")
-    logging.info(f"Saved {len(phylum_data)} division entries to {phylum_output}")
-    logging.info(f"Division summary: {phylum_success} with taxids, {len([t for t in phylum_to_taxid.values() if t in taxid_to_lineage])} with lineages")
+    print(f"✅ Saved {len(phylum_data)} phylum entries to {phylum_output}")
+    print(f"📊 Phylum success rate: {phylum_success}/{len(phylum_data)} ({phylum_success_rate:.1f}%)")
 
-    logging.info(f"Saved {len(family_data)} family entries to {family_output}")
-    logging.info(f"Family summary: {family_success} with taxids, {len([t for t in family_to_taxid.values() if t in taxid_to_lineage])} with lineages")
+    print(f"✅ Saved {len(family_data)} family entries to {family_output}")
+    print(f"📊 Family success rate: {family_success}/{len(family_data)} ({family_success_rate:.1f}%)")
 
-    logging.info(f"Saved {len(genus_data)} genus entries to {genus_output}")
-    logging.info(f"Genus summary: {genus_success} with taxids, {len([t for t in genus_to_taxid.values() if t in taxid_to_lineage])} with lineages")
+    print(f"✅ Saved {len(genus_data)} genus entries to {genus_output}")
+    print(f"📊 Genus success rate: {genus_success}/{len(genus_data)} ({genus_success_rate:.1f}%)")
 
-    logging.info(f"Processing complete in {processing_time:.2f} seconds")
-    logging.info(f"Total entries processed: {total_entries}")
-    logging.info(f"Performance: {total_entries/processing_time:.1f} entries/second")
+    print(f"🎉 Vectorized processing complete in {processing_time:.2f} seconds")
+    print(f"📊 Total entries processed: {total_entries}")
+    print(f"⚡ Performance: {total_entries/processing_time:.1f} entries/second")
+    print(f"🚀 Vectorized organelle handling and optimized batch processing enabled")
 
-    logging.info("Processing complete! Generated the following files:")
-    logging.info(f"- {phylum_output}")
-    logging.info(f"- {family_output}")
-    logging.info(f"- {genus_output}")
-    logging.info(f"- {log_dir / f'{output_prefix}_comprehensive_unmapped.log'}")
-    logging.info(f"- {log_dir / 'eukcensus16S_processing.log'}")
-    logging.info("Output files organized in csv_16S/ and logs/ directories")
+    print("Enhanced processing complete! Generated the following files:")
+    print(f"- {phylum_output}")
+    print(f"- {family_output}")
+    print(f"- {genus_output}")
+    print(f"- {output_prefix}_comprehensive_unmapped.log")
+    print(f"- {output_prefix}_processing.log")
 
 if __name__ == "__main__":
     main()

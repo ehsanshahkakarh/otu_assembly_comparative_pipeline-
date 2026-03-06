@@ -222,20 +222,37 @@ def clean_organelle_taxon_name(taxon_name):
 def extract_genus_from_species(species_name):
     """
     Extract genus name from a species name.
-    
+
+    Handles special cases:
+    - "Candidatus Genus" -> "Candidatus Genus" (keep both words)
+    - "candidate division Name" -> "candidate division Name" (keep both words)
+    - "Genus species" -> "Genus" (normal case)
+
     Args:
-        species_name: Full species name (e.g., "Vitis vinifera")
-        
+        species_name: Full species name (e.g., "Vitis vinifera" or "Candidatus Edwardsbacteria")
+
     Returns:
-        Genus name (e.g., "Vitis")
+        Genus name (e.g., "Vitis" or "Candidatus Edwardsbacteria")
     """
     if not species_name or pd.isna(species_name):
         return species_name
-    
+
     parts = species_name.strip().split()
+
+    # Special case: "Candidatus" is a prefix for uncultivated prokaryotes
+    # Keep both "Candidatus" and the following genus name
+    if len(parts) >= 2 and parts[0].lower() == 'candidatus':
+        return f"{parts[0]} {parts[1]}"
+
+    # Special case: "candidate division" is a prefix for environmental clades
+    # Keep both "candidate division" and the following name
+    if len(parts) >= 3 and parts[0].lower() == 'candidate' and parts[1].lower() == 'division':
+        return f"{parts[0]} {parts[1]} {parts[2]}"
+
+    # Normal case: return first word (genus)
     if len(parts) >= 1:
         return parts[0]
-    
+
     return species_name
 
 def recover_organelle_taxonomy(taxon_name, target_rank):
