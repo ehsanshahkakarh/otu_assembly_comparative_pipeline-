@@ -1,0 +1,110 @@
+# GTDB-NCBI Mapper Configuration
+# ================================
+# Configuration file for the GTDB-NCBI genome mapping pipeline
+
+# Input Data Paths
+# ----------------
+input:
+  # GTDB taxonomy files (from centralized metadata directory)
+  gtdb:
+    archaea: "../../metadata/gtdb/ar53_taxonomy.tsv"
+    bacteria: "../../metadata/gtdb/bac120_taxonomy.tsv"
+
+  # NCBI assembly summary file (from centralized metadata directory)
+  ncbi:
+    assembly_summary: "../../metadata/ncbi/assembly_summary_genbank.txt"
+
+# Output Directories
+# ------------------
+output:
+  # Raw merger outputs (mapped/unmapped CSVs)
+  raw: "outputs"
+  
+  # Clean mapping tables (for end users)
+  mapping_tables: "mapping_tables"
+  
+  # Execution logs
+  logs: "logs"
+  
+  # Archive/intermediate files
+  archive: "archive"
+
+# Processing Options
+# ------------------
+processing:
+  # GTDB accession cleaning
+  remove_prefixes: ["RS_", "GB_"]
+  
+  # NCBI matching columns
+  ncbi_columns:
+    primary: "assembly_accession"  # GCA accessions
+    secondary: "gbrs_paired_asm"   # GCF accessions (RefSeq paired)
+  
+  # Taxonomy parsing
+  taxonomy_levels:
+    - domain
+    - phylum
+    - class
+    - order
+    - family
+    - genus
+    - species
+
+# NCBI Datasets API Configuration
+# --------------------------------
+ncbi_datasets:
+  # Conda environment name for NCBI datasets tool
+  conda_env: "ncbi_datasets"
+  
+  # API query settings
+  timeout: 30  # seconds
+  max_retries: 3
+  rate_limit_delay: 5  # seconds between requests
+  
+  # Batch processing
+  batch_size: 100  # number of accessions to check per batch
+
+# Logging Configuration
+# ---------------------
+logging:
+  level: "INFO"  # DEBUG, INFO, WARNING, ERROR, CRITICAL
+  format: "%(asctime)s - %(levelname)s - %(message)s"
+  
+  # Log files
+  files:
+    merger: "logs/accession_merger.log"
+    mapping: "logs/mapping_table_generator.log"
+    status_check: "logs/unmapped_status_check.log"
+
+# Output File Names
+# -----------------
+output_files:
+  # Raw merger outputs
+  raw:
+    archaea_mapped: "archaea_mapped.csv"
+    archaea_unmapped: "archaea_unmapped.csv"
+    bacteria_mapped: "bacteria_mapped.csv"
+    bacteria_unmapped: "bacteria_unmapped.csv"
+    ncbi_unmapped: "ncbi_unmapped.csv"
+  
+  # Mapping tables
+  mapping:
+    simple: "gtdb_to_ncbi_simple_map.csv"
+    taxonomy: "gtdb_to_ncbi_taxonomy_map.csv"
+    full: "gtdb_to_ncbi_full_map.csv"
+  
+  # Status check outputs
+  status:
+    archaea_report: "unmapped_status_report_archaea.csv"
+    bacteria_report: "unmapped_status_report_bacteria.csv"
+    archaea_not_found: "unmapped_not_found_archaea.csv"
+    bacteria_not_found: "unmapped_not_found_bacteria.csv"
+
+# Metadata
+# --------
+metadata:
+  pipeline_name: "GTDB-NCBI Genome Mapper"
+  version: "1.0.0"
+  created: "2026-03-04"
+  description: "High-precision genome-level mapping between GTDB and NCBI databases"
+

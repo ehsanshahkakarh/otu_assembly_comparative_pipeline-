@@ -1,0 +1,11 @@
+"Rank","Phylum","Genome_Percentage","Isolate_Percentage","Size_Percentage","OTU_Percentage","Isolate_Species_Coverage","Species_Coverage","Total_Representation"
+1,"Pseudomonadota",51.35,47.61,30.84,18.66,19.85,23.55,191.86
+2,"Bacillota",21,16.2,17.32,17.34,7.75,10.16,89.77
+3,"Actinomycetota",3.32,1.8,10.95,5.54,11.83,12.68,46.12
+4,"Bacteroidota",4.18,0.58,13.31,10.85,3.24,5.17,37.33
+5,"Campylobacterota",5.19,5.04,0.96,0.82,0.39,0.53,12.93
+6,"Chloroflexota",0.51,0.01,5.88,4.6,0.08,0.5,11.58
+7,"Planctomycetota",0.36,0.01,4.49,4.56,0.14,0.35,9.91
+8,"Verrucomicrobiota",0.42,0.02,4.58,3.55,0.17,0.43,9.17
+9,"Acidobacteriota",0.43,0.01,4.47,3.17,0.08,0.26,8.42
+10,"Cyanobacteriota",0.27,0.07,1.29,0.86,0.92,2.79,6.2

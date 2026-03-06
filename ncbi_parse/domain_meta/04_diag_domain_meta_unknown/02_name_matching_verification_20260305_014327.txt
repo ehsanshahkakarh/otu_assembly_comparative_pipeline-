@@ -1,0 +1,248 @@
+================================================================================
+SUB-DIAGNOSTIC 04.02: Name Matching Verification
+================================================================================
+
+Date: 2026-03-05 01:43:27
+Sample size per dataset: 10
+Random seed: 42
+
+
+================================================================================
+16S CENSUS DATA SAMPLING
+================================================================================
+
+Census file: /clusterfs/jgi/scratch/science/mgs/nelli/ehsan/UNI56v2/00data/00_gaps_taxonomic/00parse_database/16S_censusparse/csv_16S/eukcensus16S_by_genus.csv
+Total entries in census: 4,578
+Merger summary file: /clusterfs/jgi/scratch/science/mgs/nelli/ehsan/UNI56v2/00data/00_gaps_taxonomic/00parse_database/Eukcensus_merge/16s_merged/analysis_summary/16s_ncbi_merger_clean_summary.csv
+Merger summary:
+    level  total_entries  matched_taxa  census_only_taxa  ncbi_only_taxa match_rate
+0  phylum             63            42                10              11      66.7%
+1  family           1036           599               200             237      57.8%
+2   genus           6049          2777              1798            1474      45.9%
+
+
+Sampled 10 random entries:
+================================================================================
+
+[Sample 1]
+  Name_to_use: Negativibacillus
+  TaxID: 1980693.0
+  Lineage: cellular organisms;Bacteria;Bacillati;Bacillota;Bacillota sensu stricto incertae sedis;Negativibacillus
+
+  → Manual verification needed: Search 'Negativibacillus' in NCBI taxonomy
+  → Expected TaxID: 1980693.0
+
+--------------------------------------------------------------------------------
+
+[Sample 2]
+  Name_to_use: Sporichthyaceae.U.genus
+  TaxID: 85033.0
+  Lineage: cellular organisms;Bacteria;Bacillati;Actinomycetota;Actinomycetes;Sporichthyales;Sporichthyaceae;Sporichthyaceae.U.genus
+
+  → Manual verification needed: Search 'Sporichthyaceae.U.genus' in NCBI taxonomy
+  → Expected TaxID: 85033.0
+
+--------------------------------------------------------------------------------
+
+[Sample 3]
+  Name_to_use: Methanococcaceae.U.genus
+  TaxID: 2183.0
+  Lineage: cellular organisms;Archaea;Methanobacteriati;Methanobacteriota;Methanomada group;Methanococci;Methanococcales;Methanococcaceae;Methanococcaceae.U.genus
+
+  → Manual verification needed: Search 'Methanococcaceae.U.genus' in NCBI taxonomy
+  → Expected TaxID: 2183.0
+
+--------------------------------------------------------------------------------
+
+[Sample 4]
+  Name_to_use: Leisingera
+  TaxID: 191028.0
+  Lineage: cellular organisms;Bacteria;Pseudomonadati;Pseudomonadota;Alphaproteobacteria;Rhodobacterales;Roseobacteraceae;Leisingera
+
+  → Manual verification needed: Search 'Leisingera' in NCBI taxonomy
+  → Expected TaxID: 191028.0
+
+--------------------------------------------------------------------------------
+
+[Sample 5]
+  Name_to_use: Aliterella
+  TaxID: 1827277.0
+  Lineage: cellular organisms;Bacteria;Bacillati;Cyanobacteriota/Melainabacteria group;Cyanobacteriota;Cyanophyceae;Chroococcidiopsidales;Aliterellaceae;Aliterella
+
+  → Manual verification needed: Search 'Aliterella' in NCBI taxonomy
+  → Expected TaxID: 1827277.0
+
+--------------------------------------------------------------------------------
+
+[Sample 6]
+  Name_to_use: Kurthia
+  TaxID: 1649.0
+  Lineage: cellular organisms;Bacteria;Bacillati;Bacillota;Bacilli;Bacillales;Caryophanaceae;Kurthia
+
+  → Manual verification needed: Search 'Kurthia' in NCBI taxonomy
+  → Expected TaxID: 1649.0
+
+--------------------------------------------------------------------------------
+
+[Sample 7]
+  Name_to_use: Desulfopila
+  TaxID: 429014.0
+  Lineage: cellular organisms;Bacteria;Pseudomonadati;Thermodesulfobacteriota;Desulfobulbia;Desulfobulbales;Desulfocapsaceae;Desulfopila
+
+  → Manual verification needed: Search 'Desulfopila' in NCBI taxonomy
+  → Expected TaxID: 429014.0
+
+--------------------------------------------------------------------------------
+
+[Sample 8]
+  Name_to_use: Eimeria1_meleagrimitis:apic.Apicoplast
+  TaxID: nan
+  Lineage: Eimeria1_meleagrimitis:apic.Apicoplast
+
+  → Manual verification needed: Search 'Eimeria1_meleagrimitis:apic.Apicoplast' in NCBI taxonomy
+  → Expected TaxID: nan
+
+--------------------------------------------------------------------------------
+
+[Sample 9]
+  Name_to_use: Fermentimonas
+  TaxID: 1784836.0
+  Lineage: cellular organisms;Bacteria;Pseudomonadati;FCB group;Bacteroidota/Chlorobiota group;Bacteroidota;Bacteroidia;Bacteroidales;Dysgonomonadaceae;Fermentimonas
+
+  → Manual verification needed: Search 'Fermentimonas' in NCBI taxonomy
+  → Expected TaxID: 1784836.0
+
+--------------------------------------------------------------------------------
+
+[Sample 10]
+  Name_to_use: Spongiimonas
+  TaxID: 1313213.0
+  Lineage: cellular organisms;Bacteria;Pseudomonadati;FCB group;Bacteroidota/Chlorobiota group;Bacteroidota;Flavobacteriia;Flavobacteriales;Weeksellaceae;Spongiimonas
+
+  → Manual verification needed: Search 'Spongiimonas' in NCBI taxonomy
+  → Expected TaxID: 1313213.0
+
+--------------------------------------------------------------------------------
+
+
+================================================================================
+18S CENSUS DATA SAMPLING
+================================================================================
+
+Census file: /clusterfs/jgi/scratch/science/mgs/nelli/ehsan/UNI56v2/00data/00_gaps_taxonomic/00parse_database/18S_censusparse/output/eukcensus_18S_by_genus.csv
+Total entries in census: 491
+Merger summary file: /clusterfs/jgi/scratch/science/mgs/nelli/ehsan/UNI56v2/00data/00_gaps_taxonomic/00parse_database/Eukcensus_merge/py_mergers/18s_merged/analysis_summary/18s_ncbi_merger_clean_summary.csv
+Merger summary:
+    level  total_entries  matched_taxa  census_only_taxa  ncbi_only_taxa match_rate
+0  phylum             24            12                10               2      50.0%
+1  family           1667            66               248            1353       4.0%
+2   genus           9080           135               356            8589       1.5%
+
+
+Sampled 10 random entries:
+================================================================================
+
+[Sample 1]
+  Name_to_use: Ciliophora.U.genus
+  TaxID: 5878
+  Lineage: cellular organisms;Eukaryota;Sar;Alveolata;Ciliophora;Ciliophora.U.genus
+
+  → Manual verification needed: Search 'Ciliophora.U.genus' in NCBI taxonomy
+  → Expected TaxID: 5878
+
+--------------------------------------------------------------------------------
+
+[Sample 2]
+  Name_to_use: Gyrista.U.genus
+  TaxID: nan
+  Lineage: cellular organisms;Eukaryota;Sar;Gyrista.U.genus
+
+  → Manual verification needed: Search 'Gyrista.U.genus' in NCBI taxonomy
+  → Expected TaxID: nan
+
+--------------------------------------------------------------------------------
+
+[Sample 3]
+  Name_to_use: Vampyrellida.U.genus
+  TaxID: 1367446
+  Lineage: cellular organisms;Eukaryota;Sar;Rhizaria;Endomyxa;Vampyrellida;Vampyrellida.U.genus
+
+  → Manual verification needed: Search 'Vampyrellida.U.genus' in NCBI taxonomy
+  → Expected TaxID: 1367446
+
+--------------------------------------------------------------------------------
+
+[Sample 4]
+  Name_to_use: Branchiopoda.U.genus
+  TaxID: 6658
+  Lineage: cellular organisms;Eukaryota;Opisthokonta;Metazoa;Eumetazoa;Bilateria;Protostomia;Ecdysozoa;Panarthropoda;Arthropoda;Mandibulata;Pancrustacea;Crustacea;Branchiopoda;Branchiopoda.U.genus
+
+  → Manual verification needed: Search 'Branchiopoda.U.genus' in NCBI taxonomy
+  → Expected TaxID: 6658
+
+--------------------------------------------------------------------------------
+
+[Sample 5]
+  Name_to_use: Glycine
+  TaxID: 3846
+  Lineage: cellular organisms;Eukaryota;Viridiplantae;Streptophyta;Streptophytina;Embryophyta;Tracheophyta;Euphyllophyta;Spermatophyta;Magnoliopsida;Mesangiospermae;eudicotyledons;Gunneridae;Pentapetalae;rosids;fabids;Fabales;Fabaceae;Papilionoideae;50 kb inversion clade;NPAAA clade;indigoferoid/millettioid clade;Phaseoleae;Glycine
+
+  → Manual verification needed: Search 'Glycine' in NCBI taxonomy
+  → Expected TaxID: 3846
+
+--------------------------------------------------------------------------------
+
+[Sample 6]
+  Name_to_use: Cercomonas
+  TaxID: 45109
+  Lineage: cellular organisms;Eukaryota;Sar;Rhizaria;Cercozoa;Cercomonadida;Cercomonadidae;Cercomonas
+
+  → Manual verification needed: Search 'Cercomonas' in NCBI taxonomy
+  → Expected TaxID: 45109
+
+--------------------------------------------------------------------------------
+
+[Sample 7]
+  Name_to_use: Rigifila
+  TaxID: 1237874
+  Lineage: cellular organisms;Eukaryota;CRuMs;Rigifilida;Rigifila
+
+  → Manual verification needed: Search 'Rigifila' in NCBI taxonomy
+  → Expected TaxID: 1237874
+
+--------------------------------------------------------------------------------
+
+[Sample 8]
+  Name_to_use: Heterolobosea.U.genus
+  TaxID: 5752
+  Lineage: cellular organisms;Eukaryota;Discoba;Heterolobosea;Heterolobosea.U.genus
+
+  → Manual verification needed: Search 'Heterolobosea.U.genus' in NCBI taxonomy
+  → Expected TaxID: 5752
+
+--------------------------------------------------------------------------------
+
+[Sample 9]
+  Name_to_use: Sabatieria
+  TaxID: 129901
+  Lineage: cellular organisms;Eukaryota;Opisthokonta;Metazoa;Eumetazoa;Bilateria;Protostomia;Ecdysozoa;Nematoda;Chromadorea;Araeolaimida;Axonolaimoidea;Comesomatidae;Sabatieria
+
+  → Manual verification needed: Search 'Sabatieria' in NCBI taxonomy
+  → Expected TaxID: 129901
+
+--------------------------------------------------------------------------------
+
+[Sample 10]
+  Name_to_use: Monocystis
+  TaxID: 110315
+  Lineage: cellular organisms;Eukaryota;Sar;Alveolata;Apicomplexa;Conoidasida;Gregarinasina;Eugregarinorida;Monocystidae;Monocystis
+
+  → Manual verification needed: Search 'Monocystis' in NCBI taxonomy
+  → Expected TaxID: 110315
+
+--------------------------------------------------------------------------------
+
+
+================================================================================
+VERIFICATION COMPLETE
+================================================================================

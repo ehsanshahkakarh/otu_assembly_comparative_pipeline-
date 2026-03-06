@@ -84,3 +84,35 @@ temp_taxa_batch_*.txt
 # Large batch processing files
 txt_s/
 **/txt_s/
+
+# Pixi environment
+.pixi/
+
+# Large GTDB mapping/output files
+gtdb_ncbi_mapper/mapping_tables/
+gtdb_ncbi_mapper/outputs/
+
+# Large raw data files
+*.tsv
+*.tar
+*.tar.gz
+*.dmp
+assembly_summary_genbank.txt
+
+# Misc (old/deprecated pipeline files)
+misc/
+
+# Large NCBI intermediate/output files
+ncbi_parse/domain_meta/output/
+ncbi_parse/trees/output/
+ncbi_parse/output/
+
+# Sanity check directories and files
+**/sanity_check/
+**/sanity_checks/
+**/sanity_check_test/
+**/txt_sanity/
+**/sanity/
+**/sanity_check*.py
+**/sanity_check*.txt
+**/sanity_check*.csv

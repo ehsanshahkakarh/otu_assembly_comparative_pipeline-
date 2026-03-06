@@ -1,0 +1,51 @@
+================================================================================
+NEW MERGER VALIDATION REPORT
+================================================================================
+Generated: 2026-03-02 11:15:12
+
+SUMMARY
+--------------------------------------------------------------------------------
+✅ Passed checks: 32
+⚠️  Warnings: 0
+❌ Critical issues: 0
+
+
+PASSED CHECKS
+--------------------------------------------------------------------------------
+✅ 18s_ncbi_merged_division.csv: Data integrity check passed
+✅ 18s_ncbi_merged_division.csv: Domain filtering correct (expected: ['Eukaryota'])
+✅ 18s_ncbi_merged_division.csv: Matching logic is consistent
+✅ 18s_ncbi_merged_division.csv: OTU percentages sum to 99.98%
+✅ 18s_ncbi_merged_division.csv: Size percentages sum to 100.01%
+✅ 18s_ncbi_merged_family.csv: Data integrity check passed
+✅ 18s_ncbi_merged_family.csv: Domain filtering correct (expected: ['Eukaryota'])
+✅ 18s_ncbi_merged_family.csv: Matching logic is consistent
+✅ 18s_ncbi_merged_family.csv: OTU percentages sum to 99.98%
+✅ 18s_ncbi_merged_family.csv: Size percentages sum to 99.95%
+✅ 18s_ncbi_merged_genus.csv: Data integrity check passed
+✅ 18s_ncbi_merged_genus.csv: Domain filtering correct (expected: ['Eukaryota'])
+✅ 18s_ncbi_merged_genus.csv: Matching logic is consistent
+✅ 18s_ncbi_merged_genus.csv: OTU percentages sum to 99.92%
+✅ 18s_ncbi_merged_genus.csv: Size percentages sum to 99.92%
+✅ 18S: Totals consistent across levels (variation: 0.0%)
+✅ 16s_ncbi_merged_division.csv: Data integrity check passed
+✅ 16s_ncbi_merged_division.csv: Domain filtering correct (expected: ['Bacteria', 'Archaea'])
+✅ 16s_ncbi_merged_division.csv: Matching logic is consistent
+✅ 16s_ncbi_merged_division.csv: OTU percentages sum to 99.98%
+✅ 16s_ncbi_merged_division.csv: Size percentages sum to 100.02%
+✅ 16s_ncbi_merged_family.csv: Data integrity check passed
+✅ 16s_ncbi_merged_family.csv: Domain filtering correct (expected: ['Bacteria', 'Archaea'])
+✅ 16s_ncbi_merged_family.csv: Matching logic is consistent
+✅ 16s_ncbi_merged_family.csv: OTU percentages sum to 99.75%
+✅ 16s_ncbi_merged_family.csv: Size percentages sum to 99.94%
+✅ 16s_ncbi_merged_genus.csv: Data integrity check passed
+✅ 16s_ncbi_merged_genus.csv: Domain filtering correct (expected: ['Bacteria', 'Archaea'])
+✅ 16s_ncbi_merged_genus.csv: Matching logic is consistent
+✅ 16s_ncbi_merged_genus.csv: OTU percentages sum to 96.56%
+✅ 16s_ncbi_merged_genus.csv: Size percentages sum to 97.35%
+✅ 16S: Totals consistent across levels (variation: 14.4%)
+
+================================================================================
+CONCLUSION
+================================================================================
+✅ All critical checks passed! Outputs are valid.

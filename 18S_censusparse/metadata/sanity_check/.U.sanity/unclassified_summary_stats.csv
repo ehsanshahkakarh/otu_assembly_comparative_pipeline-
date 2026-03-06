@@ -1,8 +1,0 @@
-taxonomic_level,classification_status,entry_count,entry_percentage,sequence_count,sequence_percentage
-"# Total metadata: 70,899 entries, 401,342 sequences",,,,,
-division,classified,56501,79.7,343684,85.6
-division,unclassified (.U.),14398,20.3,57658,14.4
-family,classified,29393,41.5,202856,50.5
-family,unclassified (.U.),41506,58.5,198486,49.5
-genus,classified,20055,28.3,144214,35.9
-genus,unclassified (.U.),50844,71.7,257128,64.1

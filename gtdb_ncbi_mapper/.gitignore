@@ -1,0 +1,59 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg-info/
+*.egg
+
+# Virtual environments
+venv/
+ENV/
+env/
+.venv
+
+# Conda environments
+*.conda
+.conda/
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Logs
+*.log
+logs/*.log
+
+# Output directories (generated data)
+outputs/*.csv
+mapping_tables/*.csv
+
+# Archive directory (old/intermediate files)
+archive/*.csv
+archive/*.log
+archive/src/
+
+# Temporary files
+*.tmp
+*.temp
+tmp/
+temp/
+
+# OS files
+Thumbs.db
+.DS_Store
+
+# Keep README files
+!**/README.md
+
+# Keep directory structure
+!logs/.gitkeep
+!outputs/.gitkeep
+!mapping_tables/.gitkeep
+!archive/.gitkeep
+

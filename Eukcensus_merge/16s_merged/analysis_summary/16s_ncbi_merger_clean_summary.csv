@@ -1,4 +1,0 @@
-level,total_entries,matched_taxa,census_only_taxa,ncbi_only_taxa,match_rate
-phylum,63,42,10,11,66.7%
-family,1036,599,200,237,57.8%
-genus,6049,2777,1798,1474,45.9%

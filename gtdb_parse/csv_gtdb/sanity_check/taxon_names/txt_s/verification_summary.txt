@@ -1,7 +1,0 @@
-File	Total Taxa	Mismatches	Percentage Correct
-archaeal_phyla.csv	19	19	0.00%
-archaeal_families.csv	564	564	0.00%
-archaeal_genera.csv	1847	1847	0.00%
-bacterial_phyla.csv	175	175	0.00%
-bacterial_families.csv	4896	4896	0.00%
-bacterial_genera.csv	23112	23112	0.00%

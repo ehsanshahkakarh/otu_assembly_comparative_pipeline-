@@ -1,0 +1,20 @@
+# NCBI Datasets Tool Environment
+# ================================
+# Separate environment for NCBI datasets command-line tool
+# Create with: conda env create -f ncbi_datasets_env.yml
+# Activate with: conda activate ncbi_datasets
+
+name: ncbi_datasets
+
+channels:
+  - conda-forge
+  - bioconda
+  - defaults
+
+dependencies:
+  # NCBI datasets command-line tool
+  - ncbi-datasets-cli
+  
+  # Alternative installation if above doesn't work:
+  # Download from: https://ftp.ncbi.nlm.nih.gov/pub/datasets/command-line/LATEST/
+
