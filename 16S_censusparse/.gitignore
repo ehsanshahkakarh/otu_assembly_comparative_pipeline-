@@ -1,40 +1,32 @@
-# Ignore everything by default
-*
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
 
-# Allow directories so we can whitelist their contents selectively
-!*/
+# Logs
+logs/*.log
 
-# Keep scripts, notebooks, and docs
-!*.py
-!*.R
-!*.sh
-!*.ipynb
-!*.md
-!*.txt
-!.gitignore
-!*.csv
+# Cache files
+cache/
 
-# Keep folders but ignore metadata files inside them (commented out to allow CSV files)
-# metadata/*.csv
-# metadata/*.tsv
-# metadata/*.json
-# metadata/*.yaml
-# metadata/*.yml
-# metadata/*.xml
-# metadata/*.txt
+# Old directory structure (deprecated - moved to old_pipeline/)
+py_16S/
+csv_16S/
 
-# csv_ncbi/*.csv
-# csv_ncbi/*.tsv
-# csv_ncbi/*.json
-# csv_ncbi/*.yaml
-# csv_ncbi/*.yml
-# csv_ncbi/*.xml
-# csv_ncbi/*.txt
+# Temporary files
+*.tmp
+*.temp
+.DS_Store
+*.swp
+*.swo
+*~
 
-# taxonomic_mapping/*.csv
-# taxonomic_mapping/*.tsv
-# taxonomic_mapping/*.json
-# taxonomic_mapping/*.yaml
-# taxonomic_mapping/*.yml
-# taxonomic_mapping/*.xml
-# taxonomic_mapping/*.txt
+# Output archives
+output/archive/
+
+# IDE
+.vscode/
+.idea/
+*.sublime-*
