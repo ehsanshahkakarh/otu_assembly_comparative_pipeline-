@@ -1,0 +1,17 @@
+# Requirements for NCBI Species Parser
+# =====================================
+# 
+# Installation:
+#   pip install -r requirements.txt
+#
+# External Dependencies (must be installed separately):
+#   - taxonkit: https://bioinf.shenwei.me/taxonkit/
+#     Installation: conda install -c bioconda taxonkit
+#                   or download from: https://github.com/shenwei356/taxonkit/releases
+
+# Core dependencies
+pandas>=1.5.0
+
+# Note: taxonkit is a command-line tool, not a Python package
+# It must be installed separately and available in your PATH
+
