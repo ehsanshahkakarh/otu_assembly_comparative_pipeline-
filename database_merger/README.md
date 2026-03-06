@@ -1,243 +1,224 @@
-# Merged Database Tables
+# GTDB-NCBI Database Merger
 
-This directory contains scripts and data for merging and analyzing taxonomic data from all sources (GTDB, NCBI, and Eukprot).
+**High-precision genome-level mapping between GTDB R226 and NCBI GenBank**
 
-## Triple Anchor Merger Scripts
+This pipeline creates bidirectional mapping tables between GTDB taxonomy and NCBI metadata for **730,351 genomes (99.7% of GTDB)**.
 
-The following scripts perform comprehensive taxonomic merging using a triple-anchor strategy:
+---
 
-- `phylum_triple_anchor_merger.py` - Phylum-level merger
-- `family_triple_anchor_merger.py` - Family-level merger
-- `genus_triple_anchor_merger.py` - Genus-level merger
+## 🎯 Quick Start
 
-### Candidat Taxa Filter
+### Use the Pre-Built Mapping Tables
 
-All merger scripts include a configurable filter to exclude taxa starting with "candidat" (case-insensitive) from the output results. This filter can be easily toggled:
+The easiest way to use this pipeline is to directly access the mapping tables:
 
-**To EXCLUDE candidat taxa from output:**
 ```python
-EXCLUDE_CANDIDAT_TAXA = True
+import pandas as pd
+
+# Load the simple map (RECOMMENDED)
+df = pd.read_csv('accession_only_merger/mapping_tables/gtdb_to_ncbi_simple_map.csv')
+
+# Look up GTDB taxonomy for any NCBI accession
+genome = df[df['accession'] == 'GCA_000005845.2']
+print(genome[['gtdb_phylum', 'gtdb_genus', 'gtdb_species']])
+
+# Find all genomes in a GTDB phylum
+pseudomonadota = df[df['gtdb_phylum'] == 'Pseudomonadota']
+print(f"Found {len(pseudomonadota):,} genomes")
 ```
 
-**To INCLUDE candidat taxa in output:**
-```python
-# EXCLUDE_CANDIDAT_TAXA = True  # Comment out this line
+**📁 Mapping Tables Location:** `accession_only_merger/mapping_tables/`
+
+See detailed documentation: [`accession_only_merger/mapping_tables/README.md`](accession_only_merger/mapping_tables/README.md)
+
+---
+
+## 📊 Pipeline Overview
+
+### Current Production Pipeline: **Accession-Only Merger**
+
+**Location:** `accession_only_merger/`
+
+**What it does:**
+- Matches GTDB genomes to NCBI assemblies using accession numbers (GCA/GCF)
+- Creates clean mapping tables for bidirectional lookups
+- Validates genome presence (not taxonomic nomenclature)
+
+**Results:**
+- ✅ **99.7% match rate** (730,351 / 732,475 genomes)
+- ✅ **730,351 genomes mapped** with complete metadata
+- ✅ **3 ready-to-use mapping tables** (simple, taxonomy, full)
+
+**Key Files:**
+- `mapping_tables/` - **⭐ USE THESE** - Clean CSV mapping tables
+- `outputs/` - Raw merger outputs (mapped/unmapped CSVs)
+- `merge_gtdb_ncbi_accessions.py` - Main merger script
+- `create_gtdb_ncbi_map.py` - Mapping table generator
+- `COMPARISON_ANALYSIS.md` - Comparison with old pipeline
+
+---
+
+## 📂 Directory Structure
+
+```
+database_merger/
+├── README.md                          # This file
+├── accession_only_merger/             # PRODUCTION PIPELINE ⭐
+│   ├── mapping_tables/                # Clean mapping tables (USE THESE)
+│   │   ├── gtdb_to_ncbi_simple_map.csv       (135 MB) - RECOMMENDED
+│   │   ├── gtdb_to_ncbi_taxonomy_map.csv     (109 MB)
+│   │   ├── gtdb_to_ncbi_full_map.csv         (483 MB)
+│   │   └── README.md                          # Usage guide
+│   ├── outputs/                       # Raw merger outputs
+│   │   ├── archaea_mapped.csv         # 17,221 matched
+│   │   ├── bacteria_mapped.csv        # 713,130 matched
+│   │   ├── archaea_unmapped.csv       # 24 not in NCBI
+│   │   ├── bacteria_unmapped.csv      # 2,100 not in NCBI
+│   │   └── ncbi_unmapped.csv          # 2.5M NCBI not in GTDB
+│   ├── logs/                          # Execution logs
+│   ├── archive/                       # Old/intermediate files
+│   ├── merge_gtdb_ncbi_accessions.py  # Main merger script
+│   ├── create_gtdb_ncbi_map.py        # Mapping table generator
+│   ├── check_unmapped_status.py       # NCBI status checker
+│   └── COMPARISON_ANALYSIS.md         # Pipeline comparison
+│
+└── old_pipeline/                      # LEGACY (for reference only)
+    ├── triple_anchor_merger/          # Old name-based merger
+    │   ├── merge_outputs/             # Old outputs
+    │   ├── logs/                      # Old logs
+    │   └── *.py                       # Old scripts
+    ├── visuals/                       # Old visualizations
+    ├── README.md                      # Old documentation
+    └── README_AI_assist_merged_tables.md
 ```
 
-The filter is located at the top of each merger script and affects only the final output CSV files. All processing and matching logic remains intact - only the final results are filtered.
+---
 
-### Output Columns
+## 🔄 Running the Pipeline
 
-Each merger script generates CSV files with the following columns:
+### Step 1: Run the Merger (if needed)
 
-- **Taxonomic Name**: `Phylum`, `Family`, or `Genus` depending on the script
-- **GTDB_Domain**: Domain classification from GTDB
-- **NCBI_Domain**: Domain classification from NCBI
-- **Database_Presence**: `Both`, `GTDB_Only`, or `NCBI_Only`
-- **Match_Status**: `Match` or `No_Match`
-- **Anchor_Type**: Matching strategy used (`Name`, `Accession`, `Accession+Taxid`, etc.)
-- **GTDB_Genome_Count**: Number of genomes in GTDB for this taxon
-- **GTDB_Species_Count**: Number of species in GTDB for this taxon
-- **NCBI_Genome_Count**: Number of genomes in NCBI for this taxon
-- **NCBI_Species_Count**: Number of species in NCBI for this taxon
-
-The genome and species counts are extracted directly from the respective `*_counts.csv` and `*_species_counts.csv` files generated by the parsing scripts.
-
-### Usage
-
-Run any merger script from the merged_tables directory:
 ```bash
-python phylum_triple_anchor_merger.py
-python family_triple_anchor_merger.py
-python genus_triple_anchor_merger.py
+cd accession_only_merger
+python merge_gtdb_ncbi_accessions.py
 ```
 
-Output files are automatically saved to:
-- `merge_outputs/phylum_triple_anchor_output/`
-- `merge_outputs/family_triple_anchor_output/`
-- `merge_outputs/genus_triple_anchor_output/`
+This creates the raw outputs in `outputs/`.
 
-Log files are saved to the `logs/` directory.
+### Step 2: Generate Mapping Tables
 
-## Ignored Phyla
+```bash
+python create_gtdb_ncbi_map.py
+```
 
-The following phyla are not NCBI recognized phyla and are not used in any analysis:
+This creates the clean mapping tables in `mapping_tables/`.
 
-BS750m-G25,Bacteria,,GTDB_Only,No_Match,None,1,0
-GCA-001730085,Bacteria,,GTDB_Only,No_Match,None,2,0
-JACIXR01,Bacteria,,GTDB_Only,No_Match,None,3,0
-JAGOBX01,Bacteria,,GTDB_Only,No_Match,None,2,0
-JAHJDO01,Bacteria,,GTDB_Only,No_Match,None,7,0
-JAJRZV01,Bacteria,,GTDB_Only,No_Match,None,1,0
-JALSQH01,Bacteria,,GTDB_Only,No_Match,None,2,0
-JAMORN01,Bacteria,,GTDB_Only,No_Match,None,1,0
-JAMOTN01,Bacteria,,GTDB_Only,No_Match,None,1,0
-QNDG01,Bacteria,,GTDB_Only,No_Match,None,14,0
-RBG-13-61-14,Bacteria,,GTDB_Only,No_Match,None,3,0
-SM23-31,Bacteria,,GTDB_Only,No_Match,None,7,0
-T1Sed10-126,Bacteria,,GTDB_Only,No_Match,None,2,0
-UBP13,Bacteria,,GTDB_Only,No_Match,None,8,0
-UBP15,Bacteria,,GTDB_Only,No_Match,None,9,0
-UBP18,Bacteria,,GTDB_Only,No_Match,None,8,0
-UBP4,Bacteria,,GTDB_Only,No_Match,None,3,0
-UBP7,Bacteria,,GTDB_Only,No_Match,None,6,0
+### Step 3: (Optional) Check Unmapped Status
 
-## Merger Logic and Strategies
+```bash
+# Check why genomes are unmapped
+python check_unmapped_status.py archaea
+python check_unmapped_status.py bacteria
+```
 
-### Overview
+---
 
-The database merger implements a sophisticated multi-strategy approach to merge taxonomic data from GTDB, NCBI, and EukProt databases. The merger uses a "triple anchor" strategy that attempts multiple matching approaches to maximize successful taxonomic alignments.
+## 📈 Results Summary
 
-### Core Merger Strategies
+### Match Rates (GTDB R226 → NCBI GenBank)
 
-#### 1. **Name-Based Matching (Primary Strategy)**
-- **Direct Name Match**: Exact string matching between taxonomic names
-- **Normalized Name Match**: Case-insensitive matching with whitespace normalization
-- **Suffix Handling**: Ignores suffixes after underscores (e.g., `Bacillota_A` → `Bacillota`)
-- **Candidatus Preservation**: Maintains Candidatus taxa without stripping prefixes
+| Domain | Total GTDB | Matched | Match Rate | Unmapped |
+|--------|-----------|---------|------------|----------|
+| **Archaea** | 17,245 | 17,221 | **99.9%** | 24 (0.1%) |
+| **Bacteria** | 715,230 | 713,130 | **99.7%** | 2,100 (0.3%) |
+| **TOTAL** | 732,475 | 730,351 | **99.7%** | 2,124 (0.3%) |
 
-#### 2. **Accession-Based Matching (Secondary Strategy)**
-- **Cross-Database Accession Lookup**: Uses genome accessions to find taxonomic matches
-- **Accession Maps**: Leverages pre-built accession-to-taxonomy mappings
-- **Multi-Level Resolution**: Attempts matching at species, genus, family, and phylum levels
+### Top 10 Phyla by Genome Count
 
-#### 3. **Lineage-Based Matching (Tertiary Strategy)**
-- **Taxonomic Hierarchy Traversal**: Uses full lineage information for matching
-- **Last Lineage Taxid Grouping**: Groups entries by the most specific taxonomic identifier
-- **Partial Lineage Matching**: Matches based on available lineage components
+1. Pseudomonadota: 266,237
+2. Bacillota: 205,524
+3. Bacteroidota: 88,978
+4. Actinomycetota: 59,316
+5. Campylobacterota: 12,657
+6. Patescibacteriota: 10,828
+7. Verrucomicrobiota: 8,309
+8. Cyanobacteriota: 7,028
+9. Chloroflexota: 6,844
+10. Acidobacteriota: 5,430
 
-### Taxonomic Name Processing
+---
 
-#### Suffix Handling Logic
+## 💡 Common Use Cases
+
+### 1. Convert NCBI Accession → GTDB Taxonomy
 ```python
-# Example: Handle taxonomic suffixes
-"Bacillota_A" → "Bacillota"  # Remove suffix for matching
-"Bacillota_B" → "Bacillota"  # Merge with same base name
-"Pseudomonadota_C" → "Pseudomonadota"  # Consistent suffix removal
+df = pd.read_csv('accession_only_merger/mapping_tables/gtdb_to_ncbi_simple_map.csv')
+result = df[df['accession'] == 'GCA_000005845.2']
+print(result['gtdb_species'].values[0])
 ```
 
-#### Candidatus Taxa Handling
-- **Preservation**: Candidatus taxa are preserved in their original form
-- **No Stripping**: Unlike previous approaches, Candidatus prefixes are maintained
-- **NCBI Compatibility**: Updated NCBI taxonomy scripts properly handle Candidatus taxa
-
-#### Organellar Sequence Processing
-- **Host Organism Inference**: Extracts host taxonomy from organellar sequences
-- **Pattern Recognition**: Identifies chloroplast, mitochondria, plastid, and apicoplast sequences
-- **Vectorized Processing**: Optimized batch processing for performance
-
-### Merger Workflow
-
-#### Phase 1: Data Loading and Preprocessing
-1. **Load Source Data**: Read GTDB, NCBI, and EukProt taxonomic tables
-2. **Normalize Names**: Apply consistent naming conventions
-3. **Build Accession Maps**: Create cross-reference mappings
-4. **Extract Lineages**: Parse taxonomic hierarchy information
-
-#### Phase 2: Multi-Strategy Matching
-1. **Primary Matching**: Direct name-based matching with suffix handling
-2. **Secondary Matching**: Accession-based cross-database lookup
-3. **Tertiary Matching**: Lineage-based hierarchical matching
-4. **Conflict Resolution**: Handle cases where multiple strategies yield different results
-
-#### Phase 3: Data Aggregation and Output
-1. **Count Aggregation**: Sum OTU counts for merged entries
-2. **Metadata Preservation**: Maintain lineage and taxonomic information
-3. **Quality Assessment**: Track match success rates and anchor types
-4. **Output Generation**: Create standardized CSV files with comprehensive metadata
-
-### Count Aggregation Logic
-
-#### OTU Count Prioritization
-- **Primary Metric**: Number of distinct OTU clusters (otu_count)
-- **Removed Metric**: Sequence abundance counts (size_count) - removed for simplicity
-- **Aggregation Method**: Sum OTU counts when merging taxonomically equivalent entries
-
-#### Example Count Merging
+### 2. Get All Genomes in a GTDB Lineage
 ```python
-# Before merging:
-"Bacillota_A": otu_count=150
-"Bacillota_B": otu_count=75
-"Bacillota": otu_count=200
-
-# After merging (suffix-based):
-"Bacillota": otu_count=425  # 150 + 75 + 200
+family_genomes = df[df['gtdb_family'] == 'Enterobacteriaceae']
+print(f"Found {len(family_genomes):,} genomes")
 ```
 
-### Database-Specific Considerations
-
-#### GTDB-Specific Processing
-- **Modern Nomenclature**: Handles updated bacterial and archaeal taxonomy
-- **Genome-Centric**: Focuses on genome-level taxonomic assignments
-- **Species Clusters**: Processes GTDB species cluster information
-
-#### NCBI-Specific Processing
-- **Traditional Taxonomy**: Maintains classical taxonomic hierarchy
-- **Taxid Integration**: Uses NCBI taxonomy IDs for precise matching
-- **Lineage Validation**: Validates taxonomic assignments against NCBI taxonomy
-
-#### EukProt-Specific Processing
-- **Eukaryotic Focus**: Specialized handling for eukaryotic taxonomy
-- **Protein-Based**: Incorporates protein-level taxonomic information
-- **Cross-Reference**: Links to both GTDB and NCBI where applicable
-
-### Quality Control and Validation
-
-#### Match Quality Metrics
-- **Match Success Rate**: Percentage of successful taxonomic matches
-- **Anchor Type Distribution**: Breakdown of matching strategies used
-- **Database Coverage**: Proportion of taxa found in each database
-- **Conflict Resolution**: Handling of contradictory taxonomic assignments
-
-#### Output Validation
-- **Taxonomic Consistency**: Ensures hierarchical relationships are maintained
-- **Count Validation**: Verifies that aggregated counts are reasonable
-- **Lineage Integrity**: Checks that merged lineages are taxonomically valid
-- **Duplicate Detection**: Identifies and resolves duplicate entries
-
-### Performance Optimizations
-
-#### Vectorized Processing
-- **Batch Operations**: Process multiple entries simultaneously
-- **Pandas Integration**: Leverage vectorized pandas operations
-- **Memory Efficiency**: Optimize memory usage for large datasets
-
-#### Caching Strategies
-- **Accession Maps**: Pre-build and cache accession-to-taxonomy mappings
-- **Lineage Lookups**: Cache frequently accessed lineage information
-- **Name Normalization**: Cache normalized name transformations
-
-### Error Handling and Logging
-
-#### Comprehensive Logging
-- **Processing Steps**: Log each major processing phase
-- **Match Statistics**: Track and report matching success rates
-- **Error Reporting**: Detailed error messages for debugging
-- **Performance Metrics**: Processing time and throughput statistics
-
-#### Unmapped Taxa Analysis
-- **Pattern Recognition**: Identify common patterns in unmapped taxa
-- **Failure Categorization**: Classify reasons for matching failures
-- **Improvement Suggestions**: Provide recommendations for better matching
-
-### Configuration Options
-
-#### Candidatus Taxa Filter
+### 3. Map GTDB Species → NCBI TaxIDs
 ```python
-EXCLUDE_CANDIDAT_TAXA = True  # Exclude from final output
-# EXCLUDE_CANDIDAT_TAXA = False  # Include in final output
+species = df[df['gtdb_species'] == 'Escherichia coli']
+print(species[['accession', 'ncbi_taxid', 'ncbi_organism_name']])
 ```
 
-#### Suffix Handling
+### 4. Filter High-Quality Genomes
 ```python
-HANDLE_SUFFIXES = True  # Enable suffix-based merging
-SUFFIX_PATTERNS = ['_A', '_B', '_C', '_D']  # Recognized suffixes
+df_full = pd.read_csv('accession_only_merger/mapping_tables/gtdb_to_ncbi_full_map.csv')
+complete = df_full[df_full['assembly_level'] == 'Complete Genome']
+print(f"Found {len(complete):,} complete genomes")
 ```
 
-#### Matching Thresholds
-```python
-MIN_MATCH_CONFIDENCE = 0.8  # Minimum confidence for matches
-MAX_LINEAGE_DISTANCE = 2    # Maximum taxonomic distance for lineage matching
-```
+---
 
-This merger logic provides a robust, flexible, and comprehensive approach to integrating taxonomic data from multiple sources while maintaining data quality and taxonomic integrity.
+## 🆚 Accession-Only vs Triple Anchor
+
+| Feature | Accession-Only (NEW) | Triple Anchor (OLD) |
+|---------|---------------------|---------------------|
+| **Level** | Genome-level | Taxonomic name-level |
+| **Matching** | Accession numbers | Taxonomic names |
+| **Match Rate** | 99.7% of genomes | ~40% of phylum names |
+| **Question** | "Are genomes in both DBs?" | "Do DBs use same names?" |
+| **Use Case** | Genome presence validation | Nomenclature comparison |
+| **Status** | ✅ Production | 📦 Archived |
+
+**Conclusion:** For genome-level analysis, use the **accession-only merger**.
+
+See detailed comparison: [`accession_only_merger/COMPARISON_ANALYSIS.md`](accession_only_merger/COMPARISON_ANALYSIS.md)
+
+---
+
+## 📚 Documentation
+
+- **Main Pipeline:** [`accession_only_merger/README.md`](accession_only_merger/README.md) *(to be created)*
+- **Mapping Tables:** [`accession_only_merger/mapping_tables/README.md`](accession_only_merger/mapping_tables/README.md)
+- **Comparison Analysis:** [`accession_only_merger/COMPARISON_ANALYSIS.md`](accession_only_merger/COMPARISON_ANALYSIS.md)
+- **Old Pipeline:** [`old_pipeline/README.md`](old_pipeline/README.md)
+
+---
+
+## ⚠️ Important Notes
+
+1. **Unmapped genomes (0.3%):** These GTDB genomes don't exist in current NCBI GenBank because they were suppressed/removed after GTDB R226 snapshot.
+
+2. **Match types:**
+   - `GCA`: Matched via NCBI's `assembly_accession` column (GenBank)
+   - `GCF`: Matched via NCBI's `gbrs_paired_asm` column (RefSeq)
+
+3. **Data versions:**
+   - GTDB: R226 (April 2025)
+   - NCBI: GenBank Assembly Summary (March 2026)
+
+---
+
+**Created:** 2026-03-04  
+**Pipeline:** Accession-Only Merger  
+**Coverage:** 730,351 genomes (99.7% of GTDB R226)
+

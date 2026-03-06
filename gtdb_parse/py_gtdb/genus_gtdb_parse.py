@@ -7,8 +7,8 @@ It counts the number of genomes per genus and creates output files with
 both summary statistics and detailed accession information.
 
 Input:
-- GTDB bacterial taxonomy file (00bac120_taxonomy.tsv)
-- GTDB archaeal taxonomy file (00ar53_taxonomy.tsv)
+- GTDB bacterial taxonomy file (bac120_taxonomy.tsv)
+- GTDB archaeal taxonomy file (ar53_taxonomy.tsv)
 
 Output:
 - Summary CSV with genus counts (gtdb_genus_counts.csv)
@@ -35,8 +35,8 @@ from contextlib import contextmanager
 from tqdm import tqdm
 
 # Constants
-BAC_TAXONOMY_FILENAME = "00bac120_taxonomy.tsv"
-ARC_TAXONOMY_FILENAME = "00ar53_taxonomy.tsv"
+BAC_TAXONOMY_FILENAME = "bac120_taxonomy.tsv"
+ARC_TAXONOMY_FILENAME = "ar53_taxonomy.tsv"
 SUMMARY_OUTPUT_FILENAME = "gtdb_genus_counts.csv"
 DETAILED_OUTPUT_FILENAME = "gtdb_genus_with_accessions.csv"
 # Removed ALL_RANKS_OUTPUT_FILENAME - not needed

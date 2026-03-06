@@ -7,13 +7,13 @@ ONLY for taxa that are present in the actual metadata files. This prevents
 inclusion of taxa that exist in taxdump but have no actual genomes/assemblies.
 
 Key Changes:
-- Only processes taxa present in metadata files (00bac120_taxonomy.tsv, 00ar53_taxonomy.tsv)
+- Only processes taxa present in metadata files (bac120_taxonomy.tsv, ar53_taxonomy.tsv)
 - Excludes taxa that exist only in taxdump but not in actual genome metadata
 - Provides cleaner, more accurate results for downstream merging
 
 Input:
-- GTDB bacterial taxonomy file (00bac120_taxonomy.tsv)
-- GTDB archaeal taxonomy file (00ar53_taxonomy.tsv)
+- GTDB bacterial taxonomy file (bac120_taxonomy.tsv)
+- GTDB archaeal taxonomy file (ar53_taxonomy.tsv)
 
 Output:
 - Summary CSV with phylum counts (gtdb_phylum_counts.csv)
@@ -40,8 +40,8 @@ from contextlib import contextmanager
 from tqdm import tqdm
 
 # Constants
-BAC_TAXONOMY_FILENAME = "00bac120_taxonomy.tsv"
-ARC_TAXONOMY_FILENAME = "00ar53_taxonomy.tsv"
+BAC_TAXONOMY_FILENAME = "bac120_taxonomy.tsv"
+ARC_TAXONOMY_FILENAME = "ar53_taxonomy.tsv"
 SUMMARY_OUTPUT_FILENAME = "gtdb_phylum_counts.csv"
 DETAILED_OUTPUT_FILENAME = "gtdb_phylum_with_accessions.csv"
 # Removed ALL_RANKS_OUTPUT_FILENAME - not needed

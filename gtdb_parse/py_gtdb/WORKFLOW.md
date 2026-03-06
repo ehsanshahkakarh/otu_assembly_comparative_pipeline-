@@ -118,8 +118,8 @@ The GTDB parsing workflow processes raw taxonomy strings into structured taxonom
 
 ```
 Input Files:
-├── 00bac120_taxonomy.tsv  (Bacterial genomes)
-├── 00ar53_taxonomy.tsv    (Archaeal genomes)
+├── bac120_taxonomy.tsv    (Bacterial genomes)
+├── ar53_taxonomy.tsv      (Archaeal genomes)
 └── taxid.map              (Optional: accession→taxid mapping)
 
 Processing:

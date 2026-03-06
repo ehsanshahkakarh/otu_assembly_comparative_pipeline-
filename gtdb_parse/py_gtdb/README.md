@@ -10,8 +10,8 @@ gtdb_parse/
 │   ├── phylum_gtdb_parse.py   # Phylum-level parser
 │   ├── family_gtdb_parse.py   # Family-level parser
 │   ├── genus_gtdb_parse.py    # Genus-level parser
-│   ├── 00bac120_taxonomy.tsv  # GTDB bacterial taxonomy input
-│   ├── 00ar53_taxonomy.tsv    # GTDB archaeal taxonomy input
+│   ├── bac120_taxonomy.tsv    # GTDB bacterial taxonomy input
+│   ├── ar53_taxonomy.tsv      # GTDB archaeal taxonomy input
 │   └── taxid.map              # Accession to taxid mapping
 ├── csv_gtdb/                  # Output CSV files
 │   ├── gtdb_phylum_counts.csv
@@ -32,8 +32,8 @@ gtdb_parse/
 ## Input Files
 
 ### 1. GTDB Taxonomy Files
-- **`00bac120_taxonomy.tsv`**: Bacterial taxonomy data from GTDB
-- **`00ar53_taxonomy.tsv`**: Archaeal taxonomy data from GTDB
+- **`bac120_taxonomy.tsv`**: Bacterial taxonomy data from GTDB
+- **`ar53_taxonomy.tsv`**: Archaeal taxonomy data from GTDB
 - **Format**: `accession\ttaxonomy_string`
 - **Example**: `GB_GCA_000005825.2\td__Bacteria;p__Proteobacteria;c__Gammaproteobacteria;...`
 

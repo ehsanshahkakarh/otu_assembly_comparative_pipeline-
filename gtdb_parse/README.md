@@ -59,8 +59,8 @@ GTDB Taxonomy Files → Metadata Filtering → Taxonomic Parsing → Structured 
 - **Improves merger quality**: Clean data for downstream comparative analysis
 
 ### **Dual-Domain Processing**
-- **Bacterial Taxonomy**: `00bac120_taxonomy.tsv` (120 marker genes)
-- **Archaeal Taxonomy**: `00ar53_taxonomy.tsv` (53 marker genes)
+- **Bacterial Taxonomy**: `bac120_taxonomy.tsv` (120 marker genes)
+- **Archaeal Taxonomy**: `ar53_taxonomy.tsv` (53 marker genes)
 - **Unified Output**: Combined bacterial and archaeal results
 - **Domain Preservation**: Maintains domain information for filtering
 
@@ -93,8 +93,8 @@ gtdb_parse/
 │   └── logs/                             # Processing execution logs
 │
 ├── metadata/                             # 📊 Input GTDB Data
-│   ├── 00bac120_taxonomy.tsv             # Bacterial taxonomy (120 markers)
-│   ├── 00ar53_taxonomy.tsv               # Archaeal taxonomy (53 markers)
+│   ├── bac120_taxonomy.tsv               # Bacterial taxonomy (120 markers)
+│   ├── ar53_taxonomy.tsv                 # Archaeal taxonomy (53 markers)
 │   └── processing_logs/                  # Data processing history
 │
 ├── taxdump_gtdb/                         # 🗺️ GTDB Taxonomy Database
@@ -179,8 +179,8 @@ gtdb_parse/
 │   ├── phylum_gtdb_parse.py   # Phylum-level parser
 │   ├── family_gtdb_parse.py   # Family-level parser
 │   ├── genus_gtdb_parse.py    # Genus-level parser
-│   ├── 00bac120_taxonomy.tsv  # GTDB bacterial taxonomy input
-│   ├── 00ar53_taxonomy.tsv    # GTDB archaeal taxonomy input
+│   ├── bac120_taxonomy.tsv    # GTDB bacterial taxonomy input
+│   ├── ar53_taxonomy.tsv      # GTDB archaeal taxonomy input
 │   └── taxid.map              # Accession to taxid mapping
 ├── csv_gtdb/                  # Output CSV files (in metadata_proj)
 │   ├── gtdb_phylum_counts.csv
@@ -203,8 +203,8 @@ gtdb_parse/
 ## Input Files
 
 ### 1. GTDB Taxonomy Files
-- **`00bac120_taxonomy.tsv`**: Bacterial taxonomy data from GTDB
-- **`00ar53_taxonomy.tsv`**: Archaeal taxonomy data from GTDB
+- **`bac120_taxonomy.tsv`**: Bacterial taxonomy data from GTDB
+- **`ar53_taxonomy.tsv`**: Archaeal taxonomy data from GTDB
 - **Format**: `accession\ttaxonomy_string`
 - **Example**: `GB_GCA_000005825.2\td__Bacteria;p__Proteobacteria;c__Gammaproteobacteria;...`
 

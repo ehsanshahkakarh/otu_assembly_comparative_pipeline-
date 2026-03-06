@@ -1,5 +1,0 @@
-Node	Node_Order	Description	Total_Count	Data_Type
-Genbank_Genome_%	1	Genbank Total Genomes (Bacteria)	2,559,773	Percentage
-IMG_Genome_%	2	IMG Genome Count (16S sequences)	1,075,768	Percentage
-16S_OTU_%	3	16S OTU Count	234,159	Percentage
-Genbank_Species_%	4	Genbank Total Species (Bacteria)	84,476	Percentage

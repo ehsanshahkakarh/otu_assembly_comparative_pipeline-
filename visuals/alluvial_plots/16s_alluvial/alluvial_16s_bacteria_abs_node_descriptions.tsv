@@ -1,5 +1,0 @@
-Node	Node_Order	Description	Total_Count	Data_Type
-Genbank_Genome_Count	1	Genbank Total Genomes (Bacteria)	2,559,773	Absolute Count
-IMG_Genome_Count	2	IMG Genome Count (16S sequences)	1,075,768	Absolute Count
-16S_OTU_Count	3	16S OTU Count	234,159	Absolute Count
-Genbank_Species_Count	4	Genbank Total Species (Bacteria)	84,476	Absolute Count

@@ -1,8 +1,8 @@
 import dask.dataframe as dd
 
 # Load files with Dask
-df_bac = dd.read_csv("00bac120_taxonomy.tsv", sep="\t", header=None, names=["accession", "taxonomy"])
-df_arc = dd.read_csv("00ar53_taxonomy.tsv", sep="\t", header=None, names=["accession", "taxonomy"])
+df_bac = dd.read_csv("bac120_taxonomy.tsv", sep="\t", header=None, names=["accession", "taxonomy"])
+df_arc = dd.read_csv("ar53_taxonomy.tsv", sep="\t", header=None, names=["accession", "taxonomy"])
 
 # Combine
 df = dd.concat([df_bac, df_arc])

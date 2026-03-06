@@ -3,88 +3,49 @@
 # Shared color assignments for taxa across all visualization types
 # This ensures consistency between alluvial plots, scatter plots, and other visualizations
 #
-# SHARED TAXA ANALYSIS (Updated 2025-11-17)
+# SHARED TAXA ANALYSIS (Updated 2026-01-04)
 # ==========================================
-# This configuration prioritizes colors from comprehensive scatter plots for shared taxa
+# This configuration ONLY includes taxa that appear in BOTH scatter plots AND alluvial plots
+# All other taxa will use cross-domain fallback color pools for maximum diversity
 #
-# ARCHAEA (4/4 taxa shared between scatter plots and alluvial plots):
+# BACTERIA (7 shared taxa):
+#   - Planctomycetota, Acidobacteriota, Chloroflexota, Verrucomicrobiota,
+#     Myxococcota, Cyanobacteriota, Actinomycetota
+#
+# ARCHAEA (4 shared taxa):
 #   - Euryarchaeota, Nitrososphaerota, Thermoproteota, Nanoarchaeota
-#   - All archaea phyla use scatter plot colors for consistency
 #
-# BACTERIA (6+ taxa shared between scatter plots and alluvial plots):
-#   - Shared: Chloroflexota, Acidobacteriota, Verrucomicrobiota, Planctomycetota, Cyanobacteriota, Actinomycetota
-#   - Scatter-only: Abditibacteriota, Calditrichota, Thermomicrobiota, Gemmatimonadota, Armatimonadota, Myxococcota
-#   - Alluvial-only: Pseudomonadota, Bacillota, Campylobacterota, Bacteroidota, Thermodesulfobacteriota
-#
-# EUKARYOTA (9+ taxa shared between scatter plots and alluvial plots):
-#   - Shared: Tubulinea, Rhizaria, Evosea, Alveolata, Discoba, Metamonada, Discosea, Stramenopiles, Chlorophyta
-#   - All shared eukaryotic divisions use scatter plot colors for consistency
+# EUKARYOTA (10 shared taxa):
+#   - Tubulinea, Rhizaria, Evosea, Alveolata, Discoba, Metamonada,
+#     Discosea, Stramenopiles, Chlorophyta, Streptophyta
 
 # Bacteria Phyla Color Assignments
 # --------------------------------
-# Colors from comprehensive scatter plot analysis (mega_comprehensive_stacked_visual.R)
-# These colors ensure consistency between scatter plots and alluvial plots
+# ONLY shared taxa that appear in BOTH scatter plots AND alluvial plots
 bacteria_colors:
-  # === SHARED TAXA (appear in both scatter plots and alluvial plots) ===
-  # Using comprehensive scatter plot colors as primary source
-  Abditibacteriota: "#4c9b34"        # Dark green - highest novelty factor (36.71×)
-  Calditrichota: "#cfe99d"           # Light yellow-green - 2nd highest novelty (35.00×)
-  Planctomycetota: "#ff7200"         # Orange - unique cell wall-less bacteria (26.34×)
-  Thermomicrobiota: "#d58a2f"        # Golden orange - thermophilic (25.55×)
-  Acidobacteriota: "#ffb44c"         # Light orange - important soil bacteria (24.66×)
-  Gemmatimonadota: "#f5d24f"         # Yellow - environmental (19.97×)
-  Chloroflexota: "#32CD32"           # Lime green - green non-sulfur bacteria (18.45×) - distinct from other greens
-  Verrucomicrobiota: "#46bda3"       # Aqua - environmental bacteria (16.85×)
-  Armatimonadota: "#55e3ff"          # Cyan - soil bacteria (15.34×)
-  Myxococcota: "#7ac7da"             # Light blue - social bacteria (14.31×)
+  Planctomycetota: "#ff7200"         # Orange - unique cell wall-less bacteria (26.34× novelty)
+  Acidobacteriota: "#ffb44c"         # Light orange - important soil bacteria (24.66× novelty)
+  Chloroflexota: "#32CD32"           # Lime green - green non-sulfur bacteria (18.45× novelty)
+  Verrucomicrobiota: "#46bda3"       # Aqua - environmental bacteria (16.85× novelty)
+  Myxococcota: "#7ac7da"             # Light blue - social bacteria (14.36× novelty)
   Cyanobacteriota: "#bfb1d3"         # Lavender - photosynthetic bacteria
   Actinomycetota: "#80456e"          # Plum - important antibiotic producers
-
-  # === SCATTER PLOT ONLY TAXA ===
-  Chrysiogenota: "#994417"           # Brown - metal-reducing bacteria
-  Dictyoglomota: "#9fe18b"           # Light green - thermophilic
-
-  # === ALLUVIAL PLOT ONLY TAXA ===
-  # Major phyla that appear prominently in alluvial plots
-  Pseudomonadota: "#1f77b4"          # Blue - most abundant bacteria
-  Bacillota: "#228B22"               # Forest green - gram-positive bacteria (distinctive from Verrucomicrobiota)
-  Campylobacterota: "#2ca02c"        # Green - pathogenic bacteria
-  Bacteroidota: "#d62728"            # Red - major gut bacteria
-  Thermodesulfobacteriota: "#01414d" # Dark teal - thermophilic sulfate reducers
-
-  # === OVERREPRESENTED TAXA ===
-  Chlorobiota: "#458f9c"             # Teal - green sulfur bacteria (18.67× overrep)
-  Chlamydiota: "#5b1f06"             # Dark brown - obligate parasites (9.50× overrep)
-  Ignavibacteriota: "#f16127"        # Blood orange - anaerobic (10.64× overrep)
-
-  # === ADDITIONAL NOVEL TAXA ===
-  Bdellovibrionota: "#72c859"        # Medium green - predatory bacteria
-  Spirochaetota: "#a67c28"           # Dark yellow-brown - spiral-shaped bacteria
+  Chrysiogenota: "#008f00"           # Dark green - custom color (distinct from Verrucomicrobiota)
 
 # Archaea Phyla Color Assignments
 # -------------------------------
-# Colors from comprehensive scatter plot analysis (mega_comprehensive_stacked_visual.R)
-# These colors ensure consistency between scatter plots and alluvial plots
+# ONLY shared taxa that appear in BOTH scatter plots AND alluvial plots
 archaea_colors:
-  # === SHARED TAXA (appear in both scatter plots and alluvial plots) ===
-  # All 4 archaea phyla appear in both visualization types
-  # Using comprehensive scatter plot colors as primary source
   Euryarchaeota: "#f51b7f"           # Bright pink - most common archaea (2.05× novelty)
   Nitrososphaerota: "#ff3f4d"        # Red - ammonia-oxidizing archaea (5.79× novelty)
   Thermoproteota: "#d19386"          # Light brown - hyperthermophilic (2.28× novelty)
   Nanoarchaeota: "#8c2a50"           # Dark pink - highest novelty factor (117.70× novelty)
 
-  # === ADDITIONAL ARCHAEA PHYLA ===
-  Methanobacteriota: "#f5c7bd"       # Light pink - methane-producing archaea
-
 # Eukaryota Division Color Assignments
 # ------------------------------------
-# Colors from comprehensive scatter plot analysis (mega_comprehensive_stacked_visual.R)
-# These colors ensure consistency between scatter plots and alluvial plots
+# ONLY shared taxa that appear in BOTH scatter plots AND alluvial plots
 eukaryota_colors:
-  # === SHARED TAXA (appear in both scatter plots and alluvial plots) ===
-  # Using comprehensive scatter plot colors as primary source
-  Tubulinea: "#416b7d"               # Dark blue-gray - highest novelty (1323× factor)
+  Tubulinea: "#416b7d"               # Dark blue-gray - highest novelty (1323× novelty)
   Rhizaria: "#55d0ba"                # Teal - amoeboid protists (341.73× novelty)
   Evosea: "#003ce1"                  # Bright blue - amoeboid (78.42× novelty)
   Alveolata: "#c73de4"               # Magenta - diverse protists (51.67× novelty)
@@ -93,14 +54,8 @@ eukaryota_colors:
   Discosea: "#d24390"                # Hot pink - amoeboid (15.35× novelty)
   Stramenopiles: "#475093"           # Dark purple - diverse protists (11.12× novelty)
   Chlorophyta: "#663be6"             # Violet - green algae (6.75× novelty)
-
-  # === SCATTER PLOT ONLY TAXA ===
-  Opisthokonta: "#7a9dcd"            # Light blue - animals and fungi
-  Rhodophyta: "#69c1d4"              # Light cyan - red algae
-  Streptophyta: "#68536c"            # Gray-purple - land plants
-
-  # === ADDITIONAL EUKARYOTIC DIVISIONS ===
-  Amoebozoa: "#2E8B57"               # Sea green - amoeboid protists
+  Streptophyta: "#68536c"            # Gray-purple - land plants (appears in pct alluvial)
+  Rhodophyta: "#008f00"              # Dark green - red algae (same as Chrysiogenota for consistency)
 
 # Fallback Colors for Unmapped Taxa
 # ---------------------------------

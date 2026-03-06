@@ -1,5 +1,0 @@
-Node	Node_Order	Description	Total_Count	Data_Type
-Genbank_Genome_%	1	Genbank Total Genomes (Eukaryota)	49,999	Percentage
-IMG_Genome_%	2	IMG Genome Count (18S sequences)	400,105	Percentage
-18S_OTU_%	3	18S OTU Count	70,560	Percentage
-Genbank_Species_%	4	Genbank Total Species (Eukaryota)	20,712	Percentage

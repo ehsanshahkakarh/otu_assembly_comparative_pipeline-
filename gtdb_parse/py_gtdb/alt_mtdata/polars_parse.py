@@ -8,8 +8,8 @@ def check_file_exists(filepath):
     return True
 
 # Check if input files exist
-bac_file = "00bac120_taxonomy.tsv"
-arc_file = "00ar53_taxonomy.tsv"
+bac_file = "bac120_taxonomy.tsv"
+arc_file = "ar53_taxonomy.tsv"
 
 if not (check_file_exists(bac_file) and check_file_exists(arc_file)):
     print("Please check your input file paths")

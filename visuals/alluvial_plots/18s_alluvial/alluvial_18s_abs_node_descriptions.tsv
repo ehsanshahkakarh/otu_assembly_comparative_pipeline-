@@ -1,5 +1,0 @@
-Node	Node_Order	Description	Total_Count	Data_Type
-Genbank_Genome_Count	1	Genbank Total Genomes (Eukaryota)	49,931	Absolute Count
-IMG_Genome_Count	2	IMG Genome Count (18S sequences)	381,786	Absolute Count
-18S_OTU_Count	3	18S OTU Count	65,493	Absolute Count
-Genbank_Species_Count	4	Genbank Total Species (Eukaryota)	20,665	Absolute Count

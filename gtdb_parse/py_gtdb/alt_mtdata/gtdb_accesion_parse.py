@@ -2,7 +2,7 @@ import pandas as pd
 
 # Load and concatenate the GTDB taxonomy files
 dfs = [pd.read_csv(f, sep="\t", header=None, names=["accession", "taxonomy"])
-       for f in ["00bac120_taxonomy.tsv", "00ar53_taxonomy.tsv"]]
+       for f in ["bac120_taxonomy.tsv", "ar53_taxonomy.tsv"]]
 df = pd.concat(dfs, ignore_index=True)
 
 # Clean accession and extract phylum
