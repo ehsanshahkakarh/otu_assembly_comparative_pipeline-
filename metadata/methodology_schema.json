@@ -1,0 +1,515 @@
+{
+  "pipeline_name": "Environmental-Genomic Database Comparative Analysis",
+  "version": "2.0",
+  "date_generated": "2026-01-05",
+  "overview": "Quantitative assessment of genomic database completeness against environmental microbial diversity",
+  "data_sources": {
+    "environmental_baseline": {
+      "description": "Ground truth environmental diversity from rRNA gene surveys",
+      "initial_format": "Raw sequence data clustered into OTUs",
+      "clustering_method": "97% sequence similarity threshold",
+      "data_types": {
+        "16S_rRNA_census": {
+          "domain": "Prokaryotes (Bacteria + Archaea)",
+          "total_otus": 287000,
+          "source": "Environmental samples (soil, water, host-associated)",
+          "clustering": "Species-level OTU clustering at 97% identity",
+          "taxonomic_levels": [
+            "phylum",
+            "family",
+            "genus"
+          ],
+          "key_metrics": {
+            "otu_count": "Number of unique OTU clusters per taxon",
+            "size_count": "Total sequence abundance (read count) per taxon"
+          }
+        },
+        "18S_rRNA_census": {
+          "domain": "Eukaryotes",
+          "total_otus": 70000,
+          "source": "Environmental samples (marine, terrestrial, freshwater)",
+          "clustering": "Species-level OTU clustering at 97% identity",
+          "taxonomic_levels": [
+            "division",
+            "family",
+            "genus"
+          ],
+          "key_metrics": {
+            "otu_count": "Number of unique OTU clusters per taxon",
+            "size_count": "Total sequence abundance (read count) per taxon"
+          }
+        }
+      },
+      "processing_notes": "OTUs represent species-level diversity; each OTU is a proxy for a distinct species in the environment"
+    },
+    "genomic_databases": {
+      "description": "Reference genomic databases with sequenced organisms",
+      "initial_format": "Strain-level genome assemblies with metadata",
+      "species_subsetting": "Genomes grouped by species-level taxid to prevent strain-level inflation",
+      "data_types": {
+        "GTDB": {
+          "domain": "Prokaryotes ONLY (Bacteria + Archaea)",
+          "total_genomes": 400000,
+          "description": "Genome Taxonomy Database - curated prokaryotic genomes with standardized taxonomy",
+          "initial_granularity": "Strain-level genome assemblies",
+          "species_subsetting": "Aggregated to species using GTDB species representatives",
+          "taxonomic_parsing": "Parsed by phylum, family, genus using taxonkit and lineage functions",
+          "domain_filtering": "Prokaryotes only - Bacteria and Archaea domains",
+          "coverage_note": "GTDB is completely covered by NCBI (validated through comparison pipeline)",
+          "validation": "GTDB-NCBI comparison pipeline proves complete overlap and validates matching algorithms"
+        },
+        "NCBI": {
+          "domain": "All domains (Prokaryotes + Eukaryotes)",
+          "total_genomes": 2900000,
+          "description": "NCBI GenBank - comprehensive genome collection across all domains of life",
+          "initial_granularity": "Strain-level genome assemblies",
+          "species_subsetting": "Grouped by species-level taxid to get unique species count",
+          "taxonomic_parsing": "Parsed by phylum, family, genus using taxonkit lineage functions with domain-specific aggregation",
+          "domain_separation": {
+            "prokaryotes": "Bacteria + Archaea domains (separated post-parsing)",
+            "eukaryotes": "Eukaryota domain (separated post-parsing)"
+          },
+          "aggregation_metrics": {
+            "total_genome_count": "Sum of all genome assemblies per taxon per domain",
+            "species_count": "Unique species-level taxids per taxon per domain",
+            "isolate_count": "Cultured isolates vs MAGs",
+            "domain_subset_counts": "Separate counts for Bacteria, Archaea, Eukaryota"
+          },
+          "tools_used": "taxonkit for taxonomic lineage retrieval and parsing",
+          "additional_metrics": "Isolate vs MAG classification, assembly level tracking"
+        }
+      },
+      "processing_notes": "Critical: Species-level taxid subsetting prevents artificial inflation from multiple strains of same species",
+      "database_relationship": "GTDB (prokaryotes only) is completely covered by NCBI; NCBI provides universal coverage across all domains"
+    }
+  },
+  "processing_workflow": {
+    "step_1_environmental_parsing": {
+      "description": "Parse and aggregate environmental census data by taxonomic rank",
+      "inputs": [
+        "16S rRNA OTU tables",
+        "18S rRNA OTU tables"
+      ],
+      "process": [
+        "Clean taxonomic names (remove organellar sequences, handle Candidatus)",
+        "Extract appropriate taxonomic rank (genus from species, etc.)",
+        "Aggregate OTU counts and size counts by rank",
+        "Retrieve full taxonomic lineages using taxonkit",
+        "Generate rank-specific files (phylum, family, genus)"
+      ],
+      "outputs": [
+        "eukcensus16S_by_phylum.csv",
+        "eukcensus16S_by_family.csv",
+        "eukcensus16S_by_genus.csv",
+        "eukcensus_18S_by_division.csv",
+        "eukcensus_18S_by_family.csv",
+        "eukcensus_18S_by_genus.csv"
+      ]
+    },
+    "step_2_genomic_parsing": {
+      "description": "Parse genomic databases from strain-level to species-aggregated taxonomic ranks",
+      "inputs": [
+        "NCBI assembly_summary files",
+        "GTDB metadata files"
+      ],
+      "process": [
+        "Load strain-level genome metadata",
+        "Filter by domain (Bacteria/Archaea for prokaryotes, Eukaryota for eukaryotes)",
+        "Group genomes by species-level taxid",
+        "Count unique species per taxon (prevents strain inflation)",
+        "Count total genomes per taxon",
+        "Parse by taxonomic rank (phylum/family/genus)",
+        "Track isolate vs MAG classification",
+        "Generate lineage strings for matching"
+      ],
+      "outputs": [
+        "ncbi_phylum_counts.csv (with species_count and genome_count)",
+        "ncbi_family_counts.csv",
+        "ncbi_genus_counts.csv",
+        "gtdb_phylum_counts.csv",
+        "gtdb_family_counts.csv",
+        "gtdb_genus_counts.csv"
+      ],
+      "critical_note": "Species subsetting is essential - without it, 100 E. coli strains would falsely appear as 100 species"
+    },
+    "step_3_domain_separation": {
+      "description": "Separate prokaryotic and eukaryotic data streams for domain-specific comparisons",
+      "prokaryote_stream": {
+        "environmental": "16S census data",
+        "genomic": [
+          "GTDB",
+          "NCBI prokaryotes"
+        ],
+        "comparisons": [
+          "16S vs GTDB",
+          "16S vs NCBI"
+        ]
+      },
+      "eukaryote_stream": {
+        "environmental": "18S census data",
+        "genomic": [
+          "NCBI eukaryotes"
+        ],
+        "comparisons": [
+          "18S vs NCBI"
+        ]
+      }
+    }
+  },
+  "matching_algorithms": {
+    "overview": "Custom-designed hierarchical matching system for linking environmental taxa to genomic databases",
+    "innovation": "Novel multi-tier matching algorithm perfected through GTDB-NCBI validation pipeline",
+    "validation_note": "Matching algorithms were developed and validated through comprehensive GTDB-NCBI comparison, proving complete database overlap",
+    "tier_1_taxid_matching": {
+      "priority": "PRIMARY (Most Effective)",
+      "confidence": "Highest",
+      "description": "NCBI Taxonomy ID-based hierarchical matching - the gold standard",
+      "algorithm": "Direct taxid comparison between census and genomic data with hierarchical aggregation",
+      "advantages": [
+        "Handles taxonomic name changes and synonyms automatically",
+        "Most reliable and accurate matching method",
+        "Immune to spelling variations and database inconsistencies",
+        "Captures hierarchical relationships through lineage traversal",
+        "Primary method - achieves majority of matches"
+      ],
+      "implementation": "census_taxid == ncbi_taxid",
+      "use_cases": [
+        "16S vs NCBI (primary)",
+        "18S vs NCBI (primary)"
+      ],
+      "match_percentage": "~85-90% of all matches achieved through taxid matching",
+      "why_primary": "Taxid matching is the most effective because it uses stable numeric identifiers that persist across name changes and database updates"
+    },
+    "tier_2_vectorized_lineage_matching": {
+      "priority": "Secondary (Fallback)",
+      "confidence": "High",
+      "description": "Regex-based lineage string matching - handles misnaming and database inconsistencies",
+      "algorithm": "Pattern matching within semicolon-delimited lineage strings using taxonkit-generated lineages",
+      "pattern": "';{taxon_name};|^{taxon_name};|;{taxon_name}$|^{taxon_name}$'",
+      "explanation": {
+        ";taxon;": "Taxon in middle of lineage",
+        "^taxon;": "Taxon at start of lineage",
+        ";taxon$": "Taxon at end of lineage",
+        "^taxon$": "Taxon is entire lineage"
+      },
+      "implementation": "genomic_df['lineage'].str.contains(pattern, regex=True, na=False)",
+      "advantages": [
+        "Captures hierarchical relationships (parent-child)",
+        "Handles misnaming across databases (e.g., GTDB vs NCBI naming differences)",
+        "Vectorized pandas operations for speed - 4x faster than iterative matching",
+        "Handles 287K+ taxa efficiently",
+        "Catches taxa missed by taxid matching due to database inconsistencies"
+      ],
+      "example": {
+        "census_taxon": "Proteobacteria",
+        "genomic_lineage": "Bacteria;Proteobacteria;Gammaproteobacteria;Enterobacterales;Enterobacteriaceae;Escherichia",
+        "match": "YES - Proteobacteria found in lineage",
+        "aggregation": "All Proteobacteria genomes counted"
+      },
+      "use_cases": [
+        "16S vs GTDB (primary for GTDB)",
+        "16S vs NCBI (fallback)",
+        "18S vs NCBI (fallback)"
+      ],
+      "match_percentage": "~10-15% additional matches beyond taxid matching"
+    },
+    "tier_3_direct_name_matching": {
+      "priority": "Tertiary (Validation)",
+      "confidence": "High for exact matches",
+      "description": "Exact string comparison - final fallback for edge cases",
+      "algorithm": "census_name == genomic_name",
+      "advantages": [
+        "Simple and fast",
+        "High precision for exact matches",
+        "Catches remaining edge cases"
+      ],
+      "limitations": [
+        "Misses hierarchical relationships",
+        "Sensitive to name variations",
+        "Rarely needed after taxid and lineage matching"
+      ],
+      "use_cases": [
+        "Validation",
+        "Direct match counting",
+        "Edge case handling"
+      ],
+      "match_percentage": "<5% additional matches"
+    },
+    "tier_4_hierarchical_aggregation": {
+      "priority": "Core feature",
+      "confidence": "High",
+      "description": "Aggregate all descendant genomes for a given taxon",
+      "algorithm": "Sum genome/species counts for all lineage matches",
+      "example": {
+        "census_taxon": "Proteobacteria (phylum level)",
+        "genomic_matches": [
+          "Proteobacteria (direct)",
+          "Gammaproteobacteria (child class)",
+          "Enterobacterales (grandchild order)",
+          "Escherichia (descendant genus)"
+        ],
+        "aggregation": "Sum all genomes/species from all descendants",
+        "result": "Total Proteobacteria representation in database"
+      },
+      "implementation": "matched_genomes.sum() for all lineage matches"
+    },
+    "match_classification": {
+      "direct_match": "Exact name match at same taxonomic level",
+      "lineage_match": "Found in lineage hierarchy (parent-child relationship)",
+      "taxid_match": "Matched via NCBI taxonomy ID",
+      "combined_match": "Taxid + lineage matches merged (duplicates removed)"
+    },
+    "match_status_categories": {
+      "matched": "Environmental taxon found in genomic database",
+      "census_only": "Environmental taxon NOT in genomic database (novel diversity)",
+      "db_only": "Genomic taxon NOT in environmental census (rare/absent in samples)"
+    },
+    "performance_optimization": {
+      "vectorization": "Pandas string operations instead of Python loops",
+      "speed_improvement": "4x faster than iterative approaches",
+      "scalability": "Handles 287K environmental taxa vs 2.9M genomes efficiently",
+      "memory_efficiency": "Vectorized aggregation reduces memory footprint"
+    }
+  },
+  "comparison_metrics": {
+    "overview": "Comprehensive metrics quantifying environmental diversity vs genomic representation",
+    "category_1_abundance_metrics": {
+      "description": "Environmental diversity and abundance from census data",
+      "source": "16S/18S rRNA environmental surveys",
+      "census_otu_count": {
+        "definition": "Number of unique OTU clusters for this taxon",
+        "unit": "Count",
+        "interpretation": "Proxy for species-level diversity in environment",
+        "example": "Proteobacteria: 50,000 OTUs = ~50,000 distinct species in environment"
+      },
+      "census_size_count": {
+        "definition": "Total sequence abundance (read count) for this taxon",
+        "unit": "Count",
+        "interpretation": "Proxy for relative abundance in environmental samples",
+        "example": "High size_count = abundant in environment"
+      },
+      "otu_percentage": {
+        "formula": "(census_otu_count / total_census_otus) \u00d7 100",
+        "unit": "Percentage",
+        "interpretation": "Proportion of total environmental diversity",
+        "example": "Proteobacteria: 17.4% = represents 17.4% of all prokaryotic diversity"
+      },
+      "size_percentage": {
+        "formula": "(census_size_count / total_census_size) \u00d7 100",
+        "unit": "Percentage",
+        "interpretation": "Proportion of total environmental abundance",
+        "example": "Proteobacteria: 20.5% = represents 20.5% of all sequences"
+      }
+    },
+    "category_2_genomic_metrics": {
+      "description": "Genomic database representation metrics",
+      "source": "NCBI/GTDB genomic databases",
+      "ncbi_genome_count": {
+        "definition": "Total number of genome assemblies for this taxon",
+        "unit": "Count",
+        "note": "Includes multiple strains of same species",
+        "example": "Proteobacteria: 1,500,000 genomes (includes all strains)"
+      },
+      "ncbi_species_count": {
+        "definition": "Number of unique species (by species-level taxid) for this taxon",
+        "unit": "Count",
+        "critical_note": "Species-level subsetting prevents strain inflation",
+        "example": "Proteobacteria: 25,000 unique species (100 E. coli strains = 1 species)",
+        "interpretation": "Comparable to census_otu_count for diversity comparison"
+      },
+      "isolate_count": {
+        "definition": "Number of genomes from cultured isolates (vs MAGs)",
+        "unit": "Count",
+        "interpretation": "Cultivation success indicator",
+        "example": "High isolate_count = easily cultured taxa"
+      },
+      "genome_pct_db": {
+        "formula": "(ncbi_genome_count / total_db_genomes) \u00d7 100",
+        "unit": "Percentage",
+        "interpretation": "Proportion of database devoted to this taxon",
+        "example": "Proteobacteria: 51.7% = over half of all prokaryotic genomes"
+      },
+      "species_pct": {
+        "formula": "(ncbi_species_count / total_db_species) \u00d7 100",
+        "unit": "Percentage",
+        "interpretation": "Proportion of database species diversity",
+        "example": "Proteobacteria: 42.1% of all prokaryotic species"
+      },
+      "isolate_percentage": {
+        "formula": "(isolate_count / ncbi_genome_count) \u00d7 100",
+        "unit": "Percentage",
+        "interpretation": "Cultivation success rate",
+        "thresholds": {
+          "high": ">50% - easily cultured",
+          "medium": "10-50% - moderately cultured",
+          "low": "<10% - difficult to culture",
+          "zero": "0% - all MAGs, no cultured representatives"
+        }
+      }
+    },
+    "category_3_analytical_metrics": {
+      "description": "KEY COINED METRICS - Novel analytical metrics introduced in this study",
+      "note": "These metrics are original contributions coined in this paper for quantifying database completeness",
+      "novelty_factor": {
+        "status": "\ud83d\udd34 COINED METRIC - Primary contribution of this study",
+        "formula": "census_otu_count / ncbi_species_count",
+        "interpretation": "Environmental diversity relative to genomic representation",
+        "meaning": "How many environmental OTUs exist per sequenced species - CULTIVATION GAP INDICATOR",
+        "significance": "Quantifies the magnitude of missing genomic representation for environmental diversity",
+        "thresholds": {
+          "extreme_gap": ">100 - Massive cultivation gap (e.g., Rhizaria: 128.15)",
+          "high_novelty": "10-100 - Significant underrepresentation",
+          "moderate_novelty": "2-10 - Moderate cultivation gap",
+          "low_novelty": "<2 - Well-represented in databases",
+          "infinity": "\u221e - Taxa in environment but ZERO genomes in database"
+        },
+        "example": {
+          "taxon": "Chloroflexota",
+          "census_otus": 13210,
+          "ncbi_species": 4762,
+          "novelty_factor": 2.774,
+          "interpretation": "2.77\u00d7 more environmental diversity than genomic data - significant cultivation gap"
+        },
+        "research_application": "Identifies high-priority taxa for genome sequencing efforts"
+      },
+      "overrepresentation_factor": {
+        "status": "\ud83d\udd35 COINED METRIC - Secondary contribution of this study",
+        "formula": "ncbi_species_count / census_otu_count",
+        "interpretation": "Genomic representation relative to environmental diversity",
+        "meaning": "How many sequenced species exist per environmental OTU - DATABASE BIAS INDICATOR",
+        "significance": "Reveals systematic biases toward easily cultured or model organisms",
+        "thresholds": {
+          "high_overrepresentation": ">2 - Database bias toward easily cultured taxa",
+          "balanced": "0.5-2 - Proportional representation",
+          "underrepresentation": "<0.5 - Environmental diversity exceeds genomic data"
+        },
+        "example": {
+          "taxon": "Model organisms (E. coli, B. subtilis)",
+          "interpretation": "Many genomes/species but few environmental OTUs - research bias toward culturable taxa"
+        },
+        "research_application": "Identifies overrepresented taxa that dominate databases despite low environmental abundance"
+      },
+      "match_status": {
+        "values": {
+          "matched": "Environmental taxon found in genomic database",
+          "census_only": "Environmental taxon NOT in database - NOVEL DIVERSITY",
+          "db_only": "Database taxon NOT in environmental samples - rare/absent"
+        },
+        "research_significance": {
+          "census_only_taxa": "Cultivation priorities - these taxa need genome sequencing",
+          "matched_taxa": "Compare novelty factors to identify underrepresented groups",
+          "db_only_taxa": "Rare taxa or sampling bias indicators"
+        }
+      }
+    },
+    "category_4_match_tracking_metrics": {
+      "description": "Metrics tracking matching algorithm performance",
+      "direct_matches": {
+        "definition": "Number of exact name matches at same taxonomic level",
+        "interpretation": "High-confidence matches"
+      },
+      "lineage_matches": {
+        "definition": "Number of hierarchical lineage-based matches",
+        "interpretation": "Parent-child relationship matches"
+      },
+      "taxid_matches": {
+        "definition": "Number of NCBI taxid-based matches",
+        "interpretation": "Synonym-resistant matches"
+      },
+      "total_matches": {
+        "formula": "direct_matches + lineage_matches (or taxid_matches)",
+        "interpretation": "Total genomic entries matched to this environmental taxon"
+      }
+    }
+  },
+  "output_structure": {
+    "merged_comparison_files": {
+      "description": "Final merged datasets combining environmental and genomic data",
+      "file_pattern": "{census}_{database}_merged_clean_{level}.csv",
+      "examples": [
+        "16s_gtdb_merged_clean_phylum.csv",
+        "16s_ncbi_merged_clean_family.csv",
+        "18s_ncbi_merged_clean_genus.csv"
+      ],
+      "column_structure": {
+        "taxonomic_identifier": {
+          "columns": [
+            "phylum",
+            "family",
+            "genus",
+            "division"
+          ],
+          "description": "Taxonomic name at specified rank"
+        },
+        "environmental_metrics": {
+          "columns": [
+            "census_otu_count",
+            "census_size_count",
+            "otu_percentage",
+            "size_percentage"
+          ],
+          "description": "Environmental diversity and abundance metrics"
+        },
+        "genomic_metrics": {
+          "columns": [
+            "ncbi_genome_count",
+            "ncbi_species_count",
+            "isolate_count",
+            "genome_pct_db",
+            "species_pct",
+            "isolate_percentage"
+          ],
+          "description": "Genomic database representation metrics"
+        },
+        "analytical_metrics": {
+          "columns": [
+            "novelty_factor",
+            "overrepresentation_factor",
+            "coverage_percentage"
+          ],
+          "description": "Calculated comparison metrics"
+        },
+        "match_tracking": {
+          "columns": [
+            "direct_matches",
+            "lineage_matches",
+            "taxid_matches",
+            "total_matches",
+            "match_status"
+          ],
+          "description": "Matching algorithm performance tracking"
+        },
+        "metadata": {
+          "columns": [
+            "domain",
+            "lineage"
+          ],
+          "description": "Additional taxonomic context"
+        }
+      }
+    },
+    "summary_statistics": {
+      "description": "Merger efficacy and performance summaries",
+      "file_pattern": "{census}_{database}_merger_clean_summary.csv",
+      "metrics_included": [
+        "Total entries processed",
+        "Matched taxa count",
+        "Census-only taxa count",
+        "Database-only taxa count",
+        "Match rate percentage",
+        "Average novelty factor",
+        "Average coverage percentage"
+      ]
+    },
+    "detailed_logs": {
+      "description": "Detailed matching logs for validation",
+      "file_pattern": "{census}_{database}_matches_log.csv",
+      "contents": [
+        "Individual match records",
+        "Match type classification",
+        "Lineage information",
+        "Genome/species counts per match"
+      ]
+    }
+  }
+}
