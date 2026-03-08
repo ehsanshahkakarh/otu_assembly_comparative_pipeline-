@@ -105,7 +105,7 @@ misc/
 # Large NCBI intermediate/output files
 ncbi_parse/domain_meta/output/
 ncbi_parse/trees/output/
-ncbi_parse/output/
+# ncbi_parse/output/
 
 # Sanity check directories and files
 **/sanity_check/
