@@ -6,6 +6,8 @@ Lineage Matcher Module
 Performs hierarchical matching between census and NCBI species-level data using:
 1. Direct taxid matching (exact taxid match)
 2. Hierarchical taxid matching (census taxid found in NCBI lineage_taxids)
+   - Rank-aware: only accepts matches when the census taxid's rank is at or
+     below the target taxonomic level being matched.
 
 Then aggregates genome counts and species counts after matching.
 """
@@ -16,6 +18,98 @@ import logging
 from tqdm import tqdm
 
 logger = logging.getLogger(__name__)
+
+# Rank hierarchy: higher number = more specific (lower taxonomic level)
+# Used to determine if a census taxid's rank is appropriate for the target level
+RANK_ORDER = {
+    'superkingdom': 0, 'domain': 0,
+    'kingdom': 1,
+    'subkingdom': 2,
+    'infrakingdom': 3, 'superphylum': 3,
+    'phylum': 4, 'division': 4,
+    'subphylum': 5, 'subdivision': 5,
+    'infraphylum': 6,
+    'superclass': 7,
+    'class': 8,
+    'subclass': 9,
+    'infraclass': 10,
+    'cohort': 11,
+    'superorder': 12,
+    'order': 13,
+    'suborder': 14,
+    'infraorder': 15,
+    'parvorder': 16,
+    'superfamily': 17,
+    'family': 18,
+    'subfamily': 19,
+    'tribe': 20, 'subtribe': 20,
+    'genus': 21,
+    'subgenus': 22,
+    'species group': 23,
+    'species subgroup': 24,
+    'species': 25,
+    'subspecies': 26,
+}
+
+# Target level minimum rank order for hierarchical matching
+TARGET_RANK_MIN = {
+    'phylum': RANK_ORDER['phylum'],    # 4
+    'family': RANK_ORDER['family'],    # 18
+    'genus': RANK_ORDER['genus'],      # 21
+}
+
+
+def _get_census_taxid_rank(census_row) -> str | None:
+    """
+    Determine the actual taxonomic rank of a census entry's taxid
+    by inspecting its lineage_ranks field.
+
+    The census lineage_ranks ends with 'original_name' for _XX / .U. taxa,
+    so the real rank is the last element before 'original_name'.
+
+    Returns:
+        The rank string (e.g. 'kingdom', 'phylum', 'genus') or None if
+        it cannot be determined.
+    """
+    lineage_ranks = census_row.get('lineage_ranks', '')
+    if pd.isna(lineage_ranks) or not lineage_ranks:
+        return None
+
+    ranks = str(lineage_ranks).split(';')
+    # Walk backwards, skip 'original_name' and empty strings
+    for rank in reversed(ranks):
+        rank = rank.strip()
+        if rank and rank != 'original_name':
+            return rank
+    return None
+
+
+def _is_rank_compatible(census_taxid_rank: str | None, target_level: str) -> bool:
+    """
+    Check whether a census taxid's rank is specific enough for the target level.
+
+    Returns True if:
+      - The census taxid rank is at or below the target level in the hierarchy
+      - The rank is unknown / ambiguous ('clade', 'no rank', etc.) — benefit of the doubt
+      - The target level is not in TARGET_RANK_MIN (no constraint)
+
+    Returns False if the census taxid rank is clearly above the target level
+    (e.g. kingdom taxid when matching at genus level).
+    """
+    if target_level not in TARGET_RANK_MIN:
+        return True
+
+    if census_taxid_rank is None:
+        return True
+
+    rank_lower = census_taxid_rank.strip().lower()
+
+    # If the rank is not in our hierarchy (e.g. 'clade', 'no rank', 'cellular root'),
+    # we can't determine specificity — accept it (benefit of the doubt)
+    if rank_lower not in RANK_ORDER:
+        return True
+
+    return RANK_ORDER[rank_lower] >= TARGET_RANK_MIN[target_level]
 
 
 def match_taxa_by_lineage(
@@ -65,6 +159,7 @@ def match_taxa_by_lineage(
     results = []
     matched_count = 0
     match_type_counts = {'direct_taxid': 0, 'hierarchical_taxid': 0}
+    rank_skipped_count = 0
 
     for _, census_row in tqdm(census_df.iterrows(), total=len(census_df),
                                desc=f"  Matching {census_level}", unit="taxa", leave=False):
@@ -99,7 +194,13 @@ def match_taxa_by_lineage(
                 direct_taxid_matched = pd.DataFrame()
 
         # PRIORITY 2: Hierarchical taxid matching (census taxid in NCBI lineage_taxids)
-        if census_taxid and pd.notna(census_taxid):
+        # Only attempt if the census taxid's rank is at or below the target level.
+        # This prevents e.g. a kingdom-level taxid from matching ALL species in
+        # that kingdom when we're doing genus-level matching (_XX taxa problem).
+        census_taxid_rank = _get_census_taxid_rank(census_row)
+        rank_ok = _is_rank_compatible(census_taxid_rank, level)
+
+        if rank_ok and census_taxid and pd.notna(census_taxid):
             try:
                 # Clean and convert taxid
                 if isinstance(census_taxid, str):
@@ -116,6 +217,10 @@ def match_taxa_by_lineage(
             except (ValueError, TypeError) as e:
                 logger.warning(f"  Skipping hierarchical taxid matching for '{taxon_name}' - invalid taxid: {census_taxid}")
                 hierarchical_taxid_matched = pd.DataFrame()
+        elif not rank_ok and census_taxid and pd.notna(census_taxid):
+            rank_skipped_count += 1
+            logger.debug(f"  Skipping hierarchical match for '{taxon_name}' - "
+                         f"taxid rank '{census_taxid_rank}' is above target level '{level}'")
 
         # Combine all matches (avoid duplicates, maintain priority order)
         all_matched_indices = set()
@@ -215,6 +320,8 @@ def match_taxa_by_lineage(
     logger.info(f"  Match type breakdown:")
     logger.info(f"    Direct taxid matches: {match_type_counts['direct_taxid']}")
     logger.info(f"    Hierarchical taxid matches: {match_type_counts['hierarchical_taxid']}")
+    if rank_skipped_count > 0:
+        logger.info(f"    Hierarchical skipped (taxid rank above target level): {rank_skipped_count}")
 
     # Log aggregated totals
     total_matched_genomes = output_df[output_df['match_status'] == 'matched']['ncbi_genome_count'].sum()
