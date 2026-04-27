@@ -9,6 +9,7 @@ plt.style.use('default')
 
 # Get the directory of this script
 script_dir = os.path.dirname(os.path.abspath(__file__))
+project_root = os.path.normpath(os.path.join(script_dir, "..", "..", "..", ".."))
 
 # Define paths relative to the script location
 merged_tables_dir = os.path.normpath(os.path.join(script_dir, "..", "merged_tables", "domain_taxonomic_tables"))
@@ -21,8 +22,16 @@ archaea_phylum_file = os.path.join(merged_tables_dir, "archaea_phylum.csv")
 # Check if input files exist and use fallback paths if needed
 def check_file_exists(file_path, domain, rank):
     if not os.path.exists(file_path):
-        # Try absolute path as fallback
-        fallback_path = f"/clusterfs/jgi/scratch/science/mgs/nelli/ehsan/UNI56v2/00data/refgenomes/gtdb/parse_repaa_table/merged_tables/domain_taxonomic_tables/{domain}_{rank}.csv"
+        # Try project-relative legacy path as fallback
+        fallback_path = os.path.join(
+            project_root,
+            "04ref_genomes",
+            "gtdb",
+            "parse_repaa_table",
+            "merged_tables",
+            "domain_taxonomic_tables",
+            f"{domain}_{rank}.csv",
+        )
         if not os.path.exists(fallback_path):
             print(f"Error: File not found: {file_path}")
             sys.exit(1)

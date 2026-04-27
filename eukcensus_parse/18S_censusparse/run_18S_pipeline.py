@@ -33,7 +33,7 @@ def run_taxonkit_parser():
     logging.info("STEP 1: Running Clean Taxonkit Parser")
     logging.info("=" * 80)
 
-    from pipeline_taxonkit import run_taxonkit_pipeline
+    from src.pipeline_taxonkit import run_taxonkit_pipeline
     run_taxonkit_pipeline()
 
 
@@ -43,7 +43,7 @@ def run_systematic_resolver():
     logging.info("STEP 2: Running Systematic Family Resolver")
     logging.info("=" * 80)
 
-    from pipeline_resolver import run_resolver_pipeline
+    from src.pipeline_resolver import run_resolver_pipeline
     run_resolver_pipeline()
 
 
@@ -53,8 +53,8 @@ def run_ai_cache():
     logging.info("STEP 3: AI Cache Resolution")
     logging.info("=" * 80)
 
-    from cached_ai_resolver import CachedAIResolver
-    from ai_resolution_cache import get_default_cache_path
+    from src.cached_ai_resolver import CachedAIResolver
+    from src.ai_resolution_cache import get_default_cache_path
 
     # Setup paths
     base_dir = Path(__file__).parent

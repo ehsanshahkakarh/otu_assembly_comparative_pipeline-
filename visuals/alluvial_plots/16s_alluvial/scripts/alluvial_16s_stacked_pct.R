@@ -40,8 +40,8 @@ if (!dir.exists("../figures")) {
 }
 
 # Define relative paths from alluvial script location to data directories
-merged_data_path <- "../../../../Eukcensus_merge/16s_merged/csv_results/16s_ncbi_merged_clean_phylum.csv"
-census_data_path <- "../../../../16S_censusparse/csv_16S/eukcensus16S_by_division.csv"
+merged_data_path <- "../../../../final_merger/outputs/16s_ncbi_merged_division.csv"
+census_data_path <- "../../../../eukcensus_parse/16S_censusparse/output/eukcensus16S_by_division.csv"
 
 # Load merged 16S data
 cat("Loading 16S merged data...\n")
@@ -49,6 +49,9 @@ if (!file.exists(merged_data_path)) {
   stop("ERROR: Cannot find 16S merged data file at: ", merged_data_path)
 }
 data_16s <- read.csv(merged_data_path, stringsAsFactors = FALSE)
+if ("division" %in% colnames(data_16s) && !"phylum" %in% colnames(data_16s)) {
+  data_16s <- data_16s %>% rename(phylum = division)
+}
 
 # Load census division data for .U. entries
 if (!file.exists(census_data_path)) {
@@ -362,6 +365,14 @@ p_bacteria_abs <- ggplot(
                 lode.guidance = "forward", knot.pos = 0.35) +
   geom_stratum(alpha = 0.95, decreasing = FALSE, color = "white",
                linewidth = 0.2, width = 0.02) +
+  geom_text(
+    stat = "stratum",
+    aes(label = paste0(after_stat(stratum), "\n", scales::comma(round(after_stat(ymax - ymin))))),
+    size = 3.0,
+    fontface = "bold",
+    lineheight = 0.95,
+    check_overlap = TRUE
+  ) +
   scale_fill_manual(values = bacteria_plot_colors, name = "Phylum") +
   scale_x_discrete(
     expand = expansion(mult = 0, add = 0),
@@ -404,6 +415,14 @@ p_bacteria_pct <- ggplot(
                 lode.guidance = "forward", knot.pos = 0.35) +
   geom_stratum(alpha = 0.95, decreasing = FALSE, color = "white",
                linewidth = 0.2, width = 0.02) +
+  geom_text(
+    stat = "stratum",
+    aes(label = paste0(after_stat(stratum), "\n", sprintf("%.1f%%", after_stat(ymax - ymin)))),
+    size = 3.0,
+    fontface = "bold",
+    lineheight = 0.95,
+    check_overlap = TRUE
+  ) +
   scale_fill_manual(values = bacteria_plot_colors, name = "Phylum") +
   scale_x_discrete(
     expand = expansion(mult = 0, add = 0),
@@ -542,6 +561,14 @@ p_archaea_abs <- ggplot(
                 lode.guidance = "forward", knot.pos = 0.35) +
   geom_stratum(alpha = 0.95, decreasing = FALSE, color = "white",
                linewidth = 0.2, width = 0.02) +
+  geom_text(
+    stat = "stratum",
+    aes(label = paste0(after_stat(stratum), "\n", scales::comma(round(after_stat(ymax - ymin))))),
+    size = 3.0,
+    fontface = "bold",
+    lineheight = 0.95,
+    check_overlap = TRUE
+  ) +
   scale_fill_manual(values = archaea_plot_colors, name = "Phylum") +
   scale_x_discrete(
     expand = expansion(mult = 0, add = 0),
@@ -584,6 +611,14 @@ p_archaea_pct <- ggplot(
                 lode.guidance = "forward", knot.pos = 0.35) +
   geom_stratum(alpha = 0.95, decreasing = FALSE, color = "white",
                linewidth = 0.2, width = 0.02) +
+  geom_text(
+    stat = "stratum",
+    aes(label = paste0(after_stat(stratum), "\n", sprintf("%.1f%%", after_stat(ymax - ymin)))),
+    size = 3.0,
+    fontface = "bold",
+    lineheight = 0.95,
+    check_overlap = TRUE
+  ) +
   scale_fill_manual(values = archaea_plot_colors, name = "Phylum") +
   scale_x_discrete(
     expand = expansion(mult = 0, add = 0),

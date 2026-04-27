@@ -15,17 +15,44 @@ import random
 from datetime import datetime
 from pathlib import Path
 
-# Configuration
-WORKSPACE_ROOT = Path("/clusterfs/jgi/scratch/science/mgs/nelli/ehsan/UNI56v2/00data")
-CENSUS_16S = WORKSPACE_ROOT / "00_gaps_taxonomic/00parse_database/16S_censusparse/csv_16S/eukcensus16S_by_genus.csv"
-CENSUS_18S = WORKSPACE_ROOT / "00_gaps_taxonomic/00parse_database/18S_censusparse/output/eukcensus_18S_by_genus.csv"
-MERGER_16S = WORKSPACE_ROOT / "00_gaps_taxonomic/00parse_database/Eukcensus_merge/16s_merged/analysis_summary/16s_ncbi_merger_clean_summary.csv"
-MERGER_18S = WORKSPACE_ROOT / "00_gaps_taxonomic/00parse_database/Eukcensus_merge/py_mergers/18s_merged/analysis_summary/18s_ncbi_merger_clean_summary.csv"
+# Configuration (resolved from this file's location, no hard-coded machine paths)
+PARSE_DB_ROOT = Path(__file__).resolve().parents[3]
+
+CENSUS_16S_CANDIDATES = [
+    PARSE_DB_ROOT / "eukcensus_parse/16S_censusparse/output/eukcensus16S_by_genus.csv",
+    PARSE_DB_ROOT / "16S_censusparse/csv_16S/eukcensus16S_by_genus.csv",
+]
+CENSUS_18S_CANDIDATES = [
+    PARSE_DB_ROOT / "eukcensus_parse/csv_outputs/eukcensus_18S_by_genus.csv",
+    PARSE_DB_ROOT / "eukcensus_parse/18S_censusparse/output/eukcensus_18S_by_genus.csv",
+    PARSE_DB_ROOT / "18S_censusparse/output/eukcensus_18S_by_genus.csv",
+]
+MERGER_16S_CANDIDATES = [
+    PARSE_DB_ROOT / "final_merger/outputs/16s_ncbi_merged_family.csv",
+    PARSE_DB_ROOT / "Eukcensus_merge/16s_merged/analysis_summary/16s_ncbi_merger_clean_summary.csv",
+]
+MERGER_18S_CANDIDATES = [
+    PARSE_DB_ROOT / "final_merger/outputs/18s_ncbi_merged_family.csv",
+    PARSE_DB_ROOT / "Eukcensus_merge/py_mergers/18s_merged/analysis_summary/18s_ncbi_merger_clean_summary.csv",
+]
 
 SAMPLE_SIZE = 10  # Number of random samples per dataset
 RANDOM_SEED = 42
 
+
+def pick_first_existing(candidates):
+    """Pick the first existing path; fall back to first candidate for clear errors."""
+    for candidate in candidates:
+        if candidate.exists():
+            return candidate
+    return candidates[0]
+
 def main():
+    census_16s = pick_first_existing(CENSUS_16S_CANDIDATES)
+    census_18s = pick_first_existing(CENSUS_18S_CANDIDATES)
+    merger_16s = pick_first_existing(MERGER_16S_CANDIDATES)
+    merger_18s = pick_first_existing(MERGER_18S_CANDIDATES)
+
     timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
     output_file = Path(__file__).parent / f"02_name_matching_verification_{timestamp}.txt"
     
@@ -53,7 +80,7 @@ def main():
         f.write("16S CENSUS DATA SAMPLING\n")
         f.write("=" * 80 + "\n")
         
-        process_dataset(CENSUS_16S, MERGER_16S, "16S", SAMPLE_SIZE, f)
+        process_dataset(census_16s, merger_16s, "16S", SAMPLE_SIZE, f)
         
         # Process 18S data
         print("\n" + "=" * 80)
@@ -63,7 +90,7 @@ def main():
         f.write("18S CENSUS DATA SAMPLING\n")
         f.write("=" * 80 + "\n")
         
-        process_dataset(CENSUS_18S, MERGER_18S, "18S", SAMPLE_SIZE, f)
+        process_dataset(census_18s, merger_18s, "18S", SAMPLE_SIZE, f)
         
         f.write("\n" + "=" * 80 + "\n")
         f.write("VERIFICATION COMPLETE\n")

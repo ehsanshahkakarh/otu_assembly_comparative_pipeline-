@@ -94,6 +94,8 @@ gtdb_ncbi_mapper/outputs/
 
 # Large raw data files
 *.tsv
+!metadata/*.tsv
+metadata/*.clusters.*.tsv
 *.tar
 *.tar.gz
 *.dmp

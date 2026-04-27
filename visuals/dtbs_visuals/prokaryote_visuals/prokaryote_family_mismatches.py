@@ -10,6 +10,7 @@ plt.style.use('default')
 
 # Get the directory of this script
 script_dir = os.path.dirname(os.path.abspath(__file__))
+project_root = os.path.normpath(os.path.join(script_dir, "..", "..", "..", ".."))
 
 # Define paths relative to the script location
 csv_output_dir = os.path.normpath(os.path.join(script_dir, "..", "merged_tables", "csv_output"))
@@ -24,13 +25,13 @@ archaea_family_mismatches_file = os.path.join(domain_mismatches_dir, "archaea_fa
 # Check if input files exist and use fallback paths if needed
 def check_file_exists(file_path, description):
     if not os.path.exists(file_path):
-        # Try absolute path as fallback
+        # Try project-relative legacy path as fallback
         if "bacteria" in file_path:
-            fallback_path = "/clusterfs/jgi/scratch/science/mgs/nelli/ehsan/UNI56v2/00data/refgenomes/gtdb/parse_repaa_table/merged_tables/domain_taxonomic_tables/mismatches/bacteria_family_mismatches.csv"
+            fallback_path = os.path.join(project_root, "04ref_genomes", "gtdb", "parse_repaa_table", "merged_tables", "domain_taxonomic_tables", "mismatches", "bacteria_family_mismatches.csv")
         elif "archaea" in file_path:
-            fallback_path = "/clusterfs/jgi/scratch/science/mgs/nelli/ehsan/UNI56v2/00data/refgenomes/gtdb/parse_repaa_table/merged_tables/domain_taxonomic_tables/mismatches/archaea_family_mismatches.csv"
+            fallback_path = os.path.join(project_root, "04ref_genomes", "gtdb", "parse_repaa_table", "merged_tables", "domain_taxonomic_tables", "mismatches", "archaea_family_mismatches.csv")
         else:
-            fallback_path = "/clusterfs/jgi/scratch/science/mgs/nelli/ehsan/UNI56v2/00data/refgenomes/gtdb/parse_repaa_table/merged_tables/csv_output/family_mismatches.csv"
+            fallback_path = os.path.join(project_root, "04ref_genomes", "gtdb", "parse_repaa_table", "merged_tables", "csv_output", "family_mismatches.csv")
         
         if not os.path.exists(fallback_path):
             print(f"Error: {description} file not found: {file_path}")

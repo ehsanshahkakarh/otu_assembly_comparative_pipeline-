@@ -33,8 +33,8 @@ cat("Creating stacked visualization: Absolute (top) + Percentage (bottom)\n")
 cat("Single shared legend for both plots\n\n")
 
 # Define relative paths from alluvial script location to data directories
-merged_data_path <- "../../../../Eukcensus_merge/18s_merged/csv_results/18s_ncbi_merged_clean_phylum.csv"
-census_data_path <- "../../../../18S_censusparse/csv_outputs/eukcensus_18S_by_division.csv"
+merged_data_path <- "../../../../final_merger/outputs/18s_ncbi_merged_division.csv"
+census_data_path <- "../../../../eukcensus_parse/18S_censusparse/output/eukcensus_18S_by_division.csv"
 
 # Load merged 18S data
 cat("Loading 18S merged data...\n")
@@ -42,6 +42,9 @@ if (!file.exists(merged_data_path)) {
   stop("ERROR: Cannot find 18S merged data file at: ", merged_data_path)
 }
 data_18s <- read.csv(merged_data_path, stringsAsFactors = FALSE)
+if ("division" %in% colnames(data_18s) && !"phylum" %in% colnames(data_18s)) {
+  data_18s <- data_18s %>% rename(phylum = division)
+}
 
 # Load census division data for .U. entries
 if (!file.exists(census_data_path)) {
@@ -248,6 +251,14 @@ p_abs <- ggplot(
                 lode.guidance = "forward", knot.pos = 0.35) +
   geom_stratum(alpha = 0.95, decreasing = FALSE, color = "white",
                linewidth = 0.2, width = 0.02) +
+  geom_text(
+    stat = "stratum",
+    aes(label = paste0(after_stat(stratum), "\n", scales::comma(round(after_stat(ymax - ymin))))),
+    size = 3.6,
+    fontface = "bold",
+    lineheight = 0.95,
+    check_overlap = TRUE
+  ) +
   scale_fill_manual(values = colors, name = "Division") +
   scale_x_discrete(
     expand = expansion(mult = 0, add = 0),
@@ -291,6 +302,14 @@ p_pct <- ggplot(
                 lode.guidance = "forward", knot.pos = 0.35) +
   geom_stratum(alpha = 0.95, decreasing = FALSE, color = "white",
                linewidth = 0.2, width = 0.02) +
+  geom_text(
+    stat = "stratum",
+    aes(label = paste0(after_stat(stratum), "\n", sprintf("%.1f%%", after_stat(ymax - ymin)))),
+    size = 3.6,
+    fontface = "bold",
+    lineheight = 0.95,
+    check_overlap = TRUE
+  ) +
   scale_fill_manual(values = colors, name = "Division") +
   scale_x_discrete(
     expand = expansion(mult = 0, add = 0),

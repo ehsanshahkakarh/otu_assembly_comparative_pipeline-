@@ -9,6 +9,7 @@ plt.style.use('default')
 
 # Get the directory of this script
 script_dir = os.path.dirname(os.path.abspath(__file__))
+project_root = os.path.normpath(os.path.join(script_dir, "..", "..", "..", ".."))
 
 # Define paths
 eukaryota_tables_dir = os.path.normpath(os.path.join(script_dir, "..", "merged_tables", "eukaryota_taxonomic_tables"))
@@ -19,7 +20,15 @@ phylum_file = os.path.join(eukaryota_tables_dir, "eukaryota_phylum.csv")
 
 # Check file existence
 if not os.path.exists(phylum_file):
-    phylum_file = "/clusterfs/jgi/scratch/science/mgs/nelli/ehsan/UNI56v2/00data/refgenomes/gtdb/parse_repaa_table/merged_tables/eukaryota_taxonomic_tables/eukaryota_phylum.csv"
+    phylum_file = os.path.join(
+        project_root,
+        "04ref_genomes",
+        "gtdb",
+        "parse_repaa_table",
+        "merged_tables",
+        "eukaryota_taxonomic_tables",
+        "eukaryota_phylum.csv",
+    )
     if not os.path.exists(phylum_file):
         print(f"Error: File not found: {phylum_file}")
         sys.exit(1)

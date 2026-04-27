@@ -9,6 +9,7 @@ plt.style.use('default')
 
 # Get the directory of this script
 script_dir = os.path.dirname(os.path.abspath(__file__))
+project_root = os.path.normpath(os.path.join(script_dir, "..", "..", "..", ".."))
 
 # Define paths relative to the script location
 eukaryota_tables_dir = os.path.normpath(os.path.join(script_dir, "..", "merged_tables", "eukaryota_taxonomic_tables"))
@@ -24,7 +25,15 @@ for file_path in [phylum_file, family_file, genus_file]:
     if not os.path.exists(file_path):
         # Try absolute path as fallback
         base_name = os.path.basename(file_path)
-        fallback_path = f"/clusterfs/jgi/scratch/science/mgs/nelli/ehsan/UNI56v2/00data/refgenomes/gtdb/parse_repaa_table/merged_tables/eukaryota_taxonomic_tables/{base_name}"
+        fallback_path = os.path.join(
+            project_root,
+            "04ref_genomes",
+            "gtdb",
+            "parse_repaa_table",
+            "merged_tables",
+            "eukaryota_taxonomic_tables",
+            base_name,
+        )
         if not os.path.exists(fallback_path):
             print(f"Error: File not found: {file_path}")
             sys.exit(1)

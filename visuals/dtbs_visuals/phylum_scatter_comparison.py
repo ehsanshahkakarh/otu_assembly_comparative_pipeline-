@@ -6,6 +6,7 @@ import sys
 
 # Get the directory of this script
 script_dir = os.path.dirname(os.path.abspath(__file__))
+project_root = os.path.normpath(os.path.join(script_dir, "..", "..", ".."))
 
 # Define paths relative to the script location
 merged_tables_dir = os.path.normpath(os.path.join(script_dir, "..", "merged_tables"))
@@ -16,8 +17,16 @@ merged_phylum_file = os.path.join(merged_tables_dir, "merged_taxonomic_tables", 
 
 # Check if input file exists
 if not os.path.exists(merged_phylum_file):
-    # Try absolute path as fallback
-    merged_phylum_file = "/clusterfs/jgi/scratch/science/mgs/nelli/ehsan/UNI56v2/00data/refgenomes/gtdb/parse_repaa_table/merged_tables/merged_taxonomic_tables/merged_phylum.csv"
+    # Try project-relative legacy path as fallback
+    merged_phylum_file = os.path.join(
+        project_root,
+        "04ref_genomes",
+        "gtdb",
+        "parse_repaa_table",
+        "merged_tables",
+        "merged_taxonomic_tables",
+        "merged_phylum.csv",
+    )
     if not os.path.exists(merged_phylum_file):
         print(f"Error: Merged phylum file not found: {merged_phylum_file}")
         sys.exit(1)

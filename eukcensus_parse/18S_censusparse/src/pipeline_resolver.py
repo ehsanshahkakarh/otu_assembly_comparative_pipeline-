@@ -60,14 +60,16 @@ def run_systematic_resolver():
     # Show statistics about known_parents database
     stats = get_statistics()
     logging.info(f"\nKnown Parents Database:")
-    logging.info(f"  Total families: {stats['total_families']}")
-    logging.info(f"  Total genera: {stats['total_genera']}")
-    logging.info(f"  Unique divisions: {stats['unique_divisions']}")
+    rank_stats = stats.get('taxa_by_rank', {})
+    logging.info(f"  Total taxa: {stats.get('total_taxa', 0)}")
+    logging.info(f"  Total families: {rank_stats.get('family', 0)}")
+    logging.info(f"  Total genera: {rank_stats.get('genus', 0)}")
+    logging.info(f"  Unique parents: {stats.get('unique_parents', 0)}")
     
     # Define paths
     resolver_dir = Path(__file__).parent.parent / "systematic_resolver"
     outputs_dir = resolver_dir / "outputs"
-    outputs_dir.mkdir(exist_ok=True)
+    outputs_dir.mkdir(parents=True, exist_ok=True)
     
     resolutions_file = outputs_dir / "systematic_resolutions.json"
     unmapped_log = paths.log_dir / "eukcensus_taxonkit_only_unmapped.log"
@@ -82,7 +84,8 @@ def run_systematic_resolver():
         logging.error("Please run taxonkit parser first!")
         sys.exit(1)
     
-    resolutions = build_all_resolutions(unmapped_log)
+    env = setup_taxonkit_environment()
+    resolutions = build_all_resolutions(env, unmapped_log)
     save_resolutions(resolutions, resolutions_file)
     
     # Step 2: Apply resolutions to CSV files
@@ -108,12 +111,7 @@ def run_systematic_resolver():
     logging.info("=" * 80)
     
     final_unmapped_log = paths.log_dir / "eukcensus_18S_unmapped_final.log"
-    create_final_unmapped_log(
-        paths.csv_output_dir / "eukcensus_18S_by_division.csv",
-        paths.csv_output_dir / "eukcensus_18S_by_family.csv",
-        paths.csv_output_dir / "eukcensus_18S_by_genus.csv",
-        final_unmapped_log
-    )
+    create_final_unmapped_log(unmapped_log, resolutions, final_unmapped_log)
     
     # Step 4: Clean up intermediate taxonkit_only files
     logging.info("\n" + "=" * 80)

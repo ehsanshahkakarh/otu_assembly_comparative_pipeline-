@@ -13,6 +13,7 @@
 !*.txt
 !.gitignore
 !*.csv
+!*.tsv
 
 # Keep folders but ignore metadata files inside them (commented out to allow CSV files)
 # metadata/*.csv
