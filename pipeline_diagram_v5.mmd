@@ -1,0 +1,132 @@
+%% Taxonomic Gaps Database Parsing Pipeline (v5)
+%% Render with: mermaid-cli (mmdc -i pipeline_diagram_v5.mmd -o pipeline_diagram_v5.svg)
+%% or paste into https://mermaid.live
+flowchart TB
+    %% ================================================================
+    %% STAGE ① — INPUT METADATA  (GTDB counts already up here)
+    %% ================================================================
+    subgraph S1["① INPUT METADATA"]
+        direction LR
+        M_NCBI["<b>ncbi/assembly_summary_genbank.txt</b><br/><i>NCBI GenBank, ~1.5 GB</i>"]
+        M_GTDB["<b>gtdb/</b><br/>ar53_taxonomy.tsv · bac120_taxonomy.tsv<br/><i>GTDB R226</i><br/>━━━━━━━━━━━━━<br/>🅰 Archaea — <b>17,221</b> genomes · <b>6,953</b> species<br/>🅱 Bacteria — <b>713,130</b> genomes · <b>135,911</b> species<br/>Σ Total — <b>730,351</b> genomes · <b>142,864</b> species"]
+        M_C16["<b>eukcensus_16S/</b><br/>eukcensus_16S.clusters.97.tsv<br/><i>287K OTUs · 1.28M seqs</i>"]
+        M_C18["<b>eukcensus_18S/</b><br/>eukcensus_18S.clusters.97.tsv<br/><i>70.9K OTUs · 401K seqs</i>"]
+    end
+
+    %% ================================================================
+    %% STAGE ② — PARSING  (3 lanes; GTDB nested inside NCBI again)
+    %% Preliminary per-lane metrics shown explicitly.
+    %% ================================================================
+    subgraph S2["② PARSING (+ preliminary metrics)"]
+        direction LR
+
+        %% ----- NCBI lane with GTDB nested inside -----
+        subgraph NCBI["🧬 ncbi_parse/"]
+            direction TB
+            NCBI_LOAD["src/data_loader.py<br/>load assembly_summary"]
+            NCBI_CLASS["src/genome_classifier.py<br/>isolate vs uncultured<br/>(organism_name + excluded_from_refseq)"]
+            NCBI_GRP["src/species_grouper.py<br/>group by species_taxid"]
+            NCBI_LIN["src/lineage_enricher.py<br/>taxonkit lineage"]
+            NCBI_PCT["src/percentage_calculator.py<br/>━━━ preliminary metrics ━━━<br/>isolate% = isolate / total × 100<br/>species% = species_total / Σ all × 100"]
+            NCBI_LOAD --> NCBI_CLASS --> NCBI_GRP --> NCBI_LIN --> NCBI_PCT
+
+            subgraph GTDB["🔁 gtdb_ncbi_mapper/ — GTDB ⊂ NCBI GenBank"]
+                direction TB
+                G_ALG{{"Matching algorithm<br/>1️⃣ join GTDB.accession ↔ NCBI.assembly_accession (GCA)<br/>2️⃣ join GTDB.accession ↔ NCBI.gbrs_paired_asm (GCF)<br/>3️⃣ concat + dedupe (prefer GCA)<br/>4️⃣ unmapped = set difference"}}
+                G_RATE(["✅ match rate <b>99.7%</b><br/>730,351 / 732,475 genomes<br/>(2,124 unmapped, 0.3%)"])
+                G_ALG --> G_RATE
+            end
+            NCBI_PCT -. "NCBI accessions<br/>(GCA + GCF)" .-> G_ALG
+        end
+
+        %% ----- 16S lane -----
+        subgraph C16S["🦠 16S_censusparse/"]
+            direction TB
+            C16_P1["organelle detection<br/>+ name cleaning"]
+            C16_P2["rank filtering<br/>(division / family / genus)"]
+            C16_P3["taxonkit lineage<br/>resolution"]
+            C16_P4["3-level aggregation<br/>━━━ preliminary metrics ━━━<br/>otu% = otu / Σ otu × 100<br/>size% = size / Σ size × 100"]
+            C16_P1 --> C16_P2 --> C16_P3 --> C16_P4
+        end
+
+        %% ----- 18S lane -----
+        subgraph C18S["🧫 18S_censusparse/"]
+            direction TB
+            C18_P1["advanced name cleaning<br/>(numbers · hyphens · groups)"]
+            C18_P2["4-tier taxid fallback<br/>(direct → genus → strip → pattern)"]
+            C18_P3["taxonkit lineage<br/>resolution"]
+            C18_P4["3-level aggregation<br/>━━━ preliminary metrics ━━━<br/>otu% = otu / Σ otu × 100<br/>size% = size / Σ size × 100"]
+            C18_P1 --> C18_P2 --> C18_P3 --> C18_P4
+        end
+    end
+
+    %% ================================================================
+    %% STAGE ③ — INTERMEDIATE OUTPUTS  (3 parallel lanes)
+    %% ================================================================
+    subgraph S3["③ INTERMEDIATE OUTPUTS"]
+        direction LR
+        NCBI_OUT[("ncbi_parse/output/<br/>species_grouped_*.csv<br/><i>~162,731 species</i><br/><br/>domain_meta/output/<br/>bacteria · archaea · eukaryota ·<br/>viruses · unknown _species.csv<br/><br/>gtdb_ncbi_mapper/mapping_tables/<br/>gtdb_to_ncbi_simple_map.csv<br/>gtdb_to_ncbi_taxonomy_map.csv<br/>gtdb_to_ncbi_full_map.csv")]
+        C16_OUT[("16S_censusparse/output/<br/>eukcensus16S_by_division.csv (~95)<br/>eukcensus16S_by_family.csv (~800)<br/>eukcensus16S_by_genus.csv (~4,578)")]
+        C18_OUT[("18S_censusparse/output/<br/>eukcensus_18S_by_division.csv (~24)<br/>eukcensus_18S_by_family.csv (~316)<br/>eukcensus_18S_by_genus.csv (~847)")]
+    end
+
+    %% ================================================================
+    %% STAGE ③.5 — ALGORITHM & METRICS  (new transition band)
+    %% ================================================================
+    subgraph S35["③·⑤ MERGE ALGORITHM &amp; METRICS"]
+        direction LR
+        ALG_MATCH{{"<b>Lineage matching</b> (per census taxon)<br/>1️⃣ direct taxid: census.taxid == NCBI.species_taxid<br/>2️⃣ hierarchical taxid: census.taxid ∈ NCBI.lineage_taxids<br/>&nbsp;&nbsp;&nbsp;&nbsp;regex: ;t; · ^t; · ;t$ · ^t$<br/>&nbsp;&nbsp;&nbsp;&nbsp;rank-aware: skip if census rank above target<br/>3️⃣ aggregate over all matched NCBI species:<br/>&nbsp;&nbsp;&nbsp;&nbsp;Σ genomes · Σ isolates · Σ uncultured"}}
+        ALG_METRICS[/"<b>Final metrics</b><br/>novelty&nbsp;factor = census_otu_count / ncbi_species_count<br/>overrepresentation = ncbi_species_count / census_otu_count<br/>genome_pct_db = Σ matched_genomes / Σ all_ncbi_genomes × 100<br/>species_pct = matched_species_count / total_ncbi_species × 100<br/>isolate_percentage = Σ isolates / Σ matched_genomes × 100"/]
+        ALG_MATCH --> ALG_METRICS
+    end
+
+    %% ================================================================
+    %% STAGE ④ — FINAL MERGER (terminal box, bottom)
+    %% ================================================================
+    subgraph S4["④ FINAL MERGER"]
+        direction TB
+        FM_RUN["final_merger/<br/>run_16s_ncbi_merger.py · run_18s_ncbi_merger.py<br/>src/ data_loader · domain_filter · lineage_matcher ·<br/>isolate_tracker · metrics_calculator · output_writer"]
+        FM_FILES[("final_merger/outputs/<br/>━━━ 16S (Bacteria + Archaea) ━━━<br/>16s_ncbi_merged_division.csv<br/>16s_ncbi_merged_family.csv<br/>16s_ncbi_merged_genus.csv<br/>━━━ 18S (Eukaryota) ━━━<br/>18s_ncbi_merged_division.csv<br/>18s_ncbi_merged_family.csv<br/>18s_ncbi_merged_genus.csv")]
+        FM_RUN --> FM_FILES
+    end
+
+    %% ================================================================
+    %% INTER-STAGE WIRING (clean top-to-bottom)
+    %% ================================================================
+    M_NCBI --> NCBI_LOAD
+    M_GTDB --> G_ALG
+    M_C16  --> C16_P1
+    M_C18  --> C18_P1
+
+    NCBI_PCT --> NCBI_OUT
+    G_RATE   --> NCBI_OUT
+    C16_P4   --> C16_OUT
+    C18_P4   --> C18_OUT
+
+    %% ---- The "loop back" to NCBI metadata ----
+    G_RATE -. "GTDB taxonomy overlay<br/>(reference only — not consumed downstream)" .-> M_NCBI
+
+    %% ③ → ③.5 → ④ : only census + NCBI species outputs feed the merger
+    NCBI_OUT --> ALG_MATCH
+    C16_OUT  --> ALG_MATCH
+    C18_OUT  --> ALG_MATCH
+    ALG_METRICS --> FM_RUN
+
+    %% ================================================================
+    %% STYLING  (muted, light & dark safe)
+    %% ================================================================
+    classDef src   fill:#e8eef7,stroke:#5b7fb0,color:#1a2a44
+    classDef proc  fill:#eef3ea,stroke:#7a9c5e,color:#1f3320
+    classDef out   fill:#f7efe2,stroke:#b89160,color:#3a2a10
+    classDef algo  fill:#fbf3d9,stroke:#c9a93b,color:#3a2e08
+    classDef rate  fill:#e3f2db,stroke:#5e8a3a,color:#1c3010
+    classDef math  fill:#f3e8e2,stroke:#b97a5a,color:#3a1d10
+    classDef final fill:#f1e7f1,stroke:#9a6aa0,color:#33163a
+
+    class M_NCBI,M_GTDB,M_C16,M_C18 src
+    class NCBI_LOAD,NCBI_CLASS,NCBI_GRP,NCBI_LIN,NCBI_PCT,C16_P1,C16_P2,C16_P3,C16_P4,C18_P1,C18_P2,C18_P3,C18_P4,FM_RUN proc
+    class NCBI_OUT,C16_OUT,C18_OUT out
+    class G_ALG,ALG_MATCH algo
+    class G_RATE rate
+    class ALG_METRICS math
+    class FM_FILES final
