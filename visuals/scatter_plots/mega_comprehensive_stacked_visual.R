@@ -39,6 +39,9 @@ suppressPackageStartupMessages({
   library(yaml)
 })
 
+# Shared helpers for deterministic, cross-figure taxon color assignment.
+source("../shared_config/color_mapping_functions.R")
+
 # ============================================================================
 # Load shared taxonomic color mapping configuration
 # This ensures consistency across all visualization types
@@ -433,13 +436,22 @@ create_domain_specific_legend <- function(taxa_list, color_config, domain, title
 }
 
 # Simple path configuration
+# All taxon-level merged tables now come from the canonical final_merger output
+# directory (the same source the alluvial plots use). The phylum-level scatter
+# panel maps to the "division"-named merged file in that directory, since the
+# 16S and 18S top-rank tables are emitted under that name.
 config <- list(
-  data_dir_16s = "../../Eukcensus_merge/16s_merged/csv_results",
-  data_dir_18s = "../../Eukcensus_merge/18s_merged/csv_results",
+  data_dir_16s = "../../final_merger/outputs",
+  data_dir_18s = "../../final_merger/outputs",
   output_dir = "final_visualizations",
   source_data_dir = "source_data",
-  ncbi_data_dir = "../../00ncbi_parse/csv_ncbi"
+  ncbi_data_dir = "../../../misc/ncbi_parse_old/csv_ncbi"
 )
+
+# Map scatter-plot level name to the on-disk file suffix used by final_merger.
+level_to_file_suffix <- function(level) {
+  if (level == "phylum") "division" else level
+}
 
 # Create output directories
 if (!dir.exists(config$output_dir)) dir.create(config$output_dir, recursive = TRUE)
@@ -559,7 +571,7 @@ filter_divisions <- function(data) {
 
 # Load 16S data function
 load_16s_data <- function(level, domain) {
-  filename <- paste0("16s_ncbi_merged_clean_", level, ".csv")
+  filename <- paste0("16s_ncbi_merged_", level_to_file_suffix(level), ".csv")
   filepath <- file.path(config$data_dir_16s, filename)
 
   if (!file.exists(filepath)) stop(paste("File not found:", filepath))
@@ -617,16 +629,16 @@ add_phylum_info <- function(data, level, domain) {
   if (level == "phylum") {
     data$Phylum <- data$Taxon
   } else {
-    # For family level, try to get phylum mapping but be very conservative about filtering
+    # Family circles inherit their parent phylum's color so the family panel
+    # aligns visually with the phylum panel. Families whose phylum cannot be
+    # resolved from the NCBI lineage fall through to "Other" (gray).
     data$Phylum <- get_phylum_for_taxa(data$Taxon, level)
-
-    # Always use family names as phylum for coloring to preserve all data
-    # This ensures important families like Prochlorococcaceae are never lost
-    cat(paste("ℹ️  Using", level, "names directly for coloring to preserve all taxa.\n"))
-    data$Phylum <- data$Taxon  # Use family names directly - no filtering!
-
-    # Optional: If you had valid phylum mappings, you could use them here
-    # But for now, we prioritize data preservation over phylum accuracy
+    n_unknown <- sum(data$Phylum == "Unknown")
+    if (n_unknown > 0) {
+      cat(paste("ℹ️ ", n_unknown, "of", nrow(data), level,
+                "taxa have no resolvable phylum; coloring as Other.\n"))
+    }
+    data$Phylum[data$Phylum == "Unknown"] <- "Other"
   }
   data$Phylum <- standardize_phylum_names(data$Phylum)
   return(data)
@@ -665,8 +677,31 @@ get_phylum_for_taxa <- function(taxa, level) {
 }
 
 # Standardize phylum names
+# - Archaea: collapse NCBI synonyms onto our 6 named phyla
+# - Eukaryota: NCBI uses "phylum" rank for clades that sit *inside* the Pr2
+#   division used on the 18S phylum panel. Map them up to their division so
+#   family circles inherit the same color as their parent division.
 standardize_phylum_names <- function(phylum_names) {
-  phylum_mapping <- c("Methanobacteriota" = "Euryarchaeota")
+  phylum_mapping <- c(
+    # Archaea synonyms
+    "Methanobacteriota"   = "Euryarchaeota",
+    # NCBI eukaryote phylum -> Pr2 division
+    "Apicomplexa"         = "Alveolata",
+    "Ciliophora"          = "Alveolata",
+    "Ascomycota"          = "Opisthokonta",
+    "Basidiomycota"       = "Opisthokonta",
+    "Chytridiomycota"     = "Opisthokonta",
+    "Microsporidia"       = "Opisthokonta",
+    "Mucoromycota"        = "Opisthokonta",
+    "Zoopagomycota"       = "Opisthokonta",
+    "Fornicata"           = "Metamonada",
+    "Parabasalia"         = "Metamonada",
+    "Heterolobosea"       = "Discoba",
+    "Euglenozoa"          = "Discoba",
+    "Cercozoa"            = "Rhizaria",
+    "Foraminifera"        = "Rhizaria",
+    "Radiolaria"          = "Rhizaria"
+  )
 
   standardized <- phylum_names
   for (old_name in names(phylum_mapping)) {
@@ -677,7 +712,7 @@ standardize_phylum_names <- function(phylum_names) {
 
 # Load 18S data function
 load_18s_data <- function(level) {
-  filename <- paste0("18s_ncbi_merged_clean_", level, ".csv")
+  filename <- paste0("18s_ncbi_merged_", level_to_file_suffix(level), ".csv")
   filepath <- file.path(config$data_dir_18s, filename)
 
   if (!file.exists(filepath)) stop(paste("File not found:", filepath))
@@ -824,92 +859,23 @@ create_individual_scatter <- function(data, level, domain, master_colors) {
 
   # Top data points with proper color mapping using shared config
   if (nrow(top_data) > 0) {
-    # Load shared color configuration for specific phylum-to-color mapping
+    # Load shared color configuration
     color_config <- load_shared_color_config()
-
-    # Create shared pool of all available colors (excluding assigned ones)
-    all_assigned_colors <- c(
-      unlist(color_config$bacteria_colors),
-      unlist(color_config$archaea_colors),
-      unlist(color_config$eukaryota_colors)
-    )
-
-    # Create shared pool from all fallback colors
-    shared_color_pool <- unique(c(
-      unlist(color_config$fallback_colors$bacteria),
-      unlist(color_config$fallback_colors$archaea),
-      unlist(color_config$fallback_colors$eukaryota)
-    ))
-
-    # Remove any assigned colors from the shared pool to avoid conflicts
-    shared_color_pool <- shared_color_pool[!shared_color_pool %in% all_assigned_colors]
 
     # Determine color column and get appropriate colors
     if (domain == "Eukaryota") {
       color_col <- "Division"
       plot_groups <- sort(unique(top_data$Division[!top_data$Division %in% c("Unknown", "", "Other", NA)]))
-      # Use specific eukaryota division-to-color mapping from shared config
-      group_colors <- sapply(plot_groups, function(division) {
-        if (division %in% names(color_config$eukaryota_colors)) {
-          return(color_config$eukaryota_colors[[division]])
-        } else {
-          # Use shared color pool for unmapped divisions
-          pool_index <- ((match(division, plot_groups) - 1) %% length(shared_color_pool)) + 1
-          return(shared_color_pool[pool_index])
-        }
-      })
-      names(group_colors) <- plot_groups
+      group_colors <- get_domain_colors(plot_groups, "Eukaryota", color_config)
     } else {
       color_col <- "Phylum"
       plot_groups <- sort(unique(top_data$Phylum[!top_data$Phylum %in% c("Unknown", "", "Other", NA)]))
-      # Use specific phylum-to-color mapping from shared config
-      if (domain == "Bacteria") {
-        group_colors <- sapply(plot_groups, function(phylum) {
-          if (phylum %in% names(color_config$bacteria_colors)) {
-            return(color_config$bacteria_colors[[phylum]])
-          } else {
-            # Use shared color pool for unmapped phyla
-            pool_index <- ((match(phylum, plot_groups) - 1) %% length(shared_color_pool)) + 1
-            return(shared_color_pool[pool_index])
-          }
-        })
-      } else {
-        group_colors <- sapply(plot_groups, function(phylum) {
-          if (phylum %in% names(color_config$archaea_colors)) {
-            return(color_config$archaea_colors[[phylum]])
-          } else {
-            # Use shared color pool for unmapped phyla
-            pool_index <- ((match(phylum, plot_groups) - 1) %% length(shared_color_pool)) + 1
-            return(shared_color_pool[pool_index])
-          }
-        })
-      }
-      names(group_colors) <- plot_groups
+      group_colors <- get_domain_colors(plot_groups, domain, color_config)
     }
 
     # Print color mapping for verification
     cat(paste("🎨", domain, level, "color mapping:\n"))
-    cat(paste("   Shared color pool size:", length(shared_color_pool), "\n"))
-
-    assigned_count <- 0
-    shared_count <- 0
-
-    for (i in 1:length(group_colors)) {
-      taxon_name <- names(group_colors)[i]
-      color_value <- group_colors[i]
-
-      # Check if this is an assigned color or from shared pool
-      is_assigned <- color_value %in% all_assigned_colors
-      if (is_assigned) {
-        assigned_count <- assigned_count + 1
-        cat(paste("   ✓", taxon_name, "->", color_value, "(assigned)\n"))
-      } else {
-        shared_count <- shared_count + 1
-        cat(paste("   ○", taxon_name, "->", color_value, "(shared pool)\n"))
-      }
-    }
-
-    cat(paste("   Summary:", assigned_count, "assigned,", shared_count, "from shared pool\n"))
+    print_color_summary(names(group_colors), group_colors, domain)
 
     # Add colored points with phylum/division-based colors
     p <- p + geom_point(data = top_data,
@@ -1097,14 +1063,12 @@ main <- function() {
       theme(plot.margin = margin(0, 0, 0, 0))
   }
 
-  # Create column headers
+  # Column headers intentionally left blank; domain titles are added externally.
+  # Empty ggplots preserve the row's reserved height so the rest of the layout
+  # stays unchanged.
   col_headers <- list()
-  domain_names <- c("Bacteria", "Archaea", "Eukaryota")
-  for (i in 1:length(domain_names)) {
-    col_headers[[i]] <- ggplot() +
-      annotate("text", x = 0.5, y = 0.5, label = domain_names[i],
-               size = 12, fontface = "bold", color = "grey50") +
-      theme_void() +
+  for (i in 1:3) {
+    col_headers[[i]] <- ggplot() + theme_void() +
       theme(plot.margin = margin(0, 0, 0, 0))
   }
 
@@ -1168,11 +1132,19 @@ main <- function() {
     ncol = 2, rel_widths = c(0.85, 0.15)
   )
 
+  # Shift the phylum legend rightward by adding an empty left spacer
+  # (kept as a separate row in the main grid so the vertical layout is unchanged).
+  shifted_phyla_legend <- plot_grid(
+    ggplot() + theme_void(),
+    combined_phyla_legend,
+    ncol = 2, rel_widths = c(0.15, 0.85)
+  )
+
   # Combine main plot with long horizontal legend beneath
   complete_plot <- plot_grid(
     main_plot_with_isolate,
     ggplot() + theme_void(),  # Small spacer
-    combined_phyla_legend,
+    shifted_phyla_legend,
     ncol = 1, rel_heights = c(0.75, 0.05, 0.2)
   )
 

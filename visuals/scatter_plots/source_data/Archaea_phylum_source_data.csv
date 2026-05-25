@@ -1,5 +1,8 @@
-"Taxon","census_otu_count","census_size_count","otu_percentage","size_percentage","ncbi_genome_count","ncbi_species_count","isolate_count","genome_pct_db","species_pct","isolate_percentage","novelty_factor","overrepresentation_factor","direct_matches","taxid_matches","lineage_matches","total_matches","match_status","domain","coverage_percentage","Circle_Size","Phylum","Is_Top_Novelty","Is_Top_Coverage"
-"Nanoarchaeota",3178,9061,1.21,0.76,754,27,34,0.03,0.03,4.51,117.704,0.008,0,1,0,1,"matched","Archaea",NA,20,"Nanoarchaeota",TRUE,FALSE
-"Nitrososphaerota",1458,10698,0.56,0.9,3748,252,183,0.14,0.29,4.88,5.786,0.173,1,1,-1,1,"matched","Archaea",NA,20,"Nitrososphaerota",TRUE,FALSE
-"Thermoproteota",569,2540,0.22,0.21,2576,250,275,0.1,0.29,10.68,2.276,0.439,1,1,-1,1,"matched","Archaea",NA,15,"Thermoproteota",TRUE,FALSE
-"Euryarchaeota",3600,18821,1.37,1.58,7771,1758,1772,0.3,2.01,22.8,2.048,0.488,0,1,0,1,"matched","Archaea",NA,15,"Euryarchaeota",TRUE,FALSE
+"Taxon","census_taxid","census_otu_count","census_size_count","otu_percentage","size_percentage","ncbi_genome_count","ncbi_species_count","genome_pct_db","species_pct","direct_name_matches","direct_taxid_matches","hierarchical_taxid_matches","lineage_name_matches","total_matches","match_status","domain","isolate_count","isolate_percentage","novelty_factor","overrepresentation_factor","Circle_Size","Phylum","Is_Top_Novelty","Is_Top_Coverage"
+"Nanoarchaeota","192989",3178,9061,1.21,0.76,849,31,0.03,0.03,0,0,31,0,31,"matched","Archaea",57,6.71,102.516,0.01,20,"Nanoarchaeota",TRUE,FALSE
+"Odinarchaeia","3067281",169,511,0.06,0.04,10,3,0,0,0,0,3,0,3,"matched","Archaea",2,20,56.333,0.018,15,"Odinarchaeia",TRUE,FALSE
+"Heimdallarchaeia","3422291",83,365,0.03,0.03,44,4,0,0,0,0,4,0,4,"matched","Archaea",0,0,20.75,0.048,25,"Heimdallarchaeia",TRUE,FALSE
+"Nitrososphaerota","651137",1458,10698,0.56,0.9,4238,270,0.14,0.26,0,0,270,0,270,"matched","Archaea",203,4.79,5.4,0.185,20,"Nitrososphaerota",TRUE,FALSE
+"Lokiarchaeia","1935183",362,1328,0.14,0.11,1624,92,0.05,0.09,0,0,92,0,92,"matched","Archaea",38,2.34,3.935,0.254,20,"Lokiarchaeia",TRUE,FALSE
+"Euryarchaeota","28890",3600,18821,1.37,1.58,8618,1831,0.29,1.79,0,0,1831,0,1831,"matched","Archaea",1909,22.15,1.966,0.509,15,"Euryarchaeota",TRUE,FALSE
+"Thermoproteota","28889",569,2540,0.22,0.21,3278,290,0.11,0.28,0,0,290,0,290,"matched","Archaea",433,13.21,1.962,0.51,15,"Thermoproteota",TRUE,FALSE

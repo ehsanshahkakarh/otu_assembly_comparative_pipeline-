@@ -31,7 +31,7 @@ cat("Using clean merged data approach for reliable visualization\n\n")
 
 # Robust path handling - works from script location
 # Define relative paths from alluvial script location to data directories
-merged_data_path <- "../../../Eukcensus_merge/18s_merged/csv_results/18s_ncbi_merged_clean_phylum.csv"
+merged_data_path <- "../../../../misc/Eukcensus_merge/18s_merged/csv_results/18s_ncbi_merged_clean_phylum.csv"
 census_data_path <- "../../../18S_censusparse/csv_outputs/eukcensus_18S_by_division.csv"
 
 # Load merged 18S data (ONLY source needed)

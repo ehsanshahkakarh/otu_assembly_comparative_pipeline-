@@ -24,6 +24,32 @@ library(scales)
 library(tidyr)
 library(yaml)
 library(patchwork)  # For combining plots
+library(ggrepel)    # For non-overlapping stratum labels
+
+# Hide labels for strata below this percentage of their column total.
+# Set to 0 to keep all labels. Tune up to reduce label overlap further.
+LABEL_MIN_PCT <- 3.0
+
+# Anchor stratum labels at their true y-centers so the visible top-to-bottom
+# order of labels strictly matches the per-axis descending magnitude of the
+# strata. ggrepel's y-direction repulsion otherwise swaps adjacent labels.
+# Mirrors decreasing=FALSE so the stat re-computes the same per-axis ordering
+# that geom_stratum uses (otherwise the embedded StatStratum defaults to
+# factor-level order and produces a different y-center for each label).
+geom_text_repel <- function(..., direction = NULL, max.overlaps = NULL,
+                            force = NULL, force_pull = NULL,
+                            box.padding = NULL, point.padding = NULL,
+                            min.segment.length = NULL, segment.color = NULL,
+                            segment.size = NULL, segment.alpha = NULL,
+                            seed = NULL, max.time = NULL, max.iter = NULL,
+                            xlim = NULL, ylim = NULL, arrow = NULL,
+                            verbose = NULL) {
+  args <- list(...)
+  if (identical(args$stat, "stratum") && is.null(args$decreasing)) {
+    args$decreasing <- FALSE
+  }
+  do.call(ggplot2::geom_text, args)
+}
 
 # Load shared color mapping functions
 source("../../../shared_config/color_mapping_functions.R")
@@ -323,8 +349,22 @@ bacteria_long <- rbind(bacteria_long, data.frame(
 
 bacteria_long$x <- factor(bacteria_long$x, levels = c("Genbank_Genome_%", "IMG_Genome_%", "16S_OTU_%", "Genbank_Species_%"))
 
+# Order bacteria phylum factor by total percentage (descending), keep Other last
+bacteria_phylum_totals <- bacteria_long %>%
+  group_by(phylum) %>%
+  summarise(total = sum(percentage, na.rm = TRUE), .groups = "drop") %>%
+  arrange(desc(total))
+bacteria_ordered <- c(setdiff(bacteria_phylum_totals$phylum, "Other"), "Other")
+bacteria_long$phylum <- factor(bacteria_long$phylum, levels = bacteria_ordered)
+
+# Precompute per-row percentage label (blank when below visibility threshold)
+bacteria_long <- bacteria_long %>%
+  mutate(label_pct = ifelse(percentage >= LABEL_MIN_PCT,
+                            paste0(phylum, "\n", sprintf("%.1f%%", percentage)),
+                            ""))
+
 # Assign colors to bacteria phyla
-bacteria_phyla_names <- unique(bacteria_long$phylum)
+bacteria_phyla_names <- levels(bacteria_long$phylum)
 bacteria_plot_colors <- character(length(bacteria_phyla_names))
 names(bacteria_plot_colors) <- bacteria_phyla_names
 
@@ -353,7 +393,10 @@ bacteria_long_abs <- bacteria_long %>%
       x == "16S_OTU_%" ~ percentage / 100 * total_bacteria_otu,
       x == "Genbank_Species_%" ~ percentage / 100 * total_bacteria_species,
       TRUE ~ 0
-    )
+    ),
+    label_abs = ifelse(percentage >= LABEL_MIN_PCT,
+                       paste0(phylum, "\n", scales::comma(round(absolute_value))),
+                       "")
   )
 
 # Create bacteria ABSOLUTE plot
@@ -365,13 +408,43 @@ p_bacteria_abs <- ggplot(
                 lode.guidance = "forward", knot.pos = 0.35) +
   geom_stratum(alpha = 0.95, decreasing = FALSE, color = "white",
                linewidth = 0.2, width = 0.02) +
-  geom_text(
+  geom_text_repel(
+    data = function(d) d %>% filter(x == "Genbank_Genome_%"),
     stat = "stratum",
-    aes(label = paste0(after_stat(stratum), "\n", scales::comma(round(after_stat(ymax - ymin))))),
-    size = 3.0,
-    fontface = "bold",
-    lineheight = 0.95,
-    check_overlap = TRUE
+    aes(label = label_abs),
+    hjust = 0, nudge_x = 0.16,
+    size = 6.0, fontface = "bold", lineheight = 0.95,
+    direction = "y", max.overlaps = Inf, force = 0.5,
+    box.padding = 0.25, min.segment.length = 0,
+    segment.color = NA, seed = 42
+  ) +
+  geom_text_repel(
+    data = function(d) d %>% filter(x == "Genbank_Species_%"),
+    stat = "stratum",
+    aes(label = label_abs),
+    hjust = 1, nudge_x = -0.16,
+    size = 6.0, fontface = "bold", lineheight = 0.95,
+    direction = "y", max.overlaps = Inf, force = 0.5,
+    box.padding = 0.25, min.segment.length = 0,
+    segment.color = NA, seed = 42
+  ) +
+  geom_text_repel(
+    data = function(d) d %>% filter(x == "IMG_Genome_%"),
+    stat = "stratum",
+    aes(label = label_abs),
+    size = 6.0, fontface = "bold", lineheight = 0.95,
+    direction = "y", max.overlaps = Inf, force = 0.5,
+    box.padding = 0.25, min.segment.length = 0,
+    segment.color = NA, seed = 42
+  ) +
+  geom_text_repel(
+    data = function(d) d %>% filter(x == "16S_OTU_%"),
+    stat = "stratum",
+    aes(label = label_abs),
+    size = 6.0, fontface = "bold", lineheight = 0.95,
+    direction = "y", max.overlaps = Inf, force = 0.5,
+    box.padding = 0.25, min.segment.length = 0,
+    segment.color = NA, seed = 42
   ) +
   scale_fill_manual(values = bacteria_plot_colors, name = "Phylum") +
   scale_x_discrete(
@@ -385,20 +458,24 @@ p_bacteria_abs <- ggplot(
     labels = comma,
     expand = expansion(mult = c(0, 0.02))
   ) +
+  coord_cartesian(xlim = c(1 - 0.09, 4 + 0.09), clip = "off") +
   theme_minimal(base_size = 14) +
   theme(
-    axis.text.x = element_text(size = 20, face = "bold", angle = 0, hjust = 0.5),
-    axis.text.y = element_text(size = 20, face = "bold"),
+    axis.text.x = element_text(size = 22, face = "bold", angle = 0, hjust = 0.5, colour = "black"),
+    axis.text.y = element_text(size = 22, face = "bold", colour = "black"),
+    axis.ticks = element_line(colour = "black", linewidth = 0.5),
+    axis.ticks.length = unit(0.2, "cm"),
     axis.title.x = element_blank(),
-    axis.title.y = element_text(size = 24, face = "bold"),
+    axis.title.y = element_text(size = 26, face = "bold", colour = "black"),
     panel.grid.major.x = element_blank(),
     panel.grid.minor = element_blank(),
     legend.position = "right",
-    legend.title = element_text(size = 18, face = "bold"),
-    legend.text = element_text(size = 12, face = "bold"),
-    legend.key.size = unit(1.0, "cm"),
-    plot.title = element_text(size = 30, face = "bold", hjust = 0.5),
-    plot.margin = margin(10, 10, 5, 10)
+    legend.title = element_text(size = 22, face = "bold", colour = "black"),
+    legend.text = element_text(size = 16, face = "bold", colour = "black"),
+    legend.key.size = unit(1.8, "cm"),
+    legend.margin = margin(l = 10),
+    plot.title = element_text(size = 32, face = "bold", hjust = 0.5, colour = "black"),
+    plot.margin = margin(10, 20, 5, 20)
   ) +
   labs(
     title = "Absolute Values",
@@ -415,13 +492,43 @@ p_bacteria_pct <- ggplot(
                 lode.guidance = "forward", knot.pos = 0.35) +
   geom_stratum(alpha = 0.95, decreasing = FALSE, color = "white",
                linewidth = 0.2, width = 0.02) +
-  geom_text(
+  geom_text_repel(
+    data = function(d) d %>% filter(x == "Genbank_Genome_%"),
     stat = "stratum",
-    aes(label = paste0(after_stat(stratum), "\n", sprintf("%.1f%%", after_stat(ymax - ymin)))),
-    size = 3.0,
-    fontface = "bold",
-    lineheight = 0.95,
-    check_overlap = TRUE
+    aes(label = label_pct),
+    hjust = 0, nudge_x = 0.16,
+    size = 6.0, fontface = "bold", lineheight = 0.95,
+    direction = "y", max.overlaps = Inf, force = 0.5,
+    box.padding = 0.25, min.segment.length = 0,
+    segment.color = NA, seed = 42
+  ) +
+  geom_text_repel(
+    data = function(d) d %>% filter(x == "Genbank_Species_%"),
+    stat = "stratum",
+    aes(label = label_pct),
+    hjust = 1, nudge_x = -0.16,
+    size = 6.0, fontface = "bold", lineheight = 0.95,
+    direction = "y", max.overlaps = Inf, force = 0.5,
+    box.padding = 0.25, min.segment.length = 0,
+    segment.color = NA, seed = 42
+  ) +
+  geom_text_repel(
+    data = function(d) d %>% filter(x == "IMG_Genome_%"),
+    stat = "stratum",
+    aes(label = label_pct),
+    size = 6.0, fontface = "bold", lineheight = 0.95,
+    direction = "y", max.overlaps = Inf, force = 0.5,
+    box.padding = 0.25, min.segment.length = 0,
+    segment.color = NA, seed = 42
+  ) +
+  geom_text_repel(
+    data = function(d) d %>% filter(x == "16S_OTU_%"),
+    stat = "stratum",
+    aes(label = label_pct),
+    size = 6.0, fontface = "bold", lineheight = 0.95,
+    direction = "y", max.overlaps = Inf, force = 0.5,
+    box.padding = 0.25, min.segment.length = 0,
+    segment.color = NA, seed = 42
   ) +
   scale_fill_manual(values = bacteria_plot_colors, name = "Phylum") +
   scale_x_discrete(
@@ -436,20 +543,24 @@ p_bacteria_pct <- ggplot(
     limits = c(0, 100),
     expand = expansion(mult = c(0, 0.02))
   ) +
+  coord_cartesian(xlim = c(1 - 0.09, 4 + 0.09), clip = "off") +
   theme_minimal(base_size = 14) +
   theme(
-    axis.text.x = element_text(size = 20, face = "bold", angle = 0, hjust = 0.5),
-    axis.text.y = element_text(size = 20, face = "bold"),
+    axis.text.x = element_text(size = 22, face = "bold", angle = 0, hjust = 0.5, colour = "black"),
+    axis.text.y = element_text(size = 22, face = "bold", colour = "black"),
+    axis.ticks = element_line(colour = "black", linewidth = 0.5),
+    axis.ticks.length = unit(0.2, "cm"),
     axis.title.x = element_blank(),
-    axis.title.y = element_text(size = 24, face = "bold"),
+    axis.title.y = element_text(size = 26, face = "bold", colour = "black"),
     panel.grid.major.x = element_blank(),
     panel.grid.minor = element_blank(),
     legend.position = "right",
-    legend.title = element_text(size = 18, face = "bold"),
-    legend.text = element_text(size = 12, face = "bold"),
-    legend.key.size = unit(1.0, "cm"),
-    plot.title = element_text(size = 30, face = "bold", hjust = 0.5),
-    plot.margin = margin(5, 10, 10, 10)
+    legend.title = element_text(size = 22, face = "bold", colour = "black"),
+    legend.text = element_text(size = 16, face = "bold", colour = "black"),
+    legend.key.size = unit(1.8, "cm"),
+    legend.margin = margin(l = 10),
+    plot.title = element_text(size = 32, face = "bold", hjust = 0.5, colour = "black"),
+    plot.margin = margin(5, 20, 10, 20)
   ) +
   labs(
     title = "Percentage Values",
@@ -519,8 +630,22 @@ archaea_long <- rbind(archaea_long, data.frame(
 
 archaea_long$x <- factor(archaea_long$x, levels = c("Genbank_Genome_%", "IMG_Genome_%", "16S_OTU_%", "Genbank_Species_%"))
 
+# Order archaea phylum factor by total percentage (descending), keep Other last
+archaea_phylum_totals <- archaea_long %>%
+  group_by(phylum) %>%
+  summarise(total = sum(percentage, na.rm = TRUE), .groups = "drop") %>%
+  arrange(desc(total))
+archaea_ordered <- c(setdiff(archaea_phylum_totals$phylum, "Other"), "Other")
+archaea_long$phylum <- factor(archaea_long$phylum, levels = archaea_ordered)
+
+# Precompute per-row percentage label (blank when below visibility threshold)
+archaea_long <- archaea_long %>%
+  mutate(label_pct = ifelse(percentage >= LABEL_MIN_PCT,
+                            paste0(phylum, "\n", sprintf("%.1f%%", percentage)),
+                            ""))
+
 # Assign colors to archaea phyla
-archaea_phyla_names <- unique(archaea_long$phylum)
+archaea_phyla_names <- levels(archaea_long$phylum)
 archaea_plot_colors <- character(length(archaea_phyla_names))
 names(archaea_plot_colors) <- archaea_phyla_names
 
@@ -549,7 +674,10 @@ archaea_long_abs <- archaea_long %>%
       x == "16S_OTU_%" ~ percentage / 100 * total_archaea_otu,
       x == "Genbank_Species_%" ~ percentage / 100 * total_archaea_species,
       TRUE ~ 0
-    )
+    ),
+    label_abs = ifelse(percentage >= LABEL_MIN_PCT,
+                       paste0(phylum, "\n", scales::comma(round(absolute_value))),
+                       "")
   )
 
 # Create archaea ABSOLUTE plot
@@ -561,13 +689,43 @@ p_archaea_abs <- ggplot(
                 lode.guidance = "forward", knot.pos = 0.35) +
   geom_stratum(alpha = 0.95, decreasing = FALSE, color = "white",
                linewidth = 0.2, width = 0.02) +
-  geom_text(
+  geom_text_repel(
+    data = function(d) d %>% filter(x == "Genbank_Genome_%"),
     stat = "stratum",
-    aes(label = paste0(after_stat(stratum), "\n", scales::comma(round(after_stat(ymax - ymin))))),
-    size = 3.0,
-    fontface = "bold",
-    lineheight = 0.95,
-    check_overlap = TRUE
+    aes(label = label_abs),
+    hjust = 0, nudge_x = 0.16,
+    size = 6.0, fontface = "bold", lineheight = 0.95,
+    direction = "y", max.overlaps = Inf, force = 0.5,
+    box.padding = 0.25, min.segment.length = 0,
+    segment.color = NA, seed = 42
+  ) +
+  geom_text_repel(
+    data = function(d) d %>% filter(x == "Genbank_Species_%"),
+    stat = "stratum",
+    aes(label = label_abs),
+    hjust = 1, nudge_x = -0.16,
+    size = 6.0, fontface = "bold", lineheight = 0.95,
+    direction = "y", max.overlaps = Inf, force = 0.5,
+    box.padding = 0.25, min.segment.length = 0,
+    segment.color = NA, seed = 42
+  ) +
+  geom_text_repel(
+    data = function(d) d %>% filter(x == "IMG_Genome_%"),
+    stat = "stratum",
+    aes(label = label_abs),
+    size = 6.0, fontface = "bold", lineheight = 0.95,
+    direction = "y", max.overlaps = Inf, force = 0.5,
+    box.padding = 0.25, min.segment.length = 0,
+    segment.color = NA, seed = 42
+  ) +
+  geom_text_repel(
+    data = function(d) d %>% filter(x == "16S_OTU_%"),
+    stat = "stratum",
+    aes(label = label_abs),
+    size = 6.0, fontface = "bold", lineheight = 0.95,
+    direction = "y", max.overlaps = Inf, force = 0.5,
+    box.padding = 0.25, min.segment.length = 0,
+    segment.color = NA, seed = 42
   ) +
   scale_fill_manual(values = archaea_plot_colors, name = "Phylum") +
   scale_x_discrete(
@@ -581,20 +739,24 @@ p_archaea_abs <- ggplot(
     labels = comma,
     expand = expansion(mult = c(0, 0.02))
   ) +
+  coord_cartesian(xlim = c(1 - 0.09, 4 + 0.09), clip = "off") +
   theme_minimal(base_size = 14) +
   theme(
-    axis.text.x = element_text(size = 20, face = "bold", angle = 0, hjust = 0.5),
-    axis.text.y = element_text(size = 20, face = "bold"),
+    axis.text.x = element_text(size = 22, face = "bold", angle = 0, hjust = 0.5, colour = "black"),
+    axis.text.y = element_text(size = 22, face = "bold", colour = "black"),
+    axis.ticks = element_line(colour = "black", linewidth = 0.5),
+    axis.ticks.length = unit(0.2, "cm"),
     axis.title.x = element_blank(),
-    axis.title.y = element_text(size = 24, face = "bold"),
+    axis.title.y = element_text(size = 26, face = "bold", colour = "black"),
     panel.grid.major.x = element_blank(),
     panel.grid.minor = element_blank(),
     legend.position = "right",
-    legend.title = element_text(size = 18, face = "bold"),
-    legend.text = element_text(size = 12, face = "bold"),
-    legend.key.size = unit(1.0, "cm"),
-    plot.title = element_text(size = 30, face = "bold", hjust = 0.5),
-    plot.margin = margin(10, 10, 5, 10)
+    legend.title = element_text(size = 22, face = "bold", colour = "black"),
+    legend.text = element_text(size = 16, face = "bold", colour = "black"),
+    legend.key.size = unit(1.8, "cm"),
+    legend.margin = margin(l = 10),
+    plot.title = element_text(size = 32, face = "bold", hjust = 0.5, colour = "black"),
+    plot.margin = margin(10, 20, 5, 20)
   ) +
   labs(
     title = "Absolute Values",
@@ -611,13 +773,43 @@ p_archaea_pct <- ggplot(
                 lode.guidance = "forward", knot.pos = 0.35) +
   geom_stratum(alpha = 0.95, decreasing = FALSE, color = "white",
                linewidth = 0.2, width = 0.02) +
-  geom_text(
+  geom_text_repel(
+    data = function(d) d %>% filter(x == "Genbank_Genome_%"),
     stat = "stratum",
-    aes(label = paste0(after_stat(stratum), "\n", sprintf("%.1f%%", after_stat(ymax - ymin)))),
-    size = 3.0,
-    fontface = "bold",
-    lineheight = 0.95,
-    check_overlap = TRUE
+    aes(label = label_pct),
+    hjust = 0, nudge_x = 0.16,
+    size = 6.0, fontface = "bold", lineheight = 0.95,
+    direction = "y", max.overlaps = Inf, force = 0.5,
+    box.padding = 0.25, min.segment.length = 0,
+    segment.color = NA, seed = 42
+  ) +
+  geom_text_repel(
+    data = function(d) d %>% filter(x == "Genbank_Species_%"),
+    stat = "stratum",
+    aes(label = label_pct),
+    hjust = 1, nudge_x = -0.16,
+    size = 6.0, fontface = "bold", lineheight = 0.95,
+    direction = "y", max.overlaps = Inf, force = 0.5,
+    box.padding = 0.25, min.segment.length = 0,
+    segment.color = NA, seed = 42
+  ) +
+  geom_text_repel(
+    data = function(d) d %>% filter(x == "IMG_Genome_%"),
+    stat = "stratum",
+    aes(label = label_pct),
+    size = 6.0, fontface = "bold", lineheight = 0.95,
+    direction = "y", max.overlaps = Inf, force = 0.5,
+    box.padding = 0.25, min.segment.length = 0,
+    segment.color = NA, seed = 42
+  ) +
+  geom_text_repel(
+    data = function(d) d %>% filter(x == "16S_OTU_%"),
+    stat = "stratum",
+    aes(label = label_pct),
+    size = 6.0, fontface = "bold", lineheight = 0.95,
+    direction = "y", max.overlaps = Inf, force = 0.5,
+    box.padding = 0.25, min.segment.length = 0,
+    segment.color = NA, seed = 42
   ) +
   scale_fill_manual(values = archaea_plot_colors, name = "Phylum") +
   scale_x_discrete(
@@ -632,20 +824,24 @@ p_archaea_pct <- ggplot(
     limits = c(0, 100),
     expand = expansion(mult = c(0, 0.02))
   ) +
+  coord_cartesian(xlim = c(1 - 0.09, 4 + 0.09), clip = "off") +
   theme_minimal(base_size = 14) +
   theme(
-    axis.text.x = element_text(size = 20, face = "bold", angle = 0, hjust = 0.5),
-    axis.text.y = element_text(size = 20, face = "bold"),
+    axis.text.x = element_text(size = 22, face = "bold", angle = 0, hjust = 0.5, colour = "black"),
+    axis.text.y = element_text(size = 22, face = "bold", colour = "black"),
+    axis.ticks = element_line(colour = "black", linewidth = 0.5),
+    axis.ticks.length = unit(0.2, "cm"),
     axis.title.x = element_blank(),
-    axis.title.y = element_text(size = 24, face = "bold"),
+    axis.title.y = element_text(size = 26, face = "bold", colour = "black"),
     panel.grid.major.x = element_blank(),
     panel.grid.minor = element_blank(),
     legend.position = "right",
-    legend.title = element_text(size = 18, face = "bold"),
-    legend.text = element_text(size = 12, face = "bold"),
-    legend.key.size = unit(1.0, "cm"),
-    plot.title = element_text(size = 30, face = "bold", hjust = 0.5),
-    plot.margin = margin(5, 10, 10, 10)
+    legend.title = element_text(size = 22, face = "bold", colour = "black"),
+    legend.text = element_text(size = 16, face = "bold", colour = "black"),
+    legend.key.size = unit(1.8, "cm"),
+    legend.margin = margin(l = 10),
+    plot.title = element_text(size = 32, face = "bold", hjust = 0.5, colour = "black"),
+    plot.margin = margin(5, 20, 10, 20)
   ) +
   labs(
     title = "Percentage Values",
@@ -690,11 +886,8 @@ p_bacteria_pct_final <- p_bacteria_pct + scale_fill_manual(values = bacteria_plo
 
 # Stack bacteria plots vertically with shared legend
 p_bacteria_stacked <- p_bacteria_abs_final / p_bacteria_pct_final +
-  plot_layout(guides = "collect") +
-  plot_annotation(
-    title = "16S Bacterial Diversity Flow: Absolute vs Percentage",
-    theme = theme(plot.title = element_text(size = 28, face = "bold", hjust = 0.5))
-  )
+  plot_layout(guides = "collect") &
+  theme(legend.box.spacing = unit(0.3, "cm"))
 
 # Save bacteria stacked plot
 cat("\nSaving bacteria stacked alluvial plot...\n")
@@ -711,11 +904,8 @@ p_archaea_pct_final <- p_archaea_pct + scale_fill_manual(values = archaea_plot_c
 
 # Stack archaea plots vertically with shared legend
 p_archaea_stacked <- p_archaea_abs_final / p_archaea_pct_final +
-  plot_layout(guides = "collect") +
-  plot_annotation(
-    title = "16S Archaeal Diversity Flow: Absolute vs Percentage",
-    theme = theme(plot.title = element_text(size = 28, face = "bold", hjust = 0.5))
-  )
+  plot_layout(guides = "collect") &
+  theme(legend.box.spacing = unit(0.3, "cm"))
 
 # Save archaea stacked plot
 cat("\nSaving archaea stacked alluvial plot...\n")

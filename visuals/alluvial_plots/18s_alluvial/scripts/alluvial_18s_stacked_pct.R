@@ -24,6 +24,32 @@ library(scales)
 library(tidyr)
 library(yaml)
 library(patchwork)  # For combining plots
+library(ggrepel)    # For non-overlapping stratum labels
+
+# Hide labels for strata below this percentage of their column total.
+# Set to 0 to keep all labels. Tune up to reduce label overlap further.
+LABEL_MIN_PCT <- 3.0
+
+# Anchor stratum labels at their true y-centers so the visible top-to-bottom
+# order of labels strictly matches the per-axis descending magnitude of the
+# strata. ggrepel's y-direction repulsion otherwise swaps adjacent labels.
+# Mirrors decreasing=FALSE so the stat re-computes the same per-axis ordering
+# that geom_stratum uses (otherwise the embedded StatStratum defaults to
+# factor-level order and produces a different y-center for each label).
+geom_text_repel <- function(..., direction = NULL, max.overlaps = NULL,
+                            force = NULL, force_pull = NULL,
+                            box.padding = NULL, point.padding = NULL,
+                            min.segment.length = NULL, segment.color = NULL,
+                            segment.size = NULL, segment.alpha = NULL,
+                            seed = NULL, max.time = NULL, max.iter = NULL,
+                            xlim = NULL, ylim = NULL, arrow = NULL,
+                            verbose = NULL) {
+  args <- list(...)
+  if (identical(args$stat, "stratum") && is.null(args$decreasing)) {
+    args$decreasing <- FALSE
+  }
+  do.call(ggplot2::geom_text, args)
+}
 
 # Load shared color mapping functions
 source("../../../shared_config/color_mapping_functions.R")
@@ -212,9 +238,20 @@ long_data <- rbind(long_data, data.frame(
 # Set factor levels for proper ordering
 long_data$x <- factor(long_data$x, levels = c("Genbank_Genome_%", "IMG_Genome_%", "18S_OTU_%", "Genbank_Species_%"))
 
+# Order phylum factor by total percentage (descending), keep Other last
+phylum_totals <- long_data %>%
+  group_by(phylum) %>%
+  summarise(total = sum(percentage, na.rm = TRUE), .groups = "drop") %>%
+  arrange(desc(total))
+ordered_phyla <- c(setdiff(phylum_totals$phylum, "Other"), "Other")
+long_data$phylum <- factor(long_data$phylum, levels = ordered_phyla)
+
 # Advanced preprocessing to preserve alluvium IDs
 long_data_f <- long_data %>%
-  arrange(x, desc(percentage))
+  arrange(x, desc(percentage)) %>%
+  mutate(label_pct = ifelse(percentage >= LABEL_MIN_PCT,
+                            paste0(phylum, "\n", sprintf("%.1f%%", percentage)),
+                            ""))
 
 # Create professional color palette using shared color system
 phyla_names <- unique(long_data_f$phylum)
@@ -236,7 +273,10 @@ long_data_abs <- long_data_f %>%
       x == "18S_OTU_%" ~ percentage / 100 * total_otu_count,
       x == "Genbank_Species_%" ~ percentage / 100 * total_species_count,
       TRUE ~ 0
-    )
+    ),
+    label_abs = ifelse(percentage >= LABEL_MIN_PCT,
+                       paste0(phylum, "\n", scales::comma(round(absolute_value))),
+                       "")
   )
 
 # Create STACKED alluvial plots with shared legend
@@ -251,13 +291,43 @@ p_abs <- ggplot(
                 lode.guidance = "forward", knot.pos = 0.35) +
   geom_stratum(alpha = 0.95, decreasing = FALSE, color = "white",
                linewidth = 0.2, width = 0.02) +
-  geom_text(
+  geom_text_repel(
+    data = function(d) d %>% filter(x == "Genbank_Genome_%"),
     stat = "stratum",
-    aes(label = paste0(after_stat(stratum), "\n", scales::comma(round(after_stat(ymax - ymin))))),
-    size = 3.6,
-    fontface = "bold",
-    lineheight = 0.95,
-    check_overlap = TRUE
+    aes(label = label_abs),
+    hjust = 0, nudge_x = 0.16,
+    size = 6.0, fontface = "bold", lineheight = 0.95,
+    direction = "y", max.overlaps = Inf, force = 0.5,
+    box.padding = 0.25, min.segment.length = 0,
+    segment.color = NA, seed = 42
+  ) +
+  geom_text_repel(
+    data = function(d) d %>% filter(x == "Genbank_Species_%"),
+    stat = "stratum",
+    aes(label = label_abs),
+    hjust = 1, nudge_x = -0.16,
+    size = 6.0, fontface = "bold", lineheight = 0.95,
+    direction = "y", max.overlaps = Inf, force = 0.5,
+    box.padding = 0.25, min.segment.length = 0,
+    segment.color = NA, seed = 42
+  ) +
+  geom_text_repel(
+    data = function(d) d %>% filter(x == "IMG_Genome_%"),
+    stat = "stratum",
+    aes(label = label_abs),
+    size = 6.0, fontface = "bold", lineheight = 0.95,
+    direction = "y", max.overlaps = Inf, force = 0.5,
+    box.padding = 0.25, min.segment.length = 0,
+    segment.color = NA, seed = 42
+  ) +
+  geom_text_repel(
+    data = function(d) d %>% filter(x == "18S_OTU_%"),
+    stat = "stratum",
+    aes(label = label_abs),
+    size = 6.0, fontface = "bold", lineheight = 0.95,
+    direction = "y", max.overlaps = Inf, force = 0.5,
+    box.padding = 0.25, min.segment.length = 0,
+    segment.color = NA, seed = 42
   ) +
   scale_fill_manual(values = colors, name = "Division") +
   scale_x_discrete(
@@ -271,20 +341,23 @@ p_abs <- ggplot(
     labels = comma,
     expand = expansion(mult = c(0, 0.02))
   ) +
+  coord_cartesian(xlim = c(1 - 0.09, 4 + 0.09), clip = "off") +
   theme_minimal(base_size = 14) +
   theme(
-    axis.text.x = element_text(size = 22, face = "bold", angle = 0, hjust = 0.5),
-    axis.text.y = element_text(size = 22, face = "bold"),
+    axis.text.x = element_text(size = 22, face = "bold", angle = 0, hjust = 0.5, colour = "black"),
+    axis.text.y = element_text(size = 22, face = "bold", colour = "black"),
+    axis.ticks = element_line(colour = "black", linewidth = 0.5),
+    axis.ticks.length = unit(0.2, "cm"),
     axis.title.x = element_blank(),
-    axis.title.y = element_text(size = 26, face = "bold"),
+    axis.title.y = element_text(size = 26, face = "bold", colour = "black"),
     panel.grid.major.x = element_blank(),
     panel.grid.minor = element_blank(),
     legend.position = "right",
-    legend.title = element_text(size = 22, face = "bold"),
-    legend.text = element_text(size = 16, face = "bold"),
+    legend.title = element_text(size = 22, face = "bold", colour = "black"),
+    legend.text = element_text(size = 16, face = "bold", colour = "black"),
     legend.key.size = unit(1.8, "cm"),
-    legend.margin = margin(l = 80),
-    plot.title = element_text(size = 32, face = "bold", hjust = 0.5),
+    legend.margin = margin(l = 10),
+    plot.title = element_text(size = 32, face = "bold", hjust = 0.5, colour = "black"),
     plot.margin = margin(10, 20, 5, 20)
   ) +
   labs(
@@ -302,13 +375,43 @@ p_pct <- ggplot(
                 lode.guidance = "forward", knot.pos = 0.35) +
   geom_stratum(alpha = 0.95, decreasing = FALSE, color = "white",
                linewidth = 0.2, width = 0.02) +
-  geom_text(
+  geom_text_repel(
+    data = function(d) d %>% filter(x == "Genbank_Genome_%"),
     stat = "stratum",
-    aes(label = paste0(after_stat(stratum), "\n", sprintf("%.1f%%", after_stat(ymax - ymin)))),
-    size = 3.6,
-    fontface = "bold",
-    lineheight = 0.95,
-    check_overlap = TRUE
+    aes(label = label_pct),
+    hjust = 0, nudge_x = 0.16,
+    size = 6.0, fontface = "bold", lineheight = 0.95,
+    direction = "y", max.overlaps = Inf, force = 0.5,
+    box.padding = 0.25, min.segment.length = 0,
+    segment.color = NA, seed = 42
+  ) +
+  geom_text_repel(
+    data = function(d) d %>% filter(x == "Genbank_Species_%"),
+    stat = "stratum",
+    aes(label = label_pct),
+    hjust = 1, nudge_x = -0.16,
+    size = 6.0, fontface = "bold", lineheight = 0.95,
+    direction = "y", max.overlaps = Inf, force = 0.5,
+    box.padding = 0.25, min.segment.length = 0,
+    segment.color = NA, seed = 42
+  ) +
+  geom_text_repel(
+    data = function(d) d %>% filter(x == "IMG_Genome_%"),
+    stat = "stratum",
+    aes(label = label_pct),
+    size = 6.0, fontface = "bold", lineheight = 0.95,
+    direction = "y", max.overlaps = Inf, force = 0.5,
+    box.padding = 0.25, min.segment.length = 0,
+    segment.color = NA, seed = 42
+  ) +
+  geom_text_repel(
+    data = function(d) d %>% filter(x == "18S_OTU_%"),
+    stat = "stratum",
+    aes(label = label_pct),
+    size = 6.0, fontface = "bold", lineheight = 0.95,
+    direction = "y", max.overlaps = Inf, force = 0.5,
+    box.padding = 0.25, min.segment.length = 0,
+    segment.color = NA, seed = 42
   ) +
   scale_fill_manual(values = colors, name = "Division") +
   scale_x_discrete(
@@ -323,20 +426,23 @@ p_pct <- ggplot(
     limits = c(0, 100),
     expand = expansion(mult = c(0, 0.02))
   ) +
+  coord_cartesian(xlim = c(1 - 0.09, 4 + 0.09), clip = "off") +
   theme_minimal(base_size = 14) +
   theme(
-    axis.text.x = element_text(size = 22, face = "bold", angle = 0, hjust = 0.5),
-    axis.text.y = element_text(size = 22, face = "bold"),
+    axis.text.x = element_text(size = 22, face = "bold", angle = 0, hjust = 0.5, colour = "black"),
+    axis.text.y = element_text(size = 22, face = "bold", colour = "black"),
+    axis.ticks = element_line(colour = "black", linewidth = 0.5),
+    axis.ticks.length = unit(0.2, "cm"),
     axis.title.x = element_blank(),
-    axis.title.y = element_text(size = 26, face = "bold"),
+    axis.title.y = element_text(size = 26, face = "bold", colour = "black"),
     panel.grid.major.x = element_blank(),
     panel.grid.minor = element_blank(),
     legend.position = "right",
-    legend.title = element_text(size = 22, face = "bold"),
-    legend.text = element_text(size = 16, face = "bold"),
+    legend.title = element_text(size = 22, face = "bold", colour = "black"),
+    legend.text = element_text(size = 16, face = "bold", colour = "black"),
     legend.key.size = unit(1.8, "cm"),
-    legend.margin = margin(l = 80),
-    plot.title = element_text(size = 32, face = "bold", hjust = 0.5),
+    legend.margin = margin(l = 10),
+    plot.title = element_text(size = 32, face = "bold", hjust = 0.5, colour = "black"),
     plot.margin = margin(5, 20, 10, 20)
   ) +
   labs(
@@ -348,11 +454,8 @@ p_pct <- ggplot(
 # Stack plots vertically with shared legend using patchwork
 cat("Combining plots with patchwork...\n")
 p_stacked <- p_abs / p_pct +
-  plot_layout(guides = "collect") +
-  plot_annotation(
-    title = "18S Eukaryotic Diversity: Absolute vs Percentage Representation",
-    theme = theme(plot.title = element_text(size = 30, face = "bold", hjust = 0.5))
-  )
+  plot_layout(guides = "collect") &
+  theme(legend.box.spacing = unit(0.3, "cm"))
 
 # Save the stacked plot
 cat("\nSaving stacked alluvial plot...\n")

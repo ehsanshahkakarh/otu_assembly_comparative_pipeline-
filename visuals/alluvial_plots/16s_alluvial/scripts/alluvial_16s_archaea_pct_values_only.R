@@ -40,8 +40,8 @@ if (!dir.exists("annotations")) {
 
 # Robust path handling - works from script location
 # Define relative paths from alluvial script location to data directories
-merged_data_path <- "../../../Eukcensus_merge/16s_merged/csv_results/16s_ncbi_merged_clean_phylum.csv"
-census_data_path <- "../../../16S_censusparse/csv_16S/eukcensus16S_by_division.csv"
+merged_data_path <- "../../../../misc/Eukcensus_merge/16s_merged/csv_results/16s_ncbi_merged_clean_phylum.csv"
+census_data_path <- "../../../../misc/16S/csv_16S/eukcensus16S_by_division.csv"
 
 # Load merged 16S data (ONLY source needed)
 cat("Loading 16S merged data...\n")

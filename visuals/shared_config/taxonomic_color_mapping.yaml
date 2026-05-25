@@ -1,78 +1,104 @@
 # Taxonomic Color Mapping Configuration
 # =====================================
-# Shared color assignments for taxa across all visualization types
-# This ensures consistency between alluvial plots, scatter plots, and other visualizations
+# Global registry: every named phylum/division that renders in any panel
+# (scatter top-novelty/overrep + alluvial named flows) has a unique, perceptually
+# distinct hex (within-domain min ΔE2000 ≥ 12; cross-domain pairs may be closer
+# but never co-render).
 #
-# SHARED TAXA ANALYSIS (Updated 2026-01-04)
-# ==========================================
-# This configuration ONLY includes taxa that appear in BOTH scatter plots AND alluvial plots
-# All other taxa will use cross-domain fallback color pools for maximum diversity
-#
-# BACTERIA (7 shared taxa):
-#   - Planctomycetota, Acidobacteriota, Chloroflexota, Verrucomicrobiota,
-#     Myxococcota, Cyanobacteriota, Actinomycetota
-#
-# ARCHAEA (4 shared taxa):
-#   - Euryarchaeota, Nitrososphaerota, Thermoproteota, Nanoarchaeota
-#
-# EUKARYOTA (10 shared taxa):
-#   - Tubulinea, Rhizaria, Evosea, Alveolata, Discoba, Metamonada,
-#     Discosea, Stramenopiles, Chlorophyta, Streptophyta
+# Palette generation: visuals/shared_config/generate_palette.js (iwanthue +
+# greedy farthest-point with CIEDE2000). 15 anchors preserved from the previous
+# round; the remaining 31 saturated + 4 muted unclassified are regenerated.
+# Run `node visuals/shared_config/generate_palette.js` to refresh.
 
 # Bacteria Phyla Color Assignments
 # --------------------------------
-# ONLY shared taxa that appear in BOTH scatter plots AND alluvial plots
 bacteria_colors:
-  Planctomycetota: "#ff7200"         # Orange - unique cell wall-less bacteria (26.34× novelty)
-  Acidobacteriota: "#ffb44c"         # Light orange - important soil bacteria (24.66× novelty)
-  Chloroflexota: "#32CD32"           # Lime green - green non-sulfur bacteria (18.45× novelty)
-  Verrucomicrobiota: "#46bda3"       # Aqua - environmental bacteria (16.85× novelty)
-  Myxococcota: "#7ac7da"             # Light blue - social bacteria (14.36× novelty)
-  Cyanobacteriota: "#bfb1d3"         # Lavender - photosynthetic bacteria
-  Actinomycetota: "#80456e"          # Plum - important antibiotic producers
-  Chrysiogenota: "#008f00"           # Dark green - custom color (distinct from Verrucomicrobiota)
+  # PALETTE_B "Polychrome Alphabet" (R Polychrome::alphabet inspired).
+  # Selected from dry-run comparison (see visuals/shared_config/_dry_run_bacteria_palettes.py).
+  # Anchors (preserved from previous palette)
+  Planctomycetota: "#ff7200"         # Orange (alluvial + scatter)
+  Acidobacteriota: "#94FFB5"         # Light green (alluvial + scatter; manual: swapped with Bacteroidota to reduce green dominance vs Pseudomonadota)
+  Chloroflexota: "#1f3b99"           # Dark blue (alluvial + scatter)
+  Actinomycetota: "#80456e"          # Plum (alluvial + scatter)
+  Chrysiogenota: "#008f00"           # Dark green (scatter only)
+  Thermodesulfobacteriota: "#00B7FF" # Cool cyan (alluvial + scatter; manual: de-gold'd from Acidobacteriota)
+  # PALETTE_B non-anchors
+  Abditibacteriota: "#9DCC00"
+  Armatimonadota: "#0075DC"
+  Bacillota: "#FF0010"               # alluvial + scatter
+  Bacteroidota: "#ffb44c"            # alluvial + scatter (manual: swapped with Acidobacteriota)
+  Bdellovibrionota: "#740AFF"
+  Calditrichota: "#FFA8BB"
+  Campylobacterota: "#005C31"        # alluvial + scatter
+  Chlamydiota: "#5EF1F2"
+  Chlorobiota: "#993F00"
+  Cyanobacteriota: "#fb00d1"         # alluvial + scatter (manual: B4_dark, de-blued from Chloroflexota)
+  Dictyoglomota: "#C20088"
+  Gemmatimonadota: "#426600"
+  Ignavibacteriota: "#4C005C"
+  Mycoplasmatota: "#F0A0FF"
+  Myxococcota: "#766C95"
+  Patescibacteria: "#00998F"         # alluvial + scatter
+  Pseudomonadota: "#2BCE48"          # alluvial + scatter
+  Thermomicrobiota: "#FF5005"
+  Verrucomicrobiota: "#9A4D42"       # alluvial + scatter
 
 # Archaea Phyla Color Assignments
 # -------------------------------
-# ONLY shared taxa that appear in BOTH scatter plots AND alluvial plots
 archaea_colors:
-  Euryarchaeota: "#f51b7f"           # Bright pink - most common archaea (2.05× novelty)
-  Nitrososphaerota: "#ff3f4d"        # Red - ammonia-oxidizing archaea (5.79× novelty)
-  Thermoproteota: "#d19386"          # Light brown - hyperthermophilic (2.28× novelty)
-  Nanoarchaeota: "#8c2a50"           # Dark pink - highest novelty factor (117.70× novelty)
+  # Anchors (all alluvial + scatter)
+  Euryarchaeota: "#f51b7f"
+  Nitrososphaerota: "#ff3f4d"
+  Thermoproteota: "#d19386"
+  Nanoarchaeota: "#8c2a50"
+  # Generated (scatter family-panel parent phyla + alluvial Asgard classes)
+  Heimdallarchaeia: "#a90aa1"        # alluvial
+  Lokiarchaeia: "#2874a6"            # alluvial (manual: steel blue)
+  Nanobdellota: "#036c15"
+  Odinarchaeia: "#cdaa29"            # alluvial
+  Thermoplasmatota: "#79a20e"
 
 # Eukaryota Division Color Assignments
 # ------------------------------------
-# ONLY shared taxa that appear in BOTH scatter plots AND alluvial plots
+# NCBI phyla returned from family-panel lineage lookup (Apicomplexa, Ciliophora,
+# Ascomycota, Basidiomycota, Chytridiomycota, Fornicata, Heterolobosea) are
+# remapped to their Pr2 division by standardize_phylum_names() in
+# mega_comprehensive_stacked_visual.R before color lookup.
 eukaryota_colors:
-  Tubulinea: "#416b7d"               # Dark blue-gray - highest novelty (1323× novelty)
-  Rhizaria: "#55d0ba"                # Teal - amoeboid protists (341.73× novelty)
-  Evosea: "#003ce1"                  # Bright blue - amoeboid (78.42× novelty)
-  Alveolata: "#c73de4"               # Magenta - diverse protists (51.67× novelty)
-  Discoba: "#65417a"                 # Purple - flagellates (45.42× novelty)
-  Metamonada: "#cf8ac6"              # Pink - anaerobic flagellates (26.05× novelty)
-  Discosea: "#d24390"                # Hot pink - amoeboid (15.35× novelty)
-  Stramenopiles: "#475093"           # Dark purple - diverse protists (11.12× novelty)
-  Chlorophyta: "#663be6"             # Violet - green algae (6.75× novelty)
-  Streptophyta: "#68536c"            # Gray-purple - land plants (appears in pct alluvial)
-  Rhodophyta: "#008f00"              # Dark green - red algae (same as Chrysiogenota for consistency)
-
-# Fallback Colors for Unmapped Taxa
-# ---------------------------------
-fallback_colors:
-  bacteria: ["#FF6B6B", "#4ECDC4", "#45B7D1", "#96CEB4", "#FFEAA7", "#DDA0DD",
-             "#98D8C8", "#F7DC6F", "#BB8FCE", "#85C1E9", "#F8C471", "#82E0AA"]
-  archaea: ["#8B4513", "#2F4F4F", "#800080", "#008B8B", "#B22222", "#FF4500"]
-  eukaryota: ["#FF6B6B", "#4ECDC4", "#45B7D1", "#96CEB4", "#FFEAA7", "#DDA0DD"]
+  # PALETTE_E3_GLASBEY (Polychrome::glasbey-derived).
+  # Selected from dry-run comparison (see visuals/shared_config/_dry_run_eukaryota_palettes.py).
+  # Anchors (alluvial + scatter)
+  Tubulinea: "#416b7d"               # scatter only
+  Rhizaria: "#feaf16"                # manual: E2_palette36 Opisthokonta yellow (de-cyan'd vs Opisthokonta blue)
+  Alveolata: "#c73de4"
+  Discosea: "#d24390"                # scatter only
+  Stramenopiles: "#475093"
+  # PALETTE_E3_GLASBEY non-anchors
+  Chlorophyta: "#ff0000"             # scatter only
+  Discoba: "#00ff00"
+  Evosea: "#ff00b6"                  # scatter only
+  Metamonada: "#005300"              # scatter only
+  Opisthokonta: "#009fff"
+  Rhodophyta: "#9a4d42"              # scatter only
+  Streptophyta: "#00ffbe"
 
 # Special Case Colors
 # ------------------
+# Unclassified (.U.) bins are deliberately low-chroma muted tones so they
+# don't compete visually with the saturated named-taxon colors.
 special_colors:
-  Other: "#808080"                   # Gray for "Other" category
-  Unknown: "#C0C0C0"                 # Light gray for unknown taxa
-  unclassified_bacteria: "#9ACD32"   # Yellow-green for .U. bacterial entries (distinctive from Other and other greens)
-  unclassified_archaea: "#ffcc99"    # Light orange for .U. archaeal entries  
-  unclassified_eukaryota: "#ffcc99"  # Light orange for .U. eukaryotic entries
+  Other: "#808080"                   # Mid gray - "Other" category
+  Unknown: "#C0C0C0"                 # Light gray - unknown taxa
+  # Per-domain .U. tones (looked up by full taxon key first, then by
+  # unclassified_<domain> fallback below)
+  "Bacteria.U.phylum": "#7d9690"     # Muted slate-green
+  "Archaea.U.phylum": "#cabad2"      # Muted lavender
+  "Eukaryota.U.division": "#c8a99f"  # Muted rosy beige
+  "Amoebozoa.U.division": "#aac6d6"  # Muted ice blue
+  # Legacy per-domain keys (used if no exact .U. match above)
+  unclassified_bacteria: "#7d9690"
+  unclassified_archaea: "#cabad2"
+  unclassified_eukaryota: "#c0b8a6"
 
 # Color Assignment Rules
 # ---------------------

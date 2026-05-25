@@ -68,6 +68,25 @@ load_taxonomic_colors <- function(config_path = NULL) {
   return(config)
 }
 
+# Deterministic fallback index based on taxon name.
+# This keeps unmapped taxa color-consistent across different plots/scripts.
+get_fallback_index <- function(taxon_name, pool_size) {
+  if (is.na(taxon_name) || !nzchar(taxon_name) || pool_size <= 0) {
+    return(1)
+  }
+
+  key <- tolower(trimws(taxon_name))
+  chars <- utf8ToInt(key)
+
+  if (length(chars) == 0) {
+    return(1)
+  }
+
+  # Weighted checksum to reduce collisions for similar names.
+  checksum <- sum(chars * seq_along(chars))
+  ((checksum - 1) %% pool_size) + 1
+}
+
 # Get colors for a specific domain
 get_domain_colors <- function(taxa_names, domain, color_config = NULL) {
   if (is.null(color_config)) {
@@ -104,9 +123,15 @@ get_domain_colors <- function(taxa_names, domain, color_config = NULL) {
     } else if (taxon == "Unknown" || clean_taxon == "Unknown") {
       assigned_color <- special_colors$Unknown
     } else if (grepl("\\.U\\.", clean_taxon)) {
-      # Unclassified entries
-      special_key <- paste0("unclassified_", tolower(domain))
-      assigned_color <- special_colors[[special_key]]
+      # Unclassified entries: try full taxon key first (e.g. "Bacteria.U.phylum",
+      # "Amoebozoa.U.division") so each .U. bin can have its own muted tone,
+      # then fall back to the per-domain key.
+      if (clean_taxon %in% names(special_colors)) {
+        assigned_color <- special_colors[[clean_taxon]]
+      } else {
+        special_key <- paste0("unclassified_", tolower(domain))
+        assigned_color <- special_colors[[special_key]]
+      }
     } else {
       # 2. Try exact match
       if (clean_taxon %in% names(domain_colors)) {
@@ -122,7 +147,7 @@ get_domain_colors <- function(taxa_names, domain, color_config = NULL) {
     
     # 4. Use fallback colors if no match found
     if (is.null(assigned_color) && !is.null(fallback_colors)) {
-      fallback_idx <- ((i - 1) %% length(fallback_colors)) + 1
+      fallback_idx <- get_fallback_index(clean_taxon, length(fallback_colors))
       assigned_color <- fallback_colors[fallback_idx]
     }
     

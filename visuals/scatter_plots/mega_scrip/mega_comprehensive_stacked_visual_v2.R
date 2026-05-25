@@ -39,6 +39,9 @@ suppressPackageStartupMessages({
   library(yaml)
 })
 
+# Shared helpers for deterministic, cross-figure taxon color assignment.
+source("../../shared_config/color_mapping_functions.R")
+
 # ============================================================================
 # FIXED COLOR ASSIGNMENT - No repeats, uses all available colors
 # ============================================================================
@@ -876,15 +879,8 @@ create_individual_scatter <- function(data, level, domain, master_colors) {
 
   # Top data points with proper color mapping using shared config
   if (nrow(top_data) > 0) {
-    # Load shared color configuration for specific phylum-to-color mapping
+    # Load shared color configuration
     color_config <- load_shared_color_config()
-
-    # Create shared pool of all available colors (excluding assigned ones)
-    all_assigned_colors <- c(
-      unlist(color_config$bacteria_colors),
-      unlist(color_config$archaea_colors),
-      unlist(color_config$eukaryota_colors)
-    )
 
     # Determine color column and assign colors dynamically
     if (domain == "Eukaryota") {
@@ -895,47 +891,12 @@ create_individual_scatter <- function(data, level, domain, master_colors) {
       plot_groups <- sort(unique(top_data$Phylum[!top_data$Phylum %in% c("Unknown", "", "Other", NA)]))
     }
 
-    # Assign colors dynamically (hardcoded first, then cross-domain recycling)
-    group_colors <- sapply(plot_groups, function(taxon) {
-      assign_taxon_color(taxon, domain, color_config)
-    })
-    names(group_colors) <- plot_groups
-
-    # Get shared color pool size for reporting
-    if (domain == "Bacteria") {
-      shared_color_pool <- unique(unlist(color_config$fallback_colors$eukaryota))
-    } else if (domain == "Eukaryota") {
-      shared_color_pool <- unique(unlist(color_config$fallback_colors$bacteria))
-    } else {  # Archaea
-      shared_color_pool <- unique(c(
-        unlist(color_config$fallback_colors$bacteria),
-        unlist(color_config$fallback_colors$eukaryota)
-      ))
-    }
+    # Use shared mapping logic (same as alluvial) for exact cross-figure consistency.
+    group_colors <- get_domain_colors(plot_groups, domain, color_config)
 
     # Print color mapping for verification
     cat(paste("🎨", domain, level, "color mapping:\n"))
-    cat(paste("   Shared color pool size:", length(shared_color_pool), "\n"))
-
-    assigned_count <- 0
-    shared_count <- 0
-
-    for (i in 1:length(group_colors)) {
-      taxon_name <- names(group_colors)[i]
-      color_value <- group_colors[i]
-
-      # Check if this is an assigned color or from shared pool
-      is_assigned <- color_value %in% all_assigned_colors
-      if (is_assigned) {
-        assigned_count <- assigned_count + 1
-        cat(paste("   ✓", taxon_name, "->", color_value, "(assigned)\n"))
-      } else {
-        shared_count <- shared_count + 1
-        cat(paste("   ○", taxon_name, "->", color_value, "(shared pool)\n"))
-      }
-    }
-
-    cat(paste("   Summary:", assigned_count, "assigned,", shared_count, "from shared pool\n"))
+    print_color_summary(names(group_colors), group_colors, domain)
 
     # Add colored points with phylum/division-based colors
     p <- p + geom_point(data = top_data,
