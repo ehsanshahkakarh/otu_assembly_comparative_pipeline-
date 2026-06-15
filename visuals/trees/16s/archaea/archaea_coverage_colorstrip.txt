@@ -10,538 +10,201 @@ SHOW_INTERNAL	0
 LEGEND_TITLE	Genus genomic coverage
 LEGEND_SHAPES	1	1
 LEGEND_COLORS	#cc5500	#000000
-LEGEND_LABELS	NCBI+EukCensus	Incomplete coverage
+LEGEND_LABELS	NCBI+EukCensus	EukCensus only
 
 DATA
-unclassified_Candidatus_Woesearchaeota_N	#000000	Incomplete coverage
-environmental_samples_N	#000000	Incomplete coverage
-unclassified_Microcaldota_N	#000000	Incomplete coverage
-unclassified_Candidatus_Micrarchaeia_N	#000000	Incomplete coverage
-unclassified_Candidatus_Micrarchaeaceae_N	#000000	Incomplete coverage
-Candidatus_Micrarchaeum_G	#000000	Incomplete coverage
-unclassified_Candidatus_Micrarchaeales_N	#000000	Incomplete coverage
-unclassified_Candidatus_Bilamarchaeaceae_N	#000000	Incomplete coverage
-Candidatus_Bilamarchaeum_G	#000000	Incomplete coverage
-unclassified_Candidatus_Anstonellales_N	#000000	Incomplete coverage
-unclassified_Candidatus_Anstonellaceae_N	#000000	Incomplete coverage
-Candidatus_Anstonella_G	#000000	Incomplete coverage
-unclassified_Candidatus_Norongarragalinales_N	#000000	Incomplete coverage
-Candidatus_Norongarragalina_G	#000000	Incomplete coverage
-unclassified_Candidatus_Norongarragalinaceae_N	#000000	Incomplete coverage
-Candidatus_Gugararchaeum_G	#000000	Incomplete coverage
-Candidatus_Burarchaeum_G	#000000	Incomplete coverage
-Candidatus_Mancarchaeum_G	#000000	Incomplete coverage
-Candidatus_Fermentimicrarchaeum_G	#000000	Incomplete coverage
-unclassified_Candidatus_Aenigmatarchaeota_N	#000000	Incomplete coverage
-unclassified_Candidatus_Aenigmatarchaeia_N	#000000	Incomplete coverage
-unclassified_Candidatus_Aenigmatarchaeaceae_N	#000000	Incomplete coverage
-Candidatus_Aenigmatarchaeum_G	#000000	Incomplete coverage
-unclassified_Nanobdellota_N	#000000	Incomplete coverage
-unclassified_Candidatus_Nanoarchaeia_N	#000000	Incomplete coverage
-unclassified_Nanopusillaceae_N	#000000	Incomplete coverage
-Candidatus_Nanopusillus_G	#000000	Incomplete coverage
-Candidatus_Nanobsidianus_G	#000000	Incomplete coverage
-unclassified_Nanoarchaeales_N	#000000	Incomplete coverage
-Nanoarchaeum_G	#cc5500	NCBI+EukCensus
-unclassified_Nanoarchaeaceae_N	#000000	Incomplete coverage
-unclassified_Candidatus_Tiddalikarchaeaceae_N	#000000	Incomplete coverage
-Candidatus_Tiddalikarchaeum_G	#000000	Incomplete coverage
-unclassified_Nanobdellia_N	#000000	Incomplete coverage
-Nanobdella_G	#000000	Incomplete coverage
-unclassified_Nanobdellales_N	#000000	Incomplete coverage
-Candidatus_Jingweiarchaeum_G	#000000	Incomplete coverage
-Candidatus_Haiyanarchaeum_G	#000000	Incomplete coverage
-Candidatus_Nanoclepta_G	#000000	Incomplete coverage
-unclassified_Candidatus_Pacearchaeota_N	#000000	Incomplete coverage
-unclassified_Candidatus_Parvarchaeota_N	#000000	Incomplete coverage
-Candidatus_Rehaiarchaeum_G	#000000	Incomplete coverage
-Candidatus_Parvarchaeum_G	#000000	Incomplete coverage
-Candidatus_Acidifodinimicrobium_G	#000000	Incomplete coverage
-Candidatus_Iainarchaeum_G	#000000	Incomplete coverage
-unclassified_Candidatus_Iainarchaeales_N	#000000	Incomplete coverage
-unclassified_Candidatus_Iainarchaeota_N	#000000	Incomplete coverage
-Candidatus_Forterrea_G	#000000	Incomplete coverage
-unclassified_Nanobdellati_N	#000000	Incomplete coverage
-unclassified_Candidatus_Altarchaeota_N	#000000	Incomplete coverage
-unclassified_Candidatus_Altarchaeales_N	#000000	Incomplete coverage
-Candidatus_Altarchaeum_G	#000000	Incomplete coverage
-unclassified_Candidatus_Altarchaeaceae_N	#000000	Incomplete coverage
-unclassified_Candidatus_Altarchaeia_N	#000000	Incomplete coverage
-unclassified_Candidatus_Nanohalarchaeota_N	#000000	Incomplete coverage
-Candidatus_Nanohalobium_G	#000000	Incomplete coverage
-Candidatus_Nanoanaerosalina_G	#000000	Incomplete coverage
-Candidatus_Nanohalalkaliarchaeum_G	#000000	Incomplete coverage
-Candidatus_Nanohalococcus_G	#000000	Incomplete coverage
-Candidatus_Nanohalovita_G	#000000	Incomplete coverage
-unclassified_Candidatus_Undinarchaeota_N	#000000	Incomplete coverage
-unclassified_Candidatus_Undinarchaeales_N	#000000	Incomplete coverage
-Candidatus_Undinarchaeum_G	#000000	Incomplete coverage
-unclassified_Candidatus_Naiadarchaeales_N	#000000	Incomplete coverage
-Candidatus_Naiadarchaeum_G	#000000	Incomplete coverage
-unclassified_Candidatus_Undinarchaeia_N	#000000	Incomplete coverage
-unclassified_Candidatus_Asbonarchaeaceae_N	#000000	Incomplete coverage
-Candidatus_Asbonarchaeum_G	#000000	Incomplete coverage
-unclassified_Candidatus_Afararchaeaceae_N	#000000	Incomplete coverage
-Candidatus_Afararchaeum_G	#000000	Incomplete coverage
-Candidatus_Chewarchaeum_G	#000000	Incomplete coverage
-Candidatus_Huberarchaeum_G	#000000	Incomplete coverage
-unclassified_Thermoplasmata_N	#000000	Incomplete coverage
-unclassified_Thermoplasmatales_N	#000000	Incomplete coverage
-unclassified_Thermoplasmataceae_N	#000000	Incomplete coverage
-Thermoplasma_G	#cc5500	NCBI+EukCensus
-Oxyplasma_G	#000000	Incomplete coverage
-Ferroplasma_G	#cc5500	NCBI+EukCensus
-unclassified_Ferroplasmaceae_N	#000000	Incomplete coverage
-Acidiplasma_G	#cc5500	NCBI+EukCensus
-Cuniculiplasma_G	#cc5500	NCBI+EukCensus
-Caldiplasma_G	#000000	Incomplete coverage
-Picrophilus_G	#cc5500	NCBI+EukCensus
-Thermogymnomonas_G	#cc5500	NCBI+EukCensus
-unclassified_Methanomethylophilaceae_N	#000000	Incomplete coverage
-Methanomethylophilus_G	#000000	Incomplete coverage
-Candidatus_Methanoprimaticola_G	#000000	Incomplete coverage
-Candidatus_Methanomicula_G	#000000	Incomplete coverage
-unclassified_Methanomassiliicoccales_N	#000000	Incomplete coverage
-unclassified_Methanomassiliicoccaceae_N	#000000	Incomplete coverage
-Methanomassiliicoccus_G	#cc5500	NCBI+EukCensus
-Candidatus_Methanoplasma_G	#000000	Incomplete coverage
-Candidatus_Methanogranum_G	#000000	Incomplete coverage
-Candidatus_Methanarcanum_G	#000000	Incomplete coverage
-unclassified_Candidatus_Thermoprofundales_N	#000000	Incomplete coverage
-Candidatus_Natronoplasma_G	#000000	Incomplete coverage
-Candidatus_Saliniplasma_G	#000000	Incomplete coverage
-Candidatus_Halarchaeoplasma_G	#000000	Incomplete coverage
-Candidatus_Haladaptatiplasma_G	#000000	Incomplete coverage
-Candidatus_Sysuiplasma_G	#000000	Incomplete coverage
-unclassified_Candidatus_Sysuiplasmataceae_N	#000000	Incomplete coverage
-unclassified_Thermoplasmatota_N	#000000	Incomplete coverage
-unclassified_Candidatus_Poseidoniaceae_N	#000000	Incomplete coverage
-Candidatus_Poseidonia_G	#000000	Incomplete coverage
-unclassified_Candidatus_Thalassarchaeaceae_N	#000000	Incomplete coverage
-Candidatus_Thalassarchaeum_G	#000000	Incomplete coverage
-unclassified_Candidatus_Poseidoniales_N	#000000	Incomplete coverage
-unclassified_Candidatus_Poseidoniia_N	#000000	Incomplete coverage
-unclassified_DHVE2_group_N	#000000	Incomplete coverage
-Candidatus_Aciduliprofundum_G	#000000	Incomplete coverage
-unclassified_Candidatus_Lutacidiplasmatales_N	#000000	Incomplete coverage
-Candidatus_Lutacidiplasma_G	#000000	Incomplete coverage
-unclassified_Methanobacteriota_N	#000000	Incomplete coverage
-unclassified_Methanosarcinales_N	#000000	Incomplete coverage
-Candidatus_Methanoperedens_G	#000000	Incomplete coverage
-unclassified_Candidatus_Methanoperedenaceae_N	#000000	Incomplete coverage
-unclassified_ANME-2_cluster_N	#000000	Incomplete coverage
-Candidatus_Methanocomedens_G	#000000	Incomplete coverage
-Candidatus_Methanomarinus_G	#000000	Incomplete coverage
-unclassified_Candidatus_Methanocomedenaceae_N	#000000	Incomplete coverage
-Candidatus_Methanogaster_G	#000000	Incomplete coverage
-unclassified_Candidatus_Methanogasteraceae_N	#000000	Incomplete coverage
-Methanosarcina_G	#cc5500	NCBI+EukCensus
-unclassified_Methanosarcinaceae_N	#000000	Incomplete coverage
-Methanolobus_G	#cc5500	NCBI+EukCensus
-Methanomethylovorans_G	#cc5500	NCBI+EukCensus
-Methanococcoides_G	#cc5500	NCBI+EukCensus
-Methanohalophilus_G	#cc5500	NCBI+EukCensus
-Methanimicrococcus_G	#cc5500	NCBI+EukCensus
-Methanosalsum_G	#cc5500	NCBI+EukCensus
-Methanohalobium_G	#cc5500	NCBI+EukCensus
-Methanolapillus_G	#000000	Incomplete coverage
-Candidatus_Methanofrustulum_G	#000000	Incomplete coverage
-Candidatus_Methanovorans_G	#000000	Incomplete coverage
-Candidatus_Argoarchaeum_G	#000000	Incomplete coverage
-Candidatus_Ethanoperedens_G	#000000	Incomplete coverage
-unclassified_GOM_Arc_I_cluster_N	#000000	Incomplete coverage
-unclassified_Methermicoccaceae_N	#000000	Incomplete coverage
-Methermicoccus_G	#cc5500	NCBI+EukCensus
-Methanocorpusculum_G	#cc5500	NCBI+EukCensus
-unclassified_Methanocorpusculaceae_N	#000000	Incomplete coverage
-Methanorbis_G	#000000	Incomplete coverage
-Methanoregula_G	#cc5500	NCBI+EukCensus
-unclassified_Methanoregulaceae_N	#000000	Incomplete coverage
-Methanolinea_G	#cc5500	NCBI+EukCensus
-Methanosphaerula_G	#cc5500	NCBI+EukCensus
-Methanoculleus_G	#cc5500	NCBI+EukCensus
-unclassified_Methanomicrobiaceae_N	#000000	Incomplete coverage
-Methanomicrobium_G	#cc5500	NCBI+EukCensus
-Methanogenium_G	#cc5500	NCBI+EukCensus
-Methanofollis_G	#cc5500	NCBI+EukCensus
-Methanolacinia_G	#cc5500	NCBI+EukCensus
-Methanovulcanius_G	#000000	Incomplete coverage
-Methanochimaera_G	#000000	Incomplete coverage
-Methanoplanus_G	#cc5500	NCBI+EukCensus
-Methanospirillum_G	#cc5500	NCBI+EukCensus
-unclassified_Methanospirillaceae_N	#000000	Incomplete coverage
-Candidatus_Methanofilum_G	#000000	Incomplete coverage
-Methanocalculus_G	#cc5500	NCBI+EukCensus
-unclassified_Methanocalculaceae_N	#000000	Incomplete coverage
-unclassified_Methanoculleaceae_N	#000000	Incomplete coverage
-Methanothrix_G	#cc5500	NCBI+EukCensus
-unclassified_Methanotrichaceae_N	#000000	Incomplete coverage
-Methanocrinis_G	#000000	Incomplete coverage
-unclassified_Candidatus_Methanophagales_N	#000000	Incomplete coverage
-unclassified_Candidatus_Methanospirareceae_N	#000000	Incomplete coverage
-Candidatus_Methanospirare_G	#000000	Incomplete coverage
-Candidatus_Methanoxibalbensis_G	#000000	Incomplete coverage
-unclassified_Candidatus_Methanophagaceae_N	#000000	Incomplete coverage
-Candidatus_Methanophaga_G	#000000	Incomplete coverage
-unclassified_Methanomicrobia_N	#000000	Incomplete coverage
-unclassified_Methanocellales_N	#000000	Incomplete coverage
-Methanocella_G	#cc5500	NCBI+EukCensus
-unclassified_Methanocellaceae_N	#000000	Incomplete coverage
-Methanooceanicella_G	#000000	Incomplete coverage
-Candidatus_Alkanophaga_G	#000000	Incomplete coverage
-unclassified_Candidatus_Alkanophagales_N	#000000	Incomplete coverage
-Candidatus_Methanoflorens_G	#000000	Incomplete coverage
-unclassified_Halobacteriales_N	#000000	Incomplete coverage
-Halorubrum_G	#cc5500	NCBI+EukCensus
-unclassified_Haloferacaceae_N	#000000	Incomplete coverage
-Haloferax_G	#cc5500	NCBI+EukCensus
-Haloquadratum_G	#cc5500	NCBI+EukCensus
-Halobellus_G	#cc5500	NCBI+EukCensus
-Halolamina_G	#cc5500	NCBI+EukCensus
-Haloplanus_G	#cc5500	NCBI+EukCensus
-Halogeometricum_G	#cc5500	NCBI+EukCensus
-Salinigranum_G	#cc5500	NCBI+EukCensus
-Halobaculum_G	#cc5500	NCBI+EukCensus
-Halohasta_G	#cc5500	NCBI+EukCensus
-Halobium_G	#cc5500	NCBI+EukCensus
-Halopelagius_G	#cc5500	NCBI+EukCensus
-Halogranum_G	#cc5500	NCBI+EukCensus
-Salinirubrum_G	#cc5500	NCBI+EukCensus
-Halopenitus_G	#cc5500	NCBI+EukCensus
-Haloparvum_G	#cc5500	NCBI+EukCensus
-Halonotius_G	#cc5500	NCBI+EukCensus
-Candidatus_Halobonum_G	#000000	Incomplete coverage
-Haloprofundus_G	#cc5500	NCBI+EukCensus
-Halegenticoccus_G	#000000	Incomplete coverage
-Halalkaliarchaeum_G	#000000	Incomplete coverage
-Halalkalirubrum_G	#000000	Incomplete coverage
-Halorarum_G	#000000	Incomplete coverage
-Natronocalculus_G	#000000	Incomplete coverage
-Salinirarus_G	#000000	Incomplete coverage
-Halosubterraneus_G	#000000	Incomplete coverage
-unclassified_Haloarculaceae_N	#000000	Incomplete coverage
-Halovenus_G	#cc5500	NCBI+EukCensus
-Haloarcula_G	#cc5500	NCBI+EukCensus
-Halapricum_G	#cc5500	NCBI+EukCensus
-Salinirussus_G	#cc5500	NCBI+EukCensus
-Halorientalis_G	#cc5500	NCBI+EukCensus
-Halomicrobium_G	#cc5500	NCBI+EukCensus
-Halosimplex_G	#cc5500	NCBI+EukCensus
-Halorhabdus_G	#cc5500	NCBI+EukCensus
-Halococcoides_G	#000000	Incomplete coverage
-Salinibaculum_G	#000000	Incomplete coverage
-Halobacterium_G	#cc5500	NCBI+EukCensus
-Halodesulfurarchaeum_G	#cc5500	NCBI+EukCensus
-unclassified_Halobacteriaceae_N	#000000	Incomplete coverage
-Halanaeroarchaeum_G	#cc5500	NCBI+EukCensus
-Halospeciosus_G	#000000	Incomplete coverage
-Salarchaeum_G	#cc5500	NCBI+EukCensus
-Halarchaeum_G	#cc5500	NCBI+EukCensus
-Halocalculus_G	#cc5500	NCBI+EukCensus
-Natronomonas_G	#cc5500	NCBI+EukCensus
-Halocatena_G	#000000	Incomplete coverage
-Halomarina_G	#cc5500	NCBI+EukCensus
-Halosegnis_G	#000000	Incomplete coverage
-Salinirubellus_G	#000000	Incomplete coverage
-Haloglomus_G	#000000	Incomplete coverage
-Halorarius_G	#000000	Incomplete coverage
-unclassified_Natrialbaceae_N	#000000	Incomplete coverage
-Natrinema_G	#cc5500	NCBI+EukCensus
-Natronobacterium_G	#cc5500	NCBI+EukCensus
-Natronococcus_G	#cc5500	NCBI+EukCensus
-Natronorubrum_G	#cc5500	NCBI+EukCensus
-Saliphagus_G	#cc5500	NCBI+EukCensus
-Natrialba_G	#cc5500	NCBI+EukCensus
-Halopiger_G	#cc5500	NCBI+EukCensus
-Natribaculum_G	#cc5500	NCBI+EukCensus
-Halovivax_G	#cc5500	NCBI+EukCensus
-Natronobiforma_G	#cc5500	NCBI+EukCensus
-Haloterrigena_G	#cc5500	NCBI+EukCensus
-Natronolimnobius_G	#cc5500	NCBI+EukCensus
-Halosolutus_G	#000000	Incomplete coverage
-Halomontanus_G	#000000	Incomplete coverage
-Natronoglomus_G	#000000	Incomplete coverage
-Natrarchaeobaculum_G	#000000	Incomplete coverage
-Halostagnicola_G	#cc5500	NCBI+EukCensus
-Natrarchaeobius_G	#000000	Incomplete coverage
-Salinadaptatus_G	#000000	Incomplete coverage
-Natronolimnohabitans_G	#000000	Incomplete coverage
-Halobiforma_G	#cc5500	NCBI+EukCensus
-Natronosalvus_G	#000000	Incomplete coverage
-Salinilacihabitans_G	#000000	Incomplete coverage
-Natronobeatus_G	#000000	Incomplete coverage
-Natrononativus_G	#000000	Incomplete coverage
-Halovalidus_G	#000000	Incomplete coverage
-Salinarchaeum_G	#cc5500	NCBI+EukCensus
-Natronoarchaeum_G	#cc5500	NCBI+EukCensus
-Halostella_G	#cc5500	NCBI+EukCensus
-Natranaeroarchaeum_G	#000000	Incomplete coverage
-unclassified_Halococcaceae_N	#000000	Incomplete coverage
-Halalkalicoccus_G	#cc5500	NCBI+EukCensus
-Halococcus_G	#cc5500	NCBI+EukCensus
-Halorussus_G	#cc5500	NCBI+EukCensus
-Haladaptatus_G	#cc5500	NCBI+EukCensus
-Halomicrococcus_G	#000000	Incomplete coverage
-Haloarchaeobius_G	#cc5500	NCBI+EukCensus
-Halorubellus_G	#cc5500	NCBI+EukCensus
-Natronorarus_G	#000000	Incomplete coverage
-unclassified_Halobacteria_N	#000000	Incomplete coverage
-Halorutilus_G	#000000	Incomplete coverage
-unclassified_Halorutilales_N	#000000	Incomplete coverage
-unclassified_Candidatus_Nanohaloarchaea_N	#000000	Incomplete coverage
-Candidatus_Nanosalina_G	#000000	Incomplete coverage
-unclassified_Candidatus_Haloredivivus_N	#000000	Incomplete coverage
-Candidatus_Nanosalinicola_G	#000000	Incomplete coverage
-unclassified_Candidatus_Methanofastidiosia_N	#000000	Incomplete coverage
-Candidatus_Methanofastidiosum_G	#000000	Incomplete coverage
-Methanobrevibacter_G	#cc5500	NCBI+EukCensus
-unclassified_Methanobacteriaceae_N	#000000	Incomplete coverage
-Methanobacterium_G	#cc5500	NCBI+EukCensus
-Methanosphaera_G	#cc5500	NCBI+EukCensus
-Methanothermobacter_G	#cc5500	NCBI+EukCensus
-Candidatus_Methanobinarius_G	#000000	Incomplete coverage
-Candidatus_Methanoflexus_G	#000000	Incomplete coverage
-Candidatus_Methanorudis_G	#000000	Incomplete coverage
-Candidatus_Methanovirga_G	#000000	Incomplete coverage
-unclassified_Methanobacteriales_N	#000000	Incomplete coverage
-Methanothermus_G	#cc5500	NCBI+EukCensus
-Methanococcus_G	#cc5500	NCBI+EukCensus
-Methanothermococcus_G	#cc5500	NCBI+EukCensus
-unclassified_Methanococcaceae_N	#000000	Incomplete coverage
-Methanocaldococcus_G	#cc5500	NCBI+EukCensus
-unclassified_Methanocaldococcaceae_N	#000000	Incomplete coverage
-Methanotorris_G	#cc5500	NCBI+EukCensus
-Methanofervidicoccus_G	#000000	Incomplete coverage
-unclassified_Methanococci_N	#000000	Incomplete coverage
-Methanopyrus_G	#cc5500	NCBI+EukCensus
-unclassified_Methanopyraceae_N	#000000	Incomplete coverage
-unclassified_Methanopyri_N	#000000	Incomplete coverage
-unclassified_Archaeoglobaceae_N	#000000	Incomplete coverage
-Archaeoglobus_G	#cc5500	NCBI+EukCensus
-Geoglobus_G	#cc5500	NCBI+EukCensus
-Ferroglobus_G	#cc5500	NCBI+EukCensus
-Candidatus_Methanoglobus_G	#000000	Incomplete coverage
-unclassified_Archaeoglobales_N	#000000	Incomplete coverage
-unclassified_Archaeoglobi_N	#000000	Incomplete coverage
-Candidatus_Mnemosynella_G	#000000	Incomplete coverage
-Thermococcus_G	#cc5500	NCBI+EukCensus
-unclassified_Thermococcaceae_N	#000000	Incomplete coverage
-Pyrococcus_G	#cc5500	NCBI+EukCensus
-Palaeococcus_G	#cc5500	NCBI+EukCensus
-unclassified_Thermococcales_N	#000000	Incomplete coverage
-unclassified_Thermococci_N	#000000	Incomplete coverage
-unclassified_Theionarchaea_N	#000000	Incomplete coverage
-Candidatus_Hikarchaeum_G	#000000	Incomplete coverage
-unclassified_Candidatus_Hikarchaeia_N	#000000	Incomplete coverage
-unclassified_Methanonatronarchaeia_N	#000000	Incomplete coverage
-Candidatus_Methanohalarchaeum_G	#000000	Incomplete coverage
-Methanonatronarchaeum_G	#000000	Incomplete coverage
-unclassified_Methanonatronarchaeales_N	#000000	Incomplete coverage
-candidate_division_pMC2A384_Cl	#000000	Incomplete coverage
-candidate_division_MSBL1_Cl	#000000	Incomplete coverage
-unclassified_Candidatus_Proteinoplasmatales_N	#000000	Incomplete coverage
-Candidatus_Methanoliparum_G	#000000	Incomplete coverage
-Candidatus_Methanolliviera_G	#000000	Incomplete coverage
-unclassified_Candidatus_Methanollivieraceae_N	#000000	Incomplete coverage
-unclassified_Halobacteriota_N	#000000	Incomplete coverage
-unclassified_Candidatus_Syntropharchaeia_N	#000000	Incomplete coverage
-unclassified_Candidatus_Syntropharchaeales_N	#000000	Incomplete coverage
-Candidatus_Syntropharchaeum_G	#000000	Incomplete coverage
-unclassified_Candidatus_Hadarchaeia_N	#000000	Incomplete coverage
-unclassified_Candidatus_Hadarchaeales_N	#000000	Incomplete coverage
-Candidatus_Hadarchaeum_G	#000000	Incomplete coverage
-unclassified_Candidatus_Hadarchaeaceae_N	#000000	Incomplete coverage
-unclassified_Candidatus_Hadarchaeota_N	#000000	Incomplete coverage
-unclassified_Candidatus_Hydrothermarchaeota_N	#000000	Incomplete coverage
-unclassified_Candidatus_Hydrothermarchaeales_N	#000000	Incomplete coverage
-unclassified_Candidatus_Hydrothermarchaeaceae_N	#000000	Incomplete coverage
-Candidatus_Hydrothermarchaeum_G	#000000	Incomplete coverage
-unclassified_Candidatus_Hydrothermarchaeia_N	#000000	Incomplete coverage
-Candidatus_Pyrohabitans_G	#000000	Incomplete coverage
-unclassified_Candidatus_Bathyarchaeota_N	#000000	Incomplete coverage
-unclassified_Candidatus_Bathyarchaeia_N	#000000	Incomplete coverage
-unclassified_Candidatus_Bathyarchaeaceae_N	#000000	Incomplete coverage
-Candidatus_Bathyarchaeum_G	#000000	Incomplete coverage
-unclassified_Candidatus_Bathyarchaeales_N	#000000	Incomplete coverage
-Candidatus_Bathycorpusculum_G	#000000	Incomplete coverage
-unclassified_Candidatus_Bathycorpusculaceae_N	#000000	Incomplete coverage
-unclassified_Candidatus_Hecatellales_N	#000000	Incomplete coverage
-unclassified_Candidatus_Hecatellaceae_N	#000000	Incomplete coverage
-Candidatus_Hecatella_G	#000000	Incomplete coverage
-MCG-1_Cl	#000000	Incomplete coverage
-MCG-15_Cl	#000000	Incomplete coverage
-unclassified_Nitrososphaerota_N	#000000	Incomplete coverage
-unclassified_Nitrososphaeraceae_N	#000000	Incomplete coverage
-Nitrososphaera_G	#cc5500	NCBI+EukCensus
-Candidatus_Nitrosocosmicus_G	#000000	Incomplete coverage
-Candidatus_Nitrosopolaris_G	#000000	Incomplete coverage
-unclassified_Nitrososphaerales_N	#000000	Incomplete coverage
-unclassified_Candidatus_Methylarchaceae_N	#000000	Incomplete coverage
-Nitrosopumilus_G	#cc5500	NCBI+EukCensus
-unclassified_Nitrosopumilaceae_N	#000000	Incomplete coverage
-Nitrosarchaeum_G	#cc5500	NCBI+EukCensus
-Candidatus_Nitrosomaritimum_G	#000000	Incomplete coverage
-Candidatus_Nitrosomarinus_G	#000000	Incomplete coverage
-Candidatus_Nitrosoabyssus_G	#000000	Incomplete coverage
-unclassified_Nitrosopumilales_N	#000000	Incomplete coverage
-unclassified_Nitrososphaeria_N	#000000	Incomplete coverage
-Nitrosotalea_G	#000000	Incomplete coverage
-Candidatus_Nitrosocaldus_G	#000000	Incomplete coverage
-unclassified_Candidatus_Nitrosocaldaceae_N	#000000	Incomplete coverage
-Candidatus_Nitrosothermus_G	#000000	Incomplete coverage
-Candidatus_Caldarchaeum_G	#000000	Incomplete coverage
-unclassified_Candidatus_Caldarchaeaceae_N	#000000	Incomplete coverage
-unclassified_Candidatus_Caldarchaeales_N	#000000	Incomplete coverage
-unclassified_Candidatus_Calditenuaceae_N	#000000	Incomplete coverage
-Candidatus_Calditenuis_G	#000000	Incomplete coverage
-Candidatus_Pelearchaeum_G	#000000	Incomplete coverage
-Candidatus_Nitrosopelagicus_G	#000000	Incomplete coverage
-Candidatus_Nitrosotenuis_G	#000000	Incomplete coverage
-Candidatus_Geocrenenecus_G	#000000	Incomplete coverage
-Candidatus_Wolframiiraptor_G	#000000	Incomplete coverage
-Candidatus_Terraquivivens_G	#000000	Incomplete coverage
-Candidatus_Benthortus_G	#000000	Incomplete coverage
-Candidatus_Gagatemarchaeum_G	#000000	Incomplete coverage
-unclassified_Candidatus_Gagatemarchaeaceae_N	#000000	Incomplete coverage
-unclassified_Conexivisphaerales_N	#000000	Incomplete coverage
-Conexivisphaera_G	#000000	Incomplete coverage
-Candidatus_Cenarchaeum_G	#000000	Incomplete coverage
-unclassified_Candidatus_Nitrosomirales_N	#000000	Incomplete coverage
-unclassified_Thermoproteota_N	#000000	Incomplete coverage
-unclassified_Desulfurococcaceae_N	#000000	Incomplete coverage
-Ignisphaera_G	#cc5500	NCBI+EukCensus
-Zestosphaera_G	#000000	Incomplete coverage
-Thermosphaera_G	#cc5500	NCBI+EukCensus
-Desulfurococcus_G	#cc5500	NCBI+EukCensus
-Thermogladius_G	#cc5500	NCBI+EukCensus
-Thermodiscus_G	#cc5500	NCBI+EukCensus
-Ignicoccus_G	#cc5500	NCBI+EukCensus
-Aeropyrum_G	#cc5500	NCBI+EukCensus
-Staphylothermus_G	#cc5500	NCBI+EukCensus
-Stetteria_G	#cc5500	NCBI+EukCensus
-Candidatus_Zestomicrobium_G	#000000	Incomplete coverage
-unclassified_Desulfurococcales_N	#000000	Incomplete coverage
-unclassified_Pyrodictiaceae_N	#000000	Incomplete coverage
-Pyrodictium_G	#cc5500	NCBI+EukCensus
-Pyrolobus_G	#000000	Incomplete coverage
-Hyperthermus_G	#cc5500	NCBI+EukCensus
-Pyrofollis_G	#000000	Incomplete coverage
-unclassified_Sulfolobales_N	#000000	Incomplete coverage
-Metallosphaera_G	#cc5500	NCBI+EukCensus
-Saccharolobus_G	#cc5500	NCBI+EukCensus
-Sulfolobus_G	#cc5500	NCBI+EukCensus
-unclassified_Sulfolobaceae_N	#000000	Incomplete coverage
-Acidianus_G	#cc5500	NCBI+EukCensus
-Sulfuracidifex_G	#000000	Incomplete coverage
-Sulfurisphaera_G	#cc5500	NCBI+EukCensus
-Candidatus_Aramenus_G	#000000	Incomplete coverage
-Sulfodiicoccus_G	#000000	Incomplete coverage
-Stygiolobus_G	#cc5500	NCBI+EukCensus
-unclassified_Ignisphaeraceae_N	#000000	Incomplete coverage
-unclassified_Acidilobaceae_N	#000000	Incomplete coverage
-Acidilobus_G	#cc5500	NCBI+EukCensus
-Candidatus_Tiamatella_G	#000000	Incomplete coverage
-Candidatus_Hestiella_G	#000000	Incomplete coverage
-Candidatus_Calypsonella_G	#000000	Incomplete coverage
-Caldisphaera_G	#cc5500	NCBI+EukCensus
-unclassified_Acidilobales_N	#000000	Incomplete coverage
-unclassified_Thermoprotei_N	#000000	Incomplete coverage
-unclassified_Thermofilaceae_N	#000000	Incomplete coverage
-Thermofilum_G	#cc5500	NCBI+EukCensus
-Infirmifilum_G	#000000	Incomplete coverage
-unclassified_Thermofilales_N	#000000	Incomplete coverage
-Pyrobaculum_G	#cc5500	NCBI+EukCensus
-Vulcanisaeta_G	#cc5500	NCBI+EukCensus
-Thermoproteus_G	#cc5500	NCBI+EukCensus
-Caldivirga_G	#cc5500	NCBI+EukCensus
-Thermocladium_G	#cc5500	NCBI+EukCensus
-unclassified_Thermoproteaceae_N	#000000	Incomplete coverage
-unclassified_Thermoproteales_N	#000000	Incomplete coverage
-unclassified_Thermocladiaceae_N	#000000	Incomplete coverage
-unclassified_Fervidicoccaceae_N	#000000	Incomplete coverage
-Fervidicoccus_G	#cc5500	NCBI+EukCensus
-unclassified_Candidatus_Methanomethylicaceae_N	#000000	Incomplete coverage
-Candidatus_Methanosuratincola_ex_Vanwonterghem_et_al._2016_G	#000000	Incomplete coverage
-Candidatus_Methanomethylicus_G	#000000	Incomplete coverage
-unclassified_Methanosuratincolia_N	#000000	Incomplete coverage
-unclassified_Methanosuratincolales_N	#000000	Incomplete coverage
-Methanosuratincola_G	#000000	Incomplete coverage
-Candidatus_Korarchaeum_G	#000000	Incomplete coverage
-unclassified_Candidatus_Korarchaeaceae_N	#000000	Incomplete coverage
-Candidatus_Methanodesulfokora_G	#000000	Incomplete coverage
-Candidatus_Panguiarchaeum_G	#000000	Incomplete coverage
-candidate_division_YNPFFA_Cl	#000000	Incomplete coverage
-Candidatus_Marsarchaeota_group_1_Cl	#000000	Incomplete coverage
-Candidatus_Marsarchaeota_group_2_Cl	#000000	Incomplete coverage
-Tardisphaera_G	#000000	Incomplete coverage
-unclassified_Candidatus_Nezhaarchaeales_N	#000000	Incomplete coverage
-unclassified_Candidatus_Nezhaarchaeota_N	#000000	Incomplete coverage
-unclassified_Candidatus_Geothermarchaeota_N	#000000	Incomplete coverage
-unclassified_Candidatus_Geothermarchaeales_N	#000000	Incomplete coverage
-Candidatus_Scotarchaeum_G	#000000	Incomplete coverage
-Candidatus_Geothermarchaeum_G	#000000	Incomplete coverage
-unclassified_Candidatus_Brockarchaeota_N	#000000	Incomplete coverage
-unclassified_Thermoproteati_N	#000000	Incomplete coverage
-Candidatus_Culexarchaeum_G	#000000	Incomplete coverage
-Candidatus_Culexmicrobium_G	#000000	Incomplete coverage
-unclassified_Candidatus_Geoarchaeota_N	#000000	Incomplete coverage
-unclassified_Archaea_N	#000000	Incomplete coverage
-unclassified_Promethearchaeota_N	#000000	Incomplete coverage
-unclassified_Promethearchaeia_N	#000000	Incomplete coverage
-Promethearchaeum_G	#000000	Incomplete coverage
-Candidatus_Lokiarchaeum_G	#000000	Incomplete coverage
-Candidatus_Harpocratesius_G	#000000	Incomplete coverage
-unclassified_Candidatus_Helarchaeales_N	#000000	Incomplete coverage
-unclassified_Candidatus_Thorarchaeota_N	#000000	Incomplete coverage
-unclassified_Candidatus_Thorarchaeaceae_N	#000000	Incomplete coverage
-unclassified_Candidatus_Heimdallarchaeota_N	#000000	Incomplete coverage
-unclassified_Candidatus_Heimdallarchaeaceae_N	#000000	Incomplete coverage
-Candidatus_Heimdallarchaeum_G	#000000	Incomplete coverage
-unclassified_Candidatus_Hodarchaeales_N	#000000	Incomplete coverage
-Candidatus_Hodarchaeum_G	#000000	Incomplete coverage
-unclassified_Candidatus_Hodarchaeaceae_N	#000000	Incomplete coverage
-unclassified_Candidatus_Hodarchaeota_N	#000000	Incomplete coverage
-unclassified_Candidatus_Helarchaeota_N	#000000	Incomplete coverage
-unclassified_Candidatus_Hermodarchaeota_N	#000000	Incomplete coverage
-Candidatus_Hermodarchaeum_G	#000000	Incomplete coverage
-unclassified_Candidatus_Hermodarchaeaceae_N	#000000	Incomplete coverage
-unclassified_Candidatus_Hermodarchaeia_N	#000000	Incomplete coverage
-unclassified_Candidatus_Jordarchaeales_N	#000000	Incomplete coverage
-unclassified_Candidatus_Jordarchaeaceae_N	#000000	Incomplete coverage
-Candidatus_Jordarchaeum_G	#000000	Incomplete coverage
-unclassified_Candidatus_Jordarchaeia_N	#000000	Incomplete coverage
-unclassified_Candidatus_Asgardarchaeia_N	#000000	Incomplete coverage
-Candidatus_Asgardarchaeum_ex_Tamarit_et_al._2024_G	#000000	Incomplete coverage
-unclassified_Candidatus_Ranarchaeia_N	#000000	Incomplete coverage
-unclassified_Promethearchaeati_N	#000000	Incomplete coverage
-unclassified_Candidatus_Njordarchaeota_N	#000000	Incomplete coverage
-unclassified_Candidatus_Njordarchaeales_N	#000000	Incomplete coverage
-Candidatus_Njordarchaeum_G	#000000	Incomplete coverage
-unclassified_Candidatus_Njordarchaeia_N	#000000	Incomplete coverage
-unclassified_Candidatus_Odinarchaeota_N	#000000	Incomplete coverage
-unclassified_Candidatus_Odinarchaeia_N	#000000	Incomplete coverage
-unclassified_Candidatus_Odinarchaeales_N	#000000	Incomplete coverage
-Candidatus_Odinarchaeum_G	#000000	Incomplete coverage
-unclassified_Candidatus_Sigynarchaeales_N	#000000	Incomplete coverage
-Candidatus_Sigynarchaeum_G	#000000	Incomplete coverage
-unclassified_Candidatus_Sigynarchaeota_N	#000000	Incomplete coverage
-unclassified_Candidatus_Freyarchaeota_N	#000000	Incomplete coverage
-Candidatus_Freyrarchaeum_G	#000000	Incomplete coverage
-unclassified_Candidatus_Kariarchaeaceae_N	#000000	Incomplete coverage
-Candidatus_Kariarchaeum_G	#000000	Incomplete coverage
-unclassified_Candidatus_Kariarchaeota_N	#000000	Incomplete coverage
-unclassified_Candidatus_Gerdarchaeota_N	#000000	Incomplete coverage
-unclassified_Candidatus_Baldrarchaeota_N	#000000	Incomplete coverage
-unclassified_Candidatus_Baldrarchaeia_N	#000000	Incomplete coverage
-Candidatus_Baldrarchaeum_G	#000000	Incomplete coverage
-unclassified_Candidatus_Baldrarchaeales_N	#000000	Incomplete coverage
-unclassified_Candidatus_Sifarchaeia_N	#000000	Incomplete coverage
-Candidatus_Sifarchaeum_G	#000000	Incomplete coverage
-unclassified_Candidatus_Wukongarchaeota_N	#000000	Incomplete coverage
-unclassified_Candidatus_Wukongarchaeales_N	#000000	Incomplete coverage
-Candidatus_Wukongarchaeum_G	#000000	Incomplete coverage
-unclassified_Candidatus_Borrarchaeota_N	#000000	Incomplete coverage
-Candidatus_Borrarchaeum_G	#000000	Incomplete coverage
-Candidatus_Atabeyarchaeum_G	#000000	Incomplete coverage
-Candidatus_Australarchaeum_G	#000000	Incomplete coverage
-Candidatus_Freyarchaeum_G	#000000	Incomplete coverage
+Candidatus_Nanoarchaeia.U.genus	#cc5500	NCBI+EukCensus
+Nanoarchaeum	#cc5500	NCBI+EukCensus
+Nanopusillaceae.U.genus	#cc5500	NCBI+EukCensus
+Nanoarchaeota.U.genus	#cc5500	NCBI+EukCensus
+Candidatus_Micrarchaeales.U.genus	#cc5500	NCBI+EukCensus
+Candidatus_Bathyarchaeota.U.genus	#cc5500	NCBI+EukCensus
+Nitrososphaeria.U.genus	#cc5500	NCBI+EukCensus
+Nitrosopumilaceae.U.genus	#cc5500	NCBI+EukCensus
+Nitrosarchaeum	#cc5500	NCBI+EukCensus
+Nitrosopumilus	#cc5500	NCBI+EukCensus
+Nitrososphaeraceae.U.genus	#cc5500	NCBI+EukCensus
+Nitrososphaera	#cc5500	NCBI+EukCensus
+Candidatus_Nitrosocaldaceae.U.genus	#cc5500	NCBI+EukCensus
+Nitrosotalea	#000000	EukCensus only
+Candidatus_Cenarchaeum	#000000	EukCensus only
+Thermoprotei.U.genus	#cc5500	NCBI+EukCensus
+Ignisphaera	#cc5500	NCBI+EukCensus
+Aeropyrum	#cc5500	NCBI+EukCensus
+Sulfophobococcus	#000000	EukCensus only
+Thermogladius	#cc5500	NCBI+EukCensus
+Staphylothermus	#cc5500	NCBI+EukCensus
+Desulfurococcus	#cc5500	NCBI+EukCensus
+Desulfurococcaceae.U.genus	#cc5500	NCBI+EukCensus
+Thermodiscus	#cc5500	NCBI+EukCensus
+Ignicoccus	#cc5500	NCBI+EukCensus
+Thermosphaera	#cc5500	NCBI+EukCensus
+Stetteria	#cc5500	NCBI+EukCensus
+Desulfurococcales.U.genus	#cc5500	NCBI+EukCensus
+Pyrodictiaceae.U.genus	#cc5500	NCBI+EukCensus
+Pyrodictium	#cc5500	NCBI+EukCensus
+Hyperthermus	#cc5500	NCBI+EukCensus
+Pyrobaculum	#cc5500	NCBI+EukCensus
+Vulcanisaeta	#cc5500	NCBI+EukCensus
+Thermoproteaceae.U.genus	#cc5500	NCBI+EukCensus
+Thermoproteus	#cc5500	NCBI+EukCensus
+Thermocladium	#cc5500	NCBI+EukCensus
+Caldivirga	#cc5500	NCBI+EukCensus
+Thermofilum	#cc5500	NCBI+EukCensus
+Metallosphaera	#cc5500	NCBI+EukCensus
+Sulfolobaceae.U.genus	#cc5500	NCBI+EukCensus
+Sulfolobus	#cc5500	NCBI+EukCensus
+Saccharolobus	#cc5500	NCBI+EukCensus
+Acidianus	#cc5500	NCBI+EukCensus
+Stygiolobus	#cc5500	NCBI+EukCensus
+Sulfurisphaera	#cc5500	NCBI+EukCensus
+Sulfolobales.U.genus	#cc5500	NCBI+EukCensus
+Acidilobus	#cc5500	NCBI+EukCensus
+Acidilobaceae.U.genus	#cc5500	NCBI+EukCensus
+Caldisphaera	#cc5500	NCBI+EukCensus
+Fervidicoccaceae.U.genus	#cc5500	NCBI+EukCensus
+Fervidicoccus	#cc5500	NCBI+EukCensus
+Candidatus_Korarchaeota.U.genus	#cc5500	NCBI+EukCensus
+Candidatus_Methanomethylicia.U.genus	#cc5500	NCBI+EukCensus
+Thermoplasmata.U.genus	#cc5500	NCBI+EukCensus
+Candidatus_Methanomethylophilaceae.U.genus	#cc5500	NCBI+EukCensus
+Methanomassiliicoccales.U.genus	#cc5500	NCBI+EukCensus
+Methanomassiliicoccaceae.U.genus	#cc5500	NCBI+EukCensus
+Methanomassiliicoccus	#cc5500	NCBI+EukCensus
+Thermoplasmataceae.U.genus	#cc5500	NCBI+EukCensus
+Thermoplasma	#cc5500	NCBI+EukCensus
+Ferroplasma	#cc5500	NCBI+EukCensus
+Ferroplasmaceae.U.genus	#cc5500	NCBI+EukCensus
+Acidiplasma	#cc5500	NCBI+EukCensus
+Thermoplasmatales.U.genus	#cc5500	NCBI+EukCensus
+Cuniculiplasma	#cc5500	NCBI+EukCensus
+Picrophilus	#cc5500	NCBI+EukCensus
+Thermogymnomonas	#cc5500	NCBI+EukCensus
+Candidatus_Thermoplasmatota.U.genus	#cc5500	NCBI+EukCensus
+Candidatus_Aciduliprofundum	#000000	EukCensus only
+Thermococci.U.genus	#cc5500	NCBI+EukCensus
+Thermococcus	#cc5500	NCBI+EukCensus
+Palaeococcus	#cc5500	NCBI+EukCensus
+Pyrococcus	#cc5500	NCBI+EukCensus
+Methanothrix	#cc5500	NCBI+EukCensus
+Methanosarcina	#cc5500	NCBI+EukCensus
+Methanolobus	#cc5500	NCBI+EukCensus
+Methanosarcinaceae.U.genus	#cc5500	NCBI+EukCensus
+Methanimicrococcus	#cc5500	NCBI+EukCensus
+Methanococcoides	#cc5500	NCBI+EukCensus
+Methanomethylovorans	#cc5500	NCBI+EukCensus
+Methanohalophilus	#cc5500	NCBI+EukCensus
+Methanosalsum	#cc5500	NCBI+EukCensus
+Methanohalobium	#cc5500	NCBI+EukCensus
+Methanosarcinales.U.genus	#cc5500	NCBI+EukCensus
+Methermicoccus	#cc5500	NCBI+EukCensus
+Methanoregula	#cc5500	NCBI+EukCensus
+Methanolinea	#cc5500	NCBI+EukCensus
+Methanosphaerula	#cc5500	NCBI+EukCensus
+Methanoculleus	#cc5500	NCBI+EukCensus
+Methanomicrobiaceae.U.genus	#cc5500	NCBI+EukCensus
+Methanomicrobium	#cc5500	NCBI+EukCensus
+Methanogenium	#cc5500	NCBI+EukCensus
+Methanofollis	#cc5500	NCBI+EukCensus
+Methanolacinia	#cc5500	NCBI+EukCensus
+Methanoplanus	#cc5500	NCBI+EukCensus
+Methanospirillum	#cc5500	NCBI+EukCensus
+Methanomicrobiales.U.genus	#cc5500	NCBI+EukCensus
+Methanocorpusculum	#cc5500	NCBI+EukCensus
+Methanocalculus	#cc5500	NCBI+EukCensus
+Methanocella	#cc5500	NCBI+EukCensus
+Methanocellaceae.U.genus	#cc5500	NCBI+EukCensus
+Methanocellales.U.genus	#cc5500	NCBI+EukCensus
+Methanomicrobia.U.genus	#cc5500	NCBI+EukCensus
+Halobacteria.U.genus	#cc5500	NCBI+EukCensus
+Halorubrum	#cc5500	NCBI+EukCensus
+Haloferacaceae.U.genus	#cc5500	NCBI+EukCensus
+Halonotius	#cc5500	NCBI+EukCensus
+Haloferax	#cc5500	NCBI+EukCensus
+Halolamina	#cc5500	NCBI+EukCensus
+Haloquadratum	#cc5500	NCBI+EukCensus
+Halobellus	#cc5500	NCBI+EukCensus
+Haloplanus	#cc5500	NCBI+EukCensus
+Haloparvum	#cc5500	NCBI+EukCensus
+Halogeometricum	#cc5500	NCBI+EukCensus
+Salinigranum	#cc5500	NCBI+EukCensus
+Halohasta	#cc5500	NCBI+EukCensus
+Halobaculum	#cc5500	NCBI+EukCensus
+Halogranum	#cc5500	NCBI+EukCensus
+Halobium	#cc5500	NCBI+EukCensus
+Halopenitus	#cc5500	NCBI+EukCensus
+Halopelagius	#cc5500	NCBI+EukCensus
+Salinirubrum	#cc5500	NCBI+EukCensus
+Haloprofundus	#cc5500	NCBI+EukCensus
+Haloarcula	#cc5500	NCBI+EukCensus
+Halomicrobium	#cc5500	NCBI+EukCensus
+Haloarcula_1	#cc5500	NCBI+EukCensus
+Halapricum	#cc5500	NCBI+EukCensus
+Halovenus	#cc5500	NCBI+EukCensus
+Halosimplex	#cc5500	NCBI+EukCensus
+Halorientalis	#cc5500	NCBI+EukCensus
+Halorhabdus	#cc5500	NCBI+EukCensus
+Salinirussus	#cc5500	NCBI+EukCensus
+Haloarculaceae.U.genus	#cc5500	NCBI+EukCensus
+Halomicrobium_1	#cc5500	NCBI+EukCensus
+Natronomonas	#cc5500	NCBI+EukCensus
+Halomarina	#cc5500	NCBI+EukCensus
+Halobacteriaceae.U.genus	#cc5500	NCBI+EukCensus
+Halobacterium	#cc5500	NCBI+EukCensus
+Halarchaeum	#cc5500	NCBI+EukCensus
+Halodesulfurarchaeum	#cc5500	NCBI+EukCensus
+Halanaeroarchaeum	#cc5500	NCBI+EukCensus
+Salarchaeum	#cc5500	NCBI+EukCensus
+Halocalculus	#cc5500	NCBI+EukCensus
+Halorussus	#cc5500	NCBI+EukCensus
+Haladaptatus	#cc5500	NCBI+EukCensus
+Halococcus	#cc5500	NCBI+EukCensus
+Halococcaceae.U.genus	#cc5500	NCBI+EukCensus
+Halalkalicoccus	#cc5500	NCBI+EukCensus
+Haloterrigena	#cc5500	NCBI+EukCensus
+Natronorubrum	#cc5500	NCBI+EukCensus
+Natronobacterium	#cc5500	NCBI+EukCensus
+Natrinema	#cc5500	NCBI+EukCensus
+Natronococcus	#cc5500	NCBI+EukCensus
+Halopiger	#cc5500	NCBI+EukCensus
+Natrialba	#cc5500	NCBI+EukCensus
+Halovivax	#cc5500	NCBI+EukCensus
+Natronolimnobius	#cc5500	NCBI+EukCensus
+Halobiforma	#cc5500	NCBI+EukCensus
+Halostagnicola	#cc5500	NCBI+EukCensus
+Natribaculum	#cc5500	NCBI+EukCensus
+Natrialbaceae.U.genus	#cc5500	NCBI+EukCensus
+Saliphagus	#cc5500	NCBI+EukCensus
+Natronobiforma	#cc5500	NCBI+EukCensus
+Salinarchaeum	#cc5500	NCBI+EukCensus
+Natronoarchaeum	#cc5500	NCBI+EukCensus
+Halostella	#cc5500	NCBI+EukCensus
+Halobacteriales.U.genus	#cc5500	NCBI+EukCensus
+Halorubellus	#cc5500	NCBI+EukCensus
+Haloarchaeobius	#cc5500	NCBI+EukCensus
+Nanohaloarchaea.U.genus	#cc5500	NCBI+EukCensus
+Methanobrevibacter	#cc5500	NCBI+EukCensus
+Methanosphaera	#cc5500	NCBI+EukCensus
+Methanobacterium	#cc5500	NCBI+EukCensus
+Methanothermobacter	#cc5500	NCBI+EukCensus
+Methanobacteriaceae.U.genus	#cc5500	NCBI+EukCensus
+Methanothermus	#cc5500	NCBI+EukCensus
+Methanocaldococcus	#cc5500	NCBI+EukCensus
+Methanotorris	#cc5500	NCBI+EukCensus
+Methanococcus	#cc5500	NCBI+EukCensus
+Methanococcaceae.U.genus	#cc5500	NCBI+EukCensus
+Methanothermococcus	#cc5500	NCBI+EukCensus
+Methanopyrus	#cc5500	NCBI+EukCensus
+Archaeoglobaceae.U.genus	#cc5500	NCBI+EukCensus
+Archaeoglobus	#cc5500	NCBI+EukCensus
+Ferroglobus	#cc5500	NCBI+EukCensus
+Geoglobus	#cc5500	NCBI+EukCensus
+Euryarchaeota.U.genus	#cc5500	NCBI+EukCensus
+Methanonatronarchaeaceae.U.genus	#cc5500	NCBI+EukCensus
+Hadesarchaea.U.genus	#cc5500	NCBI+EukCensus
+Candidatus_Hydrothermarchaeota.U.genus	#cc5500	NCBI+EukCensus
+Odinarchaeia.U.genus	#cc5500	NCBI+EukCensus
+Heimdallarchaeia.U.genus	#cc5500	NCBI+EukCensus
+Asgard_group.U.genus	#cc5500	NCBI+EukCensus
+Candidatus_Lokiarchaeum	#cc5500	NCBI+EukCensus
+Archaea.U.genus	#cc5500	NCBI+EukCensus
