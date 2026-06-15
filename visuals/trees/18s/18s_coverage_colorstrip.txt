@@ -10,7 +10,7 @@ SHOW_INTERNAL	0
 LEGEND_TITLE	Genus genomic coverage
 LEGEND_SHAPES	1	1
 LEGEND_COLORS	#cc5500	#000000
-LEGEND_LABELS	NCBI+EukCensus	EukCensus-only
+LEGEND_LABELS	NCBI+EukCensus	Incomplete coverage
 
 DATA
 Eukaryota.U.genus_ON	#cc5500	NCBI+EukCensus
@@ -22,7 +22,7 @@ Culex_sG	#cc5500	NCBI+EukCensus
 Culiseta_G	#cc5500	NCBI+EukCensus
 Mayetiola_G	#cc5500	NCBI+EukCensus
 Acyrthosiphon_G	#cc5500	NCBI+EukCensus
-Cryptococcus_G	#000000	EukCensus-only
+Cryptococcus_G	#000000	Incomplete coverage
 Philaenus_G	#cc5500	NCBI+EukCensus
 Ricinus_G	#cc5500	NCBI+EukCensus
 Crustacea.U.genus_ON	#cc5500	NCBI+EukCensus
@@ -30,52 +30,52 @@ Branchiopoda.U.genus_ON	#cc5500	NCBI+EukCensus
 Chydorus_G	#cc5500	NCBI+EukCensus
 Daphnia_G	#cc5500	NCBI+EukCensus
 Simocephalus_G	#cc5500	NCBI+EukCensus
-Bosmina_G	#000000	EukCensus-only
-Diaphanosoma_G	#000000	EukCensus-only
-Leptodora_G	#000000	EukCensus-only
+Bosmina_G	#000000	Incomplete coverage
+Diaphanosoma_G	#000000	Incomplete coverage
+Leptodora_G	#000000	Incomplete coverage
 Eurytemora_G	#cc5500	NCBI+EukCensus
-Paracalanus_G	#000000	EukCensus-only
-Eudiaptomus_G	#000000	EukCensus-only
-Centropages_G	#000000	EukCensus-only
-Metridia_G	#000000	EukCensus-only
+Paracalanus_G	#000000	Incomplete coverage
+Eudiaptomus_G	#000000	Incomplete coverage
+Centropages_G	#000000	Incomplete coverage
+Metridia_G	#000000	Incomplete coverage
 Acartia_G	#cc5500	NCBI+EukCensus
-Anomalocera_G	#000000	EukCensus-only
-Cyclops_G	#000000	EukCensus-only
+Anomalocera_G	#000000	Incomplete coverage
+Cyclops_G	#000000	Incomplete coverage
 Arthropoda.U.genus_ON	#cc5500	NCBI+EukCensus
 Arachnida.U.genus_ON	#cc5500	NCBI+EukCensus
-Spinibdella_G	#000000	EukCensus-only
-Diptilomiopus_G	#000000	EukCensus-only
+Spinibdella_G	#000000	Incomplete coverage
+Diptilomiopus_G	#000000	Incomplete coverage
 Aculops_G	#cc5500	NCBI+EukCensus
-Surapoda_G	#000000	EukCensus-only
-Penthaleus_G	#000000	EukCensus-only
-Parhypochthonius_G	#000000	EukCensus-only
+Surapoda_G	#000000	Incomplete coverage
+Penthaleus_G	#000000	Incomplete coverage
+Parhypochthonius_G	#000000	Incomplete coverage
 Limulus_G	#cc5500	NCBI+EukCensus
 Nematoda.U.genus_ON	#cc5500	NCBI+EukCensus
 Chromadorea_X.U.genus_ON	#cc5500	NCBI+EukCensus
 Heterodera_G	#cc5500	NCBI+EukCensus
 Ditylenchus_G	#cc5500	NCBI+EukCensus
-Plectonchus_G	#000000	EukCensus-only
+Plectonchus_G	#000000	Incomplete coverage
 Pristionchus_G	#cc5500	NCBI+EukCensus
 Caenorhabditis_G	#cc5500	NCBI+EukCensus
 Sabatieria_G	#cc5500	NCBI+EukCensus
-Prodesmodora_G	#000000	EukCensus-only
-Tobrilus_G	#000000	EukCensus-only
-Alaimus_G	#000000	EukCensus-only
-Clavicaudoides_G	#000000	EukCensus-only
+Prodesmodora_G	#000000	Incomplete coverage
+Tobrilus_G	#000000	Incomplete coverage
+Alaimus_G	#000000	Incomplete coverage
+Clavicaudoides_G	#000000	Incomplete coverage
 Platyhelminthes.U.genus_ON	#cc5500	NCBI+EukCensus
 Schistosoma_G	#cc5500	NCBI+EukCensus
-Turbellaria.U.genus_ON	#000000	EukCensus-only
-Plagiostomum_G	#000000	EukCensus-only
+Turbellaria.U.genus_ON	#000000	Incomplete coverage
+Plagiostomum_G	#000000	Incomplete coverage
 Mollusca.U.genus_ON	#cc5500	NCBI+EukCensus
 Conus_G	#cc5500	NCBI+EukCensus
 Crassostrea_G	#cc5500	NCBI+EukCensus
-Chaetonotus_G	#000000	EukCensus-only
-Heterolepidoderma_G	#000000	EukCensus-only
+Chaetonotus_G	#000000	Incomplete coverage
+Heterolepidoderma_G	#000000	Incomplete coverage
 Annelida_XX.U.genus_ON	#cc5500	NCBI+EukCensus
-Loimia_G	#000000	EukCensus-only
+Loimia_G	#000000	Incomplete coverage
 Rotifera_XX.U.genus_ON	#cc5500	NCBI+EukCensus
-Encentrum_G	#000000	EukCensus-only
-Ascomorpha_G	#000000	EukCensus-only
+Encentrum_G	#000000	Incomplete coverage
+Ascomorpha_G	#000000	Incomplete coverage
 Craniata_X.U.genus_ON	#cc5500	NCBI+EukCensus
 Mammalia.U.genus_ON	#cc5500	NCBI+EukCensus
 Mammalia_X_ON	#cc5500	NCBI+EukCensus
@@ -85,35 +85,38 @@ Anolis_G	#cc5500	NCBI+EukCensus
 Xenopus_sG	#cc5500	NCBI+EukCensus
 Danio_G	#cc5500	NCBI+EukCensus
 Anthozoa.U.genus_ON	#cc5500	NCBI+EukCensus
-Anthoptilum_G	#000000	EukCensus-only
+Anthoptilum_G	#000000	Incomplete coverage
 Nematostella_G	#cc5500	NCBI+EukCensus
-Coccomyxa_G	#000000	EukCensus-only
+Coccomyxa_G	#000000	Incomplete coverage
 Chrysaora_G	#cc5500	NCBI+EukCensus
 Fungi.U.genus_ON	#cc5500	NCBI+EukCensus
 Pezizomycotina.U.genus_ON	#cc5500	NCBI+EukCensus
 Dothideomycetes.U.genus_ON	#cc5500	NCBI+EukCensus
 Phaeosphaeria_G	#cc5500	NCBI+EukCensus
 Corynespora_G	#cc5500	NCBI+EukCensus
-Massaria_G	#000000	EukCensus-only
+Massaria_G	#000000	Incomplete coverage
 Dothideomycetes_X_ON	#cc5500	NCBI+EukCensus
 Teratosphaeria_G	#cc5500	NCBI+EukCensus
 Zymoseptoria_G	#cc5500	NCBI+EukCensus
+Acrogenospora_G	#000000	Incomplete coverage
 Sordariomycetes.U.genus_ON	#cc5500	NCBI+EukCensus
+Fusarium_G	#000000	Incomplete coverage
 Lecanicillium_G	#cc5500	NCBI+EukCensus
 Isaria_G	#cc5500	NCBI+EukCensus
 Colletotrichum_G	#cc5500	NCBI+EukCensus
 Trichocladium_G	#cc5500	NCBI+EukCensus
 Neurospora_G	#cc5500	NCBI+EukCensus
 Podospora_G	#cc5500	NCBI+EukCensus
-Spadicoides_G	#000000	EukCensus-only
+Spadicoides_G	#000000	Incomplete coverage
+Barbatosphaeria_G	#000000	Incomplete coverage
 Leotiomycetes.U.genus_ON	#cc5500	NCBI+EukCensus
 Chlorociboria_G	#cc5500	NCBI+EukCensus
 Hyaloscypha_G	#cc5500	NCBI+EukCensus
 Articulospora_G	#cc5500	NCBI+EukCensus
-Tetrachaetum_G	#000000	EukCensus-only
+Tetrachaetum_G	#000000	Incomplete coverage
 Neofabraea_G	#cc5500	NCBI+EukCensus
 Hyphodiscus_G	#cc5500	NCBI+EukCensus
-Leohumicola_G	#000000	EukCensus-only
+Leohumicola_G	#000000	Incomplete coverage
 Eurotiomycetes.U.genus_ON	#cc5500	NCBI+EukCensus
 Penicillium_G	#cc5500	NCBI+EukCensus
 Aspergillus_G	#cc5500	NCBI+EukCensus
@@ -122,7 +125,7 @@ Exophiala_G	#cc5500	NCBI+EukCensus
 Phialophora_G	#cc5500	NCBI+EukCensus
 Cladophialophora_G	#cc5500	NCBI+EukCensus
 Lecanoromycetes.U.genus_ON	#cc5500	NCBI+EukCensus
-Bellemerea_G	#000000	EukCensus-only
+Bellemerea_G	#000000	Incomplete coverage
 Lecidea_G	#cc5500	NCBI+EukCensus
 Psora_G	#cc5500	NCBI+EukCensus
 Tuckermannopsis_G	#cc5500	NCBI+EukCensus
@@ -138,7 +141,7 @@ Taphrina_G	#cc5500	NCBI+EukCensus
 Taphrinomycotina.U.genus_ON	#cc5500	NCBI+EukCensus
 Schizosaccharomyces_G	#cc5500	NCBI+EukCensus
 Agaricomycetes.U.genus_ON	#cc5500	NCBI+EukCensus
-Drosophila_G	#000000	EukCensus-only
+Drosophila_G	#000000	Incomplete coverage
 Panellus_G	#cc5500	NCBI+EukCensus
 Coniophora_G	#cc5500	NCBI+EukCensus
 Russula_G	#cc5500	NCBI+EukCensus
@@ -148,7 +151,7 @@ Tremellomycetes.U.genus_ON	#cc5500	NCBI+EukCensus
 Trichosporon_G	#cc5500	NCBI+EukCensus
 Tremellomycetes_X_ON	#cc5500	NCBI+EukCensus
 Mrakia_G	#cc5500	NCBI+EukCensus
-Guepiniopsis_G	#000000	EukCensus-only
+Guepiniopsis_G	#000000	Incomplete coverage
 Malassezia_G	#cc5500	NCBI+EukCensus
 Ustanciosporium_G	#cc5500	NCBI+EukCensus
 Ustilaginomycotina.U.genus_ON	#cc5500	NCBI+EukCensus
@@ -180,144 +183,144 @@ Paramicrosporidium_G	#cc5500	NCBI+EukCensus
 Opisthokonta.U.genus_ON	#cc5500	NCBI+EukCensus
 Salpingoecidae_Group_C1_X_ON	#cc5500	NCBI+EukCensus
 Aphelidium_G	#cc5500	NCBI+EukCensus
-Nucleariidae_Nuclearia_2_X_ON	#000000	EukCensus-only
+Nucleariidae_Nuclearia_2_X_ON	#000000	Incomplete coverage
 Amoebozoa.U.genus_ON	#cc5500	NCBI+EukCensus
 Mastigamoeba_G	#cc5500	NCBI+EukCensus
 Mastigamoebida.U.genus_ON	#cc5500	NCBI+EukCensus
-Mastigella_G	#000000	EukCensus-only
+Mastigella_G	#000000	Incomplete coverage
 Pelobiontida.U.genus_ON	#cc5500	NCBI+EukCensus
-Flamellidae.U.genus_ON	#000000	EukCensus-only
-Flamella_G	#000000	EukCensus-only
-Schizoplasmodiidae.U.genus_ON	#000000	EukCensus-only
-Ceratiomyxella_G	#000000	EukCensus-only
-Schizoplasmodium_G	#000000	EukCensus-only
-Nematostelium_G	#000000	EukCensus-only
-Saccamoeba_G	#000000	EukCensus-only
-Hartmannella_G	#000000	EukCensus-only
-Hartmannellidae.U.genus_ON	#000000	EukCensus-only
-Ptolemeba_G	#000000	EukCensus-only
-Polychaos_G	#000000	EukCensus-only
-Copromyxa_G	#000000	EukCensus-only
-Euamoebida.U.genus_ON	#000000	EukCensus-only
-Chaos_G	#000000	EukCensus-only
-Bullinularia_G	#000000	EukCensus-only
-Arcellinida.U.genus_ON	#000000	EukCensus-only
-Phryganellina.U.genus_ON	#000000	EukCensus-only
-Cryptodifflugia_G	#000000	EukCensus-only
-Phryganella_G	#000000	EukCensus-only
-Physochila_G	#000000	EukCensus-only
-Elardia.U.genus_ON	#000000	EukCensus-only
-Ripidomyxa_G	#000000	EukCensus-only
+Flamellidae.U.genus_ON	#000000	Incomplete coverage
+Flamella_G	#000000	Incomplete coverage
+Schizoplasmodiidae.U.genus_ON	#000000	Incomplete coverage
+Ceratiomyxella_G	#000000	Incomplete coverage
+Schizoplasmodium_G	#000000	Incomplete coverage
+Nematostelium_G	#000000	Incomplete coverage
+Saccamoeba_G	#000000	Incomplete coverage
+Hartmannella_G	#000000	Incomplete coverage
+Hartmannellidae.U.genus_ON	#000000	Incomplete coverage
+Ptolemeba_G	#000000	Incomplete coverage
+Polychaos_G	#000000	Incomplete coverage
+Copromyxa_G	#000000	Incomplete coverage
+Euamoebida.U.genus_ON	#000000	Incomplete coverage
+Chaos_G	#000000	Incomplete coverage
+Bullinularia_G	#000000	Incomplete coverage
+Arcellinida.U.genus_ON	#000000	Incomplete coverage
+Phryganellina.U.genus_ON	#000000	Incomplete coverage
+Cryptodifflugia_G	#000000	Incomplete coverage
+Phryganella_G	#000000	Incomplete coverage
+Physochila_G	#000000	Incomplete coverage
+Elardia.U.genus_ON	#000000	Incomplete coverage
+Ripidomyxa_G	#000000	Incomplete coverage
 Tubulinea_X.U.genus_ON	#cc5500	NCBI+EukCensus
 Tubulinea.U.genus_ON	#cc5500	NCBI+EukCensus
-Echinamoeba_G	#000000	EukCensus-only
+Echinamoeba_G	#000000	Incomplete coverage
 Acanthamoeba_G	#cc5500	NCBI+EukCensus
 Acanthamoebidae_X_ON	#cc5500	NCBI+EukCensus
-Protacanthamoeba_G	#000000	EukCensus-only
+Protacanthamoeba_G	#000000	Incomplete coverage
 Balamuthia_G	#cc5500	NCBI+EukCensus
-Endostelium_G	#000000	EukCensus-only
+Endostelium_G	#000000	Incomplete coverage
 Vannella_G	#cc5500	NCBI+EukCensus
-Korotnevella_G	#000000	EukCensus-only
+Korotnevella_G	#000000	Incomplete coverage
 Paramoeba_G	#cc5500	NCBI+EukCensus
 Discosea_X.U.genus_ON	#cc5500	NCBI+EukCensus
 Euglenida.U.genus_ON	#cc5500	NCBI+EukCensus
-Trachelomonas_G	#000000	EukCensus-only
-Gyropaigne_G	#000000	EukCensus-only
-Distigma_G	#000000	EukCensus-only
-Petalomonadida.U.genus_ON	#000000	EukCensus-only
-Scytomonadidae.U.genus_ON	#000000	EukCensus-only
-Scytomonas_G	#000000	EukCensus-only
-Petalomonas_G	#000000	EukCensus-only
-Notosolenus_G	#000000	EukCensus-only
+Trachelomonas_G	#000000	Incomplete coverage
+Gyropaigne_G	#000000	Incomplete coverage
+Distigma_G	#000000	Incomplete coverage
+Petalomonadida.U.genus_ON	#000000	Incomplete coverage
+Scytomonadidae.U.genus_ON	#000000	Incomplete coverage
+Scytomonas_G	#000000	Incomplete coverage
+Petalomonas_G	#000000	Incomplete coverage
+Notosolenus_G	#000000	Incomplete coverage
 Kinetoplastea.U.genus_ON	#cc5500	NCBI+EukCensus
 Neobodonida.U.genus_ON	#cc5500	NCBI+EukCensus
-Neobodo_G	#000000	EukCensus-only
-Rhynchomonas_G	#000000	EukCensus-only
+Neobodo_G	#000000	Incomplete coverage
+Rhynchomonas_G	#000000	Incomplete coverage
 Trypanosoma_G	#cc5500	NCBI+EukCensus
 Leptomonas_G	#cc5500	NCBI+EukCensus
 Strigomonas_G	#cc5500	NCBI+EukCensus
 Phytomonas_G	#cc5500	NCBI+EukCensus
-Allobodo_G	#000000	EukCensus-only
+Allobodo_G	#000000	Incomplete coverage
 Bodo_G	#cc5500	NCBI+EukCensus
 Kinetoplastea_XX.U.genus_ON	#cc5500	NCBI+EukCensus
 Euglenozoa.U.genus_ON	#cc5500	NCBI+EukCensus
 Heterolobosea.U.genus_ON	#cc5500	NCBI+EukCensus
 Neovahlkampfia_G	#cc5500	NCBI+EukCensus
 Tetramitia_I.U.genus_ON	#cc5500	NCBI+EukCensus
-Sawyeria_G	#000000	EukCensus-only
+Sawyeria_G	#000000	Incomplete coverage
 Cercozoa.U.genus_ON	#cc5500	NCBI+EukCensus
-Flectomonas_G	#000000	EukCensus-only
-Sandona_G	#000000	EukCensus-only
-Glissomonadida.U.genus_ON	#000000	EukCensus-only
-Allantion_G	#000000	EukCensus-only
-Thaumatomonadida.U.genus_ON	#000000	EukCensus-only
-Thaumatomonas_G	#000000	EukCensus-only
+Flectomonas_G	#000000	Incomplete coverage
+Sandona_G	#000000	Incomplete coverage
+Glissomonadida.U.genus_ON	#000000	Incomplete coverage
+Allantion_G	#000000	Incomplete coverage
+Thaumatomonadida.U.genus_ON	#000000	Incomplete coverage
+Thaumatomonas_G	#000000	Incomplete coverage
 Paulinella_G	#cc5500	NCBI+EukCensus
-Neocercomonas_G	#000000	EukCensus-only
-Cavernomonas_G	#000000	EukCensus-only
-Cercomonas_G	#000000	EukCensus-only
-Cercomonadidae_X_ON	#000000	EukCensus-only
-Paracercomonas_G	#000000	EukCensus-only
-Cercomonadidae.U.genus_ON	#000000	EukCensus-only
-Ventrifissura_G	#000000	EukCensus-only
-Cryomonadida.U.genus_ON	#000000	EukCensus-only
-Protaspa_G	#000000	EukCensus-only
-Cryothecomonas_G	#000000	EukCensus-only
-Limnofilidae_X_ON	#000000	EukCensus-only
-Massisteria_G	#000000	EukCensus-only
+Neocercomonas_G	#000000	Incomplete coverage
+Cavernomonas_G	#000000	Incomplete coverage
+Cercomonas_G	#000000	Incomplete coverage
+Cercomonadidae_X_ON	#000000	Incomplete coverage
+Paracercomonas_G	#000000	Incomplete coverage
+Cercomonadidae.U.genus_ON	#000000	Incomplete coverage
+Ventrifissura_G	#000000	Incomplete coverage
+Cryomonadida.U.genus_ON	#000000	Incomplete coverage
+Protaspa_G	#000000	Incomplete coverage
+Cryothecomonas_G	#000000	Incomplete coverage
+Limnofilidae_X_ON	#000000	Incomplete coverage
+Massisteria_G	#000000	Incomplete coverage
 Monothalamids_X.U.genus_ON	#cc5500	NCBI+EukCensus
-Astrorhiza_G	#000000	EukCensus-only
+Astrorhiza_G	#000000	Incomplete coverage
 Foraminifera.U.genus_ON	#cc5500	NCBI+EukCensus
-Nemogullmia_G	#000000	EukCensus-only
-Reophax_G	#000000	EukCensus-only
-Polycystinea.U.genus_ON	#000000	EukCensus-only
-Nassellaria.U.genus_ON	#000000	EukCensus-only
-Collophidium_G	#000000	EukCensus-only
-Sphaerozoum_G	#000000	EukCensus-only
-Tholomura_G	#000000	EukCensus-only
-Radiolaria.U.genus_ON	#000000	EukCensus-only
-Acantharea_3a_X_ON	#000000	EukCensus-only
-Vampyrellida.U.genus_ON	#000000	EukCensus-only
-Vampyrella_G	#000000	EukCensus-only
-Filoreta_G	#000000	EukCensus-only
-Gromia_G	#000000	EukCensus-only
-Paradinium_G	#000000	EukCensus-only
+Nemogullmia_G	#000000	Incomplete coverage
+Reophax_G	#000000	Incomplete coverage
+Polycystinea.U.genus_ON	#000000	Incomplete coverage
+Nassellaria.U.genus_ON	#000000	Incomplete coverage
+Collophidium_G	#000000	Incomplete coverage
+Sphaerozoum_G	#000000	Incomplete coverage
+Tholomura_G	#000000	Incomplete coverage
+Radiolaria.U.genus_ON	#000000	Incomplete coverage
+Acantharea_3a_X_ON	#000000	Incomplete coverage
+Vampyrellida.U.genus_ON	#000000	Incomplete coverage
+Vampyrella_G	#000000	Incomplete coverage
+Filoreta_G	#000000	Incomplete coverage
+Gromia_G	#000000	Incomplete coverage
+Paradinium_G	#000000	Incomplete coverage
 Rhizaria.U.genus_ON	#cc5500	NCBI+EukCensus
 Dinophyceae.U.genus_ON	#cc5500	NCBI+EukCensus
-Pentapharsodinium_G	#000000	EukCensus-only
-Scrippsiella_G	#000000	EukCensus-only
+Pentapharsodinium_G	#000000	Incomplete coverage
+Scrippsiella_G	#000000	Incomplete coverage
 Dinoflagellata.U.genus_ON	#cc5500	NCBI+EukCensus
-Ceratium_G	#000000	EukCensus-only
+Ceratium_G	#000000	Incomplete coverage
 Ciliophora.U.genus_ON	#cc5500	NCBI+EukCensus
 Stylonychia_G	#cc5500	NCBI+EukCensus
 Oligohymenophorea.U.genus_ON	#cc5500	NCBI+EukCensus
-Vorticella_G	#000000	EukCensus-only
-Pseudovorticella_G	#000000	EukCensus-only
-Sessilida.U.genus_ON	#000000	EukCensus-only
-Campanella_G	#000000	EukCensus-only
-Peritrichia_2.U.genus_ON	#000000	EukCensus-only
+Vorticella_G	#000000	Incomplete coverage
+Pseudovorticella_G	#000000	Incomplete coverage
+Sessilida.U.genus_ON	#000000	Incomplete coverage
+Campanella_G	#000000	Incomplete coverage
+Peritrichia_2.U.genus_ON	#000000	Incomplete coverage
 Paramecium_G	#cc5500	NCBI+EukCensus
-Fusiforma_G	#000000	EukCensus-only
+Fusiforma_G	#000000	Incomplete coverage
 Ichthyophthirius_G	#cc5500	NCBI+EukCensus
-Dileptidae_X_ON	#000000	EukCensus-only
-Phyllopharyngea.U.genus_ON	#000000	EukCensus-only
-Acineta_1_ON	#000000	EukCensus-only
-Tokophrya_G	#000000	EukCensus-only
-Suctoria.U.genus_ON	#000000	EukCensus-only
-Evaginogenida_X_ON	#000000	EukCensus-only
-Trochilia_G	#000000	EukCensus-only
-Hartmannulidae_X_ON	#000000	EukCensus-only
-Urotricha_G	#000000	EukCensus-only
+Dileptidae_X_ON	#000000	Incomplete coverage
+Phyllopharyngea.U.genus_ON	#000000	Incomplete coverage
+Acineta_1_ON	#000000	Incomplete coverage
+Tokophrya_G	#000000	Incomplete coverage
+Suctoria.U.genus_ON	#000000	Incomplete coverage
+Evaginogenida_X_ON	#000000	Incomplete coverage
+Trochilia_G	#000000	Incomplete coverage
+Hartmannulidae_X_ON	#000000	Incomplete coverage
+Urotricha_G	#000000	Incomplete coverage
 Alveolata.U.genus_ON	#cc5500	NCBI+EukCensus
-Monocystis_G	#000000	EukCensus-only
+Monocystis_G	#000000	Incomplete coverage
 Leidyana2_ON	#cc5500	NCBI+EukCensus
 Leidyana1_ON	#cc5500	NCBI+EukCensus
-Actinocephalidae.U.genus_ON	#000000	EukCensus-only
+Actinocephalidae.U.genus_ON	#000000	Incomplete coverage
 Gregarina3_ON	#cc5500	NCBI+EukCensus
 Gregarinidae.U.genus_ON	#cc5500	NCBI+EukCensus
-Xiphocephalus_G	#000000	EukCensus-only
+Xiphocephalus_G	#000000	Incomplete coverage
 Neogregarinorida.U.genus_ON	#cc5500	NCBI+EukCensus
-Mattesia_G	#000000	EukCensus-only
+Mattesia_G	#000000	Incomplete coverage
 Sarcocystis10_ON	#cc5500	NCBI+EukCensus
 Eimeria1_ON	#cc5500	NCBI+EukCensus
 Cryptosporidium1_ON	#cc5500	NCBI+EukCensus
@@ -332,9 +335,9 @@ Plasmodiidae.U.genus_ON	#cc5500	NCBI+EukCensus
 Plasmodium1_ON	#cc5500	NCBI+EukCensus
 Plasmodium2_ON	#cc5500	NCBI+EukCensus
 Plasmodium4_ON	#cc5500	NCBI+EukCensus
-Adelina_G	#000000	EukCensus-only
+Adelina_G	#000000	Incomplete coverage
 Perkinsida_X.U.genus_ON	#cc5500	NCBI+EukCensus
-Gadixcellia_G	#000000	EukCensus-only
+Gadixcellia_G	#000000	Incomplete coverage
 Colpodellida_CHR1_X_ON	#cc5500	NCBI+EukCensus
 Stramenopiles.U.genus_ON	#cc5500	NCBI+EukCensus
 Thalassiosira_G	#cc5500	NCBI+EukCensus
@@ -349,57 +352,58 @@ Pythium_G	#cc5500	NCBI+EukCensus
 Phytophthora_G	#cc5500	NCBI+EukCensus
 Peronosporales.U.genus_ON	#cc5500	NCBI+EukCensus
 Saprolegnia_G	#cc5500	NCBI+EukCensus
-Halodaphnea_G	#000000	EukCensus-only
+Halodaphnea_G	#000000	Incomplete coverage
 Bicoecea.U.genus_ON	#cc5500	NCBI+EukCensus
-Bicoecaceae_X_ON	#000000	EukCensus-only
+Bicoecaceae_X_ON	#000000	Incomplete coverage
 Cafeteria_G	#cc5500	NCBI+EukCensus
 Opalozoa.U.genus_ON	#cc5500	NCBI+EukCensus
 Blastocystis_G	#cc5500	NCBI+EukCensus
 Labyrinthula_G	#cc5500	NCBI+EukCensus
 Labyrinthulomycetes.U.genus_ON	#cc5500	NCBI+EukCensus
-Diplophrys_G	#000000	EukCensus-only
-Amphitrema_G	#000000	EukCensus-only
+Diplophrys_G	#000000	Incomplete coverage
+Amphitrema_G	#000000	Incomplete coverage
 Bigyra.U.genus_ON	#cc5500	NCBI+EukCensus
-Actinosphaerium_G	#000000	EukCensus-only
+Actinosphaerium_G	#000000	Incomplete coverage
 Chlorophyta_X.U.genus_ON	#cc5500	NCBI+EukCensus
 Ostreococcus_G	#cc5500	NCBI+EukCensus
 Bathycoccus_G	#cc5500	NCBI+EukCensus
 Chlorellales_X.U.genus_ON	#cc5500	NCBI+EukCensus
 Auxenochlorella_G	#cc5500	NCBI+EukCensus
-Chloroparva_G	#000000	EukCensus-only
+Chloroparva_G	#000000	Incomplete coverage
 Micractinium_G	#cc5500	NCBI+EukCensus
 Botryococcus_G	#cc5500	NCBI+EukCensus
 Chlamydomonadales_X.U.genus_ON	#cc5500	NCBI+EukCensus
 Chlamydomonas_G	#cc5500	NCBI+EukCensus
-Spermatozopsis_G	#000000	EukCensus-only
+Spermatozopsis_G	#000000	Incomplete coverage
 Sphaeropleales.U.genus_ON	#cc5500	NCBI+EukCensus
 Raphidocelis_G	#cc5500	NCBI+EukCensus
-Ankistrodesmus_G	#000000	EukCensus-only
+Ankistrodesmus_G	#000000	Incomplete coverage
 Monoraphidium_G	#cc5500	NCBI+EukCensus
 Chlorophyceae.U.genus_ON	#cc5500	NCBI+EukCensus
 Ulva_G	#cc5500	NCBI+EukCensus
 Chloropicon_G	#cc5500	NCBI+EukCensus
 Zea_G	#cc5500	NCBI+EukCensus
+Sorghum_bicolor_S	#000000	Incomplete coverage
 Brachypodium_G	#cc5500	NCBI+EukCensus
 Oryza_G	#cc5500	NCBI+EukCensus
 Rehmannia_G	#cc5500	NCBI+EukCensus
-Cyclotrichium_G	#000000	EukCensus-only
+Cyclotrichium_G	#000000	Incomplete coverage
 Glycine_G	#cc5500	NCBI+EukCensus
 Populus_G	#cc5500	NCBI+EukCensus
 Arabidopsis_G	#cc5500	NCBI+EukCensus
-Physcomitrella_G	#000000	EukCensus-only
+Physcomitrella_G	#000000	Incomplete coverage
 Hexamitidae.U.genus_ON	#cc5500	NCBI+EukCensus
-Trimitus_G	#000000	EukCensus-only
+Trimitus_G	#000000	Incomplete coverage
 Hexamita_G	#cc5500	NCBI+EukCensus
-Trepomonas_G	#000000	EukCensus-only
-Centroplasthelida_X.U.genus_ON	#000000	EukCensus-only
-Choanocystis_G	#000000	EukCensus-only
-Rigifilida_XXXX.U.genus_ON	#000000	EukCensus-only
-Rigifila_G	#000000	EukCensus-only
-Micronuclearia_G	#000000	EukCensus-only
-Picomonas_G	#000000	EukCensus-only
-Hemimastix_G	#000000	EukCensus-only
+Trepomonas_G	#000000	Incomplete coverage
+Centroplasthelida_X.U.genus_ON	#000000	Incomplete coverage
+Choanocystis_G	#000000	Incomplete coverage
+Rigifilida_XXXX.U.genus_ON	#000000	Incomplete coverage
+Rigifila_G	#000000	Incomplete coverage
+Micronuclearia_G	#000000	Incomplete coverage
+Picomonas_G	#000000	Incomplete coverage
+Hemimastix_G	#000000	Incomplete coverage
 Cyanidioschyzon_G	#cc5500	NCBI+EukCensus
-Nibbleromonas_G	#000000	EukCensus-only
-Ubysseya_G	#000000	EukCensus-only
-Nebulomonas_G	#000000	EukCensus-only
+Nibbleromonas_G	#000000	Incomplete coverage
+Ubysseya_G	#000000	Incomplete coverage
+Nebulomonas_G	#000000	Incomplete coverage
