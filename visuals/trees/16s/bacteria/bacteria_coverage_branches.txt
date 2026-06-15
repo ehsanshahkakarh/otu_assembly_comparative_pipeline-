@@ -676,7 +676,7 @@ Lutibaculum_G	branch	#cc5500	normal	4
 Salinarimonas_G	branch	#cc5500	normal	4
 Chelatococcus_G|Camelimonas_G	clade	#cc5500	normal	4
 Zhengella_G	branch	#cc5500	normal	4
-Blastochloris_G	branch	#cc5500	normal	4
+Blastochloris_G|Blastochloris_G	clade	#cc5500	normal	4
 Pseudoxanthobacter_G	branch	#cc5500	normal	4
 Pleomorphomonas_G	branch	#cc5500	normal	4
 Oharaeibacter_G	branch	#cc5500	normal	4
@@ -1222,10 +1222,8 @@ Rhabdobacter_G	branch	#cc5500	normal	4
 Rudanella_G	branch	#cc5500	normal	4
 Anditalea_G	branch	#cc5500	normal	4
 Sporocytophaga_G	branch	#cc5500	normal	4
-Ekhidna_G	branch	#cc5500	normal	4
-Marinoscillum_G	branch	#cc5500	normal	4
-Reichenbachiella_G	branch	#cc5500	normal	4
-Roseivirga_G	branch	#cc5500	normal	4
+Ekhidna_G|Reichenbachiella_G	clade	#cc5500	normal	4
+Roseivirga_G|Roseivirga_G	clade	#cc5500	normal	4
 Imperialibacter_G	branch	#cc5500	normal	4
 Flammeovirga_G	branch	#cc5500	normal	4
 Algivirga_G	branch	#cc5500	normal	4
@@ -1263,7 +1261,7 @@ Tunicatimonas_G	branch	#cc5500	normal	4
 Catalinimonas_G	branch	#cc5500	normal	4
 Microscilla_G	branch	#cc5500	normal	4
 Eisenibacter_G	branch	#cc5500	normal	4
-Marivirga_G	branch	#cc5500	normal	4
+Marivirga_G|Marivirga_G	clade	#cc5500	normal	4
 Thermoflexibacter_G	branch	#cc5500	normal	4
 Bernardetia_G	branch	#cc5500	normal	4
 Hugenholtzia_G	branch	#cc5500	normal	4
@@ -1363,7 +1361,7 @@ Bryobacter_G	branch	#cc5500	normal	4
 Paludibaculum_G	branch	#cc5500	normal	4
 Thermoanaerobaculum_G	branch	#cc5500	normal	4
 Pyrinomonas_G	branch	#cc5500	normal	4
-Aridibacter_G	branch	#cc5500	normal	4
+Aridibacter_G|Aridibacter_G	clade	#cc5500	normal	4
 Chloracidobacterium_G|Chloracidobacterium_G	clade	#cc5500	normal	4
 Luteitalea_G	branch	#cc5500	normal	4
 Geothrix_G	branch	#cc5500	normal	4
@@ -2231,12 +2229,7 @@ Actinorugispora_G	branch	#cc5500	normal	4
 Murinocardiopsis_G	branch	#cc5500	normal	4
 Lipingzhangella_G	branch	#cc5500	normal	4
 Haloactinospora_G	branch	#cc5500	normal	4
-Actinomadura_G	branch	#cc5500	normal	4
-Actinoallomurus_G	branch	#cc5500	normal	4
-Spirillospora_G	branch	#cc5500	normal	4
-Thermomonospora_G	branch	#cc5500	normal	4
-Actinocorallia_G	branch	#cc5500	normal	4
-Thermostaphylospora_G	branch	#cc5500	normal	4
+Actinomadura_G|Thermostaphylospora_G	clade	#cc5500	normal	4
 Allonocardiopsis_G|Allonocardiopsis_G	clade	#cc5500	normal	4
 Streptomyces_G	branch	#cc5500	normal	4
 Kitasatospora_G	branch	#cc5500	normal	4
