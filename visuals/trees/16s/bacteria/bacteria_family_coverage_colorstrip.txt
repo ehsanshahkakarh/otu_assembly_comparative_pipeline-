@@ -1,0 +1,867 @@
+DATASET_COLORSTRIP
+SEPARATOR TAB
+DATASET_LABEL	Genus genomic coverage
+COLOR	#cc5500
+STRIP_WIDTH	25
+MARGIN	2
+BORDER_WIDTH	0
+SHOW_INTERNAL	0
+
+LEGEND_TITLE	Genus genomic coverage
+LEGEND_SHAPES	1	1
+LEGEND_COLORS	#cc5500	#000000
+LEGEND_LABELS	NCBI+EukCensus	EukCensus only
+
+DATA
+Lachnospiraceae	#000000	EukCensus only
+Defluviitaleaceae	#cc5500	NCBI+EukCensus
+Cellulosilyticaceae	#cc5500	NCBI+EukCensus
+Vallitaleaceae	#000000	EukCensus only
+Natranaerovirgaceae	#cc5500	NCBI+EukCensus
+Anaerotignaceae	#cc5500	NCBI+EukCensus
+Clostridia.U.family	#cc5500	NCBI+EukCensus
+Oscillospiraceae	#000000	EukCensus only
+Clostridiaceae	#000000	EukCensus only
+Peptococcaceae	#000000	EukCensus only
+Eubacteriales.U.family	#000000	EukCensus only
+Desulfitobacteriaceae	#cc5500	NCBI+EukCensus
+Fusibacteraceae	#cc5500	NCBI+EukCensus
+Symbiobacteriaceae	#cc5500	NCBI+EukCensus
+Syntrophomonadaceae	#000000	EukCensus only
+Butyricicoccaceae	#cc5500	NCBI+EukCensus
+Eubacteriaceae	#000000	EukCensus only
+Acutalibacteraceae	#cc5500	NCBI+EukCensus
+Desulfotomaculaceae	#000000	EukCensus only
+Gracilibacteraceae	#cc5500	NCBI+EukCensus
+Thermincolaceae	#cc5500	NCBI+EukCensus
+Clostridiales_Family_XVII._Incertae_Sedis	#cc5500	NCBI+EukCensus
+Clostridiales_Family_XVI._Incertae_Sedis	#cc5500	NCBI+EukCensus
+Desulfurisporaceae	#cc5500	NCBI+EukCensus
+Heliobacteriaceae	#000000	EukCensus only
+Desulfallaceae	#cc5500	NCBI+EukCensus
+Proteinivoracaceae	#cc5500	NCBI+EukCensus
+Desulfocucumaceae	#cc5500	NCBI+EukCensus
+Christensenellaceae	#cc5500	NCBI+EukCensus
+Anaerovoracaceae	#cc5500	NCBI+EukCensus
+Peptostreptococcaceae	#cc5500	NCBI+EukCensus
+Natronincolaceae	#cc5500	NCBI+EukCensus
+Peptoclostridiaceae	#cc5500	NCBI+EukCensus
+Acidaminobacteraceae	#cc5500	NCBI+EukCensus
+Guggenheimellaceae	#cc5500	NCBI+EukCensus
+Filifactoraceae	#cc5500	NCBI+EukCensus
+Caminicellaceae	#cc5500	NCBI+EukCensus
+Tindalliaceae	#cc5500	NCBI+EukCensus
+Tepidibacteraceae	#000000	EukCensus only
+Thermotaleaceae	#cc5500	NCBI+EukCensus
+Monoglobaceae	#cc5500	NCBI+EukCensus
+Caldicoprobacteraceae	#cc5500	NCBI+EukCensus
+Halanaerobiaceae	#cc5500	NCBI+EukCensus
+Halobacteroidaceae	#cc5500	NCBI+EukCensus
+Halarsenatibacteraceae	#cc5500	NCBI+EukCensus
+Halothermotrichaceae	#cc5500	NCBI+EukCensus
+Halanaerobiales.U.family	#cc5500	NCBI+EukCensus
+Lutisporaceae	#cc5500	NCBI+EukCensus
+Desulfitibacteraceae	#cc5500	NCBI+EukCensus
+Neomoorellaceae	#cc5500	NCBI+EukCensus
+Calderihabitantaceae	#cc5500	NCBI+EukCensus
+Thermoanaerobacteraceae	#000000	EukCensus only
+Thermoanaerobacterales.U.family	#cc5500	NCBI+EukCensus
+Thermoanaerobacterales_Family_III._Incertae_Sedis	#cc5500	NCBI+EukCensus
+Tepidanaerobacteraceae	#cc5500	NCBI+EukCensus
+Thermosediminibacteraceae	#cc5500	NCBI+EukCensus
+Acetivibrionaceae	#cc5500	NCBI+EukCensus
+Natranaerobiaceae	#000000	EukCensus only
+Mahellaceae	#cc5500	NCBI+EukCensus
+Bacillaceae	#000000	EukCensus only
+Paenibacillaceae	#000000	EukCensus only
+Staphylococcaceae	#cc5500	NCBI+EukCensus
+Gemellaceae	#cc5500	NCBI+EukCensus
+Bacillales.U.family	#000000	EukCensus only
+Anoxybacillaceae	#cc5500	NCBI+EukCensus
+Caryophanaceae	#cc5500	NCBI+EukCensus
+Alicyclobacillaceae	#cc5500	NCBI+EukCensus
+Thermoactinomycetaceae	#000000	EukCensus only
+Listeriaceae	#cc5500	NCBI+EukCensus
+Fictibacillaceae	#cc5500	NCBI+EukCensus
+Sporolactobacillaceae	#cc5500	NCBI+EukCensus
+Pasteuriaceae	#cc5500	NCBI+EukCensus
+Bacillales_Family_X._Incertae_Sedis	#cc5500	NCBI+EukCensus
+Abyssicoccaceae	#cc5500	NCBI+EukCensus
+Streptococcaceae	#cc5500	NCBI+EukCensus
+Lactobacillaceae	#cc5500	NCBI+EukCensus
+Enterococcaceae	#cc5500	NCBI+EukCensus
+Carnobacteriaceae	#cc5500	NCBI+EukCensus
+Aerococcaceae	#cc5500	NCBI+EukCensus
+Lactobacillales.U.family	#000000	EukCensus only
+Bacilli.U.family	#cc5500	NCBI+EukCensus
+Bacillota.U.family	#cc5500	NCBI+EukCensus
+Erysipelotrichales.U.family	#cc5500	NCBI+EukCensus
+Erysipelotrichaceae	#cc5500	NCBI+EukCensus
+Turicibacteraceae	#cc5500	NCBI+EukCensus
+Coprobacillaceae	#cc5500	NCBI+EukCensus
+Veillonellaceae	#cc5500	NCBI+EukCensus
+Selenomonadaceae	#cc5500	NCBI+EukCensus
+Sporomusaceae	#000000	EukCensus only
+Selenomonadales.U.family	#cc5500	NCBI+EukCensus
+Acidaminococcaceae	#cc5500	NCBI+EukCensus
+Negativicutes.U.family	#cc5500	NCBI+EukCensus
+Acetonemataceae	#cc5500	NCBI+EukCensus
+Tissierellia.U.family	#cc5500	NCBI+EukCensus
+Peptoniphilaceae	#cc5500	NCBI+EukCensus
+Tissierellaceae	#cc5500	NCBI+EukCensus
+Tepidimicrobiaceae	#cc5500	NCBI+EukCensus
+Thermohalobacteraceae	#cc5500	NCBI+EukCensus
+Sporanaerobacteraceae	#cc5500	NCBI+EukCensus
+Gottschalkiaceae	#cc5500	NCBI+EukCensus
+Limnochordia.U.family	#cc5500	NCBI+EukCensus
+Limnochordaceae	#cc5500	NCBI+EukCensus
+Limnochordales.U.family	#cc5500	NCBI+EukCensus
+Dethiobacteraceae	#cc5500	NCBI+EukCensus
+Caldicellulosiruptoraceae	#cc5500	NCBI+EukCensus
+Desulfuribacillaceae	#cc5500	NCBI+EukCensus
+Thermolithobacteraceae	#000000	EukCensus only
+Desulfitisporaceae	#cc5500	NCBI+EukCensus
+Anaerolineae.U.family	#cc5500	NCBI+EukCensus
+Anaerolineaceae	#000000	EukCensus only
+Anaerolineales.U.family	#cc5500	NCBI+EukCensus
+Dehalococcoidia.U.family	#cc5500	NCBI+EukCensus
+Dehalococcoidales.U.family	#cc5500	NCBI+EukCensus
+Dehalococcoidaceae	#cc5500	NCBI+EukCensus
+Chloroflexota.U.family	#cc5500	NCBI+EukCensus
+Ktedonobacteraceae	#cc5500	NCBI+EukCensus
+Ktedonobacterales.U.family	#cc5500	NCBI+EukCensus
+Thermosporotrichaceae	#cc5500	NCBI+EukCensus
+Dictyobacteraceae	#cc5500	NCBI+EukCensus
+Ktedonobacteria.U.family	#cc5500	NCBI+EukCensus
+Thermogemmatisporaceae	#cc5500	NCBI+EukCensus
+Ardenticatenales.U.family	#cc5500	NCBI+EukCensus
+Ardenticatenaceae	#cc5500	NCBI+EukCensus
+Caldilineaceae	#cc5500	NCBI+EukCensus
+Roseiflexaceae	#cc5500	NCBI+EukCensus
+Chloroflexaceae	#cc5500	NCBI+EukCensus
+Oscillochloridaceae	#000000	EukCensus only
+Chloroflexales.U.family	#000000	EukCensus only
+Chloroflexia.U.family	#cc5500	NCBI+EukCensus
+Kallotenuales.U.family	#cc5500	NCBI+EukCensus
+Kallotenuaceae	#cc5500	NCBI+EukCensus
+Herpetosiphonaceae	#cc5500	NCBI+EukCensus
+Candidatus_Thermobaculaceae	#cc5500	NCBI+EukCensus
+Thermoflexaceae	#cc5500	NCBI+EukCensus
+Acidimicrobiia.U.family	#cc5500	NCBI+EukCensus
+Ilumatobacteraceae	#cc5500	NCBI+EukCensus
+Iamiaceae	#cc5500	NCBI+EukCensus
+Acidimicrobiaceae	#cc5500	NCBI+EukCensus
+Streptomycetaceae	#000000	EukCensus only
+Corynebacteriaceae	#cc5500	NCBI+EukCensus
+Mycobacteriaceae	#cc5500	NCBI+EukCensus
+Nocardiaceae	#cc5500	NCBI+EukCensus
+Gordoniaceae	#cc5500	NCBI+EukCensus
+Lawsonellaceae	#cc5500	NCBI+EukCensus
+Dietziaceae	#cc5500	NCBI+EukCensus
+Tsukamurellaceae	#cc5500	NCBI+EukCensus
+Mycobacteriales.U.family	#cc5500	NCBI+EukCensus
+Hoyosellaceae	#cc5500	NCBI+EukCensus
+Segniliparaceae	#cc5500	NCBI+EukCensus
+Nocardioidaceae	#cc5500	NCBI+EukCensus
+Propionibacteriaceae	#cc5500	NCBI+EukCensus
+Kribbellaceae	#cc5500	NCBI+EukCensus
+Actinopolymorphaceae	#cc5500	NCBI+EukCensus
+Candidatus_Actinomarinales.U.family	#cc5500	NCBI+EukCensus
+Candidatus_Actinomarinaceae	#cc5500	NCBI+EukCensus
+Micrococcaceae	#cc5500	NCBI+EukCensus
+Microbacteriaceae	#000000	EukCensus only
+Brevibacteriaceae	#cc5500	NCBI+EukCensus
+Cellulomonadaceae	#000000	EukCensus only
+Dermatophilaceae	#000000	EukCensus only
+Dermabacteraceae	#cc5500	NCBI+EukCensus
+Promicromonosporaceae	#cc5500	NCBI+EukCensus
+Intrasporangiaceae	#cc5500	NCBI+EukCensus
+Demequinaceae	#cc5500	NCBI+EukCensus
+Ornithinimicrobiaceae	#cc5500	NCBI+EukCensus
+Sanguibacteraceae	#cc5500	NCBI+EukCensus
+Micrococcales.U.family	#cc5500	NCBI+EukCensus
+Dermacoccaceae	#cc5500	NCBI+EukCensus
+Jonesiaceae	#cc5500	NCBI+EukCensus
+Beutenbergiaceae	#cc5500	NCBI+EukCensus
+Rarobacteraceae	#cc5500	NCBI+EukCensus
+Ruaniaceae	#cc5500	NCBI+EukCensus
+Kytococcaceae	#cc5500	NCBI+EukCensus
+Tropherymataceae	#cc5500	NCBI+EukCensus
+Sporichthyaceae	#cc5500	NCBI+EukCensus
+Actinomycetaceae	#cc5500	NCBI+EukCensus
+Actinomycetales.U.family	#cc5500	NCBI+EukCensus
+Pseudonocardiaceae	#000000	EukCensus only
+Acidothermaceae	#cc5500	NCBI+EukCensus
+Bifidobacteriaceae	#000000	EukCensus only
+Micromonosporaceae	#cc5500	NCBI+EukCensus
+Frankiales.U.family	#cc5500	NCBI+EukCensus
+Frankiaceae	#cc5500	NCBI+EukCensus
+Thermomonosporaceae	#cc5500	NCBI+EukCensus
+Nocardiopsidaceae	#cc5500	NCBI+EukCensus
+Streptosporangiaceae	#000000	EukCensus only
+Streptosporangiales.U.family	#cc5500	NCBI+EukCensus
+Jatrophihabitantaceae	#cc5500	NCBI+EukCensus
+Geodermatophilaceae	#cc5500	NCBI+EukCensus
+Antricoccaceae	#cc5500	NCBI+EukCensus
+Actinospicaceae	#cc5500	NCBI+EukCensus
+Catenulisporaceae	#cc5500	NCBI+EukCensus
+Nakamurellaceae	#cc5500	NCBI+EukCensus
+Kineosporiaceae	#cc5500	NCBI+EukCensus
+Allobogoriellaceae	#cc5500	NCBI+EukCensus
+Glycomycetaceae	#000000	EukCensus only
+Jiangellaceae	#cc5500	NCBI+EukCensus
+Actinopolysporaceae	#cc5500	NCBI+EukCensus
+Motilibacteraceae	#cc5500	NCBI+EukCensus
+Cryptosporangiaceae	#cc5500	NCBI+EukCensus
+Actinomycetes.U.family	#000000	EukCensus only
+Gaiellales.U.family	#cc5500	NCBI+EukCensus
+Gaiellaceae	#cc5500	NCBI+EukCensus
+Solirubrobacterales.U.family	#cc5500	NCBI+EukCensus
+Conexibacteraceae	#cc5500	NCBI+EukCensus
+Solirubrobacteraceae	#cc5500	NCBI+EukCensus
+Patulibacteraceae	#cc5500	NCBI+EukCensus
+Parviterribacteraceae	#000000	EukCensus only
+Thermoleophilia.U.family	#cc5500	NCBI+EukCensus
+Thermoleophilaceae	#cc5500	NCBI+EukCensus
+Actinomycetota.U.family	#cc5500	NCBI+EukCensus
+Rubrobacteraceae	#cc5500	NCBI+EukCensus
+Coriobacteriia.U.family	#cc5500	NCBI+EukCensus
+Coriobacteriaceae	#cc5500	NCBI+EukCensus
+Coriobacteriales.U.family	#cc5500	NCBI+EukCensus
+Atopobiaceae	#cc5500	NCBI+EukCensus
+Eggerthellaceae	#cc5500	NCBI+EukCensus
+Euzebyaceae	#cc5500	NCBI+EukCensus
+Nitriliruptoraceae	#cc5500	NCBI+EukCensus
+Egibacteraceae	#cc5500	NCBI+EukCensus
+Egicoccaceae	#cc5500	NCBI+EukCensus
+Armatimonadota.U.family	#cc5500	NCBI+EukCensus
+Fimbriimonadaceae	#cc5500	NCBI+EukCensus
+Fimbriimonadales.U.family	#cc5500	NCBI+EukCensus
+Armatimonadales.U.family	#cc5500	NCBI+EukCensus
+Armatimonadaceae	#cc5500	NCBI+EukCensus
+Chthonomonadaceae	#cc5500	NCBI+EukCensus
+Chthonomonadales.U.family	#cc5500	NCBI+EukCensus
+Cyanobacteriota.U.family	#cc5500	NCBI+EukCensus
+Leptolyngbyaceae	#000000	EukCensus only
+Schizotrichaceae	#000000	EukCensus only
+Synechococcaceae	#cc5500	NCBI+EukCensus
+Prochlorococcaceae	#cc5500	NCBI+EukCensus
+Merismopediaceae	#cc5500	NCBI+EukCensus
+Coelosphaeriaceae	#cc5500	NCBI+EukCensus
+Synechococcales.U.family	#cc5500	NCBI+EukCensus
+Nostocaceae	#000000	EukCensus only
+Calotrichaceae	#000000	EukCensus only
+Scytonemataceae	#000000	EukCensus only
+Hapalosiphonaceae	#cc5500	NCBI+EukCensus
+Rivulariaceae	#000000	EukCensus only
+Aphanizomenonaceae	#000000	EukCensus only
+Tolypothrichaceae	#cc5500	NCBI+EukCensus
+Stigonemataceae	#cc5500	NCBI+EukCensus
+Chlorogloeopsidaceae	#cc5500	NCBI+EukCensus
+Symphyonemataceae	#000000	EukCensus only
+Nostocales.U.family	#cc5500	NCBI+EukCensus
+Nodulariaceae	#000000	EukCensus only
+Gloeotrichiaceae	#cc5500	NCBI+EukCensus
+Fortieaceae	#cc5500	NCBI+EukCensus
+Dapisostemonaceae	#000000	EukCensus only
+Cyanomargaritaceae	#cc5500	NCBI+EukCensus
+Godleyaceae	#000000	EukCensus only
+Coleofasciculaceae	#cc5500	NCBI+EukCensus
+Wilmottiaceae	#000000	EukCensus only
+Oscillatoriaceae	#cc5500	NCBI+EukCensus
+Microcoleaceae	#000000	EukCensus only
+Oscillatoriales.U.family	#000000	EukCensus only
+Sirenicapillariaceae	#000000	EukCensus only
+Microcystaceae	#000000	EukCensus only
+Geminocystaceae	#000000	EukCensus only
+Chroococcaceae	#000000	EukCensus only
+Chroococcales.U.family	#cc5500	NCBI+EukCensus
+Prochloraceae	#cc5500	NCBI+EukCensus
+Entophysalidaceae	#000000	EukCensus only
+Aphanothecaceae	#cc5500	NCBI+EukCensus
+Halothecacae	#cc5500	NCBI+EukCensus
+Gomphosphaeriaceae	#cc5500	NCBI+EukCensus
+Cyanothrichaceae	#000000	EukCensus only
+Aerosakkonemataceae	#000000	EukCensus only
+Chroococcidiopsidaceae	#cc5500	NCBI+EukCensus
+Aliterellaceae	#cc5500	NCBI+EukCensus
+Chroococcidiopsidales.U.family	#cc5500	NCBI+EukCensus
+Pseudanabaenaceae	#cc5500	NCBI+EukCensus
+Pleurocapsaceae	#cc5500	NCBI+EukCensus
+Xenococcaceae	#000000	EukCensus only
+Dermocarpellaceae	#000000	EukCensus only
+Cymatolegaceae	#cc5500	NCBI+EukCensus
+Nodosilineaceae	#000000	EukCensus only
+Romeriaceae	#000000	EukCensus only
+Geitlerinemataceae	#cc5500	NCBI+EukCensus
+Spirulinaceae	#000000	EukCensus only
+Cyanothecaceae	#cc5500	NCBI+EukCensus
+Chamaesiphonaceae	#cc5500	NCBI+EukCensus
+Gomontiellaceae	#000000	EukCensus only
+Acaryochloridaceae	#cc5500	NCBI+EukCensus
+Thermosynechococcaceae	#cc5500	NCBI+EukCensus
+Gloeobacteraceae	#cc5500	NCBI+EukCensus
+Prochlorotrichaceae	#cc5500	NCBI+EukCensus
+Oculatellaceae	#000000	EukCensus only
+Desertifilaceae	#cc5500	NCBI+EukCensus
+Neosynechococcaceae	#cc5500	NCBI+EukCensus
+Gloeomargaritaceae	#cc5500	NCBI+EukCensus
+Candidatus_Gastranaerophilales.U.family	#cc5500	NCBI+EukCensus
+Candidatus_Obscuribacterales.U.family	#cc5500	NCBI+EukCensus
+Vampirovibrionales.U.family	#cc5500	NCBI+EukCensus
+Candidatus_Sericytochromatia.U.family	#cc5500	NCBI+EukCensus
+Mycoplasmataceae	#cc5500	NCBI+EukCensus
+Acholeplasmataceae	#cc5500	NCBI+EukCensus
+Acholeplasmatales.U.family	#cc5500	NCBI+EukCensus
+Entomoplasmatales.U.family	#cc5500	NCBI+EukCensus
+Spiroplasmataceae	#cc5500	NCBI+EukCensus
+Entomoplasmataceae	#cc5500	NCBI+EukCensus
+Candidatus_Izemoplasmatales.U.family	#cc5500	NCBI+EukCensus
+Candidatus_Izemoplasmataceae	#cc5500	NCBI+EukCensus
+Anaeroplasmataceae	#000000	EukCensus only
+Haloplasmataceae	#cc5500	NCBI+EukCensus
+Mollicutes.U.family	#cc5500	NCBI+EukCensus
+Metamycoplasmataceae	#cc5500	NCBI+EukCensus
+Mycoplasmoidaceae	#cc5500	NCBI+EukCensus
+Candidatus_Parcubacteria.U.family	#cc5500	NCBI+EukCensus
+Candidatus_Saccharimonadales.U.family	#cc5500	NCBI+EukCensus
+Candidatus_Saccharimonadaceae	#cc5500	NCBI+EukCensus
+Candidatus_Babeliales.U.family	#cc5500	NCBI+EukCensus
+Candidatus_Babeliaceae	#cc5500	NCBI+EukCensus
+Candidatus_Berkelbacteria.U.family	#cc5500	NCBI+EukCensus
+Candidatus_Sumerlaeaceae	#cc5500	NCBI+EukCensus
+Candidatus_Sumerlaeia.U.family	#cc5500	NCBI+EukCensus
+Candidatus_Bipolaricaulota.U.family	#cc5500	NCBI+EukCensus
+Candidatus_Poribacteria.U.family	#cc5500	NCBI+EukCensus
+Candidatus_Fervidibacterota.U.family	#cc5500	NCBI+EukCensus
+Verrucomicrobiota.U.family	#cc5500	NCBI+EukCensus
+Verrucomicrobiia.U.family	#cc5500	NCBI+EukCensus
+Verrucomicrobiaceae	#cc5500	NCBI+EukCensus
+Akkermansiaceae	#cc5500	NCBI+EukCensus
+Verrucomicrobiales.U.family	#cc5500	NCBI+EukCensus
+Rubritaleaceae	#cc5500	NCBI+EukCensus
+Limisphaeraceae	#cc5500	NCBI+EukCensus
+Chthoniobacteraceae	#cc5500	NCBI+EukCensus
+Chthoniobacterales.U.family	#cc5500	NCBI+EukCensus
+Spartobacteria.U.family	#cc5500	NCBI+EukCensus
+Puniceicoccaceae	#cc5500	NCBI+EukCensus
+Cerasicoccaceae	#cc5500	NCBI+EukCensus
+Pelagicoccaceae	#cc5500	NCBI+EukCensus
+Coraliomargaritaceae	#cc5500	NCBI+EukCensus
+Puniceicoccales.U.family	#cc5500	NCBI+EukCensus
+Opitutaceae	#cc5500	NCBI+EukCensus
+Alterococcaceae	#000000	EukCensus only
+Opitutales.U.family	#cc5500	NCBI+EukCensus
+Opitutia.U.family	#cc5500	NCBI+EukCensus
+Methylacidiphilaceae	#cc5500	NCBI+EukCensus
+Terrimicrobiaceae	#cc5500	NCBI+EukCensus
+Pedosphaeraceae	#cc5500	NCBI+EukCensus
+Planctomycetota.U.family	#cc5500	NCBI+EukCensus
+Phycisphaerae.U.family	#cc5500	NCBI+EukCensus
+Phycisphaeraceae	#cc5500	NCBI+EukCensus
+Phycisphaerales.U.family	#cc5500	NCBI+EukCensus
+Tepidisphaerales.U.family	#cc5500	NCBI+EukCensus
+Tepidisphaeraceae	#cc5500	NCBI+EukCensus
+Sedimentisphaeraceae	#cc5500	NCBI+EukCensus
+Pirellulaceae	#cc5500	NCBI+EukCensus
+Thermoguttaceae	#cc5500	NCBI+EukCensus
+Lacipirellulaceae	#cc5500	NCBI+EukCensus
+Gemmataceae	#cc5500	NCBI+EukCensus
+Planctomycetales.U.family	#cc5500	NCBI+EukCensus
+Planctomycetaceae	#cc5500	NCBI+EukCensus
+Isosphaeraceae	#cc5500	NCBI+EukCensus
+Planctomycetia.U.family	#cc5500	NCBI+EukCensus
+Candidatus_Scalinduaceae	#cc5500	NCBI+EukCensus
+Candidatus_Brocadiaceae	#cc5500	NCBI+EukCensus
+Candidatus_Brocadiales.U.family	#cc5500	NCBI+EukCensus
+Chlamydiaceae	#cc5500	NCBI+EukCensus
+Parachlamydiaceae	#cc5500	NCBI+EukCensus
+Simkaniaceae	#cc5500	NCBI+EukCensus
+Alphaproteobacteria.U.family	#cc5500	NCBI+EukCensus
+Rhodospirillales.U.family	#cc5500	NCBI+EukCensus
+Kiloniellaceae	#cc5500	NCBI+EukCensus
+Azospirillaceae	#000000	EukCensus only
+Rhodospirillaceae	#000000	EukCensus only
+Terasakiellaceae	#cc5500	NCBI+EukCensus
+Thalassospiraceae	#cc5500	NCBI+EukCensus
+Dongiaceae	#cc5500	NCBI+EukCensus
+Magnetovibrionaceae	#cc5500	NCBI+EukCensus
+Rhodovibrionaceae	#cc5500	NCBI+EukCensus
+Allostellaceae	#cc5500	NCBI+EukCensus
+Thalassobaculaceae	#cc5500	NCBI+EukCensus
+Oceanibaculaceae	#cc5500	NCBI+EukCensus
+Novispirillaceae	#000000	EukCensus only
+Aestuariispiraceae	#cc5500	NCBI+EukCensus
+Zavarziniaceae	#cc5500	NCBI+EukCensus
+Rickettsiales.U.family	#000000	EukCensus only
+Rickettsiaceae	#cc5500	NCBI+EukCensus
+Anaplasmataceae	#cc5500	NCBI+EukCensus
+Candidatus_Midichloriaceae	#cc5500	NCBI+EukCensus
+Rhodobacterales.U.family	#cc5500	NCBI+EukCensus
+Paracoccaceae	#000000	EukCensus only
+Roseobacteraceae	#cc5500	NCBI+EukCensus
+Neomegalonemataceae	#cc5500	NCBI+EukCensus
+Sphingomonadaceae	#000000	EukCensus only
+Erythrobacteraceae	#000000	EukCensus only
+Sphingobiaceae	#cc5500	NCBI+EukCensus
+Sphingopyxidaceae	#cc5500	NCBI+EukCensus
+Sphingorhabdaceae	#cc5500	NCBI+EukCensus
+Sphingosinicellaceae	#cc5500	NCBI+EukCensus
+Blastomonadaceae	#cc5500	NCBI+EukCensus
+Parasphingopyxidaceae	#cc5500	NCBI+EukCensus
+Zymomonadaceae	#cc5500	NCBI+EukCensus
+Sphingomicrobiaceae	#cc5500	NCBI+EukCensus
+Sphingomonadales.U.family	#cc5500	NCBI+EukCensus
+Rhizorhabdaceae	#cc5500	NCBI+EukCensus
+Rhizobiaceae	#cc5500	NCBI+EukCensus
+Xanthobacteraceae	#cc5500	NCBI+EukCensus
+Beijerinckiaceae	#000000	EukCensus only
+Nitrobacteraceae	#cc5500	NCBI+EukCensus
+Hyphomicrobiaceae	#000000	EukCensus only
+Phyllobacteriaceae	#cc5500	NCBI+EukCensus
+Devosiaceae	#cc5500	NCBI+EukCensus
+Methylobacteriaceae	#000000	EukCensus only
+Brucellaceae	#cc5500	NCBI+EukCensus
+Reyranellaceae	#cc5500	NCBI+EukCensus
+Kaistiaceae	#cc5500	NCBI+EukCensus
+Roseiarcaceae	#cc5500	NCBI+EukCensus
+Alloboseaceae	#cc5500	NCBI+EukCensus
+Ahrensiaceae	#cc5500	NCBI+EukCensus
+Hyphomicrobiales.U.family	#000000	EukCensus only
+Phreatobacteraceae	#cc5500	NCBI+EukCensus
+Parvibaculaceae	#cc5500	NCBI+EukCensus
+Stappiaceae	#cc5500	NCBI+EukCensus
+Cohaesibacteraceae	#cc5500	NCBI+EukCensus
+Methylocystaceae	#cc5500	NCBI+EukCensus
+Aurantimonadaceae	#cc5500	NCBI+EukCensus
+Bartonellaceae	#cc5500	NCBI+EukCensus
+Tepidamorphaceae	#000000	EukCensus only
+Pleomorphomonadaceae	#cc5500	NCBI+EukCensus
+Rhodoblastaceae	#cc5500	NCBI+EukCensus
+Chelatococcaceae	#cc5500	NCBI+EukCensus
+Afifellaceae	#cc5500	NCBI+EukCensus
+Amorphaceae	#cc5500	NCBI+EukCensus
+Salinarimonadaceae	#cc5500	NCBI+EukCensus
+Rhodobiaceae	#cc5500	NCBI+EukCensus
+Alsobacteraceae	#cc5500	NCBI+EukCensus
+Rhodoligotrophaceae	#cc5500	NCBI+EukCensus
+Segnochrobactraceae	#cc5500	NCBI+EukCensus
+Methylopilaceae	#000000	EukCensus only
+Blastochloridaceae	#cc5500	NCBI+EukCensus
+Ancalomicrobiaceae	#000000	EukCensus only
+Notoacmeibacteraceae	#cc5500	NCBI+EukCensus
+Acetobacteraceae	#000000	EukCensus only
+Roseomonadaceae	#cc5500	NCBI+EukCensus
+Acidocellaceae	#cc5500	NCBI+EukCensus
+Elioraeaceae	#cc5500	NCBI+EukCensus
+Candidatus_Paracaedibacteraceae	#cc5500	NCBI+EukCensus
+Holosporaceae	#cc5500	NCBI+EukCensus
+Caedimonadaceae	#cc5500	NCBI+EukCensus
+Caulobacteraceae	#000000	EukCensus only
+Caulobacterales.U.family	#cc5500	NCBI+EukCensus
+Hyphomonadaceae	#cc5500	NCBI+EukCensus
+Geminicoccaceae	#cc5500	NCBI+EukCensus
+Micropepsaceae	#000000	EukCensus only
+Kordiimonadaceae	#cc5500	NCBI+EukCensus
+Kordiimonadales.U.family	#cc5500	NCBI+EukCensus
+Temperatibacteraceae	#cc5500	NCBI+EukCensus
+Parvularculaceae	#cc5500	NCBI+EukCensus
+Sneathiellaceae	#cc5500	NCBI+EukCensus
+Robiginitomaculaceae	#cc5500	NCBI+EukCensus
+Maricaulaceae	#cc5500	NCBI+EukCensus
+Iodidimonadaceae	#cc5500	NCBI+EukCensus
+Candidatus_Pelagibacteraceae	#cc5500	NCBI+EukCensus
+Emcibacteraceae	#cc5500	NCBI+EukCensus
+Rhodothalassiaceae	#cc5500	NCBI+EukCensus
+Gammaproteobacteria.U.family	#000000	EukCensus only
+Pseudomonadaceae	#cc5500	NCBI+EukCensus
+Pseudomonadales.U.family	#cc5500	NCBI+EukCensus
+Marinobacteraceae	#cc5500	NCBI+EukCensus
+Pseudohongiellaceae	#cc5500	NCBI+EukCensus
+Ketobacteraceae	#cc5500	NCBI+EukCensus
+Ventosimonadaceae	#cc5500	NCBI+EukCensus
+Perlucidibacaceae	#cc5500	NCBI+EukCensus
+Moraxellaceae	#000000	EukCensus only
+Vibrionaceae	#cc5500	NCBI+EukCensus
+Enterobacteriaceae	#000000	EukCensus only
+Yersiniaceae	#cc5500	NCBI+EukCensus
+Erwiniaceae	#cc5500	NCBI+EukCensus
+Morganellaceae	#000000	EukCensus only
+Bruguierivoracaceae	#cc5500	NCBI+EukCensus
+Pectobacteriaceae	#cc5500	NCBI+EukCensus
+Hafniaceae	#cc5500	NCBI+EukCensus
+Enterobacterales.U.family	#000000	EukCensus only
+Gallaecimonadaceae	#cc5500	NCBI+EukCensus
+Thorselliaceae	#000000	EukCensus only
+Budviciaceae	#cc5500	NCBI+EukCensus
+Halomonadaceae	#cc5500	NCBI+EukCensus
+Alcanivoracaceae	#cc5500	NCBI+EukCensus
+Endozoicomonadaceae	#cc5500	NCBI+EukCensus
+Oceanospirillaceae	#000000	EukCensus only
+Saccharospirillaceae	#cc5500	NCBI+EukCensus
+Oleiphilaceae	#cc5500	NCBI+EukCensus
+Hahellaceae	#cc5500	NCBI+EukCensus
+Pleioneaceae	#cc5500	NCBI+EukCensus
+Oceanospirillales.U.family	#cc5500	NCBI+EukCensus
+Balneatrichaceae	#cc5500	NCBI+EukCensus
+Zooshikellaceae	#cc5500	NCBI+EukCensus
+Coxiellaceae	#cc5500	NCBI+EukCensus
+Legionellaceae	#cc5500	NCBI+EukCensus
+Pasteurellaceae	#cc5500	NCBI+EukCensus
+Pseudoalteromonadaceae	#000000	EukCensus only
+Alteromonadaceae	#cc5500	NCBI+EukCensus
+Shewanellaceae	#cc5500	NCBI+EukCensus
+Colwelliaceae	#cc5500	NCBI+EukCensus
+Idiomarinaceae	#cc5500	NCBI+EukCensus
+Psychromonadaceae	#cc5500	NCBI+EukCensus
+Ferrimonadaceae	#cc5500	NCBI+EukCensus
+Moritellaceae	#000000	EukCensus only
+Alteromonadales.U.family	#cc5500	NCBI+EukCensus
+Echinimonadaceae	#cc5500	NCBI+EukCensus
+Aeromonadaceae	#cc5500	NCBI+EukCensus
+Succinivibrionaceae	#cc5500	NCBI+EukCensus
+Woeseiaceae	#cc5500	NCBI+EukCensus
+Thiotrichaceae	#cc5500	NCBI+EukCensus
+Piscirickettsiaceae	#cc5500	NCBI+EukCensus
+Francisellaceae	#cc5500	NCBI+EukCensus
+Fastidiosibacteraceae	#cc5500	NCBI+EukCensus
+Thiotrichales.U.family	#cc5500	NCBI+EukCensus
+Lysobacteraceae	#000000	EukCensus only
+Rhodanobacteraceae	#cc5500	NCBI+EukCensus
+Marinicellaceae	#cc5500	NCBI+EukCensus
+Lysobacterales.U.family	#cc5500	NCBI+EukCensus
+Arenicellaceae	#000000	EukCensus only
+Halieaceae	#cc5500	NCBI+EukCensus
+Porticoccaceae	#cc5500	NCBI+EukCensus
+Spongiibacteraceae	#cc5500	NCBI+EukCensus
+Cellvibrionaceae	#cc5500	NCBI+EukCensus
+Microbulbiferaceae	#cc5500	NCBI+EukCensus
+Methylococcales.U.family	#cc5500	NCBI+EukCensus
+Crenotrichaceae	#cc5500	NCBI+EukCensus
+Methylococcaceae	#000000	EukCensus only
+Methylothermaceae	#cc5500	NCBI+EukCensus
+Steroidobacteraceae	#cc5500	NCBI+EukCensus
+Ectothiorhodospiraceae	#000000	EukCensus only
+Thioalkalispiraceae	#000000	EukCensus only
+Chromatiaceae	#000000	EukCensus only
+Chromatiales.U.family	#cc5500	NCBI+EukCensus
+Sedimenticolaceae	#cc5500	NCBI+EukCensus
+Granulosicoccaceae	#cc5500	NCBI+EukCensus
+Halothiobacillaceae	#000000	EukCensus only
+Wenzhouxiangellaceae	#cc5500	NCBI+EukCensus
+Thioprofundaceae	#000000	EukCensus only
+Oceanococcaceae	#cc5500	NCBI+EukCensus
+Thioalkalibacteraceae	#000000	EukCensus only
+Cardiobacteriaceae	#cc5500	NCBI+EukCensus
+Ignatzschineriaceae	#cc5500	NCBI+EukCensus
+Cardiobacteriales.U.family	#cc5500	NCBI+EukCensus
+Candidatus_Competibacteraceae	#cc5500	NCBI+EukCensus
+Celerinatantimonadaceae	#cc5500	NCBI+EukCensus
+Acidiferrobacteraceae	#cc5500	NCBI+EukCensus
+Thiohalophilaceae	#cc5500	NCBI+EukCensus
+Thiohalomonadaceae	#cc5500	NCBI+EukCensus
+Salinisphaeraceae	#000000	EukCensus only
+Salinisphaerales.U.family	#cc5500	NCBI+EukCensus
+Nevskiaceae	#000000	EukCensus only
+Algiphilaceae	#cc5500	NCBI+EukCensus
+Thiohalorhabdaceae	#cc5500	NCBI+EukCensus
+Immundisolibacteraceae	#cc5500	NCBI+EukCensus
+Orbaceae	#cc5500	NCBI+EukCensus
+Kangiellaceae	#cc5500	NCBI+EukCensus
+Thiohalobacteraceae	#cc5500	NCBI+EukCensus
+Methylohalomonadaceae	#cc5500	NCBI+EukCensus
+Thiohalospiraceae	#cc5500	NCBI+EukCensus
+Burkholderiales.U.family	#cc5500	NCBI+EukCensus
+Comamonadaceae	#cc5500	NCBI+EukCensus
+Oxalobacteraceae	#cc5500	NCBI+EukCensus
+Burkholderiaceae	#cc5500	NCBI+EukCensus
+Alcaligenaceae	#cc5500	NCBI+EukCensus
+Sutterellaceae	#cc5500	NCBI+EukCensus
+Sphaerotilaceae	#cc5500	NCBI+EukCensus
+Thiobacteraceae	#cc5500	NCBI+EukCensus
+Nitrosomonadaceae	#cc5500	NCBI+EukCensus
+Methylophilaceae	#cc5500	NCBI+EukCensus
+Thiobacillaceae	#000000	EukCensus only
+Gallionellaceae	#cc5500	NCBI+EukCensus
+Sterolibacteriaceae	#cc5500	NCBI+EukCensus
+Sulfuricellaceae	#cc5500	NCBI+EukCensus
+Spirillaceae	#000000	EukCensus only
+Rhodocyclaceae	#000000	EukCensus only
+Zoogloeaceae	#cc5500	NCBI+EukCensus
+Azonexaceae	#cc5500	NCBI+EukCensus
+Neisseriaceae	#cc5500	NCBI+EukCensus
+Chitinibacteraceae	#cc5500	NCBI+EukCensus
+Chromobacteriaceae	#cc5500	NCBI+EukCensus
+Aquaspirillaceae	#cc5500	NCBI+EukCensus
+Leeiaceae	#cc5500	NCBI+EukCensus
+Ferritrophicaceae	#000000	EukCensus only
+Ferrovaceae	#cc5500	NCBI+EukCensus
+Betaproteobacteria.U.family	#cc5500	NCBI+EukCensus
+Hydrogenophilaceae	#cc5500	NCBI+EukCensus
+Magnetococcaceae	#cc5500	NCBI+EukCensus
+Mariprofundaceae	#cc5500	NCBI+EukCensus
+Candidatius_Mariprofundia.U.family	#cc5500	NCBI+EukCensus
+Acidithiobacillaceae	#cc5500	NCBI+EukCensus
+Acidithiobacillales.U.family	#cc5500	NCBI+EukCensus
+Thermithiobacillaceae	#cc5500	NCBI+EukCensus
+Pseudomonadota.U.family	#000000	EukCensus only
+Acidobacteriota.U.family	#cc5500	NCBI+EukCensus
+Vicinamibacterales.U.family	#cc5500	NCBI+EukCensus
+Vicinamibacteraceae	#000000	EukCensus only
+Vicinamibacteria.U.family	#cc5500	NCBI+EukCensus
+Thermoanaerobaculaceae	#cc5500	NCBI+EukCensus
+Pyrinomonadaceae	#cc5500	NCBI+EukCensus
+Blastocatellaceae	#000000	EukCensus only
+Arenimicrobiaceae	#000000	EukCensus only
+Blastocatellia.U.family	#cc5500	NCBI+EukCensus
+Chloracidobacteriaceae	#cc5500	NCBI+EukCensus
+Bryobacteraceae	#cc5500	NCBI+EukCensus
+Solibacteraceae	#cc5500	NCBI+EukCensus
+Acidobacteriaceae	#cc5500	NCBI+EukCensus
+Holophagae.U.family	#cc5500	NCBI+EukCensus
+Holophagaceae	#cc5500	NCBI+EukCensus
+Acanthopleuribacteraceae	#cc5500	NCBI+EukCensus
+Thermotomaculaceae	#cc5500	NCBI+EukCensus
+Bacteroidales.U.family	#cc5500	NCBI+EukCensus
+Prevotellaceae	#000000	EukCensus only
+Muribaculaceae	#cc5500	NCBI+EukCensus
+Rikenellaceae	#000000	EukCensus only
+Bacteroidaceae	#cc5500	NCBI+EukCensus
+Lentimicrobiaceae	#cc5500	NCBI+EukCensus
+Dysgonomonadaceae	#cc5500	NCBI+EukCensus
+Porphyromonadaceae	#cc5500	NCBI+EukCensus
+Paludibacteraceae	#cc5500	NCBI+EukCensus
+Tannerellaceae	#cc5500	NCBI+EukCensus
+Williamwhitmaniaceae	#cc5500	NCBI+EukCensus
+Odoribacteraceae	#cc5500	NCBI+EukCensus
+Barnesiellaceae	#cc5500	NCBI+EukCensus
+Salinivirgaceae	#cc5500	NCBI+EukCensus
+Balneicellaceae	#cc5500	NCBI+EukCensus
+Prolixibacteraceae	#000000	EukCensus only
+Marinilabiliaceae	#000000	EukCensus only
+Marinifilaceae	#cc5500	NCBI+EukCensus
+Bacteroidia.U.family	#cc5500	NCBI+EukCensus
+Bacteroidota.U.family	#000000	EukCensus only
+Sphingobacteriales.U.family	#cc5500	NCBI+EukCensus
+Sphingobacteriaceae	#cc5500	NCBI+EukCensus
+Filobacteriaceae	#000000	EukCensus only
+Sphingobacteriia.U.family	#cc5500	NCBI+EukCensus
+Flavobacteriaceae	#000000	EukCensus only
+Flavobacteriales.U.family	#cc5500	NCBI+EukCensus
+Cryomorphaceae	#cc5500	NCBI+EukCensus
+Crocinitomicaceae	#000000	EukCensus only
+Weeksellaceae	#000000	EukCensus only
+Blattabacteriaceae	#cc5500	NCBI+EukCensus
+Vicingaceae	#cc5500	NCBI+EukCensus
+Schleiferiaceae	#cc5500	NCBI+EukCensus
+Owenweeksiaceae	#cc5500	NCBI+EukCensus
+Ichthyobacteriaceae	#cc5500	NCBI+EukCensus
+Luteibaculaceae	#cc5500	NCBI+EukCensus
+Phaeocystidibacteraceae	#cc5500	NCBI+EukCensus
+Salibacteraceae	#cc5500	NCBI+EukCensus
+Flavobacteriia.U.family	#cc5500	NCBI+EukCensus
+Saprospiraceae	#000000	EukCensus only
+Lewinellaceae	#cc5500	NCBI+EukCensus
+Haliscomenobacteraceae	#cc5500	NCBI+EukCensus
+Microscillaceae	#cc5500	NCBI+EukCensus
+Cyclobacteriaceae	#000000	EukCensus only
+Hymenobacteraceae	#cc5500	NCBI+EukCensus
+Amoebophilaceae	#cc5500	NCBI+EukCensus
+Cytophagaceae	#cc5500	NCBI+EukCensus
+Fulvivirgaceae	#cc5500	NCBI+EukCensus
+Reichenbachiellaceae	#cc5500	NCBI+EukCensus
+Cytophagales.U.family	#000000	EukCensus only
+Spirosomataceae	#000000	EukCensus only
+Flectobacillaceae	#cc5500	NCBI+EukCensus
+Rhodocytophagaceae	#cc5500	NCBI+EukCensus
+Leadbetterellaceae	#000000	EukCensus only
+Flammeovirgaceae	#cc5500	NCBI+EukCensus
+Marivirgaceae	#cc5500	NCBI+EukCensus
+Flexibacteraceae	#cc5500	NCBI+EukCensus
+Raineyaceae	#cc5500	NCBI+EukCensus
+Roseivirgaceae	#cc5500	NCBI+EukCensus
+Catalimonadaceae	#cc5500	NCBI+EukCensus
+Thermoflexibacteraceae	#cc5500	NCBI+EukCensus
+Bernardetiaceae	#000000	EukCensus only
+Cesiribacteraceae	#cc5500	NCBI+EukCensus
+Thermonemataceae	#cc5500	NCBI+EukCensus
+Persicobacteraceae	#cc5500	NCBI+EukCensus
+Chitinophagales.U.family	#cc5500	NCBI+EukCensus
+Chitinophagaceae	#000000	EukCensus only
+Salinibacteraceae	#cc5500	NCBI+EukCensus
+Rhodothermaceae	#cc5500	NCBI+EukCensus
+Ignavibacteria.U.family	#cc5500	NCBI+EukCensus
+Melioribacteraceae	#cc5500	NCBI+EukCensus
+Chlorobiaceae	#cc5500	NCBI+EukCensus
+Chloroherpetonaceae	#cc5500	NCBI+EukCensus
+Gemmatimonadaceae	#cc5500	NCBI+EukCensus
+Gemmatimonadota.U.family	#cc5500	NCBI+EukCensus
+Longimicrobiaceae	#cc5500	NCBI+EukCensus
+Candidatus_Cloacimonadota.U.family	#cc5500	NCBI+EukCensus
+Candidatus_Zixiibacteriota.U.family	#cc5500	NCBI+EukCensus
+Fibrobacterales.U.family	#cc5500	NCBI+EukCensus
+Fibrobacteraceae	#cc5500	NCBI+EukCensus
+Chitinivibrionia.U.family	#cc5500	NCBI+EukCensus
+Chitinivibrionaceae	#cc5500	NCBI+EukCensus
+Chitinispirillaceae	#cc5500	NCBI+EukCensus
+Candidatus_Fermentibacteraceae	#cc5500	NCBI+EukCensus
+Treponemataceae	#cc5500	NCBI+EukCensus
+Spirochaetaceae	#cc5500	NCBI+EukCensus
+Sphaerochaetaceae	#cc5500	NCBI+EukCensus
+Spirochaetales.U.family	#cc5500	NCBI+EukCensus
+Borreliaceae	#000000	EukCensus only
+Rectinemataceae	#cc5500	NCBI+EukCensus
+Leptospiraceae	#cc5500	NCBI+EukCensus
+Brevinemataceae	#cc5500	NCBI+EukCensus
+Brachyspirales.U.family	#cc5500	NCBI+EukCensus
+Brachyspiraceae	#cc5500	NCBI+EukCensus
+Spirochaetota.U.family	#cc5500	NCBI+EukCensus
+Myxococcota.U.family	#cc5500	NCBI+EukCensus
+Kofleriaceae	#000000	EukCensus only
+Polyangiales.U.family	#cc5500	NCBI+EukCensus
+Sandaracinaceae	#cc5500	NCBI+EukCensus
+Polyangiaceae	#000000	EukCensus only
+Phaselicystidaceae	#000000	EukCensus only
+Labilitrichaceae	#cc5500	NCBI+EukCensus
+Nannocystaceae	#cc5500	NCBI+EukCensus
+Myxococcaceae	#cc5500	NCBI+EukCensus
+Anaeromyxobacteraceae	#cc5500	NCBI+EukCensus
+Vulgatibacteraceae	#cc5500	NCBI+EukCensus
+Archangiaceae	#cc5500	NCBI+EukCensus
+Myxococcales.U.family	#cc5500	NCBI+EukCensus
+Oligoflexia.U.family	#cc5500	NCBI+EukCensus
+Oligoflexaceae	#cc5500	NCBI+EukCensus
+Pseudobacteriovoracaceae	#cc5500	NCBI+EukCensus
+Oligoflexales.U.family	#cc5500	NCBI+EukCensus
+Silvanigrellaceae	#cc5500	NCBI+EukCensus
+Silvanigrellales.U.family	#cc5500	NCBI+EukCensus
+Bdellovibrionales.U.family	#cc5500	NCBI+EukCensus
+Pseudobdellovibrionaceae	#cc5500	NCBI+EukCensus
+Bacteriovoracaceae	#cc5500	NCBI+EukCensus
+Halobacteriovoraceae	#cc5500	NCBI+EukCensus
+Desulfosarcinaceae	#cc5500	NCBI+EukCensus
+Desulfobacteraceae	#000000	EukCensus only
+Desulfococcaceae	#cc5500	NCBI+EukCensus
+Desulfobacterales.U.family	#cc5500	NCBI+EukCensus
+Desulfobacteriaceae	#cc5500	NCBI+EukCensus
+Desulfatirhabdiaceae	#cc5500	NCBI+EukCensus
+Desulfolunaceae	#cc5500	NCBI+EukCensus
+Desulfosalsimonadaceae	#000000	EukCensus only
+Desulfatibacillaceae	#cc5500	NCBI+EukCensus
+Desulfofabaceae	#000000	EukCensus only
+Desulforegulaceae	#cc5500	NCBI+EukCensus
+Desulfoarculaceae	#000000	EukCensus only
+Desulfatiglandaceae	#cc5500	NCBI+EukCensus
+Desulfovibrionaceae	#cc5500	NCBI+EukCensus
+Desulfohalobiaceae	#000000	EukCensus only
+Desulfomicrobiaceae	#cc5500	NCBI+EukCensus
+Desulfonatronaceae	#cc5500	NCBI+EukCensus
+Desulfoplanaceae	#cc5500	NCBI+EukCensus
+Desulfothermaceae	#cc5500	NCBI+EukCensus
+Desulfonatronovibrionaceae	#cc5500	NCBI+EukCensus
+Desulfonauticaceae	#cc5500	NCBI+EukCensus
+Desulfovibrionales.U.family	#cc5500	NCBI+EukCensus
+Desulfocapsaceae	#cc5500	NCBI+EukCensus
+Desulfobulbaceae	#cc5500	NCBI+EukCensus
+Desulfobulbales.U.family	#cc5500	NCBI+EukCensus
+Thermodesulfobacteriota.U.family	#cc5500	NCBI+EukCensus
+Desulfuromonadia.U.family	#cc5500	NCBI+EukCensus
+Geobacteraceae	#cc5500	NCBI+EukCensus
+Geobacterales.U.family	#cc5500	NCBI+EukCensus
+Desulfuromonadaceae	#cc5500	NCBI+EukCensus
+Desulfuromonadales.U.family	#cc5500	NCBI+EukCensus
+Geopsychrobacteraceae	#cc5500	NCBI+EukCensus
+Geothermobacteraceae	#cc5500	NCBI+EukCensus
+Syntrophotaleaceae	#cc5500	NCBI+EukCensus
+Geoalkalibacteraceae	#cc5500	NCBI+EukCensus
+Syntrophorhabdaceae	#cc5500	NCBI+EukCensus
+Syntrophaceae	#cc5500	NCBI+EukCensus
+Syntrophales.U.family	#cc5500	NCBI+EukCensus
+Smithellaceae	#cc5500	NCBI+EukCensus
+Candidatus_Dadabacteria.U.family	#cc5500	NCBI+EukCensus
+Syntrophobacteraceae	#000000	EukCensus only
+Syntrophobacterales.U.family	#cc5500	NCBI+EukCensus
+Thermodesulforhabdaceae	#cc5500	NCBI+EukCensus
+Desulfobaccaceae	#cc5500	NCBI+EukCensus
+Desulfomonilaceae	#cc5500	NCBI+EukCensus
+Deferrisomataceae	#cc5500	NCBI+EukCensus
+Thermodesulfobacteriaceae	#000000	EukCensus only
+Thermodesulfatatoraceae	#cc5500	NCBI+EukCensus
+Dissulfuribacteraceae	#cc5500	NCBI+EukCensus
+Desulfarculaceae	#cc5500	NCBI+EukCensus
+Desulfarculales.U.family	#cc5500	NCBI+EukCensus
+Candidatus_Desulfofervidaceae	#cc5500	NCBI+EukCensus
+Sulfurovaceae	#cc5500	NCBI+EukCensus
+Sulfurimonadaceae	#cc5500	NCBI+EukCensus
+Arcobacteraceae	#cc5500	NCBI+EukCensus
+Campylobacteraceae	#cc5500	NCBI+EukCensus
+Helicobacteraceae	#cc5500	NCBI+EukCensus
+Sulfurospirillaceae	#cc5500	NCBI+EukCensus
+Campylobacterales.U.family	#000000	EukCensus only
+Hydrogenimonadaceae	#cc5500	NCBI+EukCensus
+Nautiliaceae	#cc5500	NCBI+EukCensus
+Nitratiruptoraceae	#cc5500	NCBI+EukCensus
+Thioreductoraceae	#000000	EukCensus only
+Hippeaceae	#cc5500	NCBI+EukCensus
+Desulfurellaceae	#cc5500	NCBI+EukCensus
+Desulfurellales.U.family	#cc5500	NCBI+EukCensus
+Thermodesulfovibrionia.U.family	#cc5500	NCBI+EukCensus
+Thermodesulfovibrionaceae	#cc5500	NCBI+EukCensus
+Nitrospiraceae	#cc5500	NCBI+EukCensus
+Nitrospirota.U.family	#cc5500	NCBI+EukCensus
+Thermomicrobiales.U.family	#cc5500	NCBI+EukCensus
+Thermomicrobiaceae	#cc5500	NCBI+EukCensus
+Sphaerobacteraceae	#cc5500	NCBI+EukCensus
+Thermomicrobia.U.family	#cc5500	NCBI+EukCensus
+Calditrichaceae	#cc5500	NCBI+EukCensus
+Calditrichota.U.family	#000000	EukCensus only
+Elusimicrobiota.U.family	#cc5500	NCBI+EukCensus
+Elusimicrobia.U.family	#cc5500	NCBI+EukCensus
+Elusimicrobiaceae	#cc5500	NCBI+EukCensus
+Endomicrobiaceae	#cc5500	NCBI+EukCensus
+Abditibacteriaceae	#cc5500	NCBI+EukCensus
+Atribacterota.U.family	#cc5500	NCBI+EukCensus
+Atribacteria.U.family	#cc5500	NCBI+EukCensus
+Nitrospinaceae	#cc5500	NCBI+EukCensus
+Nitrospinota.U.family	#cc5500	NCBI+EukCensus
+Caldisericales.U.family	#cc5500	NCBI+EukCensus
+Caldisericaceae	#cc5500	NCBI+EukCensus
+Coprothermobacteraceae	#cc5500	NCBI+EukCensus
+Deferribacteraceae	#cc5500	NCBI+EukCensus
+Mucispirillaceae	#cc5500	NCBI+EukCensus
+Calditerrivibrionaceae	#cc5500	NCBI+EukCensus
+Geovibrionaceae	#cc5500	NCBI+EukCensus
+Flexistipitaceae	#cc5500	NCBI+EukCensus
+Deferribacterales.U.family	#cc5500	NCBI+EukCensus
+Hydrogenothermaceae	#cc5500	NCBI+EukCensus
+Aquificaceae	#cc5500	NCBI+EukCensus
+Aquificales.U.family	#cc5500	NCBI+EukCensus
+Desulfurobacteriaceae	#cc5500	NCBI+EukCensus
+Thermosulfidibacteraceae	#cc5500	NCBI+EukCensus
+Dictyoglomaceae	#cc5500	NCBI+EukCensus
+Thermodesulfobiaceae	#cc5500	NCBI+EukCensus
+Chrysiogenaceae	#cc5500	NCBI+EukCensus
+Bacteria.U.family	#000000	EukCensus only
+Synergistaceae	#cc5500	NCBI+EukCensus
+Thermovirgaceae	#cc5500	NCBI+EukCensus
+Aminobacteriaceae	#000000	EukCensus only
+Acetomicrobiaceae	#cc5500	NCBI+EukCensus
+Dethiosulfovibrionaceae	#000000	EukCensus only
+Aminiphilaceae	#cc5500	NCBI+EukCensus
+Synergistales.U.family	#cc5500	NCBI+EukCensus
+Trueperaceae	#cc5500	NCBI+EukCensus
+Deinococcaceae	#cc5500	NCBI+EukCensus
+Thermaceae	#000000	EukCensus only
+Petrotogaceae	#cc5500	NCBI+EukCensus
+Fervidobacteriaceae	#cc5500	NCBI+EukCensus
+Thermotogaceae	#000000	EukCensus only
+Thermotogales.U.family	#cc5500	NCBI+EukCensus
+Kosmotogaceae	#cc5500	NCBI+EukCensus
+Mesoaciditogaceae	#cc5500	NCBI+EukCensus
+Thermotogae.U.family	#cc5500	NCBI+EukCensus
+Fusobacteriaceae	#cc5500	NCBI+EukCensus
+Leptotrichiaceae	#cc5500	NCBI+EukCensus
+Bradymonadales.U.family	#cc5500	NCBI+EukCensus
+Bradymonadaceae	#cc5500	NCBI+EukCensus
+Deltaproteobacteria.U.family	#cc5500	NCBI+EukCensus
+Candidatus_Moduliflexaceae	#cc5500	NCBI+EukCensus
