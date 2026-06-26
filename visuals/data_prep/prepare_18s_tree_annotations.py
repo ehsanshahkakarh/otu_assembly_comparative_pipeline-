@@ -130,9 +130,38 @@ def main():
     rank_maps = {"division": div_map, "family": fam_map, "genus": gen_map}
 
     build_nf_branches(rank_maps)
+    build_nf_colorstrip(gen_map)
     build_division_colorstrip(gen_map, div_map)
     build_coverage_files(gen_map, fam_map, div_map)
     print("Done.")
+
+
+def build_nf_colorstrip(gen_map):
+    """Per-genus COLORSTRIP companion to 18s_nf_branches.txt — iTOL renders
+    legends for COLORSTRIP datasets but not for TREE_COLORS, so this track
+    exists primarily to display the NF bin legend on the side panel.
+    Genera with NF <= 1 or missing NF are skipped (left blank on the strip)."""
+    g = merged_df("genus")
+    legend_colors = [c for _, _, c, _ in NF_BINS] + [NF_INF_COLOR]
+    legend_labels = [lab for _, _, _, lab in NF_BINS] + [NF_INF_LABEL]
+    out = []
+    write_header(out, "COLORSTRIP", "NF bin (genus)", "#bd0026",
+                 legend_labels=legend_labels,
+                 legend_colors=legend_colors,
+                 strip_width=12)
+    n = 0
+    for _, row in g.iterrows():
+        taxon = row["genus"]
+        if taxon not in gen_map:
+            continue
+        res = bin_nf(row["novelty_factor"])
+        if res is None:
+            continue
+        color, lab = res
+        out.append(f"{gen_map[taxon]}\t{color}\t{lab}")
+        n += 1
+    (OUT_DIR / "18s_nf_colorstrip.txt").write_text("\n".join(out) + "\n")
+    print(f"18s_nf_colorstrip.txt: {n} genera assigned a bin")
 
 
 def build_nf_branches(rank_maps):
